@@ -1,10 +1,5 @@
 ﻿using BertScout2019.Models;
-using BertScout2019.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,20 +16,24 @@ namespace BertScout2019.Views
             InitializeComponent();
         }
 
+        async private void Home_Options_Clicked(object sender, EventArgs e)
+        {
+            //todo add options page
+        }
+
         async private void Button_Select_FRC_Event_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new FRCEventsPage());
+            await RootPage.NavigateFromMenu((int)MenuItemType.BrowseFRCEvents);
         }
 
         async private void Button_Select_Teams_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new ItemsPage());
-            await RootPage.NavigateFromMenu((int)MenuItemType.Browse);
+            //await RootPage.NavigateFromMenu((int)MenuItemType.BrowseFRCEvents);
         }
 
-        async private void Home_Options_Clicked(object sender, EventArgs e)
+        async private void Select_Items_Clicked(object sender, EventArgs e)
         {
-            //todo add options page
+            await RootPage.NavigateFromMenu((int)MenuItemType.BrowseItems);
         }
     }
 }

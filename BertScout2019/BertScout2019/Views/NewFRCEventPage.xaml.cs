@@ -23,10 +23,10 @@ namespace BertScout2019.Views
             BindingContext = this;
         }
 
-        async void Save_Clicked(object sender, EventArgs e)
+        void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddFRCEvent", FRCEvent);
-            await Navigation.PopModalAsync();
+            Navigation.PopModalAsync();
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)

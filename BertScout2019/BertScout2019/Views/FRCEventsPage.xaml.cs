@@ -30,9 +30,9 @@ namespace BertScout2019.Views
             FRCEventsListView.SelectedItem = null;
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
+        async void AddFRCEvent_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new NewFRCEventPage()));
         }
 
         protected override void OnAppearing()

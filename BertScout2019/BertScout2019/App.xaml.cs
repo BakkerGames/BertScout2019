@@ -1,7 +1,6 @@
-﻿using System;
+﻿using BertScout2019.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using BertScout2019.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BertScout2019
@@ -12,7 +11,6 @@ namespace BertScout2019
         public App()
         {
             InitializeComponent();
-
 
             MainPage = new MainPage();
         }

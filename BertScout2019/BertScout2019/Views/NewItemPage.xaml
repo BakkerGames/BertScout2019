@@ -23,10 +23,10 @@
     
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="FRC Event Name:" FontSize="Medium" />
-            <Entry Text="{Binding FRCEvent.Name}" FontSize="Small" />
-            <Label Text="Location:" FontSize="Medium" />
-            <Entry Text="{Binding FRCEvent.Location}" FontSize="Small" />
+            <Label Text="Text:" FontSize="Medium" />
+            <Entry Text="{Binding Item.Text}" FontSize="Small" />
+            <Label Text="Description:" FontSize="Medium" />
+            <Entry Text="{Binding Item.Description}" FontSize="Small" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

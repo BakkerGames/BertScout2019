@@ -4,7 +4,7 @@
              x:Class="BertScout2019.Views.FRCEventsPage"
              Title="FRC Events">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
+        <ToolbarItem Text="Add" Clicked="AddFRCEvent_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="UWP" Value="add.png"/>

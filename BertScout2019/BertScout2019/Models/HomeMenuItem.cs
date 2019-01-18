@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BertScout2019.Models
+﻿namespace BertScout2019.Models
 {
     public enum MenuItemType
     {
         Home,
-        Browse,
+        BrowseFRCEvents,
+        BrowseItems,
         About
     }
     public class HomeMenuItem

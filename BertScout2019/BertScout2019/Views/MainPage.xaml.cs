@@ -1,5 +1,4 @@
 ﻿using BertScout2019.Models;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -19,7 +18,6 @@ namespace BertScout2019.Views
             MasterBehavior = MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.Home, (NavigationPage)Detail);
-            //MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -31,7 +29,10 @@ namespace BertScout2019.Views
                     case (int)MenuItemType.Home:
                         MenuPages.Add(id, new NavigationPage(new HomePage()));
                         break;
-                    case (int)MenuItemType.Browse:
+                    case (int)MenuItemType.BrowseFRCEvents:
+                        MenuPages.Add(id, new NavigationPage(new FRCEventsPage()));
+                        break;
+                    case (int)MenuItemType.BrowseItems:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
                     case (int)MenuItemType.About:

@@ -18,13 +18,14 @@ namespace BertScout2019.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Home, Title="Home" },
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
+                new HomeMenuItem {Id = MenuItemType.BrowseFRCEvents, Title="Browse FRC Events" },
+                new HomeMenuItem {Id = MenuItemType.BrowseItems, Title="Browse Items" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
 
-            ListViewMenu.SelectedItem = menuItems[0];
+            ListViewMenu.SelectedItem = null; // menuItems[0];
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)

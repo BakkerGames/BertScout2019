@@ -24,11 +24,20 @@
             Margin="20"
             WidthRequest="300"
             />
-        <Button 
+        <Button
             Text="Select Teams" 
             HorizontalOptions="Center" 
             VerticalOptions="Center"
             Clicked="Button_Select_Teams_Clicked" 
+            FontSize="Large"
+            Margin="20"
+            WidthRequest="300"
+            />
+        <Button
+            Text="Select Items (TEST)" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            Clicked="Select_Items_Clicked"
             FontSize="Large"
             Margin="20"
             WidthRequest="300"

@@ -22,7 +22,7 @@ namespace BertScout2019.ViewModels
             FRCEvents = new ObservableCollection<FRCEvent>();
             LoadFRCEventsCommand = new Command(async () => await ExecuteLoadFRCEventsCommand());
 
-            MessagingCenter.Subscribe<NewFRCEventPage, FRCEvent>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewFRCEventPage, FRCEvent>(this, "AddFRCEvent", async (obj, item) =>
             {
                 var newItem = item as FRCEvent;
                 FRCEvents.Add(newItem);

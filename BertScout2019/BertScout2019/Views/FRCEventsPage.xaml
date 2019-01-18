@@ -15,10 +15,10 @@
 
     <StackLayout>
         <ListView x:Name="FRCEventsListView"
-                ItemsSource="{Binding Items}"
+                ItemsSource="{Binding FRCEvents}"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
-                RefreshCommand="{Binding LoadItemsCommand}"
+                RefreshCommand="{Binding LoadFRCEventsCommand}"
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RecycleElement"

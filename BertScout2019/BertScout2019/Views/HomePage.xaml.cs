@@ -21,19 +21,9 @@ namespace BertScout2019.Views
             InitializeComponent();
         }
 
-        // async private void Button_Select_FRC_Event_Clicked(object sender, EventArgs e) { }
-        private void Button_Select_FRC_Event_Clicked(object sender, EventArgs e)
+        async private void Button_Select_FRC_Event_Clicked(object sender, EventArgs e)
         {
-            if (!((Button)sender).Text.EndsWith("Hello!") 
-                && 
-                !((Button)sender).Text.StartsWith("Please"))
-            {
-                ((Button)sender).Text += " - Hello!";
-            }
-            else
-            {
-                ((Button)sender).Text = "Please don't click me again!";
-            }
+            await Navigation.PushAsync(new FRCEventsPage());
         }
 
         async private void Button_Select_Teams_Clicked(object sender, EventArgs e)
@@ -44,7 +34,7 @@ namespace BertScout2019.Views
 
         async private void Home_Options_Clicked(object sender, EventArgs e)
         {
-            //todo add in options
+            //todo add options page
         }
     }
 }

@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="BertScout2019.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BertScout2019.UWP"
+    RequestedTheme="Light">
+
+</Application>

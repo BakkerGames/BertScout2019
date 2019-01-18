@@ -14,13 +14,15 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <StackLayout>
+    <StackLayout VerticalOptions="CenterAndExpand">
         <Button
             Text="Select FRC Event" 
             HorizontalOptions="Center" 
             VerticalOptions="Center"
             Clicked="Button_Select_FRC_Event_Clicked"
             FontSize="Large"
+            Margin="20"
+            WidthRequest="300"
             />
         <Button 
             Text="Select Teams" 
@@ -28,6 +30,8 @@
             VerticalOptions="Center"
             Clicked="Button_Select_Teams_Clicked" 
             FontSize="Large"
+            Margin="20"
+            WidthRequest="300"
             />
     </StackLayout>
 </ContentPage>

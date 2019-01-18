@@ -1,6 +1,6 @@
 # BertScout2019
 
-This is the FIRST Robotics FRC event scouting app for the 2019 season. It is
+This is a FIRST Robotics FRC event scouting app for the 2019 season. It is
 being written by BERT 133 (Bonny Eagle Robotics Team) in Standish, Maine, USA.
 
 Scouting is done during matches to aid in alliance selection for the finals.
@@ -9,10 +9,10 @@ join them in the finals. This app tracks how all the teams did during their
 qualification matches. Six teams compete at a time, three on each side, and
 six Kindle Fires are used to enter the data from one robot per match.
 
-The app this year is being written in C# using Xamarin.Forms, so it can be
-used from Kindle Fire tablets (Android) as well as Windows 10 computers (UWP).
-It includes the project for running it on iOS, but that may be beyond
-the scope for this year.
+The app this year is being written in C# using Xamarin.Forms in Visual Studio
+Community 2017, so it can be used from Kindle Fire tablets (Android) as well
+as Windows 10 computers (UWP). It includes the project for running it on iOS,
+but using iOS devices may be beyond the scope for this year.
 
 All data will be stored locally on each device, and transmitted to an
 external website server for consolidation. The combined results will be

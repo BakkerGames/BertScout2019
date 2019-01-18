@@ -6,28 +6,28 @@ using Xamarin.Forms.Xaml;
 namespace BertScout2019.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ItemDetailPage : ContentPage
+    public partial class FRCEventDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        FRCEventDetailViewModel viewModel;
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public FRCEventDetailPage(FRCEventDetailViewModel viewModel)
         {
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
         }
 
-        public ItemDetailPage()
+        public FRCEventDetailPage()
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new FRCEvent
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Name = "Event 1 Name",
+                Location = "Event 1 Location"
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new FRCEventDetailViewModel(item);
             BindingContext = viewModel;
         }
     }

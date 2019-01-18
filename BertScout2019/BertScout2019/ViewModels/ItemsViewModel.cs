@@ -1,17 +1,18 @@
-﻿using System;
+﻿using BertScout2019.Models;
+using BertScout2019.Services;
+using BertScout2019.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using BertScout2019.Models;
-using BertScout2019.Views;
 
 namespace BertScout2019.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 

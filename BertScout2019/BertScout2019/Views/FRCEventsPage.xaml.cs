@@ -7,27 +7,27 @@ using Xamarin.Forms.Xaml;
 namespace BertScout2019.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ItemsPage : ContentPage
+    public partial class FRCEventsPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        FRCEventsViewModel viewModel;
 
-        public ItemsPage()
+        public FRCEventsPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new FRCEventsViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            var item = args.SelectedItem as FRCEvent;
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new FRCEventDetailPage(new FRCEventDetailViewModel(item)));
 
             // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            FRCEventsListView.SelectedItem = null;
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
@@ -39,8 +39,8 @@ namespace BertScout2019.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            if (viewModel.FRCEvents.Count == 0)
+                viewModel.LoadFRCEventsCommand.Execute(null);
         }
     }
 }

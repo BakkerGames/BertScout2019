@@ -6,18 +6,18 @@ using Xamarin.Forms.Xaml;
 namespace BertScout2019.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewItemPage : ContentPage
+    public partial class NewFRCEventPage : ContentPage
     {
-        public Item Item { get; set; }
+        public FRCEvent FRCEvent { get; set; }
 
-        public NewItemPage()
+        public NewFRCEventPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            FRCEvent = new FRCEvent
             {
-                Text = "Item name",
-                Description = "This is an item description."
+                Name = "FRC Event name",
+                Location = "FRC Event location"
             };
 
             BindingContext = this;
@@ -25,7 +25,7 @@ namespace BertScout2019.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            MessagingCenter.Send(this, "AddFRCEvent", FRCEvent);
             await Navigation.PopModalAsync();
         }
 

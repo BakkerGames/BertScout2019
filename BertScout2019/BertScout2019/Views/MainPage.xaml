@@ -16,7 +16,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:MainSelectionPage />
+                <views:HomePage />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

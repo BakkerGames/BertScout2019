@@ -6,6 +6,7 @@ namespace BertScout2019.Models
 {
     public enum MenuItemType
     {
+        Home,
         Browse,
         About
     }

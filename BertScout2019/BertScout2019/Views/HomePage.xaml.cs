@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace BertScout2019.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainSelectionPage : ContentPage
+    public partial class HomePage : ContentPage
     {
-        public MainSelectionPage()
+        public HomePage()
         {
             InitializeComponent();
         }

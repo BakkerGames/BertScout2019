@@ -30,5 +30,10 @@ namespace BertScout2019.Views
                 ((Button)sender).Text = "Please don't click me again!";
             }
         }
+
+        async private void Button_Select_Teams_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ItemsPage()));
+        }
     }
 }

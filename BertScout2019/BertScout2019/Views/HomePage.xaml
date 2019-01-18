@@ -16,16 +16,18 @@
 
     <StackLayout>
         <Button
-                Text="Select FRC Event" 
-                HorizontalOptions="Center" 
-                VerticalOptions="Center"
-                Clicked="Button_Select_FRC_Event_Clicked"
-                />
+            Text="Select FRC Event" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            Clicked="Button_Select_FRC_Event_Clicked"
+            FontSize="Large"
+            />
         <Button 
-                Text="Select Teams" 
-                HorizontalOptions="Center" 
-                VerticalOptions="Center"
-                Clicked="Button_Select_Teams_Clicked" 
-                />
+            Text="Select Teams" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            Clicked="Button_Select_Teams_Clicked" 
+            FontSize="Large"
+            />
     </StackLayout>
 </ContentPage>

@@ -4,8 +4,17 @@
              x:Class="BertScout2019.Views.MainSelectionPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand">
-            <Button Text="Select FRC Event" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Button Text="Select Teams" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button
+                Text="Select FRC Event" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                Clicked="Button_Select_FRC_Event_Clicked"
+                />
+            <Button 
+                Text="Select Teams" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

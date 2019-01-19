@@ -24,6 +24,9 @@ namespace BertScout2019.Views
             if (item == null)
                 return;
 
+            App app = Application.Current as App;
+            app.CurrentFRCEvent = item.Name;
+
             await Navigation.PushAsync(new FRCEventDetailPage(new FRCEventDetailViewModel(item)));
 
             // Manually deselect item.

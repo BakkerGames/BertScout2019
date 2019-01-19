@@ -7,12 +7,17 @@ namespace BertScout2019
 {
     public partial class App : Application
     {
+        const string frcEventProperty = "currentFRCEvent";
+        public string CurrentFRCEvent { get; set; }
 
         public App()
         {
+            if (Properties.ContainsKey(frcEventProperty))
+            {
+                CurrentFRCEvent = (string)Properties[frcEventProperty];
+            }
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new MainPage() { BarBackgroundColor = Color.FromHex("#22be1c") };
         }
 
         protected override void OnStart()
@@ -23,6 +28,7 @@ namespace BertScout2019
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            Properties[frcEventProperty] = CurrentFRCEvent;
         }
 
         protected override void OnResume()

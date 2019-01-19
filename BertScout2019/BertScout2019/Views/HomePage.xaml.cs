@@ -14,6 +14,10 @@ namespace BertScout2019.Views
         public HomePage()
         {
             InitializeComponent();
+
+            // show the event last picked
+            App app = Application.Current as App;
+            CurrentFRCEventLabel.Text = app.CurrentFRCEvent;
         }
 
         async private void Home_Options_Clicked(object sender, EventArgs e)

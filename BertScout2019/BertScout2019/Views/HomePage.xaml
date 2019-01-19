@@ -4,6 +4,7 @@
              x:Class="BertScout2019.Views.HomePage"
              Title="Bert Scouting 2019"
              x:Name="HomeMainPage">
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Options" Clicked="Home_Options_Clicked">
             <ToolbarItem.Icon>
@@ -15,6 +16,14 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout VerticalOptions="CenterAndExpand">
+        <Label
+            x:Name="CurrentFRCEventLabel"
+            Text="You haven't selected an event yet"
+            HorizontalOptions="Center"
+            FontSize="Large"
+            TextColor="Green"
+            FontAttributes="Bold"
+            />
         <Button
             Text="Select FRC Event" 
             HorizontalOptions="Center" 

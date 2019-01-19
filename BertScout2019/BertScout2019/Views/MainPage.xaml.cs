@@ -20,6 +20,8 @@ namespace BertScout2019.Views
             MenuPages.Add((int)MenuItemType.Home, (NavigationPage)Detail);
         }
 
+        public Color BarBackgroundColor { get; internal set; }
+
         public async Task NavigateFromMenu(int id)
         {
             if (!MenuPages.ContainsKey(id))

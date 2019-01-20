@@ -18,12 +18,20 @@ namespace BertScout2019.Views
             BindingContext = viewModel = new SelectEventsViewModel(); 
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (viewModel.FRCEvents.Count == 0)
+                viewModel.LoadFRCEventsCommand.Execute(null);
+        }
+
         async void AddFRCEvent_Clicked(object sender, EventArgs e)
         {
             //await Navigation.PushModalAsync(new NavigationPage(new NewFRCEventPage()));
         }
 
-        async void OnFRCEventSelected(object sender, SelectedItemChangedEventArgs args)
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var item = args.SelectedItem as FRCEvent;
             if (item == null)

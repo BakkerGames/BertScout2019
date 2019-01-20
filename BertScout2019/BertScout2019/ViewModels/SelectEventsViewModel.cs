@@ -18,7 +18,7 @@ namespace BertScout2019.ViewModels
 
         public SelectEventsViewModel()
         {
-            Title = "Select Event";
+            Title = "Select FRC Event";
             FRCEvents = new ObservableCollection<FRCEvent>();
             LoadFRCEventsCommand = new Command(async () => await ExecuteLoadFRCEventsCommand());
 
@@ -32,6 +32,7 @@ namespace BertScout2019.ViewModels
 
         async Task ExecuteLoadFRCEventsCommand()
         {
+            Console.WriteLine("### in ExecuteLoadFRCEventsCommand"); //todo for testing
             if (IsBusy)
                 return;
 

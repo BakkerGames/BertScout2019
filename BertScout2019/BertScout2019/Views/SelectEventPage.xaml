@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BertScout2019.Views.SelectEventPage"
-             Title="Select FRC Event">
+             Title="{Binding Title}">
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddFRCEvent_Clicked">
             <ToolbarItem.Icon>
@@ -23,7 +24,7 @@
             IsPullToRefreshEnabled="true"
             IsRefreshing="{Binding IsBusy, Mode=OneWay}"
             CachingStrategy="RecycleElement"
-            ItemSelected="OnFRCEventSelected">
+            ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

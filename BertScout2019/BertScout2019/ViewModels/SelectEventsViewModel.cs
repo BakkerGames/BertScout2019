@@ -32,7 +32,6 @@ namespace BertScout2019.ViewModels
 
         async Task ExecuteLoadFRCEventsCommand()
         {
-            Console.WriteLine("### in ExecuteLoadFRCEventsCommand"); //todo for testing
             if (IsBusy)
                 return;
 

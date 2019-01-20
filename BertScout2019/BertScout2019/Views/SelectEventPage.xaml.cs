@@ -24,6 +24,17 @@ namespace BertScout2019.Views
 
             if (viewModel.FRCEvents.Count == 0)
                 viewModel.LoadFRCEventsCommand.Execute(null);
+
+            App app = Application.Current as App;
+            
+            foreach (FRCEvent item in viewModel.FRCEvents)
+            {
+                if (item.Name == app.CurrentFRCEvent)
+                {
+                    FRCEventsListView.SelectedItem = item;
+                    break;
+                }
+            }
         }
 
         async void AddFRCEvent_Clicked(object sender, EventArgs e)
@@ -31,7 +42,7 @@ namespace BertScout2019.Views
             //await Navigation.PushModalAsync(new NavigationPage(new NewFRCEventPage()));
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var item = args.SelectedItem as FRCEvent;
             if (item == null)
@@ -39,11 +50,6 @@ namespace BertScout2019.Views
 
             App app = Application.Current as App;
             app.CurrentFRCEvent = item.Name;
-
-            //await Navigation.PushAsync(new FRCEventDetailPage(new FRCEventDetailViewModel(item)));
-
-            // Manually deselect item.
-            FRCEventsListView.SelectedItem = null;
         }
     }
 }

@@ -12,6 +12,12 @@ namespace BertScout2019.Views
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            App app = Application.Current as App;
+            CurrentFRCEventLabel.Text = app.CurrentFRCEvent;
+        }
+
         async private void MainPage_Options_Clicked(object sender, EventArgs e)
         {
             //todo add options page

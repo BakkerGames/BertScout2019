@@ -9,25 +9,25 @@ using Xamarin.Forms;
 
 namespace BertScout2019.ViewModels
 {
-    public class FRCEventsViewModel : BaseViewModel
+    public class SelectEventsViewModel : BaseViewModel
     {
         public IDataStore<FRCEvent> DataStoreFRCEvent => DependencyService.Get<IDataStore<FRCEvent>>() ?? new MockDataStoreFRCEvent();
 
         public ObservableCollection<FRCEvent> FRCEvents { get; set; }
         public Command LoadFRCEventsCommand { get; set; }
 
-        public FRCEventsViewModel()
+        public SelectEventsViewModel()
         {
-            Title = "FRC Events";
+            Title = "Select Event";
             FRCEvents = new ObservableCollection<FRCEvent>();
             LoadFRCEventsCommand = new Command(async () => await ExecuteLoadFRCEventsCommand());
 
-            MessagingCenter.Subscribe<NewFRCEventPage, FRCEvent>(this, "AddFRCEvent", async (obj, item) =>
-            {
-                var newItem = item as FRCEvent;
-                FRCEvents.Add(newItem);
-                await DataStoreFRCEvent.AddItemAsync(newItem);
-            });
+            //MessagingCenter.Subscribe<NewFRCEventPage, FRCEvent>(this, "AddFRCEvent", async (obj, item) =>
+            //{
+            //    var newItem = item as FRCEvent;
+            //    FRCEvents.Add(newItem);
+            //    await DataStoreFRCEvent.AddItemAsync(newItem);
+            //});
         }
 
         async Task ExecuteLoadFRCEventsCommand()

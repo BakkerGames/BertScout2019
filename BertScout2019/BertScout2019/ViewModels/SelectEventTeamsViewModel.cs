@@ -14,16 +14,15 @@ namespace BertScout2019.ViewModels
         public IDataStore<EventTeam> DataStoreEventTeam => new XmlDataStoreEventTeams();
         public IDataStore<Team> DataStoreTeam => new XmlDataStoreTeams();
 
-        public List<EventTeam> EventTeams { get; set; }
+        public ObservableCollection<EventTeam> EventTeams { get; set; }
         public ObservableCollection<Team> Teams { get; set; }
         public Command LoadEventTeamsCommand { get; set; }
 
         public SelectEventTeamsViewModel()
         {
             App app = Application.Current as App;
-
             Title = app.CurrentFRCEvent;
-            EventTeams = new List<EventTeam>();
+            EventTeams = new ObservableCollection<EventTeam>();
             Teams = new ObservableCollection<Team>();
             ExecuteLoadEventTeamsCommand();
             //LoadEventTeamsCommand = new Command(async () => await ExecuteLoadEventTeamsCommand());

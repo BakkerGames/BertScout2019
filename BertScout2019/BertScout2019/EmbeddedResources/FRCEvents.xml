@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFRCEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FRCEvent>
+    <Id>129a6c3f-7786-4da3-9f7e-d0ad26f83702</Id>
+    <Name>Event 1</Name>
+    <Location>TBD</Location>
+    <StartDate>03/01/2019</StartDate>
+    <EndDate>03/01/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>8b3c6df9-2496-4468-95d6-a5312456d3f1</Id>
+    <Name>Event 2</Name>
+    <Location>TBD</Location>
+    <StartDate>03/02/2019</StartDate>
+    <EndDate>03/02/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>4aa37204-09ce-44b3-af47-82161130d5fb</Id>
+    <Name>Event 3</Name>
+    <Location>TBD</Location>
+    <StartDate>03/03/2019</StartDate>
+    <EndDate>03/03/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>fc5e7c8e-46d3-4d9b-b5f4-60b72958dba7</Id>
+    <Name>Event 4</Name>
+    <Location>TBD</Location>
+    <StartDate>03/04/2019</StartDate>
+    <EndDate>03/04/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>0cbd4476-bb58-4890-b320-b9d62a6705a0</Id>
+    <Name>Event 5</Name>
+    <Location>TBD</Location>
+    <StartDate>03/05/2019</StartDate>
+    <EndDate>03/05/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>0fed6339-afd7-476a-b76c-76b21154d2ee</Id>
+    <Name>Event 6</Name>
+    <Location>TBD</Location>
+    <StartDate>03/06/2019</StartDate>
+    <EndDate>03/06/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>63dfe303-8d28-49b6-a89d-6ed47d65a1b2</Id>
+    <Name>Event 7</Name>
+    <Location>TBD</Location>
+    <StartDate>03/07/2019</StartDate>
+    <EndDate>03/07/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>bbf53f9b-1668-45f9-a4ac-635b8e2cda4d</Id>
+    <Name>Event 8</Name>
+    <Location>TBD</Location>
+    <StartDate>03/08/2019</StartDate>
+    <EndDate>03/08/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>5725c1ea-07dd-4ebb-914c-4155144056fe</Id>
+    <Name>Event 9</Name>
+    <Location>TBD</Location>
+    <StartDate>03/09/2019</StartDate>
+    <EndDate>03/09/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>659c919d-8c7e-4e75-bf99-f4c5f99ce03e</Id>
+    <Name>Event 10</Name>
+    <Location>TBD</Location>
+    <StartDate>03/10/2019</StartDate>
+    <EndDate>03/10/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>9b60cba3-dea0-49be-a5a1-b4023f8e663d</Id>
+    <Name>Event 11</Name>
+    <Location>TBD</Location>
+    <StartDate>03/11/2019</StartDate>
+    <EndDate>03/11/2019</EndDate>
+  </FRCEvent>
+  <FRCEvent>
+    <Id>c372a084-aabb-46b1-8e3c-c8eb7d67d293</Id>
+    <Name>Event 12</Name>
+    <Location>TBD</Location>
+    <StartDate>03/12/2019</StartDate>
+    <EndDate>03/12/2019</EndDate>
+  </FRCEvent>
+</ArrayOfFRCEvent>

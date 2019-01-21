@@ -41,6 +41,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="EmbeddedResources\FRCEvents.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\FRCEvents.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />  
   </ItemGroup>
 

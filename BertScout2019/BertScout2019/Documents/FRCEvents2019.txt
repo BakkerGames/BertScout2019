@@ -1,98 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfFRCEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FRCEvent>
-    <Id>4D993B4B-935D-4F14-BBCC-81640FA40918</Id>
+    <Id>NEDIST_GRANITE</Id>
     <Name>NE District Granite State Event</Name>
     <Location>Salem, NH, USA</Location>
     <StartDate>02/28/2019</StartDate>
     <EndDate>03/02/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>EAF38C33-564A-42A1-AB72-E1E83694EB9D</Id>
+    <Id>NEDIST_SEMASS</Id>
     <Name>NE District SE Mass Event</Name>
     <Location>Bridgewater, MA, USA</Location>
     <StartDate>03/08/2019</StartDate>
     <EndDate>03/10/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>C1FB6EDD-8978-4308-944D-A066CE67C3D8</Id>
+    <Id>NEDIST_WATERBURY</Id>
     <Name>NE District Waterbury Event</Name>
     <Location>Waterbury, CT, USA</Location>
     <StartDate>03/08/2019</StartDate>
     <EndDate>03/10/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>CEFA700C-9DC1-409F-970D-3110E27C8407</Id>
+    <Id>NEDIST_NORTHSHORE</Id>
     <Name>NE District North Shore Event</Name>
     <Location>Reading, MA, USA</Location>
     <StartDate>03/15/2019</StartDate>
     <EndDate>03/17/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>AAF18836-04A0-44D6-BF18-9A102D866088</Id>
+    <Id>NEDIST_SOUTHERNNH</Id>
     <Name>NE District Southern NH Event</Name>
     <Location>Bedford, NH, USA</Location>
     <StartDate>03/15/2019</StartDate>
     <EndDate>03/17/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>B4A558CF-CD69-43CD-A1D2-57FE330CF440</Id>
+    <Id>NEDIST_BOSTON</Id>
     <Name>NE District Greater Boston Event</Name>
     <Location>Revere, MA, USA</Location>
     <StartDate>03/22/2019</StartDate>
     <EndDate>03/24/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>64EA583F-33F4-4A3F-BCA6-EF6E7EB1DEB2</Id>
+    <Id>NEDIST_RHODEISLAND</Id>
     <Name>NE District Rhode Island Event</Name>
     <Location>Smithfield, RI, USA</Location>
     <StartDate>03/22/2019</StartDate>
     <EndDate>03/24/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>04DCBC1A-776B-4972-8F70-CA6A12D3DF25</Id>
+    <Id>NEDIST_WESTNE</Id>
     <Name>NE District Western NE Event</Name>
     <Location>Springfield, MA, USA</Location>
     <StartDate>03/22/2019</StartDate>
     <EndDate>03/24/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>56332171-A097-48C1-B055-EB9296109C8B</Id>
+    <Id>NEDIST_CENTRALMA</Id>
     <Name>NE District Central Mass Event</Name>
     <Location>Shrewsbury, MA, USA</Location>
     <StartDate>03/29/2019</StartDate>
     <EndDate>03/31/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>0B66DBFB-01C2-4C80-A5E0-B7976B887DD8</Id>
+    <Id>NEDIST_UNH</Id>
     <Name>NE District UNH Event</Name>
     <Location>Durham, NH, USA</Location>
     <StartDate>03/29/2019</StartDate>
     <EndDate>03/31/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>F14F02FB-4CFB-4CE9-AEC0-F9277C1F3128</Id>
+    <Id>NEDIST_PINETREE</Id>
     <Name>NE District Pine Tree Event</Name>
     <Location>Lewiston, ME, USA</Location>
     <StartDate>04/04/2019</StartDate>
     <EndDate>04/06/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>01D8651E-ABD2-4377-91BF-CBC422AAA95E</Id>
+    <Id>NEDIST_HARTFORD</Id>
     <Name>NE District Hartford Event</Name>
     <Location>Hartford, CT, USA</Location>
     <StartDate>04/05/2019</StartDate>
     <EndDate>04/07/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>AB553675-C80D-4711-B07D-F7293C2BBC64</Id>
+    <Id>NEDIST_CHAMP</Id>
     <Name>New England District Championship</Name>
     <Location>Worcester, MA, USA</Location>
     <StartDate>04/10/2019</StartDate>
     <EndDate>04/13/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Id>81F2D736-8C59-4F5B-AEFF-66AA3E9CBD08</Id>
+    <Id>WORLD_DETROIT</Id>
     <Name>2019 FIRST Championship Detroit</Name>
     <Location>Detroit, MI, USA</Location>
     <StartDate>04/24/2019</StartDate>

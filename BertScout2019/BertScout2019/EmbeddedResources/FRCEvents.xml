@@ -35,4 +35,11 @@
     <StartDate>04/04/2019</StartDate>
     <EndDate>04/06/2019</EndDate>
   </FRCEvent>
+  <FRCEvent>
+    <Id>AB553675-C80D-4711-B07D-F7293C2BBC64</Id>
+    <Name>New England District Championship</Name>
+    <Location>Worcester, MA, USA</Location>
+    <StartDate>04/10/2019</StartDate>
+    <EndDate>04/13/2019</EndDate>
+  </FRCEvent>
 </ArrayOfFRCEvent>

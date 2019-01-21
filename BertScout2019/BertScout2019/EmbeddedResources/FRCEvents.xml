@@ -42,4 +42,11 @@
     <StartDate>04/10/2019</StartDate>
     <EndDate>04/13/2019</EndDate>
   </FRCEvent>
+  <FRCEvent>
+    <Id>81F2D736-8C59-4F5B-AEFF-66AA3E9CBD08</Id>
+    <Name>2019 FIRST Championship Detroit</Name>
+    <Location>Detroit, MI, USA</Location>
+    <StartDate>04/24/2019</StartDate>
+    <EndDate>04/27/2019</EndDate>
+  </FRCEvent>
 </ArrayOfFRCEvent>

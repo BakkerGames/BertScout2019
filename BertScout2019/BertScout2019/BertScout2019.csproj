@@ -13,6 +13,7 @@
     <Compile Remove="Models\HomeMenuItem.cs" />
     <Compile Remove="Models\Item.cs" />
     <Compile Remove="Services\MockDataStore.cs" />
+    <Compile Remove="Services\MockDataStoreFRCEvent.cs" />
     <Compile Remove="ViewModels\AboutViewModel.cs" />
     <Compile Remove="ViewModels\FRCEventDetailViewModel.cs" />
     <Compile Remove="ViewModels\ItemDetailViewModel.cs" />
@@ -41,11 +42,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="EmbeddedResources\EventTeams.xml" />
     <None Remove="EmbeddedResources\FRCEvents.xml" />
     <None Remove="EmbeddedResources\Teams.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\EventTeams.xml" />
     <EmbeddedResource Include="EmbeddedResources\FRCEvents.xml" />
     <EmbeddedResource Include="EmbeddedResources\Teams.xml" />
   </ItemGroup>
@@ -59,6 +62,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SelectEventPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SelectEventTeamPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

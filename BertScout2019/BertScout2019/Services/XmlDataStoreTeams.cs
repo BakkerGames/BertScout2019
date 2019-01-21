@@ -1,0 +1,59 @@
+﻿using BertScout2019.Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace BertScout2019.Services
+{
+    public class XmlDataStoreTeams : IDataStore<Team>
+    {
+        List<Team> items;
+
+        public XmlDataStoreTeams()
+        {
+            items = new List<Team>();
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("BertScout2019.EmbeddedResources.Teams.xml");
+            using (var reader = new StreamReader(stream))
+            {
+                var serializer = new XmlSerializer(typeof(List<Team>));
+                items = (List<Team>)serializer.Deserialize(reader);
+            }
+        }
+
+        public async Task<bool> AddItemAsync(Team item)
+        {
+            items.Add(item);
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DeleteItemAsync(string id)
+        {
+            var oldItem = items.Where((Team arg) => arg.Id == id).FirstOrDefault();
+            items.Remove(oldItem);
+            return await Task.FromResult(true);
+        }
+
+        public async Task<Team> GetItemAsync(string id)
+        {
+            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+        }
+
+        public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
+        {
+            return await Task.FromResult(items);
+        }
+
+        public async Task<bool> UpdateItemAsync(Team item)
+        {
+            var oldItem = items.Where((Team arg) => arg.Id == item.Id).FirstOrDefault();
+            items.Remove(oldItem);
+            items.Add(item);
+            return await Task.FromResult(true);
+        }
+    }
+}

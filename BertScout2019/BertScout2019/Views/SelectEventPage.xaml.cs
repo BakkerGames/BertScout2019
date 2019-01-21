@@ -1,6 +1,5 @@
 ﻿using BertScout2019.Models;
 using BertScout2019.ViewModels;
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,7 +14,7 @@ namespace BertScout2019.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new SelectEventsViewModel(); 
+            BindingContext = viewModel = new SelectEventsViewModel();
         }
 
         protected override void OnAppearing()
@@ -26,7 +25,7 @@ namespace BertScout2019.Views
                 viewModel.LoadFRCEventsCommand.Execute(null);
 
             App app = Application.Current as App;
-            
+
             foreach (FRCEvent item in viewModel.FRCEvents)
             {
                 if (item.Id == app.CurrentFRCEventID)

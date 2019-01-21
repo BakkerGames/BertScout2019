@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ArrayOfEventTeam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EventTeam>
+    <Id>AF07BEA3-3213-40E2-B058-19EC5920F851</Id>
     <EventID>TEST</EventID>
     <TeamID>133</TeamID>
   </EventTeam>

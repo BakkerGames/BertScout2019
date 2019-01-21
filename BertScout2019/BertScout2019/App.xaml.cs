@@ -8,11 +8,19 @@ namespace BertScout2019
     public partial class App : Application
     {
         public const string BertColor = "#22BE1C";
+
+        private const string frcEventPropertyID = "currentFRCEventID";
         private const string frcEventProperty = "currentFRCEvent";
+
+        public string CurrentFRCEventID { get; set; }
         public string CurrentFRCEvent { get; set; }
 
         public App()
         {
+            if (Properties.ContainsKey(frcEventPropertyID))
+            {
+                CurrentFRCEventID = (string)Properties[frcEventPropertyID];
+            }
             if (Properties.ContainsKey(frcEventProperty))
             {
                 CurrentFRCEvent = (string)Properties[frcEventProperty];
@@ -32,6 +40,7 @@ namespace BertScout2019
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            Properties[frcEventPropertyID] = CurrentFRCEventID;
             Properties[frcEventProperty] = CurrentFRCEvent;
         }
 

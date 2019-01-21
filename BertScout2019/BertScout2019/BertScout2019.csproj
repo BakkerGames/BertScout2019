@@ -42,10 +42,12 @@
 
   <ItemGroup>
     <None Remove="EmbeddedResources\FRCEvents.xml" />
+    <None Remove="EmbeddedResources\Teams.xml" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\FRCEvents.xml" />
+    <EmbeddedResource Include="EmbeddedResources\Teams.xml" />
   </ItemGroup>
 
   <ItemGroup>

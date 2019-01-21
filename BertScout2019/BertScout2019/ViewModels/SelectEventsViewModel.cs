@@ -1,13 +1,9 @@
 ﻿using BertScout2019.Models;
 using BertScout2019.Services;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 using Xamarin.Forms;
 
 namespace BertScout2019.ViewModels
@@ -44,42 +40,11 @@ namespace BertScout2019.ViewModels
             try
             {
                 FRCEvents.Clear();
-
-
-                //var assembly = typeof(App).GetTypeInfo().Assembly;
-                //Stream stream = assembly.GetManifestResourceStream("BertScout2019.EmbeddedResources.FRCEvents.xml");
-                //using (var reader = new StreamReader(stream))
-                //{
-                //    var serializer = new XmlSerializer(typeof(ObservableCollection<FRCEvent>));
-                //    FRCEvents = (ObservableCollection<FRCEvent>)serializer.Deserialize(reader);
-                //}
-                //foreach (FRCEvent obj in FRCEvents)
-                //{
-                //    Console.WriteLine(obj.Name);
-                //}
-                //Console.ReadLine();
-                //var assembly = IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly;
-                //Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
-                //List<FRCEvent> FRCEvents;
-                //using (var reader = new System.IO.StreamReader(stream))
-                //{
-                //    var serializer = new XmlSerializer(typeof(List<FRCEvent>));
-                //    FRCEvents = (List<FRCEvent>)serializer.Deserialize(reader);
-                //}
-                //var listView = new ListView();
-                //listView.ItemsSource = FRCEvents;
-
-
-
                 var items = await DataStoreFRCEvent.GetItemsAsync(true);
                 foreach (var item in items)
                 {
                     FRCEvents.Add(item);
                 }
-                //XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<FRCEvent>));
-                //StringWriter sw = new StringWriter();
-                //serializer.Serialize(sw, FRCEvents);
-                //Console.WriteLine(sw.ToString());
             }
             catch (Exception ex)
             {

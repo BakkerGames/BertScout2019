@@ -37,11 +37,6 @@ namespace BertScout2019.Views
             }
         }
 
-        async void AddFRCEvent_Clicked(object sender, EventArgs e)
-        {
-            //await Navigation.PushModalAsync(new NavigationPage(new NewFRCEventPage()));
-        }
-
         void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var item = args.SelectedItem as FRCEvent;

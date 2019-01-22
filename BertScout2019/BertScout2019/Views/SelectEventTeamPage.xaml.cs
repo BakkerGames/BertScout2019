@@ -1,4 +1,5 @@
 ﻿using BertScout2019.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,9 +17,10 @@ namespace BertScout2019.Views
             BindingContext = viewModel = new SelectEventTeamsViewModel();
         }
 
-        private void EventTeamsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void EventTeamsListView_ItemSelected(object sender, EventArgs e)
         {
             //todo
+            await Navigation.PushAsync(new TeamMatchListPage());
         }
     }
 }

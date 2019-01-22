@@ -1,6 +1,9 @@
 ﻿using BertScout2019.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
+using System.IO;
+using System;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BertScout2019
@@ -11,17 +14,20 @@ namespace BertScout2019
         public const string HighlightColor = "#23DAFF";
         public Color SelectedButtonColor = Color.LightGray;
 
-        private const string frcEventPropertyID = "currentFRCEventID";
+        private const string frcEventPropertyID = "currentFRCEventId";
         private const string frcEventProperty = "currentFRCEvent";
 
-        public string CurrentFRCEventID { get; set; }
+        public string CurrentFRCEventId { get; set; }
         public string CurrentFRCEvent { get; set; }
+
+        public const string dbFilename = "bertscout2019.db3";
+        public string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), dbFilename);
 
         public App()
         {
             if (Properties.ContainsKey(frcEventPropertyID))
             {
-                CurrentFRCEventID = (string)Properties[frcEventPropertyID];
+                CurrentFRCEventId = (string)Properties[frcEventPropertyID];
             }
             if (Properties.ContainsKey(frcEventProperty))
             {
@@ -42,7 +48,7 @@ namespace BertScout2019
         protected override void OnSleep()
         {
             // Handle when your app sleeps
-            Properties[frcEventPropertyID] = CurrentFRCEventID;
+            Properties[frcEventPropertyID] = CurrentFRCEventId;
             Properties[frcEventProperty] = CurrentFRCEvent;
         }
 

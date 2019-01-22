@@ -1,493 +1,493 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ArrayOfEventTeam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EventTeam>
-    <Id>TEST_133</Id>
-    <EventID>TEST</EventID>
-    <TeamID>133</TeamID>
+    <Id>0</Id>
+    <EventId>TEST</EventId>
+    <TeamNumber>133</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_126</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>126</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>126</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_131</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>131</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>131</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_133</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>133</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>133</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_138</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>138</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>138</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_151</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>151</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>151</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_166</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>166</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>166</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_213</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>213</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>213</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_319</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>319</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>319</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_509</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>509</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>509</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_885</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>885</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>885</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1058</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1058</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1058</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1247</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1247</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1247</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1277</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1277</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1277</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1307</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1307</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1307</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1517</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1517</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1517</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1729</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1729</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1729</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1735</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1735</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1735</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_1922</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>1922</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>1922</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_2342</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>2342</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>2342</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_3323</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>3323</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>3323</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_3467</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>3467</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>3467</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_3609</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>3609</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>3609</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_3623</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>3623</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>3623</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_4034</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>4034</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>4034</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_4041</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>4041</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>4041</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_4473</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>4473</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>4473</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_4925</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>4925</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>4925</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_6324</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>6324</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>6324</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_6337</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>6337</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>6337</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_6690</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>6690</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>6690</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_6762</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>6762</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>6762</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_6811</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>6811</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>6811</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_6933</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>6933</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>6933</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_7126</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>7126</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>7126</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_7133</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>7133</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>7133</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_7212</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>7212</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>7212</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_7314</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>7314</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>7314</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_7674</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>7674</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>7674</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_SOUTHERNNH_7913</Id>
-    <EventID>NEDIST_SOUTHERNNH</EventID>
-    <TeamID>7913</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_SOUTHERNNH</EventId>
+    <TeamNumber>7913</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_61</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>61</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>61</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_78</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>78</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>78</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_121</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>121</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>121</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_133</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>133</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>133</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_173</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>173</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>173</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_716</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>716</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>716</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_1153</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>1153</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>1153</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_1350</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>1350</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>1350</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_1740</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>1740</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>1740</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_2067</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>2067</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>2067</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_2168</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>2168</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>2168</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_2712</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>2712</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>2712</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_3146</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>3146</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>3146</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_3236</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>3236</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>3236</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_3719</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>3719</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>3719</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_4042</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>4042</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>4042</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_4097</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>4097</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>4097</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_4151</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>4151</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>4151</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_4176</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>4176</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>4176</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_4796</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>4796</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>4796</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_4908</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>4908</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>4908</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_5000</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>5000</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>5000</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_5112</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>5112</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>5112</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_5494</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>5494</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>5494</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_5846</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>5846</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>5846</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_RHODEISLAND_6620</Id>
-    <EventID>NEDIST_RHODEISLAND</EventID>
-    <TeamID>6620</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_RHODEISLAND</EventId>
+    <TeamNumber>6620</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_133</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>133</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>133</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_172</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>172</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>172</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_237</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>237</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>237</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_663</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>663</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>663</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_1519</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>1519</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>1519</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_1768</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>1768</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>1768</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_2523</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>2523</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>2523</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_2648</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>2648</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>2648</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_2712</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>2712</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>2712</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_3451</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>3451</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>3451</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_3525</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>3525</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>3525</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_3609</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>3609</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>3609</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_3930</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>3930</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>3930</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4041</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4041</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4041</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4042</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4042</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4042</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4055</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4055</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4055</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4473</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4473</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4473</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4546</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4546</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4546</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4564</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4564</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4564</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4906</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4906</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4906</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_4925</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>4925</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>4925</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_5265</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>5265</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>5265</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_5494</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>5494</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>5494</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_5506</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>5506</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>5506</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_5633</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>5633</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>5633</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_5687</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>5687</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>5687</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_6153</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>6153</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>6153</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_6161</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>6161</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>6161</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_6172</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>6172</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>6172</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_6224</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>6224</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>6224</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_6329</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>6329</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>6329</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Id>NEDIST_PINETREE_6337</Id>
-    <EventID>NEDIST_PINETREE</EventID>
-    <TeamID>6337</TeamID>
+    <Id>0</Id>
+    <EventId>NEDIST_PINETREE</EventId>
+    <TeamNumber>6337</TeamNumber>
   </EventTeam>
 </ArrayOfEventTeam>

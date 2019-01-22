@@ -49,8 +49,8 @@ namespace BertScout2019.ViewModels
                 {
                     foreach (var item in items)
                     {
-                        if (item.EventID == app.CurrentFRCEventID
-                            && item.TeamID == team.Id)
+                        if (item.EventId == app.CurrentFRCEventId
+                            && item.TeamNumber == team.TeamNumber)
                         {
                             Teams.Add(team);
                             break;

@@ -30,14 +30,14 @@ namespace BertScout2019.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(string id)
+        public async Task<bool> DeleteItemAsync(int id)
         {
             var oldItem = items.Where((FRCEvent arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
 
-        public async Task<FRCEvent> GetItemAsync(string id)
+        public async Task<FRCEvent> GetItemAsync(int id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }

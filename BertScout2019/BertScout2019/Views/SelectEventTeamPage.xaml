@@ -21,7 +21,7 @@
                         <ViewCell>
                             <StackLayout Padding="10">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Id}"
+                                    <Label Text="{Binding TeamNumber}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"

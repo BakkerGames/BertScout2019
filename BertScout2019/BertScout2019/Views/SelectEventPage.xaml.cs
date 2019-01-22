@@ -28,7 +28,7 @@ namespace BertScout2019.Views
 
             foreach (FRCEvent item in viewModel.FRCEvents)
             {
-                if (item.Id == app.CurrentFRCEventID)
+                if (item.EventId == app.CurrentFRCEventId)
                 {
                     FRCEventsListView.SelectedItem = item;
                     break;
@@ -43,7 +43,7 @@ namespace BertScout2019.Views
                 return;
 
             App app = Application.Current as App;
-            app.CurrentFRCEventID = item.Id;
+            app.CurrentFRCEventId = item.EventId;
             app.CurrentFRCEvent = item.Name;
         }
     }

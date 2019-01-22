@@ -1,10 +1,13 @@
-﻿namespace BertScout2019.Models
+﻿using SQLite;
+
+namespace BertScout2019.Models
 {
     public class EventTeamMatch
     {
-        public string Id { get; set; }
-        public string EventID { get; set; }
-        public string TeamID { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string EventId { get; set; }
+        public int TeamNumber { get; set; }
         public int Match { get; set; }
 
         public int SandstormMoveType { get; set; }

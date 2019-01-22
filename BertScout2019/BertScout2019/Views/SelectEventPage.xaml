@@ -12,7 +12,8 @@
             RefreshCommand="{Binding LoadFRCEventsCommand}"
             IsPullToRefreshEnabled="true"
             IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-            CachingStrategy="RecycleElement"
+            CachingStrategy="RetainElement"
+            BackgroundColor="White"
             ItemSelected="OnItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>

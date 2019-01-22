@@ -27,6 +27,7 @@
                 Margin="20"
             />
             <Button
+                x:Name="Button_Select_FRC_Event"
                 Text="Select FRC Event" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"
@@ -36,6 +37,7 @@
                 WidthRequest="300"
             />
             <Button
+                x:Name="Button_Match_Scouting"
                 Text="Match Scouting" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"

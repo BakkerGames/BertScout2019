@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BertScout2019.Models
+﻿namespace BertScout2019.Models
 {
     public class FRCEvent
     {

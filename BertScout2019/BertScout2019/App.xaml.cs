@@ -8,6 +8,8 @@ namespace BertScout2019
     public partial class App : Application
     {
         public const string BertColor = "#22BE1C";
+        public const string HighlightColor = "#23DAFF";
+        public Color SelectedButtonColor = Color.LightGray;
 
         private const string frcEventPropertyID = "currentFRCEventID";
         private const string frcEventProperty = "currentFRCEvent";

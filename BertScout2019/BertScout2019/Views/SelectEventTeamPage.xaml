@@ -6,35 +6,35 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView 
-            x:Name="EventTeamsListView"
-            ItemsSource="{Binding Teams}"
-            VerticalOptions="FillAndExpand"
-            HasUnevenRows="true"
-            RefreshCommand="{Binding LoadEventTeamsCommand}"
-            IsPullToRefreshEnabled="true"
-            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-            CachingStrategy="RecycleElement"
-            ItemSelected="EventTeamsListView_ItemSelected">
+                    x:Name="EventTeamsListView"
+                    ItemsSource="{Binding Teams}"
+                    VerticalOptions="FillAndExpand"
+                    HasUnevenRows="true"
+                    RefreshCommand="{Binding LoadEventTeamsCommand}"
+                    IsPullToRefreshEnabled="true"
+                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                    CachingStrategy="RecycleElement"
+                    BackgroundColor="White"
+                    ItemSelected="EventTeamsListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="Team"
-                                           LineBreakMode="NoWrap"
-                                           Style="{DynamicResource ListItemTextStyle}"
-                                           FontSize="16" />
                                     <Label Text="{Binding Id}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
                                            FontSize="16" />
                                     <Label Text="-"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
                                            FontSize="16" />
                                     <Label Text="{Binding Name}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
                                            FontSize="16" />
                                 </StackLayout>
                             </StackLayout>

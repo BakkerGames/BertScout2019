@@ -25,12 +25,20 @@ namespace BertScout2019.Views
 
         async private void Button_Select_FRC_Event_Clicked(object sender, EventArgs e)
         {
+            //todo add wait cursor here
+            App app = Application.Current as App;
+            Button_Select_FRC_Event.BackgroundColor = app.SelectedButtonColor;
             await Navigation.PushAsync(new SelectEventPage());
+            Button_Select_FRC_Event.BackgroundColor = Color.Default;
         }
 
         async private void Button_Match_Scouting_Clicked(object sender, EventArgs e)
         {
+            //todo add wait cursor here
+            App app = Application.Current as App;
+            Button_Match_Scouting.BackgroundColor = app.SelectedButtonColor;
             await Navigation.PushAsync(new SelectEventTeamPage());
+            Button_Match_Scouting.BackgroundColor = Color.Default;
         }
     }
 }

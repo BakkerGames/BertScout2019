@@ -11,7 +11,7 @@ namespace BertScout2019.ViewModels
 {
     public class SelectEventsViewModel : BaseViewModel
     {
-        //public IDataStore<FRCEvent> DataStoreFRCEvent => DependencyService.Get<IDataStore<FRCEvent>>() ?? new DataStoreFRCEvent();
+        //public IDataStore<FRCEvent> DataStoreFRCEvent => DependencyService.Get<IDataStore<FRCEvent>>() ?? new XmlDataStoreFRCEvent();
         public IDataStore<FRCEvent> DataStoreFRCEvent => new XmlDataStoreFRCEvent();
 
         public ObservableCollection<FRCEvent> FRCEvents { get; set; }

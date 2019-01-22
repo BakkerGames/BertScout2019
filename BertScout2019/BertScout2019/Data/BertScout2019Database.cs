@@ -1,5 +1,6 @@
 ﻿using BertScout2019.Models;
 using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,27 @@ namespace BertScout2019.Data
 
         public BertScout2019Database(string dbPath)
         {
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<FRCEvent>().Wait();
-            database.CreateTableAsync<Team>().Wait();
-            database.CreateTableAsync<EventTeam>().Wait();
-            database.CreateTableAsync<EventTeamMatch>().Wait();
+            try
+            {
+                database = new SQLiteAsyncConnection(dbPath, SQLiteOpenFlags.Create | SQLiteOpenFlags.ReadWrite);
+                //database = new SQLiteAsyncConnection(dbPath, SQLiteOpenFlags.ReadWrite);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            try
+            {
+                database.CreateTableAsync<FRCEvent>().Wait();
+                database.CreateTableAsync<Team>().Wait();
+                database.CreateTableAsync<EventTeam>().Wait();
+                database.CreateTableAsync<EventTeamMatch>().Wait();
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
         }
 
         public Task<List<FRCEvent>> GetEventsAsync()

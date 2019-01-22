@@ -1,12 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BertScout2019.Views.OptionsPage">
+             x:Class="BertScout2019.Views.OptionsPage"
+             Title="Options">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Here are some options!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+            VerticalOptions="CenterAndExpand">
+            <Label
+                Text="Here are some options!"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                />
+            <Button
+                x:Name="Fill_Database_Button"
+                Text="Fill Database"
+                Clicked="Fill_Database_Button_Clicked"
+                BackgroundColor="LightGray"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                FontSize="Large"
+                Margin="20"
+                WidthRequest="300"
+                />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

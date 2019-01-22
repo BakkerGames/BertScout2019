@@ -6,8 +6,11 @@ namespace BertScout2019.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string EventId { get; set; }
+        [Indexed]
+        public string EventKey { get; set; }
+        [Indexed]
         public int TeamNumber { get; set; }
+        [Indexed]
         public int Match { get; set; }
 
         public int SandstormMoveType { get; set; }

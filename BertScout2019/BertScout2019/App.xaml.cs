@@ -1,9 +1,8 @@
 ﻿using BertScout2019.Views;
+using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SQLite;
-using System.IO;
-using System;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BertScout2019
@@ -14,24 +13,24 @@ namespace BertScout2019
         public const string HighlightColor = "#23DAFF";
         public Color SelectedButtonColor = Color.LightGray;
 
-        private const string frcEventPropertyID = "currentFRCEventId";
-        private const string frcEventProperty = "currentFRCEvent";
+        private const string propNameFRCEventKey = "currentFRCEventKey";
+        private const string propNameFRCEventName = "currentFRCEventName";
 
-        public string CurrentFRCEventId { get; set; }
-        public string CurrentFRCEvent { get; set; }
+        public string currFRCEventKey { get; set; }
+        public string currFRCEventName { get; set; }
 
         public const string dbFilename = "bertscout2019.db3";
-        public string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), dbFilename);
+        public string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), dbFilename);
 
         public App()
         {
-            if (Properties.ContainsKey(frcEventPropertyID))
+            if (Properties.ContainsKey(propNameFRCEventKey))
             {
-                CurrentFRCEventId = (string)Properties[frcEventPropertyID];
+                currFRCEventKey = (string)Properties[propNameFRCEventKey];
             }
-            if (Properties.ContainsKey(frcEventProperty))
+            if (Properties.ContainsKey(propNameFRCEventName))
             {
-                CurrentFRCEvent = (string)Properties[frcEventProperty];
+                currFRCEventName = (string)Properties[propNameFRCEventName];
             }
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage())
@@ -48,8 +47,8 @@ namespace BertScout2019
         protected override void OnSleep()
         {
             // Handle when your app sleeps
-            Properties[frcEventPropertyID] = CurrentFRCEventId;
-            Properties[frcEventProperty] = CurrentFRCEvent;
+            Properties[propNameFRCEventKey] = currFRCEventKey;
+            Properties[propNameFRCEventName] = currFRCEventName;
         }
 
         protected override void OnResume()

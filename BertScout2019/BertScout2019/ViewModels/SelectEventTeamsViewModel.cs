@@ -21,7 +21,7 @@ namespace BertScout2019.ViewModels
         public SelectEventTeamsViewModel()
         {
             App app = Application.Current as App;
-            Title = app.CurrentFRCEvent;
+            Title = app.currFRCEventName;
             EventTeams = new ObservableCollection<EventTeam>();
             Teams = new ObservableCollection<Team>();
             ExecuteLoadEventTeamsCommand();
@@ -49,7 +49,7 @@ namespace BertScout2019.ViewModels
                 {
                     foreach (var item in items)
                     {
-                        if (item.EventId == app.CurrentFRCEventId
+                        if (item.EventKey == app.currFRCEventKey
                             && item.TeamNumber == team.TeamNumber)
                         {
                             Teams.Add(team);

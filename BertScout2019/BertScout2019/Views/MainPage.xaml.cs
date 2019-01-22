@@ -15,7 +15,7 @@ namespace BertScout2019.Views
         protected override void OnAppearing()
         {
             App app = Application.Current as App;
-            CurrentFRCEventLabel.Text = app.CurrentFRCEvent;
+            CurrentFRCEventLabel.Text = app.currFRCEventName;
         }
 
         async private void MainPage_Options_Clicked(object sender, EventArgs e)

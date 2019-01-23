@@ -9,14 +9,13 @@ namespace BertScout2019.Data
 {
     public class BertScout2019Database
     {
-        readonly SQLiteAsyncConnection database;
+        static SQLiteAsyncConnection database;
 
         public BertScout2019Database(string dbPath)
         {
             try
             {
-                database = new SQLiteAsyncConnection(dbPath, SQLiteOpenFlags.Create | SQLiteOpenFlags.ReadWrite);
-                //database = new SQLiteAsyncConnection(dbPath, SQLiteOpenFlags.ReadWrite);
+                database = new SQLiteAsyncConnection(dbPath);
             }
             catch (System.Exception ex)
             {
@@ -66,6 +65,21 @@ namespace BertScout2019.Data
         }
 
         public Task<int> SaveFRCEventAsync(FRCEvent item)
+        {
+            return database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> SaveTeamAsync(Team item)
+        {
+            return database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> SaveEventTeamAsync(EventTeam item)
+        {
+            return database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> SaveEventTeamMatchAsync(EventTeamMatch item)
         {
             return database.InsertOrReplaceAsync(item);
         }

@@ -41,13 +41,13 @@ namespace BertScout2019.ViewModels
             {
                 EventTeams.Clear();
                 Teams.Clear();
-                var items = DataStoreEventTeam.GetItemsAsync(true).Result;
+                var eventTeams = DataStoreEventTeam.GetItemsAsync(true).Result;
                 var teams = DataStoreTeam.GetItemsAsync(true).Result;
                 //var items = await DataStoreEventTeam.GetItemsAsync(true);
                 //var teams = await DataStoreTeam.GetItemsAsync(true);
                 foreach (var team in teams)
                 {
-                    foreach (var item in items)
+                    foreach (var item in eventTeams)
                     {
                         if (item.EventKey == app.currFRCEventKey
                             && item.TeamNumber == team.TeamNumber)

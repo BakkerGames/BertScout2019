@@ -10,8 +10,10 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OptionsPage : ContentPage
     {
-        public IDataStore<FRCEvent> DataStoreFRCEvent => new XmlDataStoreFRCEvent();
-        public BertScout2019Database database;
+        public IDataStore<FRCEvent> DataStoreFRCEvents => new XmlDataStoreFRCEvent();
+        public IDataStore<Team> DataStoreTeams => new XmlDataStoreTeams();
+        public IDataStore<EventTeam> DataStoreEventTeams => new XmlDataStoreEventTeams();
+        //public BertScout2019Database database;
 
         public OptionsPage()
         {
@@ -22,12 +24,23 @@ namespace BertScout2019.Views
         {
             string saveText = Fill_Database_Button.Text;
             Fill_Database_Button.Text = "Filling...";
-            App app = Application.Current as App;
-            database = new BertScout2019Database(app.dbPath);
-            var items = DataStoreFRCEvent.GetItemsAsync(true).Result;
-            foreach (var item in items)
+            // put frc events from xml into database
+            var frcEvents = DataStoreFRCEvents.GetItemsAsync(true).Result;
+            foreach (var frcEvent in frcEvents)
             {
-                int result = database.SaveFRCEventAsync(item).Result;
+                int result = App.Database.SaveFRCEventAsync(frcEvent).Result;
+            }
+            // todo put teams from xml into database
+            var teams = DataStoreTeams.GetItemsAsync(true).Result;
+            foreach (var team in teams)
+            {
+                int result = App.Database.SaveTeamAsync(team).Result;
+            }
+            // todo put eventteams from xml into database
+            var eventTeams = DataStoreEventTeams.GetItemsAsync(true).Result;
+            foreach (var eventTeam in eventTeams)
+            {
+                int result = App.Database.SaveEventTeamAsync(eventTeam).Result;
             }
             Fill_Database_Button.Text = saveText;
         }

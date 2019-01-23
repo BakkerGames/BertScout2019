@@ -1,4 +1,5 @@
-﻿using BertScout2019.Views;
+﻿using BertScout2019.Data;
+using BertScout2019.Views;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -20,7 +21,8 @@ namespace BertScout2019
         public string currFRCEventName { get; set; }
 
         public const string dbFilename = "bertscout2019.db3";
-        public string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), dbFilename);
+
+        static BertScout2019Database database;
 
         public App()
         {
@@ -37,6 +39,18 @@ namespace BertScout2019
             {
                 BarBackgroundColor = Color.FromHex(BertColor)
             };
+        }
+
+        public static BertScout2019Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new BertScout2019Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), dbFilename));
+                }
+                return database;
+            }
         }
 
         protected override void OnStart()

@@ -14,8 +14,7 @@ namespace BertScout2019.Views
 
         protected override void OnAppearing()
         {
-            App app = Application.Current as App;
-            CurrentFRCEventLabel.Text = app.currFRCEventName;
+            CurrentFRCEventLabel.Text = App.currFRCEventName;
         }
 
         async private void MainPage_Options_Clicked(object sender, EventArgs e)
@@ -27,8 +26,7 @@ namespace BertScout2019.Views
         async private void Button_Select_FRC_Event_Clicked(object sender, EventArgs e)
         {
             //todo add wait cursor here
-            App app = Application.Current as App;
-            Button_Select_FRC_Event.BackgroundColor = app.SelectedButtonColor;
+            Button_Select_FRC_Event.BackgroundColor = App.SelectedButtonColor;
             await Navigation.PushAsync(new SelectEventPage());
             Button_Select_FRC_Event.BackgroundColor = Color.Default;
         }
@@ -37,7 +35,7 @@ namespace BertScout2019.Views
         {
             //todo add wait cursor here
             App app = Application.Current as App;
-            Button_Match_Scouting.BackgroundColor = app.SelectedButtonColor;
+            Button_Match_Scouting.BackgroundColor = App.SelectedButtonColor;
             await Navigation.PushAsync(new SelectEventTeamPage());
             Button_Match_Scouting.BackgroundColor = Color.Default;
         }

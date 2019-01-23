@@ -41,6 +41,8 @@ namespace BertScout2019.ViewModels
             try
             {
                 FRCEvents.Clear();
+                // 384,390,407 ms with xml, 93,94 ms with sql
+                // second call 2ms with xml, 1ms with sql
                 var items = await DataStoreFRCEvent.GetItemsAsync(true);
                 foreach (var item in items)
                 {

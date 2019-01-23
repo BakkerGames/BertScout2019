@@ -10,19 +10,18 @@ namespace BertScout2019
 {
     public partial class App : Application
     {
-        public const string BertColor = "#22BE1C";
-        public const string HighlightColor = "#23DAFF";
-        public Color SelectedButtonColor = Color.LightGray;
+        static public string BertColor = "#22BE1C";
+        static public string HighlightColor = "#23DAFF";
+        static public Color SelectedButtonColor = Color.LightGray;
 
+        static public string currFRCEventKey { get; set; }
+        static public string currFRCEventName { get; set; }
+
+        static public BertScout2019Database database;
+
+        private const string dbFilename = "bertscout2019.db3";
         private const string propNameFRCEventKey = "currentFRCEventKey";
         private const string propNameFRCEventName = "currentFRCEventName";
-
-        public string currFRCEventKey { get; set; }
-        public string currFRCEventName { get; set; }
-
-        public const string dbFilename = "bertscout2019.db3";
-
-        static BertScout2019Database database;
 
         public App()
         {

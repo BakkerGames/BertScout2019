@@ -37,15 +37,20 @@ namespace BertScout2019.Data
             return database.Table<FRCEvent>().ToListAsync();
         }
 
+        public Task<List<Team>> GetTeamsAsync()
+        {
+            return database.Table<Team>().ToListAsync();
+        }
+
         public Task<List<Team>> GetEventTeamsAsync(string EventKey)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("SELECT * FROM [Team]");
+            query.Append("SELECT [Team].* FROM [Team]");
             query.Append(" LEFT JOIN [EventTeam]");
-            query.Append(" ON [EventTeam].[EventKey] = '");
+            query.Append(" ON [EventTeam].[TeamNumber] = [Team].[TeamNumber]");
+            query.Append(" WHERE [EventTeam].[EventKey] = '");
             query.Append(EventKey);
             query.Append("'");
-            query.Append(" AND [EventTeam].[TeamNumber] = [Team].[TeamNumber]");
             return database.QueryAsync<Team>(query.ToString());
         }
 

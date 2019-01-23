@@ -11,12 +11,8 @@ namespace BertScout2019.Services
 
         public SqlDataStoreFRCEvent()
         {
-            LoadFRCEvents();
-        }
-
-        async private void LoadFRCEvents()
-        {
-            items = await App.Database.GetEventsAsync();
+            // must complete, so don't async/await
+            items = App.Database.GetEventsAsync().Result;
         }
 
         public async Task<bool> AddItemAsync(FRCEvent item)

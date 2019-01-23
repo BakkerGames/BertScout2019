@@ -23,10 +23,7 @@ namespace BertScout2019.Data
             }
             try
             {
-                database.CreateTableAsync<FRCEvent>().Wait();
-                database.CreateTableAsync<Team>().Wait();
-                database.CreateTableAsync<EventTeam>().Wait();
-                database.CreateTableAsync<EventTeamMatch>().Wait();
+                CreateTables();
             }
             catch (System.Exception ex)
             {
@@ -62,6 +59,22 @@ namespace BertScout2019.Data
             query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
             query.Append(TeamNumber);
             return database.QueryAsync<EventTeamMatch>(query.ToString());
+        }
+
+        public void DropTables()
+        {
+            database.DropTableAsync<FRCEvent>().Wait();
+            database.DropTableAsync<Team>().Wait();
+            database.DropTableAsync<EventTeam>().Wait();
+            database.DropTableAsync<EventTeamMatch>().Wait();
+        }
+
+        public void CreateTables()
+        {
+            database.CreateTableAsync<FRCEvent>().Wait();
+            database.CreateTableAsync<Team>().Wait();
+            database.CreateTableAsync<EventTeam>().Wait();
+            database.CreateTableAsync<EventTeamMatch>().Wait();
         }
 
         public Task<int> SaveFRCEventAsync(FRCEvent item)

@@ -12,9 +12,9 @@
                 FontSize="Large"
                 />
             <Button
-                x:Name="Fill_Database_Button"
-                Text="Fill Database"
-                Clicked="Fill_Database_Button_Clicked"
+                x:Name="Reset_Database_Button"
+                Text="Reset Database"
+                Clicked="Reset_Database_Button_Clicked"
                 BackgroundColor="LightGray"
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"

@@ -1,7 +1,6 @@
 ﻿using BertScout2019.Models;
 using BertScout2019.Services;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -12,7 +11,8 @@ namespace BertScout2019.ViewModels
     public class SelectEventsViewModel : BaseViewModel
     {
         //public IDataStore<FRCEvent> DataStoreFRCEvent => DependencyService.Get<IDataStore<FRCEvent>>() ?? new XmlDataStoreFRCEvent();
-        public IDataStore<FRCEvent> DataStoreFRCEvent => new XmlDataStoreFRCEvent();
+        //public IDataStore<FRCEvent> DataStoreFRCEvent => new XmlDataStoreFRCEvent();
+        public IDataStore<FRCEvent> DataStoreFRCEvent => new SqlDataStoreFRCEvent();
 
         public ObservableCollection<FRCEvent> FRCEvents { get; set; }
         public Command LoadFRCEventsCommand { get; set; }

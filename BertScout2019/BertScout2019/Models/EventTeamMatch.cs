@@ -11,7 +11,7 @@ namespace BertScout2019.Models
         [Indexed]
         public int TeamNumber { get; set; }
         [Indexed]
-        public int Match { get; set; }
+        public int MatchNumber { get; set; }
 
         public int SandstormMoveType { get; set; }
         public int SandstormOffPlatform { get; set; }

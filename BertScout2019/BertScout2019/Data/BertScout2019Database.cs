@@ -57,7 +57,7 @@ namespace BertScout2019.Data
         public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string EventKey, int TeamNumber)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("SELECT * FROM [EventTeamMatch]");
+            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
             query.Append(" WHERE [EventTeamMatch].[EventKey] = '");
             query.Append(EventKey);
             query.Append("'");

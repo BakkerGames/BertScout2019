@@ -62,8 +62,8 @@
     <Compile Update="Views\OptionsPage.xaml.cs">
       <DependentUpon>OptionsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\TeamMatchListPage.xaml.cs">
-      <DependentUpon>TeamMatchListPage.xaml</DependentUpon>
+    <Compile Update="Views\SelectTeamMatchPage.xaml.cs">
+      <DependentUpon>SelectTeamMatchPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -80,7 +80,7 @@
     <EmbeddedResource Update="Views\SelectEventTeamPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\TeamMatchListPage.xaml">
+    <EmbeddedResource Update="Views\SelectTeamMatchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

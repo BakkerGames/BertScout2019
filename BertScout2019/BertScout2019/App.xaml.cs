@@ -17,6 +17,9 @@ namespace BertScout2019
         static public string currFRCEventKey { get; set; }
         static public string currFRCEventName { get; set; }
 
+        static public int currTeamNumber { get; set; }
+        static public string currTeamName { get; set; }
+
         static public BertScout2019Database database;
 
         private const string dbFilename = "bertscout2019.db3";

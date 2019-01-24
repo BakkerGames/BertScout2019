@@ -1,4 +1,5 @@
-﻿using BertScout2019.ViewModels;
+﻿using BertScout2019.Models;
+using BertScout2019.ViewModels;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,7 +21,8 @@ namespace BertScout2019.Views
         private async void EventTeamsListView_ItemSelected(object sender, EventArgs e)
         {
             //todo
-            await Navigation.PushAsync(new TeamMatchListPage());
+            App.currTeamNumber = ((Team)sender).TeamNumber;
+            await Navigation.PushAsync(new SelectTeamMatchPage());
         }
     }
 }

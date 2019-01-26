@@ -18,11 +18,15 @@ namespace BertScout2019.Views
             BindingContext = viewModel = new SelectEventTeamsViewModel();
         }
 
-        private async void EventTeamsListView_ItemSelected(object sender, EventArgs e)
+        private async void EventTeamsListView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             //todo
-            App.currTeamNumber = ((Team)sender).TeamNumber;
-            //todo await Navigation.PushAsync(new SelectTeamMatchPage());
+            var item = args.SelectedItem as Team;
+            if (item == null)
+                return;
+
+            App.currTeamNumber = item.TeamNumber;
+            await Navigation.PushAsync(new SelectEventTeamMatchPage());
         }
     }
 }

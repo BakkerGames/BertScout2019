@@ -3,48 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BertScout2019.Views.SelectEventPage"
              Title="{Binding Title}">
-    <StackLayout>
-        <ListView 
-            x:Name="FRCEventsListView"
-            ItemsSource="{Binding FRCEvents}"
-            VerticalOptions="FillAndExpand"
-            HasUnevenRows="true"
-            RefreshCommand="{Binding LoadFRCEventsCommand}"
-            IsPullToRefreshEnabled="true"
-            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-            CachingStrategy="RetainElement"
-            BackgroundColor="White"
-            ItemSelected="OnItemSelected">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding Name}"
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView 
+                x:Name="FRCEventsListView"
+                ItemsSource="{Binding FRCEvents}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadFRCEventsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RetainElement"
+                BackgroundColor="White"
+                ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Name}"
                                    LineBreakMode="NoWrap"
                                    Style="{DynamicResource ListItemTextStyle}"
                                    FontSize="16" />
-                            <Label Text="{Binding Location}"
+                                <Label Text="{Binding Location}"
                                    LineBreakMode="NoWrap"
                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                    FontSize="13" />
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding StartDate}"
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding StartDate}"
                                        LineBreakMode="NoWrap"
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13" />
-                                <Label Text="to" 
+                                    <Label Text="to" 
                                        LineBreakMode="NoWrap"
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13" />
-                                <Label Text="{Binding EndDate}"
+                                    <Label Text="{Binding EndDate}"
                                        LineBreakMode="NoWrap"
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13" />
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

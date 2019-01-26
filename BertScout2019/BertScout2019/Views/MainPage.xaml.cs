@@ -33,6 +33,10 @@ namespace BertScout2019.Views
 
         async private void Button_Match_Scouting_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(App.currFRCEventKey))
+            {
+                return;
+            }
             //todo add wait cursor here
             App app = Application.Current as App;
             Button_Match_Scouting.BackgroundColor = App.SelectedButtonColor;

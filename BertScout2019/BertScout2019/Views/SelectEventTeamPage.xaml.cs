@@ -17,6 +17,11 @@ namespace BertScout2019.Views
             BindingContext = viewModel = new SelectEventTeamsViewModel();
         }
 
+        protected override void OnAppearing()
+        {
+            EventTeamsListView.SelectedItem = null;
+        }
+
         private async void EventTeamsListView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             //todo

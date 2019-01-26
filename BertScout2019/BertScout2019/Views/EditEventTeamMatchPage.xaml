@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BertScout2019.Views.EditEventTeamMatchPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Margin="10,10,10,10"
+            >
+            <StackLayout
+                HorizontalOptions="Fill"
+                BackgroundColor="#22BE1C">
+                <Label
+                    Text="Sandstorm" 
+                    HorizontalOptions="Center"
+                    BackgroundColor="#22BE1C"
+                    FontSize="Large"
+                />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Movement Type:"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"
+                       WidthRequest="300"
+                       />
+                <Button Text="None"
+                        FontSize="Medium"
+                        />
+                <Button Text="Vision"
+                        FontSize="Medium"
+                        />
+                <Button Text="Auto"
+                        FontSize="Medium"
+                        />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Drove Off Platform:"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"
+                       WidthRequest="300"
+                       />
+                <Button Text="None" 
+                        FontSize="Medium" />
+                <Button Text="1" 
+                        FontSize="Medium" />
+                <Button Text="2" 
+                        FontSize="Medium" />
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="Fill"
+                BackgroundColor="#22BE1C">
+                <Label
+                    Text="Main Game" 
+                    HorizontalOptions="Center"
+                    BackgroundColor="#22BE1C"
+                    FontSize="Large"
+                />
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="Fill"
+                BackgroundColor="#22BE1C">
+                <Label
+                    Text="End Game" 
+                    HorizontalOptions="Center"
+                    BackgroundColor="#22BE1C"
+                    FontSize="Large"
+                />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -19,6 +19,11 @@ namespace BertScout2019.Views
             BindingContext = viewModel = new SelectEventTeamMatchesViewModel();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            EventTeamMatchesListView.SelectedItem = null;
+        }
 
         private async void EventTeamsListMatchView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
@@ -27,8 +32,8 @@ namespace BertScout2019.Views
             if (item == null)
                 return;
 
-            //App.currTeamNumber = item.TeamNumber;
-            //await Navigation.PushAsync(new SelectEventTeamMatchPage());
+            App.currMatchNumber = item.MatchNumber;
+            await Navigation.PushAsync(new EditEventTeamMatchPage());
         }
 
         private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)

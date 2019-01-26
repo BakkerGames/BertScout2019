@@ -6,6 +6,7 @@
              >
 
     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Version 1.0" />
         <ToolbarItem Text="Options" Clicked="MainPage_Options_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">

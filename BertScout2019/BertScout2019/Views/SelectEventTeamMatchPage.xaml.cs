@@ -20,7 +20,7 @@ namespace BertScout2019.Views
         }
 
 
-        private async void EventTeamsListView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
+        private async void EventTeamsListMatchView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             //todo
             var item = args.SelectedItem as EventTeamMatch;
@@ -51,7 +51,24 @@ namespace BertScout2019.Views
 
         private void AddNewMatch_Clicked(object sender, System.EventArgs e)
         {
-
+            int value = int.Parse(ShowNewMatchNumber.Text);
+            foreach (EventTeamMatch oldMatch in viewModel.Matches)
+            {
+                if (oldMatch.MatchNumber == value)
+                {
+                    return;
+                }
+            }
+            EventTeamMatch newMatch = new EventTeamMatch();
+            newMatch.EventKey = App.currFRCEventKey;
+            newMatch.TeamNumber = App.currTeamNumber;
+            newMatch.MatchNumber = value;
+            App.database.SaveEventTeamMatchAsync(newMatch);
+            viewModel.Matches.Add(newMatch);
+            if (App.highestMatchNumber < value)
+            {
+                App.highestMatchNumber = value;
+            }
         }
     }
 }

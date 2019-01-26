@@ -54,7 +54,7 @@
                     IsPullToRefreshEnabled="true"
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     CachingStrategy="RecycleElement"
-                    ItemSelected="EventTeamsListView_ItemSelected">
+                    ItemSelected="EventTeamsListMatchView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

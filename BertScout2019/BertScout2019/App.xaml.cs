@@ -13,8 +13,10 @@ namespace BertScout2019
         static public string BertColor = "#22BE1C";
         static public string HighlightColor = "#23DAFF";
         static public Color SelectedButtonColor = Color.LightGray;
+        static public double dbVersion = 1.0;
 
         // app properties for easy page communication
+        static public int currVersionNumber { get; set; }
         static public string currFRCEventKey { get; set; }
         static public string currFRCEventName { get; set; }
         static public int currTeamNumber { get; set; }
@@ -27,18 +29,32 @@ namespace BertScout2019
         static public BertScout2019Database database;
 
         // app properties saved by OnSleep()
+        private const string propNameVersionNumber = "currentVersionNumber";
         private const string propNameFRCEventKey = "currentFRCEventKey";
         private const string propNameFRCEventName = "currentFRCEventName";
 
         public App()
         {
-            if (Properties.ContainsKey(propNameFRCEventKey))
+            try
             {
-                currFRCEventKey = (string)Properties[propNameFRCEventKey];
+                if (Properties.ContainsKey(propNameVersionNumber)
+                    && (double)Properties[propNameVersionNumber] == dbVersion)
+                {
+                    if (Properties.ContainsKey(propNameFRCEventKey))
+                    {
+                        currFRCEventKey = (string)Properties[propNameFRCEventKey];
+                    }
+                    if (Properties.ContainsKey(propNameFRCEventName))
+                    {
+                        currFRCEventName = (string)Properties[propNameFRCEventName];
+                    }
+                }
             }
-            if (Properties.ContainsKey(propNameFRCEventName))
+            catch (Exception)
             {
-                currFRCEventName = (string)Properties[propNameFRCEventName];
+                Properties[propNameVersionNumber] = dbVersion;
+                Properties[propNameFRCEventKey] = "";
+                Properties[propNameFRCEventName] = "";
             }
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage())
@@ -67,6 +83,7 @@ namespace BertScout2019
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            Properties[propNameVersionNumber] = dbVersion;
             Properties[propNameFRCEventKey] = currFRCEventKey;
             Properties[propNameFRCEventName] = currFRCEventName;
         }

@@ -63,6 +63,7 @@ namespace BertScout2019.Data
             query.Append("'");
             query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
             query.Append(TeamNumber);
+            query.Append(" ORDER BY [EventTeamMatch].[MatchNumber]");
             return database.QueryAsync<EventTeamMatch>(query.ToString());
         }
 

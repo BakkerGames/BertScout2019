@@ -19,6 +19,7 @@ namespace BertScout2019.Views
 
         protected override void OnAppearing()
         {
+            base.OnAppearing();
             EventTeamsListView.SelectedItem = null;
         }
 

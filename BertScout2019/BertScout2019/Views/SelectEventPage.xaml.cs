@@ -24,8 +24,6 @@ namespace BertScout2019.Views
             if (viewModel.FRCEvents.Count == 0)
                 viewModel.LoadFRCEventsCommand.Execute(null);
 
-            App app = Application.Current as App;
-
             foreach (FRCEvent item in viewModel.FRCEvents)
             {
                 if (item.EventKey == App.currFRCEventKey)

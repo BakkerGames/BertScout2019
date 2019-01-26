@@ -12,9 +12,9 @@ namespace BertScout2019.ViewModels
         public IDataStore<EventTeamMatch> DataStoreMatch => new SqlDataStoreEventTeamMatches(App.currFRCEventKey, App.currTeamNumber);
 
         public ObservableCollection<EventTeamMatch> Matches { get; set; }
-        public Command LoadEventTeamsCommand { get; set; }
+        public Command LoadEventTeamMatchesCommand { get; set; }
 
-        public SelectEventTeamMatchesViewModel(Team item)
+        public SelectEventTeamMatchesViewModel()
         {
             Title = $"Team {App.currTeamNumber} - {App.currTeamName}";
             Matches = new ObservableCollection<EventTeamMatch>();
@@ -27,16 +27,14 @@ namespace BertScout2019.ViewModels
                 return;
 
             IsBusy = true;
-            App app = Application.Current as App;
 
             try
             {
                 Matches.Clear();
-                var teams = DataStoreMatch.GetItemsAsync(true).Result;
-                // 94ms sql
-                foreach (var team in teams)
+                var matches = DataStoreMatch.GetItemsAsync(true).Result;
+                foreach (var match in matches)
                 {
-                    Matches.Add(team);
+                    Matches.Add(match);
                 }
             }
             catch (Exception ex)

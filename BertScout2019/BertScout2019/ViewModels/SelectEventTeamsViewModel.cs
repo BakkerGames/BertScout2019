@@ -16,11 +16,9 @@ namespace BertScout2019.ViewModels
 
         public SelectEventTeamsViewModel()
         {
-            App app = Application.Current as App;
             Title = App.currFRCEventName;
             Teams = new ObservableCollection<Team>();
             ExecuteLoadEventTeamsCommand();
-            //LoadEventTeamsCommand = new Command(async () => await ExecuteLoadEventTeamsCommand());
         }
 
         public void ExecuteLoadEventTeamsCommand()
@@ -29,13 +27,11 @@ namespace BertScout2019.ViewModels
                 return;
 
             IsBusy = true;
-            App app = Application.Current as App;
 
             try
             {
                 Teams.Clear();
                 var teams = DataStoreTeam.GetItemsAsync(true).Result;
-                // 94ms sql
                 foreach (var team in teams)
                 {
                     Teams.Add(team);

@@ -38,7 +38,6 @@ namespace BertScout2019.Views
                 return;
             }
             //todo add wait cursor here
-            App app = Application.Current as App;
             Button_Match_Scouting.BackgroundColor = App.SelectedButtonColor;
             await Navigation.PushAsync(new SelectEventTeamPage());
             Button_Match_Scouting.BackgroundColor = Color.Default;

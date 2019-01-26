@@ -14,8 +14,11 @@ namespace BertScout2019.Views
         {
             InitializeComponent();
 
+            ShowNewMatchNumber.Text = (App.highestMatchNumber + 1).ToString();
+
             BindingContext = viewModel = new SelectEventTeamMatchesViewModel();
         }
+
 
         private async void EventTeamsListView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
@@ -26,6 +29,28 @@ namespace BertScout2019.Views
 
             //App.currTeamNumber = item.TeamNumber;
             //await Navigation.PushAsync(new SelectEventTeamMatchPage());
+        }
+
+        private void NewMatchNumberStepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+        }
+
+        private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)
+        {
+            int value = int.Parse(ShowNewMatchNumber.Text);
+            if (value > 1)
+            {
+                ShowNewMatchNumber.Text = (value - 1).ToString();
+            }
+        }
+
+        private void AddMatch_Plus_Clicked(object sender, System.EventArgs e)
+        {
+            int value = int.Parse(ShowNewMatchNumber.Text);
+            if (value < 999)
+            {
+                ShowNewMatchNumber.Text = (value + 1).ToString();
+            }
         }
     }
 }

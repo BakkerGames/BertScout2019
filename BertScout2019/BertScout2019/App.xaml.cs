@@ -14,15 +14,19 @@ namespace BertScout2019
         static public string HighlightColor = "#23DAFF";
         static public Color SelectedButtonColor = Color.LightGray;
 
+        // app properties for easy page communication
         static public string currFRCEventKey { get; set; }
         static public string currFRCEventName { get; set; }
-
         static public int currTeamNumber { get; set; }
         static public string currTeamName { get; set; }
+        static public int currMatchNumber { get; set; }
+        static public int highestMatchNumber { get; set; }
 
+        // app database
+        private const string dbFilename = "bertscout2019.db3";
         static public BertScout2019Database database;
 
-        private const string dbFilename = "bertscout2019.db3";
+        // app properties saved by OnSleep()
         private const string propNameFRCEventKey = "currentFRCEventKey";
         private const string propNameFRCEventName = "currentFRCEventName";
 

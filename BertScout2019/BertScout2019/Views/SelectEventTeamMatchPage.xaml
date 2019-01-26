@@ -3,9 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BertScout2019.Views.SelectEventTeamMatchPage"
              Title="{Binding Title}">
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView 
+            <StackLayout 
+                Orientation="Horizontal"
+                Margin="10"
+                >
+                <Label 
+                    Text="Match Number:" 
+                    FontSize="Large"
+                    />
+                <Label
+                    x:Name="ShowNewMatchNumber"
+                    Text="100"
+                    FontSize="Large"
+                    WidthRequest="70"
+                    Margin="10,0,10,0"
+                    />
+                <Button
+                    x:Name="AddMatch_Minus"
+                    Text="-"
+                    FontSize="Large"
+                    WidthRequest="50"
+                    Clicked="AddMatch_Minus_Clicked"
+                    />
+                <Button
+                    x:Name="AddMatch_Plus"
+                    Text="+"
+                    FontSize="Large"
+                    WidthRequest="50"
+                    Clicked="AddMatch_Plus_Clicked"
+                    />
+                <Button
+                    x:Name="AddNewMatch"
+                    Text="Add"
+                    FontSize="Large"
+                    Margin="10,0,0,0"
+                    />
+            </StackLayout>
+            <ListView
                     x:Name="EventTeamMatchesListView"
                     ItemsSource="{Binding Matches}"
                     VerticalOptions="FillAndExpand"
@@ -37,7 +74,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

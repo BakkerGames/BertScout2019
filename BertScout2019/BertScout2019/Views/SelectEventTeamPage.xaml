@@ -14,7 +14,6 @@
                     IsPullToRefreshEnabled="true"
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     CachingStrategy="RecycleElement"
-                    BackgroundColor="White"
                     ItemSelected="EventTeamsListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -31,10 +31,6 @@ namespace BertScout2019.Views
             //await Navigation.PushAsync(new SelectEventTeamMatchPage());
         }
 
-        private void NewMatchNumberStepper_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-        }
-
         private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)
         {
             int value = int.Parse(ShowNewMatchNumber.Text);
@@ -51,6 +47,11 @@ namespace BertScout2019.Views
             {
                 ShowNewMatchNumber.Text = (value + 1).ToString();
             }
+        }
+
+        private void AddNewMatch_Clicked(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

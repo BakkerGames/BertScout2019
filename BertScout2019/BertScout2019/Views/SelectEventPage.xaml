@@ -14,7 +14,6 @@
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RetainElement"
-                BackgroundColor="White"
                 ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

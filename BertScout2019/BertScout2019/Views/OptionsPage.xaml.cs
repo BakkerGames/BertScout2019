@@ -52,6 +52,7 @@ namespace BertScout2019.Views
                     eventTeam.Id = ++eventTeamId;
                     int result = App.Database.SaveEventTeamAsync(eventTeam).Result;
                 }
+                OptionsMessageLabel.Text = "Database reset done!";
             }
             catch (Exception)
             {

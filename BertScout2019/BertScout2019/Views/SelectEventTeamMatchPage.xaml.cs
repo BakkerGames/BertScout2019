@@ -64,10 +64,24 @@ namespace BertScout2019.Views
             newMatch.TeamNumber = App.currTeamNumber;
             newMatch.MatchNumber = value;
             App.database.SaveEventTeamMatchAsync(newMatch);
-            viewModel.Matches.Add(newMatch);
             if (App.highestMatchNumber < value)
             {
                 App.highestMatchNumber = value;
+            }
+            // add new match into list in proper order
+            bool found = false;
+            for (int i = 0; i < viewModel.Matches.Count; i++)
+            {
+                if (viewModel.Matches[i].MatchNumber > value)
+                {
+                    found = true;
+                    viewModel.Matches.Insert(i, newMatch);
+                    break;
+                }
+            }
+            if (!found)
+            {
+                viewModel.Matches.Add(newMatch);
             }
         }
     }

@@ -25,6 +25,7 @@ namespace BertScout2019.Views
                 return;
 
             App.currTeamNumber = item.TeamNumber;
+            App.currTeamName = item.Name;
             await Navigation.PushAsync(new SelectEventTeamMatchPage());
         }
     }

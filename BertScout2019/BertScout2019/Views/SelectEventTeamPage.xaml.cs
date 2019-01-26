@@ -22,7 +22,7 @@ namespace BertScout2019.Views
         {
             //todo
             App.currTeamNumber = ((Team)sender).TeamNumber;
-            await Navigation.PushAsync(new SelectTeamMatchPage());
+            //todo await Navigation.PushAsync(new SelectTeamMatchPage());
         }
     }
 }

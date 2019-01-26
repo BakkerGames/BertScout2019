@@ -27,6 +27,7 @@
     <Compile Remove="Views\MenuPage.xaml.cs" />
     <Compile Remove="Views\NewFRCEventPage.xaml.cs" />
     <Compile Remove="Views\NewItemPage.xaml.cs" />
+    <Compile Remove="Views\SelectTeamMatchPage.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +40,7 @@
     <EmbeddedResource Remove="Views\MenuPage.xaml" />
     <EmbeddedResource Remove="Views\NewFRCEventPage.xaml" />
     <EmbeddedResource Remove="Views\NewItemPage.xaml" />
+    <EmbeddedResource Remove="Views\SelectTeamMatchPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,9 +64,6 @@
     <Compile Update="Views\OptionsPage.xaml.cs">
       <DependentUpon>OptionsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\SelectTeamMatchPage.xaml.cs">
-      <DependentUpon>SelectTeamMatchPage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -78,9 +77,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SelectEventTeamPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SelectTeamMatchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

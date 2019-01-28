@@ -8,30 +8,31 @@
             }
             set
             {
-                int saveValue = viewModel.item.ZZZ;
+                int newValue = value;
                 switch (value)
                 {
                     case 1:
-                        viewModel.item.ZZZ = 1;
+                        newValue = 1;
                         Button_ZZZ_None.BackgroundColor = App.UnselectedButtonColor;
                         Button_ZZZ_AAA.BackgroundColor = App.SelectedButtonColor;
                         Button_ZZZ_BBB.BackgroundColor = App.UnselectedButtonColor;
                         break;
                     case 2:
-                        viewModel.item.ZZZ = 2;
+                        newValue = 2;
                         Button_ZZZ_None.BackgroundColor = App.UnselectedButtonColor;
                         Button_ZZZ_AAA.BackgroundColor = App.UnselectedButtonColor;
                         Button_ZZZ_BBB.BackgroundColor = App.SelectedButtonColor;
                         break;
                     default:
-                        viewModel.item.ZZZ = 0;
+                        newValue = 0;
                         Button_ZZZ_None.BackgroundColor = App.SelectedButtonColor;
                         Button_ZZZ_AAA.BackgroundColor = App.UnselectedButtonColor;
                         Button_ZZZ_BBB.BackgroundColor = App.UnselectedButtonColor;
                         break;
                 }
-                if (saveValue != viewModel.item.ZZZ)
+                if (viewModel.item.ZZZ != newValue)
                 {
+                    viewModel.item.ZZZ = newValue;
                     App.database.SaveEventTeamMatchAsync(viewModel.item);
                 }
             }

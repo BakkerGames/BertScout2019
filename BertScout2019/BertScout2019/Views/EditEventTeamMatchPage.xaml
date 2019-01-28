@@ -31,28 +31,28 @@
                         WidthRequest="293"
                         />
                     <Button
-                        x:Name="Button_MovementType_None"
+                        x:Name="Button_SandstormMoveType_None"
                         Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_MovementType_None_Clicked"
+                        Clicked="Button_SandstormMoveType_None_Clicked"
                         />
                     <Button
-                        x:Name="Button_MovementType_Tele"
+                        x:Name="Button_SandstormMoveType_Tele"
                         Text="Tele"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_MovementType_Tele_Clicked"
+                        Clicked="Button_SandstormMoveType_Tele_Clicked"
                         />
                     <Button
-                        x:Name="Button_MovementType_Auto"
+                        x:Name="Button_SandstormMoveType_Auto"
                         Text="Auto"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_MovementType_Auto_Clicked"
+                        Clicked="Button_SandstormMoveType_Auto_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -63,25 +63,28 @@
                         WidthRequest="293"
                         />
                     <Button
-                        x:Name="Button_DroveOffPlatform_None"
+                        x:Name="Button_SandstormOffPlatform_None"
                         Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormOffPlatform_None_Clicked"
                         />
                     <Button
-                        x:Name="Button_DroveOffPlatform_1"
+                        x:Name="Button_SandstormOffPlatform_1"
                         Text="1"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormOffPlatform_1_Clicked"
                         />
                     <Button
-                        x:Name="Button_DroveOffPlatform_2"
+                        x:Name="Button_SandstormOffPlatform_2"
                         Text="2"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormOffPlatform_2_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -92,25 +95,27 @@
                         WidthRequest="293"
                         />
                     <Label
-                        x:Name="Label_SandstormHatchesPlaced_Value"
+                        x:Name="Label_SandstormHatches_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="10,10,0,0"
                         />
                     <Button
-                        x:Name="Button_SandstormHatchesPlaced_Minus"
+                        x:Name="Button_SandstormHatches_Minus"
                         Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormHatches_Minus_Clicked"
                         />
                     <Button
-                        x:Name="Button_SandstormHatchesPlaced_Plus"
+                        x:Name="Button_SandstormHatches_Plus"
                         Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormHatches_Plus_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -121,25 +126,27 @@
                         WidthRequest="293"
                         />
                     <Label
-                        x:Name="Label_SandstormCargoPlaced_Value"
+                        x:Name="Label_SandstormCargo_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="10,10,0,0"
                         />
                     <Button
-                        x:Name="Button_SandstormCargoPlaced_Minus"
+                        x:Name="Button_SandstormCargo_Minus"
                         Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormCargo_Minus_Clicked"
                         />
                     <Button
-                        x:Name="Button_SandstormCargoPlaced_Plus"
+                        x:Name="Button_SandstormCargo_Plus"
                         Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_SandstormCargo_Plus_Clicked"
                         />
                 </StackLayout>
 

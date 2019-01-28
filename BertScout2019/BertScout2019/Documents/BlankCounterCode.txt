@@ -1,0 +1,36 @@
+        #region ZZZ
+
+        public int ZZZ
+        {
+            get
+            {
+                return viewModel.item.ZZZ;
+            }
+            set
+            {
+                Label_ZZZ_Value.Text = value.ToString();
+                if (viewModel.item.ZZZ != value)
+                {
+                    viewModel.item.ZZZ = value;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_ZZZ_Minus_Clicked(object sender, System.EventArgs e)
+        {
+            if (ZZZ > 0)
+            {
+                ZZZ--;
+            }
+        }
+
+        private void Button_ZZZ_Plus_Clicked(object sender, System.EventArgs e)
+        {
+            if (ZZZ < 99)
+            {
+                ZZZ++;
+            }
+        }
+
+        #endregion

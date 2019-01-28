@@ -6,97 +6,116 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"
-            Margin="10,10,10,10"
-            >
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="10,10,10,10"
+                >
 
                 <!-- SANDSTORM -->
 
                 <StackLayout
-                HorizontalOptions="Fill"
-                BackgroundColor="#22BE1C">
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#22BE1C">
                     <Label
-                    Text="Sandstorm" 
-                    HorizontalOptions="Center"
-                    BackgroundColor="#22BE1C"
-                    FontSize="Large"
-                />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Movement Type:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None"
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="Tele"
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="Auto"
-                        FontSize="24"
-                        WidthRequest="90"
+                        Text="Sandstorm" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="#22BE1C"
+                        FontSize="Large"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Drove Off Platform:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None" 
+                    <Label 
+                        Text="Movement Type:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button 
+                        x:Name="Button_MovementType_None"
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="1" 
+                    <Button 
+                        x:Name="Button_MovementType_Tele"
+                        Text="Tele"
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="2" 
+                    <Button 
+                        x:Name="Button_MovementType_Auto"
+                        Text="Auto"
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Hatches Placed:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label 
+                        Text="Drove Off Platform:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button 
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
+                    <Button 
+                        Text="1" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button 
+                        Text="2" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Cargo Placed:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label
+                        Text="Hatches Placed:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label 
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button 
+                        Text="-" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
+                    <Button 
+                        Text="+" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label 
+                        Text="Cargo Placed:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label 
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button
+                        Text="+" 
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -105,131 +124,155 @@
                 <!-- MAIN GAME -->
 
                 <StackLayout
-                HorizontalOptions="Fill"
-                BackgroundColor="#22BE1C">
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#22BE1C">
                     <Label
-                    Text="Main Game" 
-                    HorizontalOptions="Center"
-                    BackgroundColor="#22BE1C"
-                    FontSize="Large"
-                />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Cargo Ship Hatches:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="+" 
-                        FontSize="24"
-                        WidthRequest="90"
+                        Text="Main Game" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="#22BE1C"
+                        FontSize="Large"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Cargo Ship Cargo:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label 
+                        Text="Cargo Ship Hatches:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label 
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
+                    <Button
+                        Text="+" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Rocket Hatches:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label 
+                        Text="Cargo Ship Cargo:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label 
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Rocket Cargo:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="+" 
+                    <Button
+                        Text="+" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Highest Rocket Hatch:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label 
+                        Text="Rocket Hatches:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
+                    <Button
+                        Text="+" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Highest Rocket Cargo:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label
+                        Text="Rocket Cargo:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
+                    <Button
+                        Text="+" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Highest Rocket Hatch:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button
+                        Text="+" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Highest Rocket Cargo:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button
+                        Text="+" 
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -238,51 +281,59 @@
                 <!-- END GAME -->
 
                 <StackLayout
-                HorizontalOptions="Fill"
-                BackgroundColor="#22BE1C">
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#22BE1C">
                     <Label
-                    Text="End Game" 
-                    HorizontalOptions="Center"
-                    BackgroundColor="#22BE1C"
-                    FontSize="Large"
-                />
+                        Text="End Game" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="#22BE1C"
+                        FontSize="Large"
+                        />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Climbed Platform:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Label Text="0"
-                       FontSize="24"
-                       WidthRequest="80"
-                       Margin="0,10,0,0"
-                       />
-                    <Button Text="-" 
+                    <Label
+                        Text="Climbed Platform:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Label
+                        Text="0"
+                        FontSize="24"
+                        WidthRequest="80"
+                        Margin="0,10,0,0"
+                        />
+                    <Button
+                        Text="-" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="+" 
+                    <Button
+                        Text="+" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Buddy Climb:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None" 
+                    <Label
+                        Text="Buddy Climb:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="None" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Lift" 
+                    <Button
+                        Text="Lift" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="On"
+                    <Button
+                        Text="On"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -291,88 +342,104 @@
                 <!-- GAMEPLAY -->
 
                 <StackLayout
-                HorizontalOptions="Fill"
-                BackgroundColor="#22BE1C">
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#22BE1C">
                     <Label
-                    Text="Gameplay" 
-                    HorizontalOptions="Center"
-                    BackgroundColor="#22BE1C"
-                    FontSize="Large"
-                />
+                        Text="Gameplay" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="#22BE1C"
+                        FontSize="Large"
+                        />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Defense:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None" 
+                    <Label
+                        Text="Defense:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="None" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Some" 
+                    <Button
+                        Text="Some" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Lots" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Cooperation:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="Some" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="Lots" 
+                    <Button
+                        Text="Lots" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Fouls:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None" 
+                    <Label
+                        Text="Cooperation:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="None" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Some" 
+                    <Button
+                        Text="Some" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Lots" 
+                    <Button
+                        Text="Lots" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Broken:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="None" 
+                    <Label
+                        Text="Fouls:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="None" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Some" 
+                    <Button
+                        Text="Some" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Lots" 
+                    <Button
+                        Text="Lots" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Broken:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="None" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button
+                        Text="Some" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button
+                        Text="Lots" 
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -381,61 +448,71 @@
                 <!-- GAMEPLAY -->
 
                 <StackLayout
-                HorizontalOptions="Fill"
-                BackgroundColor="#22BE1C">
+                    HorizontalOptions="Fill"
+                    BackgroundColor="#22BE1C">
                     <Label
-                    Text="Results" 
-                    HorizontalOptions="Center"
-                    BackgroundColor="#22BE1C"
-                    FontSize="Large"
-                />
+                        Text="Results" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="#22BE1C"
+                        FontSize="Large"
+                        />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Alliance Result:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="Lost" 
+                    <Label
+                        Text="Alliance Result:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="Lost" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Tied" 
+                    <Button
+                        Text="Tied" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Won" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Rocket Ranking Point:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="No" 
-                        FontSize="24"
-                        WidthRequest="90"
-                        />
-                    <Button Text="Yes" 
+                    <Button
+                        Text="Won" 
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Hab Ranking Point:"
-                       FontSize="24"
-                       Margin="0,10,0,0"
-                       WidthRequest="295"
-                       />
-                    <Button Text="No" 
+                    <Label
+                        Text="Rocket Ranking Point:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="No" 
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button Text="Yes" 
+                    <Button
+                        Text="Yes" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Hab Ranking Point:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="295"
+                        />
+                    <Button
+                        Text="No" 
+                        FontSize="24"
+                        WidthRequest="90"
+                        />
+                    <Button
+                        Text="Yes" 
                         FontSize="24"
                         WidthRequest="90"
                         />

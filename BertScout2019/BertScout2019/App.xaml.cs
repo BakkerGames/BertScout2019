@@ -14,7 +14,7 @@ namespace BertScout2019
         static public string HighlightColor = "#23DAFF";
         static public Color SelectedButtonColor = Color.FromHex(BertColor);
         static public Color UnselectedButtonColor = Color.LightGray;
-        static public double dbVersion = 1.0;
+        static public double dbVersion = 1.1;
 
         // app properties for easy page communication
         static public int currVersionNumber { get; set; }

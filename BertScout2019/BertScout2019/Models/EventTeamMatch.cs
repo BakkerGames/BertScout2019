@@ -33,8 +33,7 @@ namespace BertScout2019.Models
         public int Fouls { get; set; }
         public int Broken { get; set; }
 
-        public int AllianceScore { get; set; }
-        public int LostTiedWon { get; set; }
+        public int AllianceResult { get; set; }
         public int RocketRankingPoint { get; set; }
         public int HabRankingPoint { get; set; }
 

@@ -14,7 +14,7 @@ namespace BertScout2019.Views
         {
             InitializeComponent();
 
-            ShowNewMatchNumber.Text = (App.highestMatchNumber + 1).ToString();
+            MatchNumberLabelValue.Text = (App.highestMatchNumber + 1).ToString();
 
             BindingContext = viewModel = new SelectEventTeamMatchesViewModel();
         }
@@ -38,25 +38,25 @@ namespace BertScout2019.Views
 
         private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)
         {
-            int value = int.Parse(ShowNewMatchNumber.Text);
+            int value = int.Parse(MatchNumberLabelValue.Text);
             if (value > 1)
             {
-                ShowNewMatchNumber.Text = (value - 1).ToString();
+                MatchNumberLabelValue.Text = (value - 1).ToString();
             }
         }
 
         private void AddMatch_Plus_Clicked(object sender, System.EventArgs e)
         {
-            int value = int.Parse(ShowNewMatchNumber.Text);
+            int value = int.Parse(MatchNumberLabelValue.Text);
             if (value < 999)
             {
-                ShowNewMatchNumber.Text = (value + 1).ToString();
+                MatchNumberLabelValue.Text = (value + 1).ToString();
             }
         }
 
         private void AddNewMatch_Clicked(object sender, System.EventArgs e)
         {
-            int value = int.Parse(ShowNewMatchNumber.Text);
+            int value = int.Parse(MatchNumberLabelValue.Text);
             foreach (EventTeamMatch oldMatch in viewModel.Matches)
             {
                 if (oldMatch.MatchNumber == value)

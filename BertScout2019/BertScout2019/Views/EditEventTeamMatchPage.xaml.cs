@@ -38,22 +38,25 @@ namespace BertScout2019.Views
             set
             {
                 int saveValue = viewModel.item.SandstormMoveType;
-                Button_MovementType_None.BackgroundColor = App.UnselectedButtonColor;
-                Button_MovementType_Tele.BackgroundColor = App.UnselectedButtonColor;
-                Button_MovementType_Auto.BackgroundColor = App.UnselectedButtonColor;
                 switch (value)
                 {
                     case 1:
                         viewModel.item.SandstormMoveType = 1;
+                        Button_MovementType_None.BackgroundColor = App.UnselectedButtonColor;
                         Button_MovementType_Tele.BackgroundColor = App.SelectedButtonColor;
+                        Button_MovementType_Auto.BackgroundColor = App.UnselectedButtonColor;
                         break;
                     case 2:
                         viewModel.item.SandstormMoveType = 2;
+                        Button_MovementType_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_MovementType_Tele.BackgroundColor = App.UnselectedButtonColor;
                         Button_MovementType_Auto.BackgroundColor = App.SelectedButtonColor;
                         break;
                     default:
                         viewModel.item.SandstormMoveType = 0;
                         Button_MovementType_None.BackgroundColor = App.SelectedButtonColor;
+                        Button_MovementType_Tele.BackgroundColor = App.UnselectedButtonColor;
+                        Button_MovementType_Auto.BackgroundColor = App.UnselectedButtonColor;
                         break;
                 }
                 if (saveValue != viewModel.item.SandstormMoveType)

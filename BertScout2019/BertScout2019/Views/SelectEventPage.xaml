@@ -19,27 +19,36 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
-                                <Label Text="{Binding Name}"
-                                   LineBreakMode="NoWrap"
-                                   Style="{DynamicResource ListItemTextStyle}"
-                                   FontSize="16" />
+                                <Label
+                                    Text="{Binding Name}"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemTextStyle}"
+                                    FontAttributes="Bold" 
+                                    FontSize="24"
+                                    />
                                 <Label Text="{Binding Location}"
                                    LineBreakMode="NoWrap"
                                    Style="{DynamicResource ListItemDetailTextStyle}"
-                                   FontSize="13" />
+                                   FontSize="16" />
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding StartDate}"
-                                       LineBreakMode="NoWrap"
-                                       Style="{DynamicResource ListItemDetailTextStyle}"
-                                       FontSize="13" />
-                                    <Label Text="to" 
-                                       LineBreakMode="NoWrap"
-                                       Style="{DynamicResource ListItemDetailTextStyle}"
-                                       FontSize="13" />
-                                    <Label Text="{Binding EndDate}"
-                                       LineBreakMode="NoWrap"
-                                       Style="{DynamicResource ListItemDetailTextStyle}"
-                                       FontSize="13" />
+                                    <Label
+                                        Text="{Binding StartDate}"
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="16"
+                                        />
+                                    <Label
+                                        Text="to" 
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="16"
+                                        />
+                                    <Label
+                                        Text="{Binding EndDate}"
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="16"
+                                        />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

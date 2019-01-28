@@ -26,7 +26,7 @@
                 TextColor="Green"
                 FontAttributes="Bold"
                 Margin="20"
-            />
+                />
             <Button
                 x:Name="Button_Select_FRC_Event"
                 Text="Select FRC Event" 
@@ -36,7 +36,8 @@
                 FontSize="Large"
                 Margin="20"
                 WidthRequest="300"
-            />
+                BackgroundColor="LightGray"
+                />
             <Button
                 x:Name="Button_Match_Scouting"
                 Text="Match Scouting" 
@@ -46,7 +47,8 @@
                 FontSize="Large"
                 Margin="20"
                 WidthRequest="300"
-            />
+                BackgroundColor="LightGray"
+                />
         </StackLayout>
     </ContentPage.Content>
     

@@ -24,17 +24,20 @@
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
-                                           FontSize="16" />
+                                           FontSize="24"
+                                           />
                                     <Label Text="-"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
-                                           FontSize="16" />
+                                           FontSize="24"
+                                           />
                                     <Label Text="{Binding Name}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
-                                           FontSize="16" />
+                                           FontSize="24"
+                                           />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

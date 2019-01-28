@@ -29,6 +29,7 @@
                     FontSize="24"
                     WidthRequest="50"
                     Clicked="AddMatch_Minus_Clicked"
+                    BackgroundColor="LightGray"
                     />
                 <Button
                     x:Name="AddMatch_Plus"
@@ -36,6 +37,7 @@
                     FontSize="24"
                     WidthRequest="50"
                     Clicked="AddMatch_Plus_Clicked"
+                    BackgroundColor="LightGray"
                     />
                 <Button
                     x:Name="AddNewMatch"
@@ -43,6 +45,7 @@
                     FontSize="24"
                     Margin="10,0,0,0"
                     Clicked="AddNewMatch_Clicked"
+                    BackgroundColor="LightGray"
                     />
             </StackLayout>
             <ListView
@@ -64,12 +67,12 @@
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
-                                           FontSize="16" />
+                                           FontSize="24" />
                                     <Label Text="{Binding MatchNumber}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
-                                           FontSize="16" />
+                                           FontSize="24" />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

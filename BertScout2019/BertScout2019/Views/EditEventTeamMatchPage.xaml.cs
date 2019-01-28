@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using BertScout2019.Models;
+using BertScout2019.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace BertScout2019.Views
@@ -6,40 +9,56 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditEventTeamMatchPage : ContentPage
     {
-        public EditEventTeamMatchPage()
+        EditEventTeamMatchViewModel viewModel;
+
+        public EditEventTeamMatchPage(EventTeamMatch item)
         {
             InitializeComponent();
-            Title = $"Team {App.currTeamNumber} - Match {App.currMatchNumber}";
+
+            BindingContext = viewModel = new EditEventTeamMatchViewModel(item);
+
+            SetButtons();
+        }
+
+        private void SetButtons()
+        {
+            SandstormMovementType = viewModel.item.SandstormMoveType;
+
+            //todo add more here
         }
 
         #region SandstormMovementType
 
-        private int _SandstormMovementType = 0;
         public int SandstormMovementType
         {
             get
             {
-                return _SandstormMovementType;
+                return viewModel.item.SandstormMoveType;
             }
             set
             {
+                int saveValue = viewModel.item.SandstormMoveType;
                 Button_MovementType_None.BackgroundColor = App.UnselectedButtonColor;
                 Button_MovementType_Tele.BackgroundColor = App.UnselectedButtonColor;
                 Button_MovementType_Auto.BackgroundColor = App.UnselectedButtonColor;
                 switch (value)
                 {
-                    case 0:
-                        _SandstormMovementType = value;
-                        Button_MovementType_None.BackgroundColor = App.SelectedButtonColor;
-                        break;
                     case 1:
-                        _SandstormMovementType = value;
+                        viewModel.item.SandstormMoveType = 1;
                         Button_MovementType_Tele.BackgroundColor = App.SelectedButtonColor;
                         break;
                     case 2:
-                        _SandstormMovementType = value;
+                        viewModel.item.SandstormMoveType = 2;
                         Button_MovementType_Auto.BackgroundColor = App.SelectedButtonColor;
                         break;
+                    default:
+                        viewModel.item.SandstormMoveType = 0;
+                        Button_MovementType_None.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                }
+                if (saveValue != viewModel.item.SandstormMoveType)
+                {
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
                 }
             }
         }

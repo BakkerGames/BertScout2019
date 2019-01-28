@@ -33,7 +33,7 @@ namespace BertScout2019.Views
                 return;
 
             App.currMatchNumber = item.MatchNumber;
-            await Navigation.PushAsync(new EditEventTeamMatchPage());
+            await Navigation.PushAsync(new EditEventTeamMatchPage(item));
         }
 
         private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)

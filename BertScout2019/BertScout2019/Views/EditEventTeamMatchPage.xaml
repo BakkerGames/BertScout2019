@@ -17,57 +17,63 @@
                     HorizontalOptions="Fill"
                     BackgroundColor="#22BE1C">
                     <Label
-                        Text="Sandstorm" 
+                        Text="Sandstorm"
                         HorizontalOptions="Center"
                         BackgroundColor="#22BE1C"
                         FontSize="Large"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label 
+                    <Label
                         Text="Movement Type:"
                         FontSize="24"
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Button 
+                    <Button
                         x:Name="Button_MovementType_None"
                         Text="None"
                         FontSize="24"
                         WidthRequest="90"
+                        Clicked="Button_MovementType_None_Clicked"
                         />
-                    <Button 
+                    <Button
                         x:Name="Button_MovementType_Tele"
                         Text="Tele"
                         FontSize="24"
                         WidthRequest="90"
+                        Clicked="Button_MovementType_Tele_Clicked"
                         />
-                    <Button 
+                    <Button
                         x:Name="Button_MovementType_Auto"
                         Text="Auto"
                         FontSize="24"
                         WidthRequest="90"
+                        Clicked="Button_MovementType_Auto_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label 
+                    <Label
                         Text="Drove Off Platform:"
                         FontSize="24"
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Button 
+                    <Button
+                        x:Name="Button_DroveOffPlatform_None"
                         Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button 
-                        Text="1" 
+                    <Button
+                        x:Name="Button_DroveOffPlatform_1"
+                        Text="1"
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button 
-                        Text="2" 
+                    <Button
+                        x:Name="Button_DroveOffPlatform_2"
+                        Text="2"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -79,43 +85,49 @@
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Label 
+                    <Label
+                        x:Name="Label_SandstormHatchesPlaced_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
-                    <Button 
-                        Text="-" 
+                    <Button
+                        x:Name="Button_SandstormHatchesPlaced_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
-                    <Button 
-                        Text="+" 
+                    <Button
+                        x:Name="Button_SandstormHatchesPlaced_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label 
+                    <Label
                         Text="Cargo Placed:"
                         FontSize="24"
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Label 
+                    <Label
+                        x:Name="Label_SandstormCargoPlaced_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_SandstormCargoPlaced_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_SandstormCargoPlaced_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -127,80 +139,89 @@
                     HorizontalOptions="Fill"
                     BackgroundColor="#22BE1C">
                     <Label
-                        Text="Main Game" 
+                        Text="Main Game"
                         HorizontalOptions="Center"
                         BackgroundColor="#22BE1C"
                         FontSize="Large"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label 
+                    <Label
                         Text="Cargo Ship Hatches:"
                         FontSize="24"
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Label 
+                    <Label
+                        x:Name="Label_CargoShipHatches_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_CargoShipHatches_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_CargoShipHatches_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label 
+                    <Label
                         Text="Cargo Ship Cargo:"
                         FontSize="24"
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Label 
+                    <Label
+                        x:Name="Label_CargoShipCargo_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_CargoShipCargo_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_CargoShipCargo_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label 
+                    <Label
                         Text="Rocket Hatches:"
                         FontSize="24"
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
                     <Label
+                        x:Name="Label_RocketHatches_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_RocketHatches_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_RocketHatches_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -213,18 +234,21 @@
                         WidthRequest="295"
                         />
                     <Label
+                        x:Name="Label_RocketCargo_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_RocketCargo_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_RocketCargo_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -237,18 +261,21 @@
                         WidthRequest="295"
                         />
                     <Label
+                        x:Name="Label_HighestRocketHatch_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_HighestRocketHatch_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_HighestRocketHatch_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -261,18 +288,21 @@
                         WidthRequest="295"
                         />
                     <Label
+                        x:Name="Label_HighestRocketCargo_Value"
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
                         />
                     <Button
-                        Text="-" 
+                        x:Name="Button_HighestRocketCargo_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="+" 
+                        x:Name="Button_HighestRocketCargo_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -284,7 +314,7 @@
                     HorizontalOptions="Fill"
                     BackgroundColor="#22BE1C">
                     <Label
-                        Text="End Game" 
+                        Text="End Game"
                         HorizontalOptions="Center"
                         BackgroundColor="#22BE1C"
                         FontSize="Large"
@@ -298,22 +328,37 @@
                         Margin="0,10,0,0"
                         WidthRequest="295"
                         />
-                    <Label
+                    <Button
+                        Text="None"
+                        />
+                    <Button
+                        Text="1"
+                        />
+                    <Button
+                        Text="2"
+                        />
+                    <Button
+                        Text="3"
+                        />
+                    <!--<Label
+                        x:Name=""
                         Text="0"
                         FontSize="24"
                         WidthRequest="80"
                         Margin="0,10,0,0"
-                        />
-                    <Button
-                        Text="-" 
+                        />-->
+                    <!--<Button
+                        x:Name=""
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
-                        />
-                    <Button
-                        Text="+" 
+                        />-->
+                    <!--<Button
+                        x:Name=""
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
-                        />
+                        />-->
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label
@@ -323,16 +368,19 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="None" 
+                        x:Name="Button_BuddyClimb_None"
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Lift" 
+                        x:Name="Button_BuddyClimb_Lift"
+                        Text="Lift"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
+                        x:Name="Button_BuddyClimb_On"
                         Text="On"
                         FontSize="24"
                         WidthRequest="90"
@@ -345,7 +393,7 @@
                     HorizontalOptions="Fill"
                     BackgroundColor="#22BE1C">
                     <Label
-                        Text="Gameplay" 
+                        Text="Gameplay"
                         HorizontalOptions="Center"
                         BackgroundColor="#22BE1C"
                         FontSize="Large"
@@ -360,17 +408,20 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="None" 
+                        x:Name="Button_Defense_None"
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Some" 
+                        x:Name="Button_Defense_Some"
+                        Text="Some"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Lots" 
+                        x:Name="Button_Defense_Lots"
+                        Text="Lots"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -383,17 +434,20 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="None" 
+                        x:Name="Button_Cooperation_None"
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Some" 
+                        x:Name="Button_Cooperation_Some"
+                        Text="Some"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Lots" 
+                        x:Name="Button_Cooperation_Lots"
+                        Text="Lots"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -406,17 +460,20 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="None" 
+                        x:Name="Button_Fouls_None"
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Some" 
+                        x:Name="Button_Fouls_Some"
+                        Text="Some"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Lots" 
+                        x:Name="Button_Fouls_Lots"
+                        Text="Lots"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -429,17 +486,20 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="None" 
+                        x:Name="Button_Broken_None"
+                        Text="None"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Some" 
+                        x:Name="Button_Broken_Some"
+                        Text="Some"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Lots" 
+                        x:Name="Button_Broken_Lots"
+                        Text="Lots"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -451,7 +511,7 @@
                     HorizontalOptions="Fill"
                     BackgroundColor="#22BE1C">
                     <Label
-                        Text="Results" 
+                        Text="Results"
                         HorizontalOptions="Center"
                         BackgroundColor="#22BE1C"
                         FontSize="Large"
@@ -466,17 +526,20 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="Lost" 
+                        x:Name="Button_AllianceResult_Lost"
+                        Text="Lost"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Tied" 
+                        x:Name="Button_AllianceResult_Tied"
+                        Text="Tied"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Won" 
+                        x:Name="Button_AllianceResult_Won"
+                        Text="Won"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -489,12 +552,14 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="No" 
+                        x:Name="Button_RocketRankingPoint_No"
+                        Text="No"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Yes" 
+                        x:Name="Button_RocketRankingPoint_Yes"
+                        Text="Yes"
                         FontSize="24"
                         WidthRequest="90"
                         />
@@ -507,12 +572,14 @@
                         WidthRequest="295"
                         />
                     <Button
-                        Text="No" 
+                        x:Name="Button_HabRankingPoint_No"
+                        Text="No"
                         FontSize="24"
                         WidthRequest="90"
                         />
                     <Button
-                        Text="Yes" 
+                        x:Name="Button_HabRankingPoint_Yes"
+                        Text="Yes"
                         FontSize="24"
                         WidthRequest="90"
                         />

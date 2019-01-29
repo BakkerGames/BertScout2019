@@ -961,7 +961,7 @@ namespace BertScout2019.Views
 
         private void ToolbarItem_Comments_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new EditMatchCommentPage());
+            Navigation.PushAsync(new EditMatchCommentPage(viewModel.item));
         }
     }
 }

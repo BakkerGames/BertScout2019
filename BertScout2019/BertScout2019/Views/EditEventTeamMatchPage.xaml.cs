@@ -959,9 +959,9 @@ namespace BertScout2019.Views
 
         #endregion
 
-        private void Match_Comments_Clicked(object sender, System.EventArgs e)
+        private void ToolbarItem_Comments_Clicked(object sender, System.EventArgs e)
         {
-
+            Navigation.PushAsync(new EditMatchCommentPage());
         }
     }
 }

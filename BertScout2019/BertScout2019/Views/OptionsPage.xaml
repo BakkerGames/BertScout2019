@@ -6,12 +6,6 @@
     <ContentPage.Content>
         <StackLayout
             VerticalOptions="CenterAndExpand">
-            <Label
-                x:Name="OptionsMessageLabel"
-                Text="Here are some options"
-                HorizontalOptions="CenterAndExpand"
-                FontSize="Large"
-                />
             <Button
                 x:Name="Reset_Database_Button"
                 Text="Reset Database"
@@ -19,9 +13,34 @@
                 BackgroundColor="LightGray"
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"
-                FontSize="Large"
+                FontSize="24"
                 Margin="20"
                 WidthRequest="300"
+                />
+            <StackLayout 
+                x:Name="OptionPasswordStackLayout"
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="True"
+                >
+                <Label
+                    Text="Password:"
+                    FontSize="24"
+                    />
+                <Entry
+                    x:Name="Entry_OptionPassword_Value"
+                    Text=""
+                    FontSize="24"
+                    WidthRequest="200"
+                    IsPassword="True"
+                    />
+            </StackLayout>
+            <Label
+                x:Name="OptionsMessageLabel"
+                Text=""
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,20,0,0"
+                FontSize="24"
                 />
         </StackLayout>
     </ContentPage.Content>

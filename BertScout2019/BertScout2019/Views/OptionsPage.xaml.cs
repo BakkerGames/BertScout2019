@@ -22,8 +22,18 @@ namespace BertScout2019.Views
 
         public void Reset_Database_Button_Clicked(object sender, EventArgs e)
         {
-            if (Reset_Database_Button_Clicked_IsBusy) return;
+            if (Reset_Database_Button_Clicked_IsBusy)
+            {
+                return;
+            }
             Reset_Database_Button_Clicked_IsBusy = true;
+            OptionsMessageLabel.Text = "";
+            if (Entry_OptionPassword_Value.Text != "bertdata")
+            {
+                OptionsMessageLabel.Text = "Incorrect password!";
+                Reset_Database_Button_Clicked_IsBusy = false;
+                return;
+            }
             try
             {
                 App.Database.DropTables();

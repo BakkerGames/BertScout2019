@@ -958,5 +958,10 @@ namespace BertScout2019.Views
         }
 
         #endregion
+
+        private void Match_Comments_Clicked(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

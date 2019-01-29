@@ -35,6 +35,10 @@ namespace BertScout2019.ViewModels
                 foreach (var match in matches)
                 {
                     Matches.Add(match);
+                    if (App.highestMatchNumber < match.MatchNumber)
+                    {
+                        App.highestMatchNumber = match.MatchNumber;
+                    }
                 }
             }
             catch (Exception ex)

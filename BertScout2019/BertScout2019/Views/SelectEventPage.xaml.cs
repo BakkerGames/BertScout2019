@@ -42,6 +42,7 @@ namespace BertScout2019.Views
 
             App.currFRCEventKey = item.EventKey;
             App.currFRCEventName = item.Name;
+            App.highestMatchNumber = 0;
         }
     }
 }

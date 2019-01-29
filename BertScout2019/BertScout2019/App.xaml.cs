@@ -23,7 +23,7 @@ namespace BertScout2019
         static public int currTeamNumber { get; set; }
         static public string currTeamName { get; set; }
         static public int currMatchNumber { get; set; }
-        static public int highestMatchNumber { get; set; }
+        static public int highestMatchNumber { get; set; } = 0;
 
         // app database
         private const string dbFilename = "bertscout2019.db3";
@@ -33,6 +33,7 @@ namespace BertScout2019
         private const string propNameVersionNumber = "currentVersionNumber";
         private const string propNameFRCEventKey = "currentFRCEventKey";
         private const string propNameFRCEventName = "currentFRCEventName";
+        private const string propNameHighestMatchNumber = "highestMatchNumber";
 
         public App()
         {
@@ -49,6 +50,10 @@ namespace BertScout2019
                     {
                         currFRCEventName = (string)Properties[propNameFRCEventName];
                     }
+                    if (Properties.ContainsKey(propNameHighestMatchNumber))
+                    {
+                        highestMatchNumber = (int)Properties[propNameHighestMatchNumber];
+                    }
                 }
             }
             catch (Exception)
@@ -56,6 +61,7 @@ namespace BertScout2019
                 Properties[propNameVersionNumber] = dbVersion;
                 Properties[propNameFRCEventKey] = "";
                 Properties[propNameFRCEventName] = "";
+                Properties[propNameHighestMatchNumber] = 0;
             }
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage())
@@ -87,6 +93,7 @@ namespace BertScout2019
             Properties[propNameVersionNumber] = dbVersion;
             Properties[propNameFRCEventKey] = currFRCEventKey;
             Properties[propNameFRCEventName] = currFRCEventName;
+            Properties[propNameHighestMatchNumber] = highestMatchNumber;
         }
 
         protected override void OnResume()

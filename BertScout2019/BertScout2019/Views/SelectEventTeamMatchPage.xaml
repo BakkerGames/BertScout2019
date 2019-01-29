@@ -20,14 +20,14 @@
                     x:Name="MatchNumberLabelValue"
                     Text="1"
                     FontSize="24"
-                    WidthRequest="70"
+                    WidthRequest="90"
                     Margin="10,10,10,0"
                     />
                 <Button
                     x:Name="AddMatch_Minus"
                     Text="-"
                     FontSize="24"
-                    WidthRequest="50"
+                    WidthRequest="90"
                     Clicked="AddMatch_Minus_Clicked"
                     BackgroundColor="LightGray"
                     />
@@ -35,7 +35,7 @@
                     x:Name="AddMatch_Plus"
                     Text="+"
                     FontSize="24"
-                    WidthRequest="50"
+                    WidthRequest="90"
                     Clicked="AddMatch_Plus_Clicked"
                     BackgroundColor="LightGray"
                     />
@@ -46,6 +46,7 @@
                     Margin="10,0,0,0"
                     Clicked="AddNewMatch_Clicked"
                     BackgroundColor="LightGray"
+                    WidthRequest="90"
                     />
             </StackLayout>
             <ListView

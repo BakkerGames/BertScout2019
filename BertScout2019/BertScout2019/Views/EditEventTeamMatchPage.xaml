@@ -493,6 +493,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Cooperation_None_Clicked"
                         />
                     <Button
                         x:Name="Button_Cooperation_Some"
@@ -500,6 +501,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Cooperation_Some_Clicked"
                         />
                     <Button
                         x:Name="Button_Cooperation_Lots"
@@ -507,6 +509,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Cooperation_Lots_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -522,6 +525,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Fouls_None_Clicked"
                         />
                     <Button
                         x:Name="Button_Fouls_Some"
@@ -529,6 +533,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Fouls_Some_Clicked"
                         />
                     <Button
                         x:Name="Button_Fouls_Lots"
@@ -536,6 +541,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Fouls_Lots_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -551,6 +557,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Broken_None_Clicked"
                         />
                     <Button
                         x:Name="Button_Broken_Some"
@@ -558,6 +565,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Broken_Some_Clicked"
                         />
                     <Button
                         x:Name="Button_Broken_Lots"
@@ -565,6 +573,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Broken_Lots_Clicked"
                         />
                 </StackLayout>
 
@@ -594,6 +603,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_AllianceResult_Lost_Clicked"
                         />
                     <Button
                         x:Name="Button_AllianceResult_Tied"
@@ -601,6 +611,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_AllianceResult_Tied_Clicked"
                         />
                     <Button
                         x:Name="Button_AllianceResult_Won"
@@ -608,6 +619,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_AllianceResult_Won_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -623,6 +635,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_RocketRankingPoint_No_Clicked"
                         />
                     <Button
                         x:Name="Button_RocketRankingPoint_Yes"
@@ -630,6 +643,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_RocketRankingPoint_Yes_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
@@ -645,6 +659,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_HabRankingPoint_No_Clicked"
                         />
                     <Button
                         x:Name="Button_HabRankingPoint_Yes"
@@ -652,6 +667,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_HabRankingPoint_Yes_Clicked"
                         />
                 </StackLayout>
 

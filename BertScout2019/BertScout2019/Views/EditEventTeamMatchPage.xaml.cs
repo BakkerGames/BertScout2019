@@ -36,8 +36,14 @@ namespace BertScout2019.Views
             EndgamePlatform = viewModel.item.EndgamePlatform;
             EndgameBuddyClimb = viewModel.item.EndgameBuddyClimb;
 
+            Defense = viewModel.item.Defense;
+            Cooperation = viewModel.item.Cooperation;
+            Fouls = viewModel.item.Fouls;
+            Broken = viewModel.item.Broken;
 
-            //todo add more here
+            AllianceResult = viewModel.item.AllianceResult;
+            RocketRankingPoint = viewModel.item.RocketRankingPoint;
+            HabRankingPoint = viewModel.item.HabRankingPoint;
         }
 
         #region SandstormMoveType
@@ -580,6 +586,8 @@ namespace BertScout2019.Views
 
         #endregion
 
+        #region Defense
+
         public int Defense
         {
             get
@@ -588,33 +596,35 @@ namespace BertScout2019.Views
             }
             set
             {
+                int newValue = value;
                 switch (value)
                 {
                     case 1:
-                        //set buttons
+                        newValue = 1;
                         Button_Defense_None.BackgroundColor = App.UnselectedButtonColor;
                         Button_Defense_Some.BackgroundColor = App.SelectedButtonColor;
                         Button_Defense_Lots.BackgroundColor = App.UnselectedButtonColor;
-                        viewModel.item.Defense = 1;
-                            break;
+                        break;
                     case 2:
-                        //set buttons
+                        newValue = 2;
                         Button_Defense_None.BackgroundColor = App.UnselectedButtonColor;
                         Button_Defense_Some.BackgroundColor = App.UnselectedButtonColor;
                         Button_Defense_Lots.BackgroundColor = App.SelectedButtonColor;
-                        viewModel.item.Defense = 2;
                         break;
-                   default:
-                        // set buttons
+                    default:
+                        newValue = 0;
                         Button_Defense_None.BackgroundColor = App.SelectedButtonColor;
                         Button_Defense_Some.BackgroundColor = App.UnselectedButtonColor;
                         Button_Defense_Lots.BackgroundColor = App.UnselectedButtonColor;
-                        viewModel.item.Defense = 0;
                         break;
+                }
+                if (viewModel.item.Defense != newValue)
+                {
+                    viewModel.item.Defense = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
                 }
             }
         }
-
 
         private void Button_Defense_None_Clicked(object sender, System.EventArgs e)
         {
@@ -630,5 +640,323 @@ namespace BertScout2019.Views
         {
             Defense = 2;
         }
+
+        #endregion
+
+        #region Cooperation
+
+        public int Cooperation
+        {
+            get
+            {
+                return viewModel.item.Cooperation;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_Cooperation_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Cooperation_Some.BackgroundColor = App.SelectedButtonColor;
+                        Button_Cooperation_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                    case 2:
+                        newValue = 2;
+                        Button_Cooperation_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Cooperation_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Cooperation_Lots.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_Cooperation_None.BackgroundColor = App.SelectedButtonColor;
+                        Button_Cooperation_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Cooperation_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.Cooperation != newValue)
+                {
+                    viewModel.item.Cooperation = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_Cooperation_None_Clicked(object sender, System.EventArgs e)
+        {
+            Cooperation = 0;
+        }
+
+        private void Button_Cooperation_Some_Clicked(object sender, System.EventArgs e)
+        {
+            Cooperation = 1;
+        }
+
+        private void Button_Cooperation_Lots_Clicked(object sender, System.EventArgs e)
+        {
+            Cooperation = 2;
+        }
+
+        #endregion
+
+        #region Fouls
+
+        public int Fouls
+        {
+            get
+            {
+                return viewModel.item.Fouls;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_Fouls_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Fouls_Some.BackgroundColor = App.SelectedButtonColor;
+                        Button_Fouls_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                    case 2:
+                        newValue = 2;
+                        Button_Fouls_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Fouls_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Fouls_Lots.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_Fouls_None.BackgroundColor = App.SelectedButtonColor;
+                        Button_Fouls_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Fouls_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.Fouls != newValue)
+                {
+                    viewModel.item.Fouls = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_Fouls_None_Clicked(object sender, System.EventArgs e)
+        {
+            Fouls = 0;
+        }
+
+        private void Button_Fouls_Some_Clicked(object sender, System.EventArgs e)
+        {
+            Fouls = 1;
+        }
+
+        private void Button_Fouls_Lots_Clicked(object sender, System.EventArgs e)
+        {
+            Fouls = 2;
+        }
+
+        #endregion
+
+        #region Broken
+
+        public int Broken
+        {
+            get
+            {
+                return viewModel.item.Broken;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_Broken_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Broken_Some.BackgroundColor = App.SelectedButtonColor;
+                        Button_Broken_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                    case 2:
+                        newValue = 2;
+                        Button_Broken_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Broken_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Broken_Lots.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_Broken_None.BackgroundColor = App.SelectedButtonColor;
+                        Button_Broken_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Broken_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.Broken != newValue)
+                {
+                    viewModel.item.Broken = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_Broken_None_Clicked(object sender, System.EventArgs e)
+        {
+            Broken = 0;
+        }
+
+        private void Button_Broken_Some_Clicked(object sender, System.EventArgs e)
+        {
+            Broken = 1;
+        }
+
+        private void Button_Broken_Lots_Clicked(object sender, System.EventArgs e)
+        {
+            Broken = 2;
+        }
+
+        #endregion
+
+        #region AllianceResult
+
+        public int AllianceResult
+        {
+            get
+            {
+                return viewModel.item.AllianceResult;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_AllianceResult_Lost.BackgroundColor = App.UnselectedButtonColor;
+                        Button_AllianceResult_Tied.BackgroundColor = App.SelectedButtonColor;
+                        Button_AllianceResult_Won.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                    case 2:
+                        newValue = 2;
+                        Button_AllianceResult_Lost.BackgroundColor = App.UnselectedButtonColor;
+                        Button_AllianceResult_Tied.BackgroundColor = App.UnselectedButtonColor;
+                        Button_AllianceResult_Won.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_AllianceResult_Lost.BackgroundColor = App.SelectedButtonColor;
+                        Button_AllianceResult_Tied.BackgroundColor = App.UnselectedButtonColor;
+                        Button_AllianceResult_Won.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.AllianceResult != newValue)
+                {
+                    viewModel.item.AllianceResult = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_AllianceResult_Lost_Clicked(object sender, System.EventArgs e)
+        {
+            AllianceResult = 0;
+        }
+
+        private void Button_AllianceResult_Tied_Clicked(object sender, System.EventArgs e)
+        {
+            AllianceResult = 1;
+        }
+
+        private void Button_AllianceResult_Won_Clicked(object sender, System.EventArgs e)
+        {
+            AllianceResult = 2;
+        }
+
+        #endregion
+
+        #region RocketRankingPoint
+
+        public int RocketRankingPoint
+        {
+            get
+            {
+                return viewModel.item.RocketRankingPoint;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_RocketRankingPoint_No.BackgroundColor = App.UnselectedButtonColor;
+                        Button_RocketRankingPoint_Yes.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_RocketRankingPoint_No.BackgroundColor = App.SelectedButtonColor;
+                        Button_RocketRankingPoint_Yes.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.RocketRankingPoint != newValue)
+                {
+                    viewModel.item.RocketRankingPoint = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_RocketRankingPoint_No_Clicked(object sender, System.EventArgs e)
+        {
+            RocketRankingPoint = 0;
+        }
+
+        private void Button_RocketRankingPoint_Yes_Clicked(object sender, System.EventArgs e)
+        {
+            RocketRankingPoint = 1;
+        }
+
+        #endregion
+
+        #region HabRankingPoint
+
+        public int HabRankingPoint
+        {
+            get
+            {
+                return viewModel.item.HabRankingPoint;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_HabRankingPoint_No.BackgroundColor = App.UnselectedButtonColor;
+                        Button_HabRankingPoint_Yes.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_HabRankingPoint_No.BackgroundColor = App.SelectedButtonColor;
+                        Button_HabRankingPoint_Yes.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.HabRankingPoint != newValue)
+                {
+                    viewModel.item.HabRankingPoint = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_HabRankingPoint_No_Clicked(object sender, System.EventArgs e)
+        {
+            HabRankingPoint = 0;
+        }
+
+        private void Button_HabRankingPoint_Yes_Clicked(object sender, System.EventArgs e)
+        {
+            HabRankingPoint = 1;
+        }
+
+        #endregion
     }
 }

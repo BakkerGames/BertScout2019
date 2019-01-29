@@ -461,6 +461,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Defense_None_Clicked"
                         />
                     <Button
                         x:Name="Button_Defense_Some"
@@ -468,6 +469,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Defense_Some_Clicked"
                         />
                     <Button
                         x:Name="Button_Defense_Lots"
@@ -475,6 +477,7 @@
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
+                        Clicked="Button_Defense_Lots_Clicked"
                         />
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">

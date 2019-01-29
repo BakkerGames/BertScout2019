@@ -1,0 +1,1 @@
+git clone https://github.com/bakkergames/BertScout2019.git BertScout2019

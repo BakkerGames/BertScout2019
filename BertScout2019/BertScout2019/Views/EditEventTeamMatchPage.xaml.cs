@@ -36,6 +36,7 @@ namespace BertScout2019.Views
             EndgamePlatform = viewModel.item.EndgamePlatform;
             EndgameBuddyClimb = viewModel.item.EndgameBuddyClimb;
 
+
             //todo add more here
         }
 
@@ -576,6 +577,58 @@ namespace BertScout2019.Views
             EndgameBuddyClimb = 2;
         }
 
+
         #endregion
+
+        public int Defense
+        {
+            get
+            {
+                return viewModel.item.Defense;
+            }
+            set
+            {
+                switch (value)
+                {
+                    case 1:
+                        //set buttons
+                        Button_Defense_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Defense_Some.BackgroundColor = App.SelectedButtonColor;
+                        Button_Defense_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        viewModel.item.Defense = 1;
+                            break;
+                    case 2:
+                        //set buttons
+                        Button_Defense_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Defense_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Defense_Lots.BackgroundColor = App.SelectedButtonColor;
+                        viewModel.item.Defense = 2;
+                        break;
+                   default:
+                        // set buttons
+                        Button_Defense_None.BackgroundColor = App.SelectedButtonColor;
+                        Button_Defense_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_Defense_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        viewModel.item.Defense = 0;
+                        break;
+                }
+            }
+        }
+
+
+        private void Button_Defense_None_Clicked(object sender, System.EventArgs e)
+        {
+            Defense = 0;
+        }
+
+        private void Button_Defense_Some_Clicked(object sender, System.EventArgs e)
+        {
+            Defense = 1;
+        }
+
+        private void Button_Defense_Lots_Clicked(object sender, System.EventArgs e)
+        {
+            Defense = 2;
+        }
     }
 }

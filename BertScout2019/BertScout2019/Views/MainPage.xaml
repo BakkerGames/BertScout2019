@@ -21,8 +21,8 @@
             <Label
                 x:Name="CurrentFRCEventLabel"
                 Text="You haven't selected an event yet"
-                HorizontalOptions="Center"
-                FontSize="24"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="30"
                 TextColor="Green"
                 FontAttributes="Bold"
                 Margin="20"

@@ -19,7 +19,6 @@ namespace BertScout2019.Views
 
         async private void MainPage_Options_Clicked(object sender, EventArgs e)
         {
-            //todo add options page
             await Navigation.PushAsync(new OptionsPage());
         }
 

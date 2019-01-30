@@ -14,7 +14,9 @@ namespace BertScout2019.Views
 
         protected override void OnAppearing()
         {
+            MainPage_Version_Label.Text = $"Version {App.dbVersion}";
             CurrentFRCEventLabel.Text = App.currFRCEventName;
+            LabelVersionMessage.Text = "";
         }
 
         async private void MainPage_Options_Clicked(object sender, EventArgs e)
@@ -40,6 +42,18 @@ namespace BertScout2019.Views
             Button_Match_Scouting.BackgroundColor = App.SelectedButtonColor;
             await Navigation.PushAsync(new SelectEventTeamPage());
             Button_Match_Scouting.BackgroundColor = Color.Default;
+        }
+
+        private void MainPage_Version_Label_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(LabelVersionMessage.Text))
+            {
+                LabelVersionMessage.Text = "Please don't press that button!";
+            }
+            else
+            {
+                LabelVersionMessage.Text = "";
+            }
         }
     }
 }

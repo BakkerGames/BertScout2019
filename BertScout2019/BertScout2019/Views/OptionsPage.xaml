@@ -10,7 +10,7 @@
                 x:Name="Reset_Database_Button"
                 Text="Reset Database"
                 Clicked="Reset_Database_Button_Clicked"
-                BackgroundColor="LightGray"
+                BackgroundColor="#B19CD9"
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"
                 FontSize="24"
@@ -26,6 +26,7 @@
                 <Label
                     Text="Password:"
                     FontSize="24"
+                    VerticalOptions="Center"
                     />
                 <Entry
                     x:Name="Entry_OptionPassword_Value"
@@ -33,6 +34,8 @@
                     FontSize="24"
                     WidthRequest="200"
                     IsPassword="True"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
                     />
             </StackLayout>
             <Label

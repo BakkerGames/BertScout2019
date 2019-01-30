@@ -6,7 +6,11 @@
              >
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Version 1.1" />
+        <ToolbarItem 
+            x:Name="MainPage_Version_Label"
+            Text="Version 0.0" 
+            Clicked="MainPage_Version_Label_Clicked"
+            />
         <ToolbarItem Text="Options" Clicked="MainPage_Options_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -48,6 +52,12 @@
                 Margin="20"
                 WidthRequest="300"
                 BackgroundColor="LightGray"
+                />
+            <Label
+                x:Name="LabelVersionMessage"
+                Text=""
+                FontSize="24"
+                HorizontalOptions="CenterAndExpand"
                 />
         </StackLayout>
     </ContentPage.Content>

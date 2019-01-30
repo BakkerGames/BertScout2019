@@ -17,7 +17,7 @@ namespace BertScout2019
         static public double dbVersion = 1.1;
 
         // app properties for easy page communication
-        static public int currVersionNumber { get; set; }
+        //static public int currVersionNumber { get; set; }
         static public string currFRCEventKey { get; set; }
         static public string currFRCEventName { get; set; }
         static public int currTeamNumber { get; set; }

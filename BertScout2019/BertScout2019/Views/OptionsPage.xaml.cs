@@ -20,13 +20,14 @@ namespace BertScout2019.Views
             InitializeComponent();
         }
 
+        private bool _nateCanBreak = false;
         public void Reset_Database_Button_Clicked(object sender, EventArgs e)
         {
-            if (Reset_Database_Button_Clicked_IsBusy)
+            if (_nateCanBreak)
             {
                 return;
             }
-            Reset_Database_Button_Clicked_IsBusy = true;
+            _nateCanBreak = true;
             OptionsMessageLabel.Text = "";
             if (Entry_OptionPassword_Value.Text != "bertdata")
             {
@@ -67,10 +68,6 @@ namespace BertScout2019.Views
             catch (Exception)
             {
                 throw;
-            }
-            finally
-            {
-                Reset_Database_Button_Clicked_IsBusy = false;
             }
         }
     }

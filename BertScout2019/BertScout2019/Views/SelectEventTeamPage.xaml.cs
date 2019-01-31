@@ -34,5 +34,10 @@ namespace BertScout2019.Views
             App.currTeamName = item.Name;
             await Navigation.PushAsync(new SelectEventTeamMatchPage());
         }
+
+        async private void AddTeam_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new AddNewTeamPage());
+        }
     }
 }

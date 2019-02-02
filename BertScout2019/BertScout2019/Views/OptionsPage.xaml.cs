@@ -29,12 +29,12 @@ namespace BertScout2019.Views
             }
             _nateCanBreak = true;
             OptionsMessageLabel.Text = "";
-            if (Entry_OptionPassword_Value.Text != "bertdata")
-            {
-                OptionsMessageLabel.Text = "Incorrect password!";
-                Reset_Database_Button_Clicked_IsBusy = false;
-                return;
-            }
+            //if (Entry_OptionPassword_Value.Text.ToLower() != App.OptionPassword.ToLower())
+            //{
+            //    OptionsMessageLabel.Text = "Incorrect password!";
+            //    Reset_Database_Button_Clicked_IsBusy = false;
+            //    return;
+            //}
             try
             {
                 App.Database.DropTables();
@@ -64,11 +64,21 @@ namespace BertScout2019.Views
                     int result = App.Database.SaveEventTeamAsync(eventTeam).Result;
                 }
                 OptionsMessageLabel.Text = "Database reset done!";
+                Reset_Database_Button.IsEnabled = false;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                OptionsMessageLabel.Text = ex.Message;
             }
+        }
+
+        private void Entry_OptionPassword_Value_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (_nateCanBreak)
+            {
+                return;
+            }
+            Reset_Database_Button.IsEnabled = (Entry_OptionPassword_Value.Text.ToLower() == App.OptionPassword.ToLower());
         }
     }
 }

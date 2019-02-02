@@ -9,7 +9,7 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OptionsPage : ContentPage
     {
-        static bool Reset_Database_Button_Clicked_IsBusy = false;
+        private bool _nateSyncFlag = false;
 
         public IDataStore<FRCEvent> DataStoreFRCEvents => new XmlDataStoreFRCEvent();
         public IDataStore<Team> DataStoreTeams => new XmlDataStoreTeams();
@@ -20,21 +20,14 @@ namespace BertScout2019.Views
             InitializeComponent();
         }
 
-        private bool _nateCanBreak = false;
         public void Reset_Database_Button_Clicked(object sender, EventArgs e)
         {
-            if (_nateCanBreak)
+            if (_nateSyncFlag)
             {
                 return;
             }
-            _nateCanBreak = true;
+            _nateSyncFlag = true;
             OptionsMessageLabel.Text = "";
-            //if (Entry_OptionPassword_Value.Text.ToLower() != App.OptionPassword.ToLower())
-            //{
-            //    OptionsMessageLabel.Text = "Incorrect password!";
-            //    Reset_Database_Button_Clicked_IsBusy = false;
-            //    return;
-            //}
             try
             {
                 App.Database.DropTables();
@@ -74,7 +67,7 @@ namespace BertScout2019.Views
 
         private void Entry_OptionPassword_Value_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (_nateCanBreak)
+            if (_nateSyncFlag)
             {
                 return;
             }

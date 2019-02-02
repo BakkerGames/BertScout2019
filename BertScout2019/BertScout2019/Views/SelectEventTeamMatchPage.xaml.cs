@@ -89,5 +89,10 @@ namespace BertScout2019.Views
                 viewModel.Matches.Add(newMatch);
             }
         }
+
+        private async void TeamDetails_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new TeamDetailsPage());
+        }
     }
 }

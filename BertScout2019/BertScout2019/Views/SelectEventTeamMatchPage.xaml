@@ -11,7 +11,7 @@
             Clicked="TeamDetails_Clicked">
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="options.png"/>
+                    <On Platform="UWP" Value="info.png"/>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>

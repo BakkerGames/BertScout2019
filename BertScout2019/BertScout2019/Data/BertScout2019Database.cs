@@ -42,6 +42,19 @@ namespace BertScout2019.Data
             return database.Table<Team>().ToListAsync();
         }
 
+        public Task<List<Locate>> GetLocatesAsync()
+        {
+            return database.Table<Locate>().ToListAsync();
+        }
+
+        public Task<List<Locate>> GetLocatessAsync(string Locate)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [Team].* FROM [Team]");
+            query.Append(" ON  [Team].[Location]");
+            return database.QueryAsync<Locate>(query.ToString());
+        }
+
         public Task<List<Team>> GetEventTeamsAsync(string EventKey)
         {
             StringBuilder query = new StringBuilder();
@@ -65,6 +78,11 @@ namespace BertScout2019.Data
             query.Append(TeamNumber);
             query.Append(" ORDER BY [EventTeamMatch].[MatchNumber]");
             return database.QueryAsync<EventTeamMatch>(query.ToString());
+        }
+
+        internal object SaveTeamAsync(object locate)
+        {
+            throw new NotImplementedException();
         }
 
         public Task<EventTeamMatch> GetEventTeamMatchAsync(string EventKey, int TeamNumber, int MatchNumber)

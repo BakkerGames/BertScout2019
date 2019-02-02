@@ -1,5 +1,7 @@
 ﻿using SQLite;
 
+// remember to increment the dbVersion in App.xaml.cs when changing this model
+
 namespace BertScout2019.Models
 {
     public class EventTeamMatch
@@ -37,6 +39,7 @@ namespace BertScout2019.Models
         public int RocketRankingPoint { get; set; }
         public int HabRankingPoint { get; set; }
 
+        public string ScouterName { get; set; }
         public string Comments { get; set; }
     }
 }

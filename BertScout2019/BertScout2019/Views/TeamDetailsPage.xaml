@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BertScout2019.Views.TeamDetailsPage"
+             Title="{Binding Title}">
+    
+    <ContentPage.Content>
+        <StackLayout
+            Margin="10"
+            >
+            <!-- Team Number -->
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="Team Number:" 
+                    FontSize="24"
+                    WidthRequest="200"
+                />
+                <Label
+                    x:Name="TeamDetails_Number"
+                    Text=""
+                    FontAttributes="Bold"
+                    FontSize="24"
+                />
+            </StackLayout>
+            <!-- Team Name -->
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="Team Name:" 
+                    FontSize="24"
+                    WidthRequest="200"
+                />
+                <Label
+                    x:Name="TeamDetails_Name"
+                    Text=""
+                    FontAttributes="Bold"
+                    FontSize="24"
+                />
+            </StackLayout>
+            <!-- Team Location -->
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="Team Location:" 
+                    FontSize="24"
+                    WidthRequest="200"
+                />
+                <Label
+                    x:Name="TeamDetails_Location"
+                    Text=""
+                    FontAttributes="Bold"
+                    FontSize="24"
+                />
+            </StackLayout>
+            <!-- Team Events -->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

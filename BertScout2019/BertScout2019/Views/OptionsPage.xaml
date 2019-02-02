@@ -16,6 +16,7 @@
                 FontSize="24"
                 Margin="20"
                 WidthRequest="300"
+                IsEnabled="False"
                 />
             <StackLayout 
                 x:Name="OptionPasswordStackLayout"
@@ -36,6 +37,7 @@
                     IsPassword="True"
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
+                    TextChanged="Entry_OptionPassword_Value_TextChanged"
                     />
             </StackLayout>
             <Label

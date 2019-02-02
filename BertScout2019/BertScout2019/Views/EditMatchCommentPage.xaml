@@ -21,12 +21,35 @@
         <StackLayout
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="Name: "
+                    FontSize="24"
+                    VerticalTextAlignment="Center"
+                    />
+                <Entry 
+                    x:Name="Editor_MatchScouterName"
+                    Text=""
+                    FontSize="24"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    HorizontalOptions="FillAndExpand"
+                    TextChanged="Editor_MatchScouterName_TextChanged"
+                    />
+            </StackLayout>
             <Editor
                 x:Name="Editor_MatchComment"
                 VerticalOptions="FillAndExpand"
                 FontSize="24"
                 IsSpellCheckEnabled="False"
                 Text=""
+                TextChanged="Editor_MatchComment_TextChanged"
+                />
+            <Label
+                x:Name="ErrorMessage"
+                Text=""
+                HorizontalOptions="CenterAndExpand"
+                FontSize="24"
                 />
         </StackLayout>
     </ContentPage.Content>

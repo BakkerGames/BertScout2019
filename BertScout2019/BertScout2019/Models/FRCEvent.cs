@@ -1,5 +1,7 @@
 ﻿using SQLite;
 
+// remember to increment the dbVersion in App.xaml.cs when changing this model
+
 namespace BertScout2019.Models
 {
     public class FRCEvent

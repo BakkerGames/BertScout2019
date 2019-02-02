@@ -56,6 +56,11 @@ namespace BertScout2019.Views
                     eventTeam.Id = ++eventTeamId;
                     int result = App.Database.SaveEventTeamAsync(eventTeam).Result;
                 }
+                App.currFRCEventKey = "";
+                App.currFRCEventName = "";
+                App.currTeamName = "";
+                App.currTeamNumber = 0;
+                App.currMatchNumber = 0;
                 OptionsMessageLabel.Text = "Database reset done!";
                 Reset_Database_Button.IsEnabled = false;
             }

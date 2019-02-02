@@ -19,7 +19,11 @@ namespace BertScout2019.Views
             MainPage_Version_Label.Text = $"Version {App.dbVersion}";
             CurrentFRCEventLabel.Text = App.currFRCEventName;
             LabelVersionMessage.Text = "";
-            Button_Select_FRC_Event.IsEnabled = (!string.IsNullOrEmpty(App.currFRCEventName));
+            if (string.IsNullOrEmpty(App.currFRCEventName))
+            {
+                LabelVersionMessage.Text = "Please select an event";
+            }
+            Button_Match_Scouting.IsEnabled = (!string.IsNullOrEmpty(App.currFRCEventName));
         }
 
         async private void MainPage_Options_Clicked(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace BertScout2019.Views
         {
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))
             {
-                LabelVersionMessage.Text = "Please don't press that button!";
+                LabelVersionMessage.Text = "Please don't press that again!";
             }
             else
             {

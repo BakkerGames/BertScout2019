@@ -19,31 +19,65 @@ namespace BertScout2019.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (string.IsNullOrEmpty(viewModel.item.Comments))
-            {
-                viewModel.item.Comments = "Name: ";
-            }
+            Editor_MatchScouterName.Text = viewModel.item.ScouterName;
             Editor_MatchComment.Text = viewModel.item.Comments;
-            Editor_MatchComment.Focus();
+            if (string.IsNullOrEmpty(Editor_MatchScouterName.Text))
+            {
+                Editor_MatchScouterName.Focus();
+            }
+            else
+            {
+                Editor_MatchComment.Focus();
+            }
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            if (!viewModel.item.Comments.Equals(Editor_MatchComment.Text))
+            try
             {
-                viewModel.item.Comments = Editor_MatchComment.Text;
-                App.database.SaveEventTeamMatchAsync(viewModel.item);
+                if (viewModel.item.ScouterName != Editor_MatchScouterName.Text
+                    || viewModel.item.Comments != Editor_MatchComment.Text)
+                {
+                    viewModel.item.ScouterName = Editor_MatchScouterName.Text.Trim();
+                    viewModel.item.Comments = Editor_MatchComment.Text;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+                ErrorMessage.Text = "Saved!";
+            }
+            catch (System.Exception ex)
+            {
+                ErrorMessage.Text = ex.Message;
             }
         }
 
         private void ToolbarItem_Save_Clicked(object sender, System.EventArgs e)
         {
-            if (!viewModel.item.Comments.Equals(Editor_MatchComment.Text))
+            try
             {
-                viewModel.item.Comments = Editor_MatchComment.Text;
-                App.database.SaveEventTeamMatchAsync(viewModel.item);
+                if (viewModel.item.ScouterName != Editor_MatchScouterName.Text
+                    || viewModel.item.Comments != Editor_MatchComment.Text)
+                {
+                    viewModel.item.ScouterName = Editor_MatchScouterName.Text.Trim();
+                    viewModel.item.Comments = Editor_MatchComment.Text;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+                ErrorMessage.Text = "Saved!";
             }
+            catch (System.Exception ex)
+            {
+                ErrorMessage.Text = ex.Message;
+            }
+        }
+
+        private void Editor_MatchComment_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ErrorMessage.Text = "";
+        }
+
+        private void Editor_MatchScouterName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ErrorMessage.Text = "";
         }
     }
 }

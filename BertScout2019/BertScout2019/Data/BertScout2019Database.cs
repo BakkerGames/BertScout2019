@@ -54,6 +54,18 @@ namespace BertScout2019.Data
             return database.QueryAsync<Team>(query.ToString());
         }
 
+        public Task<EventTeam> GetEventTeamAsync(string EventKey, int TeamNumber)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeam].* FROM [EventTeam]");
+            query.Append(" WHERE [EventTeam].[EventKey] = '");
+            query.Append(EventKey);
+            query.Append("'");
+            query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
+            query.Append(TeamNumber);
+            return database.GetAsync<EventTeam>(query.ToString());
+        }
+
         public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string EventKey, int TeamNumber)
         {
             StringBuilder query = new StringBuilder();
@@ -79,6 +91,15 @@ namespace BertScout2019.Data
             query.Append(" AND [EventTeamMatch].[MatchNumber] = ");
             query.Append(MatchNumber);
             return database.GetAsync<EventTeamMatch>(query.ToString());
+        }
+
+        public Task<Team> GetTeamAsync(int TeamNumber)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [Team].* FROM [Team]");
+            query.Append(" WHERE [Team].[TeamNumber] = ");
+            query.Append(TeamNumber);
+            return database.GetAsync<Team>(query.ToString());
         }
 
         public void DropTables()

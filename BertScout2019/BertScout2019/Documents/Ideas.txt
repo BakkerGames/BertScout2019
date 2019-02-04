@@ -1,0 +1,3 @@
+﻿??? increment match number when click Add
+
+Team Power Ranking

@@ -28,9 +28,14 @@ namespace BertScout2019.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<Team> GetItemAsync(int id)
+        //public async Task<Team> GetItemAsync(int id)
+        //{
+        //    return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+        //}
+
+        public async Task<Team> GetItemAsync(int teamNumber)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            return await Task.FromResult(items.FirstOrDefault(s => s.TeamNumber == teamNumber));
         }
 
         public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)

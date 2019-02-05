@@ -7,14 +7,14 @@ using Xamarin.Forms;
 
 namespace BertScout2019.ViewModels
 {
-    public class SelectEventTeamsViewModel : BaseViewModel
+    public class SelectTeamsByEventViewModel : BaseViewModel
     {
         public IDataStore<Team> DataStoreTeam => new SqlDataStoreTeamsByEvent(App.currFRCEventKey);
 
         public ObservableCollection<Team> Teams { get; set; }
         public Command LoadEventTeamsCommand { get; set; }
 
-        public SelectEventTeamsViewModel()
+        public SelectTeamsByEventViewModel()
         {
             Title = App.currFRCEventName;
             Teams = new ObservableCollection<Team>();

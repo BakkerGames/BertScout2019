@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BertScout2019.Models;
 
 namespace BertScout2019.ViewModels
 {
     public class TeamDetailViewModel : BaseViewModel
     {
-        public TeamDetailViewModel()
+        public Team item;
+
+        public TeamDetailViewModel(Team item)
         {
-            Title = "Team Details";
+            this.item = item;
+            Title = $"Team {App.currTeamNumber} Details";
         }
     }
 }

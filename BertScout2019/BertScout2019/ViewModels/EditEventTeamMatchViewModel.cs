@@ -8,7 +8,6 @@ namespace BertScout2019.ViewModels
 
         public EditEventTeamMatchViewModel(EventTeamMatch item)
         {
-            //this.item = App.database.GetEventTeamMatchAsync(eventKey, teamNumber, matchNumber).Result;
             this.item = item;
             Title = $"Team {App.currTeamNumber} - Match {App.currMatchNumber}";
         }

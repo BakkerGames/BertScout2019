@@ -33,6 +33,11 @@ namespace BertScout2019.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
+        public async Task<FRCEvent> GetItemAsync(string eventKey)
+        {
+            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == eventKey));
+        }
+
         public async Task<IEnumerable<FRCEvent>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);

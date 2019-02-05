@@ -12,11 +12,13 @@ namespace BertScout2019.Services
     {
         List<EventTeam> items;
 
+        private const string resourcePath = "BertScout2019.EmbeddedResources.EventTeams.xml";
+
         public XmlDataStoreEventTeams()
         {
             items = new List<EventTeam>();
             var assembly = typeof(App).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("BertScout2019.EmbeddedResources.EventTeams.xml");
+            Stream stream = assembly.GetManifestResourceStream(resourcePath);
             using (var reader = new StreamReader(stream))
             {
                 var serializer = new XmlSerializer(typeof(List<EventTeam>));

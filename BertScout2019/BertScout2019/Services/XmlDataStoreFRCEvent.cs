@@ -12,11 +12,13 @@ namespace BertScout2019.Services
     {
         List<FRCEvent> items;
 
+        private const string resourcePath = "BertScout2019.EmbeddedResources.FRCEvents.xml";
+
         public XmlDataStoreFRCEvent()
         {
             items = new List<FRCEvent>();
             var assembly = typeof(App).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("BertScout2019.EmbeddedResources.FRCEvents.xml");
+            Stream stream = assembly.GetManifestResourceStream(resourcePath);
             using (var reader = new StreamReader(stream))
             {
                 var serializer = new XmlSerializer(typeof(List<FRCEvent>));

@@ -9,7 +9,7 @@ namespace BertScout2019.ViewModels
 {
     public class SelectEventTeamMatchesViewModel : BaseViewModel
     {
-        public IDataStore<EventTeamMatch> DataStoreMatch => new SqlDataStoreEventTeamMatches(App.currFRCEventKey, App.currTeamNumber);
+        public IDataStore<EventTeamMatch> DataStoreMatch => new SqlDataStoreMatchesByEventTeam(App.currFRCEventKey, App.currTeamNumber);
 
         public ObservableCollection<EventTeamMatch> Matches { get; set; }
         public Command LoadEventTeamMatchesCommand { get; set; }

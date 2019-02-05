@@ -17,7 +17,7 @@ namespace BertScout2019.Data
             {
                 database = new SQLiteAsyncConnection(dbPath);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -25,78 +25,11 @@ namespace BertScout2019.Data
             {
                 CreateTables();
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 throw;
             }
-        }
-
-        public Task<List<FRCEvent>> GetEventsAsync()
-        {
-            return database.Table<FRCEvent>().ToListAsync();
-        }
-
-        public Task<List<Team>> GetTeamsAsync()
-        {
-            return database.Table<Team>().ToListAsync();
-        }
-
-        public Task<List<Locate>> GetLocatesAsync()
-        {
-            return database.Table<Locate>().ToListAsync();
-        }
-
-        public Task<List<Locate>> GetLocatessAsync(string Locate)
-        {
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT [Team].* FROM [Team]");
-            query.Append(" ON  [Team].[Location]");
-            return database.QueryAsync<Locate>(query.ToString());
-        }
-
-        public Task<List<Team>> GetEventTeamsAsync(string EventKey)
-        {
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT [Team].* FROM [Team]");
-            query.Append(" LEFT JOIN [EventTeam]");
-            query.Append(" ON [EventTeam].[TeamNumber] = [Team].[TeamNumber]");
-            query.Append(" WHERE [EventTeam].[EventKey] = '");
-            query.Append(EventKey);
-            query.Append("'");
-            return database.QueryAsync<Team>(query.ToString());
-        }
-
-        public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string EventKey, int TeamNumber)
-        {
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
-            query.Append(" WHERE [EventTeamMatch].[EventKey] = '");
-            query.Append(EventKey);
-            query.Append("'");
-            query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
-            query.Append(TeamNumber);
-            query.Append(" ORDER BY [EventTeamMatch].[MatchNumber]");
-            return database.QueryAsync<EventTeamMatch>(query.ToString());
-        }
-
-        internal object SaveTeamAsync(object locate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<EventTeamMatch> GetEventTeamMatchAsync(string EventKey, int TeamNumber, int MatchNumber)
-        {
-            StringBuilder query = new StringBuilder();
-            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
-            query.Append(" WHERE [EventTeamMatch].[EventKey] = '");
-            query.Append(EventKey);
-            query.Append("'");
-            query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
-            query.Append(TeamNumber);
-            query.Append(" AND [EventTeamMatch].[MatchNumber] = ");
-            query.Append(MatchNumber);
-            return database.GetAsync<EventTeamMatch>(query.ToString());
         }
 
         public void DropTables()
@@ -115,9 +48,54 @@ namespace BertScout2019.Data
             database.CreateTableAsync<EventTeamMatch>().Wait();
         }
 
+        // FRCEvent
+
+        public Task<List<FRCEvent>> GetEventsAsync()
+        {
+            return database.Table<FRCEvent>().ToListAsync();
+        }
+
+        public Task<FRCEvent> GetEventAsync(string eventKey)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [FRCEvent].* FROM [FRCEvent]");
+            query.Append(" WHERE [FRCEvent].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            return database.GetAsync<FRCEvent>(query.ToString());
+        }
+
         public Task<int> SaveFRCEventAsync(FRCEvent item)
         {
             return database.InsertOrReplaceAsync(item);
+        }
+
+        // Team
+
+        public Task<List<Team>> GetTeamsAsync()
+        {
+            return database.Table<Team>().ToListAsync();
+        }
+
+        public Task<List<Team>> GetTeamsByEventAsync(string eventKey)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [Team].* FROM [Team]");
+            query.Append(" LEFT JOIN [EventTeam]");
+            query.Append(" ON [EventTeam].[TeamNumber] = [Team].[TeamNumber]");
+            query.Append(" WHERE [EventTeam].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            return database.QueryAsync<Team>(query.ToString());
+        }
+
+        public Task<Team> GetTeamAsync(int teamNumber)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [Team].* FROM [Team]");
+            query.Append(" WHERE [Team].[TeamNumber] = ");
+            query.Append(teamNumber);
+            return database.GetAsync<Team>(query.ToString());
         }
 
         public Task<int> SaveTeamAsync(Team item)
@@ -125,9 +103,72 @@ namespace BertScout2019.Data
             return database.InsertOrReplaceAsync(item);
         }
 
+        // EventTeam
+
+        public Task<List<EventTeam>> GetEventTeamsAsync()
+        {
+            return database.Table<EventTeam>().ToListAsync();
+        }
+
+        public Task<List<EventTeam>> GetEventTeamsAsync(string eventKey)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeam].* FROM [EventTeam]");
+            query.Append(" WHERE [EventTeam].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            return database.QueryAsync<EventTeam>(query.ToString());
+        }
+
+        public Task<EventTeam> GetEventTeamAsync(string eventKey, int teamNumber)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeam].* FROM [EventTeam]");
+            query.Append(" WHERE [EventTeam].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
+            query.Append(teamNumber);
+            return database.GetAsync<EventTeam>(query.ToString());
+        }
+
         public Task<int> SaveEventTeamAsync(EventTeam item)
         {
             return database.InsertOrReplaceAsync(item);
+        }
+
+        // EventTeamMatch
+
+        public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
+        {
+            return database.Table<EventTeamMatch>().ToListAsync();
+        }
+
+        public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string eventKey, int teamNumber)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
+            query.Append(" WHERE [EventTeamMatch].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
+            query.Append(teamNumber);
+            query.Append(" ORDER BY [EventTeamMatch].[MatchNumber]");
+            return database.QueryAsync<EventTeamMatch>(query.ToString());
+        }
+
+        public Task<EventTeamMatch> GetEventTeamMatchAsync(string eventKey, int teamNumber, int matchNumber)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
+            query.Append(" WHERE [EventTeamMatch].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
+            query.Append(teamNumber);
+            query.Append(" AND [EventTeamMatch].[MatchNumber] = ");
+            query.Append(matchNumber);
+            return database.GetAsync<EventTeamMatch>(query.ToString());
         }
 
         public Task<int> SaveEventTeamMatchAsync(EventTeamMatch item)
@@ -135,21 +176,11 @@ namespace BertScout2019.Data
             return database.InsertOrReplaceAsync(item);
         }
 
-        //public Task<int> SaveItemAsync(TodoItem item)
-        //{
-        //    if (item.ID != 0)
-        //    {
-        //        return database.UpdateAsync(item);
-        //    }
-        //    else
-        //    {
-        //        return database.InsertAsync(item);
-        //    }
-        //}
+        // internal functions
 
-        //public Task<int> DeleteItemAsync(TodoItem item)
-        //{
-        //    return database.DeleteAsync(item);
-        //}
+        private string FixSqlValue(string value)
+        {
+            return value?.Replace("'", "''") ?? "";
+        }
     }
 }

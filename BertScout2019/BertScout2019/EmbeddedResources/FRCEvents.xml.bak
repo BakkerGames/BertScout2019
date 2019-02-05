@@ -5,55 +5,55 @@
     <EventKey>TEST</EventKey>
     <Name>Testing</Name>
     <Location>TBD</Location>
-    <StartDate>2019-01-01</StartDate>
-    <EndDate>2019-12-31</EndDate>
+    <StartDate>01/01/2019</StartDate>
+    <EndDate>12/31/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
     <Id>0</Id>
     <EventKey>WEEKZERO</EventKey>
     <Name>Week Zero</Name>
     <Location>TBD</Location>
-    <StartDate>2019-02-16</StartDate>
-    <EndDate>2019-02-16</EndDate>
+    <StartDate>02/16/2019</StartDate>
+    <EndDate>02/16/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
     <Id>0</Id>
     <EventKey>NEDIST_SOUTHERNNH</EventKey>
     <Name>NE District Southern NH Event</Name>
     <Location>Bedford, NH, USA</Location>
-    <StartDate>2019-03-15</StartDate>
-    <EndDate>2019-03-17</EndDate>
+    <StartDate>03/15/2019</StartDate>
+    <EndDate>03/17/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
     <Id>0</Id>
     <EventKey>NEDIST_RHODEISLAND</EventKey>
     <Name>NE District Rhode Island Event</Name>
     <Location>Smithfield, RI, USA</Location>
-    <StartDate>2019-03-22</StartDate>
-    <EndDate>2019-03-24</EndDate>
+    <StartDate>03/22/2019</StartDate>
+    <EndDate>03/24/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
     <Id>0</Id>
     <EventKey>NEDIST_PINETREE</EventKey>
     <Name>NE District Pine Tree Event</Name>
     <Location>Lewiston, ME, USA</Location>
-    <StartDate>2019-04-04</StartDate>
-    <EndDate>2019-04-06</EndDate>
+    <StartDate>04/04/2019</StartDate>
+    <EndDate>04/06/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
     <Id>0</Id>
     <EventKey>NEDIST_CHAMP</EventKey>
     <Name>New England District Championship</Name>
     <Location>Worcester, MA, USA</Location>
-    <StartDate>2019-04-10</StartDate>
-    <EndDate>2019-04-13</EndDate>
+    <StartDate>04/10/2019</StartDate>
+    <EndDate>04/13/2019</EndDate>
   </FRCEvent>
   <FRCEvent>
     <Id>0</Id>
     <EventKey>WORLD_DETROIT</EventKey>
     <Name>2019 FIRST Championship Detroit</Name>
     <Location>Detroit, MI, USA</Location>
-    <StartDate>2019-04-24</StartDate>
-    <EndDate>2019-04-27</EndDate>
+    <StartDate>04/24/2019</StartDate>
+    <EndDate>04/27/2019</EndDate>
   </FRCEvent>
 </ArrayOfFRCEvent>

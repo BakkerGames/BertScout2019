@@ -24,37 +24,28 @@ namespace BertScout2019.Views
 
         private void Add_NewTeam_Clicked(object sender, EventArgs e)
         {
-            /*int value = int.Parse(TeamNumberLabelValue.Text);
-            foreach (TeamNumber oldTeam in viewModel.Teams)
+            int newTeamNumber = 0;
+            if (Add_New_Team.Text == "")
             {
-                if (oldTeam.TeamNumber == value)
-                {
-                    return;
-                }
+                this.Title = "Must Specify Team Number";
+                return;
             }
-            TeamNumber newTeam = new TeamNumber();
-            newTeam.EventKey = App.currFRCEventKey;
-            newTeam.TeamNumber = App.currTeamNumber;
-            App.database.SaveTeamNumberAsync(newTeam);
-            if (App.highestTeamNumber < value)
+            if (!int.TryParse(Add_New_Team.Text, out newTeamNumber))
             {
-                App.highestTeamNumber = value;
+                this.Title = "Numbers Only Please!";
+                return;
             }
-            // add new team into list in proper order
-            bool found = false;
-            for (int i = 0; i < viewModel.Teams.Count; i++)
+            if (newTeamNumber > 9999 || newTeamNumber < 1)
             {
-                if (viewModel.Teams[i].TeamNumber > value)
-                {
-                    found = true;
-                    viewModel.Teams.Insert(i, newTeam);
-                    break;
-                }
+                this.Title = "Number out of range";
+                return;
             }
-            if (!found)
-            {
-                viewModel.TeamNumber.Add(newTeam);
-            }*/
+            //if (App.database.GetTeamsAsync(newTeamNumber))
+            //{
+            //    this.Title = "Team Already Exists";
+            //    return;
+            //}
+                this.Title = $"Added new team {newTeamNumber}";
         }
     }
 }

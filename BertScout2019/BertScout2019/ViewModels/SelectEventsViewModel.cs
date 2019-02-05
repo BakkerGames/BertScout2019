@@ -12,7 +12,7 @@ namespace BertScout2019.ViewModels
     {
         //public IDataStore<FRCEvent> DataStoreFRCEvent => DependencyService.Get<IDataStore<FRCEvent>>() ?? new XmlDataStoreFRCEvent();
         //public IDataStore<FRCEvent> DataStoreFRCEvent => new XmlDataStoreFRCEvent();
-        public IDataStore<FRCEvent> DataStoreFRCEvent => new SqlDataStoreFRCEvent();
+        public IDataStore<FRCEvent> DataStoreFRCEvent => new SqlDataStoreFRCEvents();
 
         public ObservableCollection<FRCEvent> FRCEvents { get; set; }
         public Command LoadFRCEventsCommand { get; set; }

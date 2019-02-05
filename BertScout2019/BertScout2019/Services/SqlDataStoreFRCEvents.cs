@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace BertScout2019.Services
 {
-    public class SqlDataStoreFRCEvent : IDataStore<FRCEvent>
+    public class SqlDataStoreFRCEvents : IDataStore<FRCEvent>
     {
         List<FRCEvent> items;
 
-        public SqlDataStoreFRCEvent()
+        public SqlDataStoreFRCEvents()
         {
             // must complete, so don't async/await
             items = App.Database.GetEventsAsync().Result;

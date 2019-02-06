@@ -262,4 +262,6 @@ __pycache__/
 
 # Windows link files
 *.lnk
+*.bak
+*.orig
 

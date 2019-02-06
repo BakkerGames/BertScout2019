@@ -50,7 +50,7 @@
                     FontSize="24"
                 />
             </StackLayout>
-            <!-- Team Events -->
+            <!-- Team Match Results -->
             <ListView 
                 x:Name="TeamMatchesListView"
                 ItemsSource="{Binding MatchResults}"
@@ -60,17 +60,18 @@
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RetainElement"
+                Margin="0,20,0,0"
                 ItemSelected="TeamMatchesListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
+                            <StackLayout>
                                 <Label
                                     Text="{Binding Text}"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemTextStyle}"
-                                    FontAttributes="Bold" 
                                     FontSize="24"
+                                    FontAttributes="None"
                                     />
                             </StackLayout>
                         </ViewCell>

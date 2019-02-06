@@ -10,9 +10,7 @@ namespace BertScout2019.ViewModels
 {
     public class SelectEventsViewModel : BaseViewModel
     {
-        //public IDataStore<FRCEvent> DataStoreFRCEvent => DependencyService.Get<IDataStore<FRCEvent>>() ?? new XmlDataStoreFRCEvent();
-        //public IDataStore<FRCEvent> DataStoreFRCEvent => new XmlDataStoreFRCEvent();
-        public IDataStore<FRCEvent> DataStoreFRCEvent => new SqlDataStoreFRCEvent();
+        public IDataStore<FRCEvent> DataStoreFRCEvent => new SqlDataStoreFRCEvents();
 
         public ObservableCollection<FRCEvent> FRCEvents { get; set; }
         public Command LoadFRCEventsCommand { get; set; }
@@ -22,13 +20,6 @@ namespace BertScout2019.ViewModels
             Title = "Select FRC Event";
             FRCEvents = new ObservableCollection<FRCEvent>();
             LoadFRCEventsCommand = new Command(async () => await ExecuteLoadFRCEventsCommand());
-
-            //MessagingCenter.Subscribe<NewFRCEventPage, FRCEvent>(this, "AddFRCEvent", async (obj, item) =>
-            //{
-            //    var newItem = item as FRCEvent;
-            //    FRCEvents.Add(newItem);
-            //    await DataStoreFRCEvent.AddItemAsync(newItem);
-            //});
         }
 
         async Task ExecuteLoadFRCEventsCommand()
@@ -41,8 +32,6 @@ namespace BertScout2019.ViewModels
             try
             {
                 FRCEvents.Clear();
-                // 384,390,407 ms with xml, 93,94 ms with sql
-                // second call 2ms with xml, 1ms with sql
                 var items = await DataStoreFRCEvent.GetItemsAsync(true);
                 foreach (var item in items)
                 {

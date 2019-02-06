@@ -3,20 +3,19 @@ using BertScout2019.Services;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using Xamarin.Forms;
 
 namespace BertScout2019.ViewModels
 {
-    public class SelectEventTeamMatchesViewModel : BaseViewModel
+    public class SelectMatchesByEventTeamViewModel : BaseViewModel
     {
-        public IDataStore<EventTeamMatch> DataStoreMatch => new SqlDataStoreEventTeamMatches(App.currFRCEventKey, App.currTeamNumber);
+        public IDataStore<EventTeamMatch> DataStoreMatch;
 
         public ObservableCollection<EventTeamMatch> Matches { get; set; }
-        public Command LoadEventTeamMatchesCommand { get; set; }
 
-        public SelectEventTeamMatchesViewModel()
+        public SelectMatchesByEventTeamViewModel(string eventKey, Team team)
         {
-            Title = $"Team {App.currTeamNumber} - {App.currTeamName}";
+            DataStoreMatch = new SqlDataStoreMatchesByEventTeam(eventKey, team.TeamNumber);
+            Title = $"Team {team.TeamNumber} - {team.Name}";
             Matches = new ObservableCollection<EventTeamMatch>();
             ExecuteLoadEventTeamMatchesCommand();
         }

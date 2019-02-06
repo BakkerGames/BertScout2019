@@ -8,13 +8,14 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectEventTeamMatchPage : ContentPage
     {
-        SelectEventTeamMatchesViewModel viewModel;
+        SelectMatchesByEventTeamViewModel viewModel;
+        Team currTeam;
 
-        public SelectEventTeamMatchPage()
+        public SelectEventTeamMatchPage(string eventKey, Team team)
         {
             InitializeComponent();
-
-            BindingContext = viewModel = new SelectEventTeamMatchesViewModel();
+            currTeam = team;
+            BindingContext = viewModel = new SelectMatchesByEventTeamViewModel(eventKey, team);
         }
 
         protected override void OnAppearing()
@@ -26,17 +27,22 @@ namespace BertScout2019.Views
 
         private async void EventTeamsListMatchView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as EventTeamMatch;
+            EventTeamMatch item = (EventTeamMatch)args.SelectedItem;
             if (item == null)
+            {
                 return;
-
+            }
             App.currMatchNumber = item.MatchNumber;
             await Navigation.PushAsync(new EditEventTeamMatchPage(item));
         }
 
         private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)
         {
-            int value = int.Parse(MatchNumberLabelValue.Text);
+            int value = 0;
+            if (!int.TryParse(MatchNumberLabelValue.Text, out value))
+            {
+                MatchNumberLabelValue.Text = (1).ToString();
+            }
             if (value > 1)
             {
                 MatchNumberLabelValue.Text = (value - 1).ToString();
@@ -46,7 +52,11 @@ namespace BertScout2019.Views
 
         private void AddMatch_Plus_Clicked(object sender, System.EventArgs e)
         {
-            int value = int.Parse(MatchNumberLabelValue.Text);
+            int value = 0;
+            if (!int.TryParse(MatchNumberLabelValue.Text, out value))
+            {
+                MatchNumberLabelValue.Text = (1).ToString();
+            }
             if (value < 999)
             {
                 MatchNumberLabelValue.Text = (value + 1).ToString();
@@ -92,7 +102,7 @@ namespace BertScout2019.Views
 
         private async void TeamDetails_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new TeamDetailsPage());
+            await Navigation.PushAsync(new TeamDetailsPage(currTeam));
         }
     }
 }

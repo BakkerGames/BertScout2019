@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BertScout2019.Models;
 
 namespace BertScout2019.ViewModels
 {
     public class TeamDetailViewModel : BaseViewModel
     {
+<<<<<<< HEAD
         //do not edit 
         //public IDataStore<Team> DataStoreTeam => new SqlDataStoreEventTeams(App.currFRCEventKey);
 
@@ -18,6 +17,14 @@ namespace BertScout2019.ViewModels
             Title = "Team Details";
 
             
+=======
+        public Team item;
+
+        public TeamDetailViewModel(Team item)
+        {
+            this.item = item;
+            Title = $"Team {App.currTeamNumber} Details";
+>>>>>>> master
         }
     }
 }

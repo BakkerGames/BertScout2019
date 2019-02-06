@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace BertScout2019.Services
 {
-    public class SqlDataStoreFRCEvent : IDataStore<FRCEvent>
+    public class SqlDataStoreFRCEvents : IDataStore<FRCEvent>
     {
         List<FRCEvent> items;
 
-        public SqlDataStoreFRCEvent()
+        public SqlDataStoreFRCEvents()
         {
             // must complete, so don't async/await
             items = App.Database.GetEventsAsync().Result;
@@ -31,6 +31,11 @@ namespace BertScout2019.Services
         public async Task<FRCEvent> GetItemAsync(int id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+        }
+
+        public async Task<FRCEvent> GetItemAsync(string eventKey)
+        {
+            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == eventKey));
         }
 
         public async Task<IEnumerable<FRCEvent>> GetItemsAsync(bool forceRefresh = false)

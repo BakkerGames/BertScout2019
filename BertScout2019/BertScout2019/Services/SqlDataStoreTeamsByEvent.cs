@@ -1,29 +1,18 @@
 ﻿using BertScout2019.Models;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace BertScout2019.Services
 {
-    public class XmlDataStoreTeams : IDataStore<Team>
+    public class SqlDataStoreTeamsByEvent : IDataStore<Team>
     {
         List<Team> items;
 
-        private const string resourcePath = "BertScout2019.EmbeddedResources.Teams.xml";
-
-        public XmlDataStoreTeams()
+        public SqlDataStoreTeamsByEvent(string eventKey)
         {
-            items = new List<Team>();
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream(resourcePath);
-            using (var reader = new StreamReader(stream))
-            {
-                var serializer = new XmlSerializer(typeof(List<Team>));
-                items = (List<Team>)serializer.Deserialize(reader);
-            }
+            // must complete, so don't async/await
+            items = App.Database.GetTeamsByEventAsync(eventKey).Result;
         }
 
         public async Task<bool> AddItemAsync(Team item)

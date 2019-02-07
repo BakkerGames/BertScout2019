@@ -119,9 +119,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BertScout2019\BertScout2019\BertScout2019.csproj">
-      <Project>{620b1321-9574-45dd-a3e3-4be88a971921}</Project>
-      <Name>BertScout2019</Name>
+    <ProjectReference Include="..\..\BertScout2019Data\BertScout2019Data.csproj">
+      <Project>{180df173-92f6-45c4-9e4b-ae81568f507b}</Project>
+      <Name>BertScout2019Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common.JSON\Common.JSON\Common.JSON.csproj">
       <Project>{ef7b4f31-17b9-40ff-8334-196056bab2d2}</Project>

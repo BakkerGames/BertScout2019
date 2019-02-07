@@ -11,8 +11,11 @@
 
   <ItemGroup>
     <Compile Remove="Data\**" />
+    <Compile Remove="EmbeddedResources\**" />
     <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="EmbeddedResources\**" />
     <None Remove="Data\**" />
+    <None Remove="EmbeddedResources\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,18 +54,6 @@
     <EmbeddedResource Remove="Views\NewFRCEventPage.xaml" />
     <EmbeddedResource Remove="Views\NewItemPage.xaml" />
     <EmbeddedResource Remove="Views\SelectTeamMatchPage.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="EmbeddedResources\EventTeams.xml" />
-    <None Remove="EmbeddedResources\FRCEvents.xml" />
-    <None Remove="EmbeddedResources\Teams.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="EmbeddedResources\EventTeams.xml" />
-    <EmbeddedResource Include="EmbeddedResources\FRCEvents.xml" />
-    <EmbeddedResource Include="EmbeddedResources\Teams.xml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -105,5 +96,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\BertScout2019Data\BertScout2019Data.csproj" />
+    <ProjectReference Include="..\..\BertScout2019XmlData\BertScout2019XmlData.csproj" />
   </ItemGroup>
 </Project>

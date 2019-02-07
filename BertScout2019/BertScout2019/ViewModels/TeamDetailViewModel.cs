@@ -1,5 +1,6 @@
 ﻿using BertScout2019.Models;
 using BertScout2019.Services;
+using BertScout2019Data.Models;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -75,8 +76,8 @@ namespace BertScout2019.ViewModels
 
             score += match.Defense;
             score += match.Cooperation;
-            score -= match.Fouls*10;
-            score -= match.Broken*20;
+            score -= match.Fouls * 10;
+            score -= match.Broken * 20;
 
             int rp = 0;
 

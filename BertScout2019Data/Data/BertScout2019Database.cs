@@ -1,11 +1,11 @@
-﻿using BertScout2019.Models;
+﻿using BertScout2019Data.Models;
 using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BertScout2019.Data
+namespace BertScout2019Data.Data
 {
     public class BertScout2019Database
     {

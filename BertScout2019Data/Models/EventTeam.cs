@@ -2,17 +2,17 @@
 
 // remember to increment the dbVersion in App.xaml.cs when changing this model
 
-namespace BertScout2019.Models
+namespace BertScout2019Data.Models
 {
-    public partial class Team
+    public partial class EventTeam
     {
         [PrimaryKey, AutoIncrement]
         public int? Id { get; set; }
         public string Uuid { get; set; }
         public int Changed { get; set; }
         [Indexed]
+        public string EventKey { get; set; }
+        [Indexed]
         public int TeamNumber { get; set; }
-        public string Name { get; set; }
-        public string Location { get; set; }
     }
 }

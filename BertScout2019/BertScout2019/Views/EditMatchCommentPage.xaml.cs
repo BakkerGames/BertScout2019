@@ -1,5 +1,5 @@
-﻿using BertScout2019.Models;
-using BertScout2019.ViewModels;
+﻿using BertScout2019.ViewModels;
+using BertScout2019Data.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

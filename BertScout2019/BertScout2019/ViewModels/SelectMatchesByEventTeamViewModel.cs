@@ -1,5 +1,5 @@
-﻿using BertScout2019.Models;
-using BertScout2019.Services;
+﻿using BertScout2019.Services;
+using BertScout2019Data.Models;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;

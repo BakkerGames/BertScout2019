@@ -2,7 +2,7 @@
 
 // remember to increment the dbVersion in App.xaml.cs when changing this model
 
-namespace BertScout2019.Models
+namespace BertScout2019Data.Models
 {
     public partial class EventTeamMatch
     {

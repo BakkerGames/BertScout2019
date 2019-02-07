@@ -10,8 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\EventTeam.cs" />
+    <Compile Remove="Models\EventTeamMatch.cs" />
+    <Compile Remove="Models\FRCEvent.cs" />
     <Compile Remove="Models\HomeMenuItem.cs" />
     <Compile Remove="Models\Item.cs" />
+    <Compile Remove="Models\Team.cs" />
     <Compile Remove="Services\MockDataStore.cs" />
     <Compile Remove="Services\MockDataStoreFRCEvent.cs" />
     <Compile Remove="ViewModels\AboutViewModel.cs" />
@@ -57,7 +67,7 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1009999" />  
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />  
   </ItemGroup>
 
   <ItemGroup>
@@ -91,5 +101,9 @@
     <EmbeddedResource Update="Views\TeamDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BertScout2019Data\BertScout2019Data.csproj" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
-﻿using BertScout2019.Models;
-using BertScout2019.Services;
+﻿using BertScout2019.Services;
+using BertScout2019Data.Models;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -34,27 +34,27 @@ namespace BertScout2019.Views
                 App.Database.CreateTables();
                 // put frc events from xml into database
                 var frcEvents = DataStoreFRCEvents.GetItemsAsync(true).Result;
-                int frcEventId = 0;
-                foreach (var frcEvent in frcEvents)
+                foreach (var item in frcEvents)
                 {
-                    frcEvent.Id = ++frcEventId;
-                    int result = App.Database.SaveFRCEventAsync(frcEvent).Result;
+                    item.Id = null;
+                    item.Uuid = item.EventKey;
+                    int result = App.Database.SaveFRCEventAsync(item).Result;
                 }
                 // put teams from xml into database
                 var teams = DataStoreTeams.GetItemsAsync(true).Result;
-                int teamId = 0;
-                foreach (var team in teams)
+                foreach (var item in teams)
                 {
-                    team.Id = ++teamId;
-                    int result = App.Database.SaveTeamAsync(team).Result;
+                    item.Id = null;
+                    item.Uuid = item.TeamNumber.ToString();
+                    int result = App.Database.SaveTeamAsync(item).Result;
                 }
                 // put eventteams from xml into database
                 var eventTeams = DataStoreEventTeams.GetItemsAsync(true).Result;
-                int eventTeamId = 0;
-                foreach (var eventTeam in eventTeams)
+                foreach (var item in eventTeams)
                 {
-                    eventTeam.Id = ++eventTeamId;
-                    int result = App.Database.SaveEventTeamAsync(eventTeam).Result;
+                    item.Id = null;
+                    item.Uuid = $"{item.EventKey}:{item.TeamNumber}";
+                    int result = App.Database.SaveEventTeamAsync(item).Result;
                 }
                 App.currFRCEventKey = "";
                 App.currFRCEventName = "";

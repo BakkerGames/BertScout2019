@@ -1,12 +1,9 @@
-﻿using BertScout2019.Models;
-using BertScout2019.Services;
+﻿using BertScout2019Data.Models;
 
 namespace BertScout2019.ViewModels
 {
     public class EditEventTeamMatchViewModel : BaseViewModel
     {
-        public IDataStore<EventTeamMatch> DataStoreMatch => new SqlDataStoreEventTeamMatch(App.currFRCEventKey, App.currTeamNumber, App.currMatchNumber);
-
         public EventTeamMatch item;
 
         public EditEventTeamMatchViewModel(EventTeamMatch item)

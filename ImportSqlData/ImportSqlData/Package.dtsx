@@ -1,0 +1,1627 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/3/2019 3:12:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ELYSIAN"
+  DTS:CreatorName="ELYSIAN\chime"
+  DTS:DTSID="{489F13E3-0ADA-4F55-B308-E5D39E517720}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.30"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{D2669692-1A20-4C1F-8FF4-DC6C7CE1E06D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.BertScout2019]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E7AD13C5-BB87-4C21-A560-ABCC20B25182}"
+      DTS:ObjectName="localhost.BertScout2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=BertScout2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost_BertScout2019]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{691128B6-6B33-4247-982E-8DDD986E0782}"
+      DTS:ObjectName="localhost_BertScout2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Import EventTeam"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BA1DF27B-202F-4F81-BA72-670A40B9FF23}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import EventTeam"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import EventTeam\EventTeam Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="EventTeam Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[EventTeam]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import EventTeam\EventTeam Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.BertScout2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.BertScout2019]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].Columns[EventKey]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EventKey"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].ExternalColumns[EventKey]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[EventKey]" />
+                    <inputColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].Columns[TeamNumber]"
+                      cachedDataType="ui2"
+                      cachedName="TeamNumber"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].ExternalColumns[TeamNumber]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[TeamNumber]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].ExternalColumns[EventKey]"
+                      dataType="wstr"
+                      length="50"
+                      name="EventKey" />
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input].ExternalColumns[TeamNumber]"
+                      dataType="i4"
+                      name="TeamNumber" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import EventTeam\EventTeam Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import EventTeam\EventTeam Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeam Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import EventTeam\EventTeam Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import EventTeam\EventTeams"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="EventTeams"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">D:\Projects\BertScout2019\BertScout2019\BertScout2019\EmbeddedResources\EventTeams.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">D:\Projects\BertScout2019\BertScout2019\BertScout2019\EmbeddedResources\EventTeams.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam]"
+                  name="EventTeam">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">EventTeam</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[Id]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].ExternalColumns[Id]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[EventKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].ExternalColumns[EventKey]"
+                      length="50"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[EventKey]"
+                      name="EventKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[TeamNumber]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].ExternalColumns[TeamNumber]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].Columns[TeamNumber]"
+                      name="TeamNumber"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].ExternalColumns[Id]"
+                      dataType="ui1"
+                      name="Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].ExternalColumns[EventKey]"
+                      dataType="wstr"
+                      length="50"
+                      name="EventKey">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam].ExternalColumns[TeamNumber]"
+                      dataType="ui2"
+                      name="TeamNumber">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output]"
+                  isErrorOut="true"
+                  name="EventTeam Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">EventTeam</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].ExternalColumns[Id]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[EventKey]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].ExternalColumns[EventKey]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[EventKey]"
+                      name="EventKey" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[TeamNumber]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].ExternalColumns[TeamNumber]"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[TeamNumber]"
+                      name="TeamNumber" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].ExternalColumns[Id]"
+                      dataType="nText"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].ExternalColumns[EventKey]"
+                      dataType="nText"
+                      name="EventKey" />
+                    <externalMetadataColumn
+                      refId="Package\Import EventTeam\EventTeams.Outputs[EventTeam Error Output].ExternalColumns[TeamNumber]"
+                      dataType="nText"
+                      name="TeamNumber" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import EventTeam.Paths[EventTeam]"
+              endId="Package\Import EventTeam\EventTeam Table.Inputs[OLE DB Destination Input]"
+              name="EventTeam"
+              startId="Package\Import EventTeam\EventTeams.Outputs[EventTeam]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import FRCEvents"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AB59B879-419F-4F98-9537-215F705135AA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import FRCEvents"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import FRCEvents\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import FRCEvents\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import FRCEvents\Data Conversion.Inputs[Data Conversion Input].Columns[StartDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartDate"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[StartDate]" />
+                    <inputColumn
+                      refId="Package\Import FRCEvents\Data Conversion.Inputs[Data Conversion Input].Columns[EndDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EndDate"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EndDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Import FRCEvents\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output].Columns[StartDate_DB]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output].Columns[StartDate_DB]"
+                      name="StartDate_DB"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[StartDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output].Columns[EndDate_DB]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output].Columns[EndDate_DB]"
+                      name="EndDate_DB"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EndDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Import FRCEvents\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import FRCEvents\FRCEvent Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="FRCEvent Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FRCEvent]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import FRCEvents\FRCEvent Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.BertScout2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.BertScout2019]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].Columns[EventKey]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="EventKey"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[EventKey]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EventKey]" />
+                    <inputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Location]" />
+                    <inputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].Columns[StartDate_DB]"
+                      cachedDataType="dbDate"
+                      cachedName="StartDate_DB"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[StartDate]"
+                      lineageId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output].Columns[StartDate_DB]" />
+                    <inputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].Columns[EndDate_DB]"
+                      cachedDataType="dbDate"
+                      cachedName="EndDate_DB"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[EndDate]"
+                      lineageId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output].Columns[EndDate_DB]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[EventKey]"
+                      dataType="wstr"
+                      length="50"
+                      name="EventKey" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[StartDate]"
+                      dataType="dbDate"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input].ExternalColumns[EndDate]"
+                      dataType="dbDate"
+                      name="EndDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import FRCEvents\FRCEvent Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import FRCEvents\FRCEvent Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvent Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import FRCEvents\FRCEvent Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import FRCEvents\FRCEvents"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="FRCEvents"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">D:\Projects\BertScout2019\BertScout2019\BertScout2019\EmbeddedResources\FRCEvents.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">D:\Projects\BertScout2019\BertScout2019\BertScout2019\EmbeddedResources\FRCEvents.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent]"
+                  name="FRCEvent">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">FRCEvent</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Id]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[Id]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EventKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[EventKey]"
+                      length="50"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EventKey]"
+                      name="EventKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[Location]"
+                      length="50"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[StartDate]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[StartDate]"
+                      name="StartDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EndDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[EndDate]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].Columns[EndDate]"
+                      name="EndDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[Id]"
+                      dataType="ui1"
+                      name="Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[EventKey]"
+                      dataType="wstr"
+                      length="50"
+                      name="EventKey">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Location">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[StartDate]"
+                      dataType="dbTimeStamp"
+                      name="StartDate">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.DateTime</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent].ExternalColumns[EndDate]"
+                      dataType="dbTimeStamp"
+                      name="EndDate">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.DateTime</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output]"
+                  isErrorOut="true"
+                  name="FRCEvent Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">FRCEvent</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[Id]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[EventKey]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[EventKey]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[EventKey]"
+                      name="EventKey" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[Name]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[Name]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[Location]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[Location]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[Location]"
+                      name="Location" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[StartDate]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[StartDate]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[StartDate]"
+                      name="StartDate" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[EndDate]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[EndDate]"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[EndDate]"
+                      name="EndDate" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[Id]"
+                      dataType="nText"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[EventKey]"
+                      dataType="nText"
+                      name="EventKey" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[Name]"
+                      dataType="nText"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[Location]"
+                      dataType="nText"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[StartDate]"
+                      dataType="nText"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent Error Output].ExternalColumns[EndDate]"
+                      dataType="nText"
+                      name="EndDate" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import FRCEvents.Paths[Data Conversion Output]"
+              endId="Package\Import FRCEvents\FRCEvent Table.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Import FRCEvents\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Import FRCEvents.Paths[FRCEvent]"
+              endId="Package\Import FRCEvents\Data Conversion.Inputs[Data Conversion Input]"
+              name="FRCEvent"
+              startId="Package\Import FRCEvents\FRCEvents.Outputs[FRCEvent]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Teams"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B0C7CD10-5C16-46A9-BA0A-0BC48D008486}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import Teams"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Teams\Team Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Team Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Team]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Teams\Team Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.BertScout2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.BertScout2019]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].Columns[TeamNumber]"
+                      cachedDataType="ui2"
+                      cachedName="TeamNumber"
+                      externalMetadataColumnId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[TeamNumber]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[TeamNumber]" />
+                    <inputColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[TeamNumber]"
+                      dataType="i4"
+                      name="TeamNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="100"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Teams\Team Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Teams\Team Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Teams\Team Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Teams\Team Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Teams\Team Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Teams\Teams"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="Teams"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">D:\Projects\BertScout2019\BertScout2019\BertScout2019\EmbeddedResources\Teams.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">D:\Projects\BertScout2019\BertScout2019\BertScout2019\EmbeddedResources\Teams.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Import Teams\Teams.Outputs[Team]"
+                  name="Team">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">Team</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].Columns[Id]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[Id]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].Columns[TeamNumber]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[TeamNumber]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[TeamNumber]"
+                      name="TeamNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[Name]"
+                      length="100"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].Columns[Location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[Location]"
+                      length="100"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[Id]"
+                      dataType="ui1"
+                      name="Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[TeamNumber]"
+                      dataType="ui2"
+                      name="TeamNumber">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="100"
+                      name="Name">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="100"
+                      name="Location">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Teams\Teams.Outputs[Team Error Output]"
+                  isErrorOut="true"
+                  name="Team Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">Team</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[Id]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[TeamNumber]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[TeamNumber]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[TeamNumber]"
+                      name="TeamNumber" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[Name]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[Name]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[Location]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[Location]"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[Location]"
+                      name="Location" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Teams\Teams.Outputs[Team Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[Id]"
+                      dataType="nText"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[TeamNumber]"
+                      dataType="nText"
+                      name="TeamNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[Name]"
+                      dataType="nText"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Teams\Teams.Outputs[Team Error Output].ExternalColumns[Location]"
+                      dataType="nText"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Teams.Paths[Team]"
+              endId="Package\Import Teams\Team Table.Inputs[OLE DB Destination Input]"
+              name="Team"
+              startId="Package\Import Teams\Teams.Outputs[Team]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Tables"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Execute T-SQL Statement Task"
+      DTS:DTSID="{509C3BB9-8C74-4CDA-98D7-31A0BD5BF41A}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Tables"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{691128B6-6B33-4247-982E-8DDD986E0782}"
+          SQLTask:SqlStatementSource="use [BertScout2019];&#xA;truncate table [dbo].[FRCEvent];&#xA;truncate table [dbo].[Team];&#xA;truncate table [dbo].[EventTeam];"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{23AEC633-10B1-4DE9-8BBC-E8F7D9B03112}"
+      DTS:From="Package\Truncate Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import FRCEvents" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{BCEFD84A-9C72-4B4D-B302-A259D8B06163}"
+      DTS:From="Package\Import FRCEvents"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Import Teams" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{9CF00EB7-F537-4E05-A5DB-88DF66512893}"
+      DTS:From="Package\Import Teams"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Import EventTeam" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Import FRCEvents"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Truncate Tables"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="89,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Import Teams"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="89,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Import EventTeam"
+          TopLeft="5.50000000000003,311.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="89,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import FRCEvents">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Import FRCEvents\FRCEvents"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Import FRCEvents\Data Conversion"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\Import FRCEvents.Paths[FRCEvent]"
+          TopLeft="83.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Import FRCEvents\FRCEvent Table"
+          TopLeft="5.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package\Import FRCEvents.Paths[Data Conversion Output]"
+          TopLeft="83.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import FRCEvents\FRCEvent Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import Teams">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Import Teams\Team Table"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Import Teams\Teams"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package\Import Teams.Paths[Team]"
+          TopLeft="73,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Teams\Team Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import EventTeam">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Import EventTeam\EventTeams"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Import EventTeam\EventTeam Table"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\Import EventTeam.Paths[EventTeam]"
+          TopLeft="86,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import EventTeam\EventTeam Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

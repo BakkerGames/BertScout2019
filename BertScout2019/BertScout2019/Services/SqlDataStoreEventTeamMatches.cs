@@ -1,4 +1,4 @@
-﻿using BertScout2019.Models;
+﻿using BertScout2019Data.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,10 +9,10 @@ namespace BertScout2019.Services
     {
         List<EventTeamMatch> items;
 
-        public SqlDataStoreEventTeamMatches(string frcEventKey, int teamNumber)
+        public SqlDataStoreEventTeamMatches()
         {
             // must complete, so don't async/await
-            items = App.Database.GetEventTeamMatchesAsync(frcEventKey, teamNumber).Result;
+            items = App.Database.GetEventTeamMatchesAsync().Result;
         }
 
         public async Task<bool> AddItemAsync(EventTeamMatch item)

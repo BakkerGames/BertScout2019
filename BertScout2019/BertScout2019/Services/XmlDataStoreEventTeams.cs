@@ -1,8 +1,8 @@
-﻿using BertScout2019.Models;
+﻿using BertScout2019Data.Models;
+using BertScout2019XmlData;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
@@ -15,8 +15,7 @@ namespace BertScout2019.Services
         public XmlDataStoreEventTeams()
         {
             items = new List<EventTeam>();
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("BertScout2019.EmbeddedResources.EventTeams.xml");
+            Stream stream = EmbeddedData.XmlDataStoreEventTeams();
             using (var reader = new StreamReader(stream))
             {
                 var serializer = new XmlSerializer(typeof(List<EventTeam>));

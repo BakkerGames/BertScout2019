@@ -3,6 +3,7 @@ using Common.JSON;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 using System.Web.Services;
 
 namespace WebService2019
@@ -15,24 +16,34 @@ namespace WebService2019
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     [System.Web.Script.Services.ScriptService]
-    public class Bert133Data : System.Web.Services.WebService
+    public class Bert133Data : WebService
     {
 
-        private string _server = "localhost"; // "(localdb)\\mssqllocaldb";
-        private string _database = "BertScout2019";
         private int _timeout = 30;
 
         [WebMethod]
-        public string HelloWorld()
+        public string ResetDatabase()
         {
-            return "Hello World";
+            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+            using (SqlConnection dc = new SqlConnection(connectionString))
+            {
+                dc.Open();
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("TRUNCATE TABLE [dbo].[EventTeamMatch];");
+                SqlCommand cmd = new SqlCommand(query.ToString(), dc)
+                {
+                    CommandType = CommandType.Text,
+                    CommandTimeout = _timeout,
+                };
+                int result = cmd.ExecuteNonQuery();
+                return $"Database reset done, result = {result}";
+            }
         }
 
         [WebMethod]
         public string GetFRCEvents()
         {
-            //string connectionString = GetConnectionString(_server, _database);
-            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString; 
+            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
             using (SqlConnection dc = new SqlConnection(connectionString))
             {
                 dc.Open();
@@ -55,21 +66,82 @@ namespace WebService2019
             }
         }
 
-        public static string GetConnectionString(string server, string database)
+        [WebMethod]
+        public string GetTeams()
         {
-            SqlConnectionStringBuilder result = new SqlConnectionStringBuilder()
+            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+            using (SqlConnection dc = new SqlConnection(connectionString))
             {
-                DataSource = server,
-                InitialCatalog = database,
-                IntegratedSecurity = true,
-                PersistSecurityInfo = false,
-                MultipleActiveResultSets = true,
-                Encrypt = false,
-                ConnectTimeout = 30,
-                Pooling = true
-            };
-            return result.ToString();
+                dc.Open();
+                string query = "SELECT * FROM [dbo].[Team];";
+                SqlCommand cmd = new SqlCommand(query, dc)
+                {
+                    CommandType = CommandType.Text,
+                    CommandTimeout = _timeout,
+                };
+                JArray result = new JArray();
+                using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
+                {
+                    while (dr.Read())
+                    {
+                        Team obj = Team.FromSqlDataReader(dr);
+                        result.Add(obj.ToJson());
+                    }
+                }
+                return result.ToString();
+            }
         }
 
+        [WebMethod]
+        public string GetEventTeams()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+            using (SqlConnection dc = new SqlConnection(connectionString))
+            {
+                dc.Open();
+                string query = "SELECT * FROM [dbo].[EventTeam];";
+                SqlCommand cmd = new SqlCommand(query, dc)
+                {
+                    CommandType = CommandType.Text,
+                    CommandTimeout = _timeout,
+                };
+                JArray result = new JArray();
+                using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
+                {
+                    while (dr.Read())
+                    {
+                        EventTeam obj = EventTeam.FromSqlDataReader(dr);
+                        result.Add(obj.ToJson());
+                    }
+                }
+                return result.ToString();
+            }
+        }
+
+        [WebMethod]
+        public string GetEventTeamMatches()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+            using (SqlConnection dc = new SqlConnection(connectionString))
+            {
+                dc.Open();
+                string query = "SELECT * FROM [dbo].[EventTeamMatch];";
+                SqlCommand cmd = new SqlCommand(query, dc)
+                {
+                    CommandType = CommandType.Text,
+                    CommandTimeout = _timeout,
+                };
+                JArray result = new JArray();
+                using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
+                {
+                    while (dr.Read())
+                    {
+                        EventTeamMatch obj = EventTeamMatch.FromSqlDataReader(dr);
+                        result.Add(obj.ToJson());
+                    }
+                }
+                return result.ToString();
+            }
+        }
     }
 }

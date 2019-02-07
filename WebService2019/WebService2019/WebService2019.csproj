@@ -32,6 +32,17 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="myConnectionString-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=localhost%3bInitial Catalog=BertScout2019%3bIntegrated Security=True%3bPersist Security Info=False%3bPooling=True%3bMultipleActiveResultSets=True%3bConnect Timeout=30%3bEncrypt=False" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\myConnectionString-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -82,7 +93,11 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\EventTeam.cs" />
+    <Compile Include="Models\EventTeam.Json.cs" />
+    <Compile Include="Models\EventTeam.SqlData.cs" />
     <Compile Include="Models\EventTeamMatch.cs" />
+    <Compile Include="Models\EventTeamMatch.Json.cs" />
+    <Compile Include="Models\EventTeamMatch.SqlData.cs" />
     <Compile Include="Models\FRCEvent.cs" />
     <Compile Include="Models\FRCEvent.Json.cs" />
     <Compile Include="Models\FRCEvent.SqlData.cs" />

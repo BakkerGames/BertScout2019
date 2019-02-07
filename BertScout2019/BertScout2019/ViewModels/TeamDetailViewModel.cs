@@ -38,7 +38,9 @@ namespace BertScout2019.ViewModels
                 foreach (var match in matches)
                 {
                     MatchResult obj = new MatchResult();
-                    obj.Text = $"Match {match.MatchNumber}";
+                    // todo fill in text with useful match results
+                    obj.Text1 = $"Match {match.MatchNumber}";
+                    obj.Text2 = "Hello Nate";
                     MatchResults.Add(obj);
                 }
             }

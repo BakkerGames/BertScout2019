@@ -60,18 +60,26 @@
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 CachingStrategy="RetainElement"
-                Margin="0,20,0,0"
+                Margin="0,10,0,0"
                 ItemSelected="TeamMatchesListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout>
+                            <StackLayout Margin="0,10,0,0">
                                 <Label
-                                    Text="{Binding Text}"
+                                    Text="{Binding Text1}"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemTextStyle}"
                                     FontSize="24"
                                     FontAttributes="None"
+                                    />
+                                <Label
+                                    Text="{Binding Text2}"
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemTextStyle}"
+                                    FontSize="24"
+                                    FontAttributes="None"
+                                    Margin="10,0,0,0"
                                     />
                             </StackLayout>
                         </ViewCell>

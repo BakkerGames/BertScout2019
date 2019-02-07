@@ -123,6 +123,10 @@
       <Project>{180df173-92f6-45c4-9e4b-ae81568f507b}</Project>
       <Name>BertScout2019Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\BertScout2019XmlData\BertScout2019XmlData.csproj">
+      <Project>{73f730d8-7556-4691-b051-6d77a971cd89}</Project>
+      <Name>BertScout2019XmlData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common.JSON\Common.JSON\Common.JSON.csproj">
       <Project>{ef7b4f31-17b9-40ff-8334-196056bab2d2}</Project>
       <Name>Common.JSON</Name>

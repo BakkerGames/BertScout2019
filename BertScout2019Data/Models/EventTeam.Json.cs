@@ -11,6 +11,8 @@ namespace BertScout2019Data.Models
             JObject result = new JObject()
             {
                 { "Id", Id },
+                { "Uuid", Uuid },
+                { "Changed", Changed },
                 { "EventKey", EventKey },
                 { "TeamNumber", TeamNumber },
             };

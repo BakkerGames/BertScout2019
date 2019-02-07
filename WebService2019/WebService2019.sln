@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.JSON", "..\Common.JS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "..\BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019XmlData", "..\BertScout2019XmlData\BertScout2019XmlData.csproj", "{73F730D8-7556-4691-B051-6D77A971CD89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{180DF173-92F6-45C4-9E4B-AE81568F507B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180DF173-92F6-45C4-9E4B-AE81568F507B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180DF173-92F6-45C4-9E4B-AE81568F507B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F730D8-7556-4691-B051-6D77A971CD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F730D8-7556-4691-B051-6D77A971CD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F730D8-7556-4691-B051-6D77A971CD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F730D8-7556-4691-B051-6D77A971CD89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

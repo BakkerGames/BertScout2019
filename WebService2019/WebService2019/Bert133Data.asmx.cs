@@ -1,10 +1,12 @@
 ﻿using BertScout2019Data.Data;
 using BertScout2019Data.Models;
+using BertScout2019XmlData;
 using Common.JSON;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.Services;
+using System.Xml.Serialization;
 
 namespace WebService2019
 {
@@ -43,11 +45,65 @@ namespace WebService2019
             {
                 Database.DropTables();
                 Database.CreateTables();
+                FillStartingData_FRCEvents();
+                FillStartingData_Teams();
+                FillStartingData_EventTeams();
                 return "Reset database done";
             }
             catch (Exception ex)
             {
                 return ex.Message;
+            }
+        }
+
+        private void FillStartingData_FRCEvents()
+        {
+            List<FRCEvent> items = new List<FRCEvent>();
+            Stream stream = EmbeddedData.XmlDataStoreFRCEvents();
+            using (var reader = new StreamReader(stream))
+            {
+                var serializer = new XmlSerializer(typeof(List<FRCEvent>));
+                items = (List<FRCEvent>)serializer.Deserialize(reader);
+            }
+            foreach (FRCEvent item in items)
+            {
+                item.Id = null;
+                item.Uuid = item.EventKey;
+                int result = Database.SaveFRCEventAsync(item).Result;
+            }
+        }
+
+        private void FillStartingData_Teams()
+        {
+            List<Team> items = new List<Team>();
+            Stream stream = EmbeddedData.XmlDataStoreTeams();
+            using (var reader = new StreamReader(stream))
+            {
+                var serializer = new XmlSerializer(typeof(List<Team>));
+                items = (List<Team>)serializer.Deserialize(reader);
+            }
+            foreach (Team item in items)
+            {
+                item.Id = null;
+                item.Uuid = item.TeamNumber.ToString();
+                int result = Database.SaveTeamAsync(item).Result;
+            }
+        }
+
+        private void FillStartingData_EventTeams()
+        {
+            List<EventTeam> items = new List<EventTeam>();
+            Stream stream = EmbeddedData.XmlDataStoreEventTeams();
+            using (var reader = new StreamReader(stream))
+            {
+                var serializer = new XmlSerializer(typeof(List<EventTeam>));
+                items = (List<EventTeam>)serializer.Deserialize(reader);
+            }
+            foreach (EventTeam item in items)
+            {
+                item.Id = null;
+                item.Uuid = $"{item.EventKey}:{item.TeamNumber}";
+                int result = Database.SaveEventTeamAsync(item).Result;
             }
         }
 
@@ -66,82 +122,37 @@ namespace WebService2019
         [WebMethod]
         public string GetTeams()
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            //using (SqlConnection dc = new SqlConnection(connectionString))
-            //{
-            //    dc.Open();
-            //    string query = "SELECT * FROM [dbo].[Team];";
-            //    SqlCommand cmd = new SqlCommand(query, dc)
-            //    {
-            //        CommandType = CommandType.Text,
-            //        CommandTimeout = _timeout,
-            //    };
-            //    JArray result = new JArray();
-            //    using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
-            //    {
-            //        while (dr.Read())
-            //        {
-            //            Team obj = Team.FromSqlDataReader(dr);
-            //            result.Add(obj.ToJson());
-            //        }
-            //    }
-            //    return result.ToString();
-            //}
-            return "Not implemented";
+            List<Team> events = Database.GetTeamsAsync().Result;
+            JArray result = new JArray();
+            foreach (Team item in events)
+            {
+                result.Add(item.ToJson());
+            }
+            return result.ToString();
         }
 
         [WebMethod]
         public string GetEventTeams()
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            //using (SqlConnection dc = new SqlConnection(connectionString))
-            //{
-            //    dc.Open();
-            //    string query = "SELECT * FROM [dbo].[EventTeam];";
-            //    SqlCommand cmd = new SqlCommand(query, dc)
-            //    {
-            //        CommandType = CommandType.Text,
-            //        CommandTimeout = _timeout,
-            //    };
-            //    JArray result = new JArray();
-            //    using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
-            //    {
-            //        while (dr.Read())
-            //        {
-            //            EventTeam obj = EventTeam.FromSqlDataReader(dr);
-            //            result.Add(obj.ToJson());
-            //        }
-            //    }
-            //    return result.ToString();
-            //}
-            return "Not implemented";
+            List<EventTeam> events = Database.GetEventTeamsAsync().Result;
+            JArray result = new JArray();
+            foreach (EventTeam item in events)
+            {
+                result.Add(item.ToJson());
+            }
+            return result.ToString();
         }
 
         [WebMethod]
         public string GetEventTeamMatches()
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            //using (SqlConnection dc = new SqlConnection(connectionString))
-            //{
-            //    dc.Open();
-            //    string query = "SELECT * FROM [dbo].[EventTeamMatch];";
-            //    SqlCommand cmd = new SqlCommand(query, dc)
-            //    {
-            //        CommandType = CommandType.Text,
-            //        CommandTimeout = _timeout,
-            //    };
-            //    JArray result = new JArray();
-            //    using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
-            //    {
-            //        while (dr.Read())
-            //        {
-            //            EventTeamMatch obj = EventTeamMatch.FromSqlDataReader(dr);
-            //            result.Add(obj.ToJson());
-            //        }
-            //    }
-            //    return result.ToString();
-            //}
-            return "Not implemented";
+            List<EventTeamMatch> events = Database.GetEventTeamMatchesAsync().Result;
+            JArray result = new JArray();
+            foreach (EventTeamMatch item in events)
+            {
+                result.Add(item.ToJson());
+            }
+            return result.ToString();
         }
     }
 }

@@ -60,6 +60,10 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveFRCEventAsync(FRCEvent item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 
@@ -93,6 +97,10 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveTeamAsync(Team item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 
@@ -127,6 +135,10 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveEventTeamAsync(EventTeam item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 
@@ -166,6 +178,10 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveEventTeamMatchAsync(EventTeamMatch item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 

@@ -4,7 +4,7 @@
 
 namespace BertScout2019.Models
 {
-    public class EventTeam
+    public partial class EventTeam
     {
         [PrimaryKey, AutoIncrement]
         public int? Id { get; set; }

@@ -4,7 +4,7 @@
 
 namespace BertScout2019.Models
 {
-    public class FRCEvent
+    public partial class FRCEvent
     {
         [PrimaryKey, AutoIncrement]
         public int? Id { get; set; }

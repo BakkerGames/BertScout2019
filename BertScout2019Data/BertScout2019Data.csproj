@@ -60,14 +60,24 @@
   <ItemGroup>
     <Compile Include="Data\BertScout2019Database.cs" />
     <Compile Include="Models\EventTeam.cs" />
+    <Compile Include="Models\EventTeam.Json.cs" />
     <Compile Include="Models\EventTeamMatch.cs" />
+    <Compile Include="Models\EventTeamMatch.Json.cs" />
     <Compile Include="Models\FRCEvent.cs" />
+    <Compile Include="Models\FRCEvent.Json.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\Team.Json.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.JSON\Common.JSON\Common.JSON.csproj">
+      <Project>{ef7b4f31-17b9-40ff-8334-196056bab2d2}</Project>
+      <Name>Common.JSON</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.13\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.13\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />

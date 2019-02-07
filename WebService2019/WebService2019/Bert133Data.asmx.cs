@@ -1,5 +1,8 @@
 ﻿using BertScout2019Data.Data;
+using BertScout2019Data.Models;
+using Common.JSON;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Web.Services;
 
@@ -51,28 +54,13 @@ namespace WebService2019
         [WebMethod]
         public string GetFRCEvents()
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            //using (SqlConnection dc = new SqlConnection(connectionString))
-            //{
-            //    dc.Open();
-            //    string query = "SELECT * FROM [dbo].[FRCEvent];";
-            //    SqlCommand cmd = new SqlCommand(query, dc)
-            //    {
-            //        CommandType = CommandType.Text,
-            //        CommandTimeout = _timeout,
-            //    };
-            //    JArray result = new JArray();
-            //    using (SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.SingleResult))
-            //    {
-            //        while (dr.Read())
-            //        {
-            //            FRCEvent obj = FRCEvent.FromSqlDataReader(dr);
-            //            result.Add(obj.ToJson());
-            //        }
-            //    }
-            //    return result.ToString();
-            //}
-            return "Not implemented";
+            List<FRCEvent> events = Database.GetEventsAsync().Result;
+            JArray result = new JArray();
+            foreach (FRCEvent item in events)
+            {
+                result.Add(item.ToJson());
+            }
+            return result.ToString();
         }
 
         [WebMethod]

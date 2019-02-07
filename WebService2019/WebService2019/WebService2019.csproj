@@ -66,12 +66,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bert133Data.asmx" />
+    <Content Include="Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bert133Data.asmx.cs">
       <DependentUpon>Bert133Data.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\EventTeam.cs" />
     <Compile Include="Models\EventTeamMatch.cs" />

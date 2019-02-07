@@ -1,5 +1,6 @@
 ﻿using BertScout2019.Models;
 using Common.JSON;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Services;
@@ -30,7 +31,9 @@ namespace WebService2019
         [WebMethod]
         public string GetFRCEvents()
         {
-            using (SqlConnection dc = new SqlConnection(GetConnectionString(_server, _database)))
+            //string connectionString = GetConnectionString(_server, _database);
+            string connectionString = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString; 
+            using (SqlConnection dc = new SqlConnection(connectionString))
             {
                 dc.Open();
                 string query = "SELECT * FROM [dbo].[FRCEvent];";

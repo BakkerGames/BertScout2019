@@ -29,6 +29,10 @@ namespace WebService2019
             {
                 dc.Open();
                 StringBuilder query = new StringBuilder();
+                // todo drop, create, and fill all tables
+                //query.AppendLine("TRUNCATE TABLE [dbo].[FRCEvent];");
+                //query.AppendLine("TRUNCATE TABLE [dbo].[Team];");
+                //query.AppendLine("TRUNCATE TABLE [dbo].[EventTeam];");
                 query.AppendLine("TRUNCATE TABLE [dbo].[EventTeamMatch];");
                 SqlCommand cmd = new SqlCommand(query.ToString(), dc)
                 {

@@ -8,6 +8,8 @@ namespace BertScout2019.Models
     {
         [PrimaryKey, AutoIncrement]
         public int? Id { get; set; }
+        public string Uuid { get; set; }
+        public int Changed { get; set; }
         [Indexed]
         public int TeamNumber { get; set; }
         public string Name { get; set; }

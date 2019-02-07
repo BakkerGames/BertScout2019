@@ -16,13 +16,6 @@ namespace BertScout2019.Data
             try
             {
                 database = new SQLiteAsyncConnection(dbPath);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            try
-            {
                 CreateTables();
             }
             catch (Exception ex)

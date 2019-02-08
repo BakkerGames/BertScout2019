@@ -560,6 +560,38 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label
+                        Text="Tech Fouls:"
+                        FontSize="24"
+                        Margin="0,10,0,0"
+                        WidthRequest="293"
+                        />
+                    <Button
+                        x:Name="Button_TechFouls_None"
+                        Text="None"
+                        FontSize="24"
+                        WidthRequest="90"
+                        BackgroundColor="LightGray"
+                        Clicked="Button_TechFouls_None_Clicked"
+                        />
+                    <Button
+                        x:Name="Button_TechFouls_Some"
+                        Text="Some"
+                        FontSize="24"
+                        WidthRequest="90"
+                        BackgroundColor="LightGray"
+                        Clicked="Button_TechFouls_Some_Clicked"
+                        />
+                    <Button
+                        x:Name="Button_TechFouls_Lots"
+                        Text="Lots"
+                        FontSize="24"
+                        WidthRequest="90"
+                        BackgroundColor="LightGray"
+                        Clicked="Button_TechFouls_Lots_Clicked"
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
                         Text="Broken:"
                         FontSize="24"
                         Margin="0,10,0,0"

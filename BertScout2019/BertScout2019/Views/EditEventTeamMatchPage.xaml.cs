@@ -39,6 +39,7 @@ namespace BertScout2019.Views
             Defense = viewModel.item.Defense;
             Cooperation = viewModel.item.Cooperation;
             Fouls = viewModel.item.Fouls;
+            TechFouls = viewModel.item.TechFouls;
             Broken = viewModel.item.Broken;
 
             AllianceResult = viewModel.item.AllianceResult;
@@ -753,6 +754,63 @@ namespace BertScout2019.Views
         private void Button_Fouls_Lots_Clicked(object sender, System.EventArgs e)
         {
             Fouls = 2;
+        }
+
+        #endregion
+
+        #region TechFouls
+
+        public int TechFouls
+        {
+            get
+            {
+                return viewModel.item.TechFouls;
+            }
+            set
+            {
+                int newValue = value;
+                switch (value)
+                {
+                    case 1:
+                        newValue = 1;
+                        Button_TechFouls_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_TechFouls_Some.BackgroundColor = App.SelectedButtonColor;
+                        Button_TechFouls_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                    case 2:
+                        newValue = 2;
+                        Button_TechFouls_None.BackgroundColor = App.UnselectedButtonColor;
+                        Button_TechFouls_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_TechFouls_Lots.BackgroundColor = App.SelectedButtonColor;
+                        break;
+                    default:
+                        newValue = 0;
+                        Button_TechFouls_None.BackgroundColor = App.SelectedButtonColor;
+                        Button_TechFouls_Some.BackgroundColor = App.UnselectedButtonColor;
+                        Button_TechFouls_Lots.BackgroundColor = App.UnselectedButtonColor;
+                        break;
+                }
+                if (viewModel.item.TechFouls != newValue)
+                {
+                    viewModel.item.TechFouls = newValue;
+                    App.database.SaveEventTeamMatchAsync(viewModel.item);
+                }
+            }
+        }
+
+        private void Button_TechFouls_None_Clicked(object sender, System.EventArgs e)
+        {
+            TechFouls = 0;
+        }
+
+        private void Button_TechFouls_Some_Clicked(object sender, System.EventArgs e)
+        {
+            TechFouls = 1;
+        }
+
+        private void Button_TechFouls_Lots_Clicked(object sender, System.EventArgs e)
+        {
+            TechFouls = 2;
         }
 
         #endregion

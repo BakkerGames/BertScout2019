@@ -33,6 +33,7 @@ namespace BertScout2019.Models
         public int Defense { get; set; }
         public int Cooperation { get; set; }
         public int Fouls { get; set; }
+        public int TechFouls { get; set; }
         public int Broken { get; set; }
 
         public int AllianceResult { get; set; }

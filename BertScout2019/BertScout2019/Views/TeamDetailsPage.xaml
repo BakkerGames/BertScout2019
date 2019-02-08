@@ -50,6 +50,20 @@
                     FontSize="24"
                 />
             </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                    <Label
+                    Text="Total RP:" 
+                    FontSize="24"
+                    WidthRequest="200"
+                />
+                    <Label
+                    x:Name="TeamDetails_RP"
+                    Text=""
+                    FontAttributes="Bold"
+                    FontSize="24"
+                />
+            </StackLayout>
             <!-- Team Match Results -->
             <ListView 
                 x:Name="TeamMatchesListView"

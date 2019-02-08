@@ -11,6 +11,8 @@ namespace BertScout2019.ViewModels
 
         public Team item;
 
+        public int TotalRP = 0;
+
         public IDataStore<EventTeamMatch> DataStoreMatch;
 
         public ObservableCollection<MatchResult> MatchResults { get; set; }
@@ -41,8 +43,10 @@ namespace BertScout2019.ViewModels
                     // todo fill in text with useful match results
                     obj.Text1 = $"Match {match.MatchNumber}";
                     obj.Text2 = CalculateMatchResult(match);
+                    TotalRP +=CalculateMatchRP(match);
                     MatchResults.Add(obj);
                 }
+
             }
             catch (Exception ex)
             {
@@ -53,30 +57,59 @@ namespace BertScout2019.ViewModels
                 IsBusy = false;
             }
         }
+        private int CalculateMatchRP(EventTeamMatch match)
+        {
+            int rp = 0;
 
-        private string CalculateMatchResult(EventTeamMatch match)
+            rp += match.AllianceResult;
+            rp += match.RocketRankingPoint;
+            rp += match.HabRankingPoint;
+
+            return rp;
+
+
+
+
+        }
+
+            private string CalculateMatchResult(EventTeamMatch match)
         {
             string result;
             int score = 0;
-            score += match.SandstormMoveType;
-            score += match.SandstormOffPlatform;
-            score += match.SandstormHatches;
-            score += match.SandstormCargo;
+            //not scoring movement type
+            //score += match.SandstormMoveType;
+            score += match.SandstormOffPlatform*3;
+            score += match.SandstormHatches*2;
+            score += match.SandstormCargo*3;
 
-            score += match.CargoShipHatches;
-            score += match.CargoShipCargo;
-            score += match.RocketHatches;
-            score += match.RocketCargo;
-            score += match.RocketHighestHatch;
-            score += match.RocketHighestCargo;
+            score += match.CargoShipHatches*2;
+            score += match.CargoShipCargo*3;
+            score += match.RocketHatches*2;
+            score += match.RocketCargo*3;
+            //not scoring highest platform
+            //score += match.RocketHighestHatch;
+            //score += match.RocketHighestCargo;
 
-            score += match.EndgamePlatform;
-            score += match.EndgameBuddyClimb;
+            //score += match.EndgamePlatform;
+            switch (match.EndgamePlatform) {
+                case 1:
+                    score += 3;
+                    break;
+                case 2:
+                    score += 6;
+                    break;
+                case 3:
+                    score += 12;
+                    break;
+            }
+            //not scoring buddy climb
+            //score += match.EndgameBuddyClimb;
 
-            score += match.Defense;
-            score += match.Cooperation;
-            score -= match.Fouls*10;
-            score -= match.Broken*20;
+            //score += match.Defense;
+            //score += match.Cooperation;
+            score -= match.Fouls*3;
+            score -= match.TechFouls*10;
+            //score -= match.Broken*20;
 
             int rp = 0;
 
@@ -84,7 +117,6 @@ namespace BertScout2019.ViewModels
             rp += match.RocketRankingPoint;
             rp += match.HabRankingPoint;
             result = $"Score: {score} RP: {rp}";
-            // todo add score and ranking points
 
             return result;
         }

@@ -119,11 +119,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BertScout2019Data\BertScout2019Data.csproj">
+    <ProjectReference Include="..\BertScout2019Data\BertScout2019Data.csproj">
       <Project>{180df173-92f6-45c4-9e4b-ae81568f507b}</Project>
       <Name>BertScout2019Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\BertScout2019XmlData\BertScout2019XmlData.csproj">
+    <ProjectReference Include="..\BertScout2019XmlData\BertScout2019XmlData.csproj">
       <Project>{73f730d8-7556-4691-b051-6d77a971cd89}</Project>
       <Name>BertScout2019XmlData</Name>
     </ProjectReference>

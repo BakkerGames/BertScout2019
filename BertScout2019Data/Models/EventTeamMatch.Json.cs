@@ -31,6 +31,7 @@ namespace BertScout2019Data.Models
                 { "Defense", Defense },
                 { "Cooperation", Cooperation },
                 { "Fouls", Fouls },
+                { "TechFouls", TechFouls },
                 { "Broken", Broken },
                 { "AllianceResult", AllianceResult },
                 { "RocketRankingPoint", RocketRankingPoint },

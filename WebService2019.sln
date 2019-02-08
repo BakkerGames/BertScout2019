@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService2019", "WebService2019\WebService2019.csproj", "{1645B704-017D-4AB1-A846-746424DA513F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.JSON", "..\Common.JSON\Common.JSON\Common.JSON.csproj", "{EF7B4F31-17B9-40FF-8334-196056BAB2D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.JSON", "Common.JSON\Common.JSON.csproj", "{EF7B4F31-17B9-40FF-8334-196056BAB2D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "..\BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019XmlData", "..\BertScout2019XmlData\BertScout2019XmlData.csproj", "{73F730D8-7556-4691-B051-6D77A971CD89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019XmlData", "BertScout2019XmlData\BertScout2019XmlData.csproj", "{73F730D8-7556-4691-B051-6D77A971CD89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

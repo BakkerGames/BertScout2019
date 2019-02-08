@@ -533,31 +533,31 @@
                         Margin="0,10,0,0"
                         WidthRequest="293"
                         />
-                    <Button
-                        x:Name="Button_Fouls_None"
-                        Text="None"
+                    <Label
+                        x:Name="Label_Fouls_Value"
+                        Text="0"
                         FontSize="24"
-                        WidthRequest="90"
-                        BackgroundColor="LightGray"
-                        Clicked="Button_Fouls_None_Clicked"
+                        WidthRequest="80"
+                        Margin="10,10,0,0"
                         />
                     <Button
-                        x:Name="Button_Fouls_Some"
-                        Text="Some"
+                        x:Name="Button_Fouls_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_Fouls_Some_Clicked"
+                        Clicked="Button_Fouls_Minus_Clicked"
                         />
                     <Button
-                        x:Name="Button_Fouls_Lots"
-                        Text="Lots"
+                        x:Name="Button_Fouls_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_Fouls_Lots_Clicked"
+                        Clicked="Button_Fouls_Plus_Clicked"
                         />
                 </StackLayout>
+
                 <StackLayout Orientation="Horizontal">
                     <Label
                         Text="Tech Fouls:"
@@ -565,31 +565,31 @@
                         Margin="0,10,0,0"
                         WidthRequest="293"
                         />
-                    <Button
-                        x:Name="Button_TechFouls_None"
-                        Text="None"
+                    <Label
+                        x:Name="Label_TechFouls_Value"
+                        Text="0"
                         FontSize="24"
-                        WidthRequest="90"
-                        BackgroundColor="LightGray"
-                        Clicked="Button_TechFouls_None_Clicked"
+                        WidthRequest="80"
+                        Margin="10,10,0,0"
                         />
                     <Button
-                        x:Name="Button_TechFouls_Some"
-                        Text="Some"
+                        x:Name="Button_TechFouls_Minus"
+                        Text="-"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_TechFouls_Some_Clicked"
+                        Clicked="Button_TechFouls_Minus_Clicked"
                         />
                     <Button
-                        x:Name="Button_TechFouls_Lots"
-                        Text="Lots"
+                        x:Name="Button_TechFouls_Plus"
+                        Text="+"
                         FontSize="24"
                         WidthRequest="90"
                         BackgroundColor="LightGray"
-                        Clicked="Button_TechFouls_Lots_Clicked"
+                        Clicked="Button_TechFouls_Plus_Clicked"
                         />
                 </StackLayout>
+                
                 <StackLayout Orientation="Horizontal">
                     <Label
                         Text="Broken:"

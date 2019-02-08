@@ -47,7 +47,6 @@ namespace BertScout2019.ViewModels
                     TotalRP +=CalculateMatchRP(match);
                     MatchResults.Add(obj);
                 }
-
             }
             catch (Exception ex)
             {

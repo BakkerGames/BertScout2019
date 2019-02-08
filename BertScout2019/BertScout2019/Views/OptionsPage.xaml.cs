@@ -48,14 +48,6 @@ namespace BertScout2019.Views
                     item.Uuid = item.TeamNumber.ToString();
                     int result = App.Database.SaveTeamAsync(item).Result;
                 }
-                //put location from xml into database
-                //var locate = DataStoreTeams.GetItemsAsync(true).Result;
-                //int teamId = 0;
-                //foreach (var team in teams)
-                //{
-                //    team.Id = ++teamId;
-                //    int result = App.Database.SaveTeamAsync(team).Result;
-                //}
                 // put eventteams from xml into database
                 var eventTeams = DataStoreEventTeams.GetItemsAsync(true).Result;
                 foreach (var item in eventTeams)

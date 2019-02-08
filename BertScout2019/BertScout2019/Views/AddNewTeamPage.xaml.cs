@@ -40,12 +40,17 @@ namespace BertScout2019.Views
                 this.Title = "Number out of range";
                 return;
             }
-            //if (App.database.GetTeamsAsync(newTeamNumber))
-            //{
-            //    this.Title = "Team Already Exists";
-            //    return;
-            //}
+            /*if (App.database.GetTeamAsync(newTeamNumber).Result != null)
+            {
+                this.Title = "Team Already Exists";
+                return;
+            }*/
+            if (int.TryParse(Add_New_Team.Text, out newTeamNumber))
+            {
                 this.Title = $"Added new team {newTeamNumber}";
+                //Navigation.PushAsync(new SelectEventTeamPage());
+                return;
+            }    
         }
     }
 }

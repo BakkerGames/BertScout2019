@@ -53,6 +53,15 @@
                 WidthRequest="300"
                 BackgroundColor="LightGray"
                 />
+            <Button
+                Text="Event Results" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                FontSize="24"
+                Margin="20"
+                WidthRequest="300"
+                BackgroundColor="LightGray"
+                />
             <Label
                 x:Name="LabelVersionMessage"
                 Text=""

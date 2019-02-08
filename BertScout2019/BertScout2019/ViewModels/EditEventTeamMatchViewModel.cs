@@ -1,4 +1,4 @@
-﻿using BertScout2019.Models;
+﻿using BertScout2019Data.Models;
 
 namespace BertScout2019.ViewModels
 {

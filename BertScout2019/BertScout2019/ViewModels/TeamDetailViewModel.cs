@@ -1,5 +1,6 @@
 ﻿using BertScout2019.Models;
 using BertScout2019.Services;
+using BertScout2019Data.Models;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -113,10 +114,37 @@ namespace BertScout2019.ViewModels
 
             int rp = 0;
 
+        private string CalculateMatchResult(EventTeamMatch match)
+        {
+            string result;
+            int score = 0;
+            score += match.SandstormMoveType;
+            score += match.SandstormOffPlatform;
+            score += match.SandstormHatches;
+            score += match.SandstormCargo;
+
+            score += match.CargoShipHatches;
+            score += match.CargoShipCargo;
+            score += match.RocketHatches;
+            score += match.RocketCargo;
+            score += match.RocketHighestHatch;
+            score += match.RocketHighestCargo;
+
+            score += match.EndgamePlatform;
+            score += match.EndgameBuddyClimb;
+
+            score += match.Defense;
+            score += match.Cooperation;
+            score -= match.Fouls * 10;
+            score -= match.Broken * 20;
+
+            int rp = 0;
+
             rp += match.AllianceResult;
             rp += match.RocketRankingPoint;
             rp += match.HabRankingPoint;
             result = $"Score: {score} RP: {rp}";
+            // todo add score and ranking points
 
             return result;
         }

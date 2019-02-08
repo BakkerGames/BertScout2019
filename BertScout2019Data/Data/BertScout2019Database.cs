@@ -1,11 +1,11 @@
-﻿using BertScout2019.Models;
+﻿using BertScout2019Data.Models;
 using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BertScout2019.Data
+namespace BertScout2019Data.Data
 {
     public class BertScout2019Database
     {
@@ -16,13 +16,6 @@ namespace BertScout2019.Data
             try
             {
                 database = new SQLiteAsyncConnection(dbPath);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            try
-            {
                 CreateTables();
             }
             catch (Exception ex)
@@ -67,6 +60,10 @@ namespace BertScout2019.Data
 
         public Task<int> SaveFRCEventAsync(FRCEvent item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 
@@ -100,6 +97,10 @@ namespace BertScout2019.Data
 
         public Task<int> SaveTeamAsync(Team item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 
@@ -134,6 +135,10 @@ namespace BertScout2019.Data
 
         public Task<int> SaveEventTeamAsync(EventTeam item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 
@@ -173,6 +178,10 @@ namespace BertScout2019.Data
 
         public Task<int> SaveEventTeamMatchAsync(EventTeamMatch item)
         {
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
             return database.InsertOrReplaceAsync(item);
         }
 

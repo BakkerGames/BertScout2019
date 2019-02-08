@@ -1,5 +1,5 @@
-﻿using BertScout2019.Data;
-using BertScout2019.Views;
+﻿using BertScout2019.Views;
+using BertScout2019Data.Data;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -14,11 +14,10 @@ namespace BertScout2019
         static public string HighlightColor = "#23DAFF";
         static public Color SelectedButtonColor = Color.FromHex(BertColor);
         static public Color UnselectedButtonColor = Color.LightGray;
-        static public double dbVersion = 1.2;
+        static public double dbVersion = 1.3;
         static public string OptionPassword = "bertdata";
 
         // app properties for easy page communication
-        //static public int currVersionNumber { get; set; }
         static public string currFRCEventKey { get; set; }
         static public string currFRCEventName { get; set; }
         static public int currTeamNumber { get; set; }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BertScout2019.Services;
+using BertScout2019.ViewModels;
+using BertScout2019Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +12,20 @@ using Xamarin.Forms.Xaml;
 
 namespace BertScout2019.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AddNewTeamPage : ContentPage
-	{
-		public AddNewTeamPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AddNewTeamPage : ContentPage
+    {
+        SelectTeamsByEventViewModel viewModel;
+        public IDataStore<Team> DataStoreTeams;
+        public IDataStore<EventTeam> DataStoreEventTeams;
+
+        public AddNewTeamPage()
+        {
+            InitializeComponent();
+            BindingContext = viewModel = new SelectTeamsByEventViewModel();
+            DataStoreTeams = new SqlDataStoreTeams();
+            DataStoreEventTeams = new SqlDataStoreEventTeams();
+        }
 
         private void Add_New_Team_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -40,17 +50,38 @@ namespace BertScout2019.Views
                 this.Title = "Number out of range";
                 return;
             }
-            /*if (App.database.GetTeamAsync(newTeamNumber).Result != null)
+            foreach (Team team in viewModel.Teams)
             {
-                this.Title = "Team Already Exists";
-                return;
-            }*/
-            if (int.TryParse(Add_New_Team.Text, out newTeamNumber))
+                if (team.TeamNumber == newTeamNumber)
+                {
+                    this.Title = "Team already exists";
+                    return;
+                }
+            }
+
+            // todo add new team
+            Team newTeam;
+            try
             {
-                this.Title = $"Added new team {newTeamNumber}";
-                //Navigation.PushAsync(new SelectEventTeamPage());
+                newTeam = DataStoreTeams.GetItemByTagAsync(newTeamNumber.ToString()).Result;
+            }
+            catch (Exception ex)
+            {
+                this.Title = ex.Message; // $"Team {newTeamNumber} does not exist";
                 return;
-            }    
+            }
+
+            viewModel.Teams.Add(newTeam);
+            EventTeam newEventTeam = new EventTeam()
+            {
+                EventKey = App.currFRCEventKey,
+                TeamNumber = newTeamNumber,
+            };
+            DataStoreEventTeams.AddItemAsync(newEventTeam);
+
+            this.Title = $"Added new team {newTeamNumber}";
+            //Navigation.PushAsync(new SelectEventTeamPage());
+            return;
         }
     }
 }

@@ -11,7 +11,9 @@ namespace HttpClientSample
 
     class Program
     {
-        
+
+        private static string baseWebAddress = "http://localhost:64190/";
+
         static HttpClient client = new HttpClient();
         
 
@@ -58,32 +60,26 @@ namespace HttpClientSample
             return FRCEvent;
         }
         
-
-        
         static async Task<HttpStatusCode> DeleteFRCEventAsync(int? id)
         {
             HttpResponseMessage response = await client.DeleteAsync(
                 $"api/FRCEvents/{id}");
             return response.StatusCode;
         }
-        
 
         static void Main()
         {
             RunAsync().GetAwaiter().GetResult();
         }
 
-        
-        
         static async Task RunAsync()
         {
             // Update port # in the following line.
-            client.BaseAddress = new Uri("http://localhost:64190/");
+            client.BaseAddress = new Uri(baseWebAddress);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             
-
             try
             {
                 // Create a new FRCEvent
@@ -103,7 +99,7 @@ namespace HttpClientSample
 
                 // Update the FRCEvent
                 Console.WriteLine("Updating Location...");
-                FRCEvent.Location = "Anotertown, ME";
+                FRCEvent.Location = "Anothertown, ME";
                 await UpdateFRCEventAsync(FRCEvent);
 
                 // Get the updated FRCEvent

@@ -33,6 +33,11 @@ namespace BertScout2019.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
+        public Task<Team> GetItemByTagAsync(string tag)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);

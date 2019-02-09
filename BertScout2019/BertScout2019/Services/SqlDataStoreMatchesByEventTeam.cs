@@ -40,6 +40,11 @@ namespace BertScout2019.Services
                                                               && s.MatchNumber == matchNumber));
         }
 
+        public Task<EventTeamMatch> GetItemByTagAsync(string tag)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<IEnumerable<EventTeamMatch>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);

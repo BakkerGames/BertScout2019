@@ -41,6 +41,11 @@ namespace BertScout2019.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
+        public Task<FRCEvent> GetItemByTagAsync(string tag)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<IEnumerable<FRCEvent>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);

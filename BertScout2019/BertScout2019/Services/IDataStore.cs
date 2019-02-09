@@ -9,6 +9,7 @@ namespace BertScout2019.Services
         Task<bool> UpdateItemAsync(T item);
         Task<bool> DeleteItemAsync(int id);
         Task<T> GetItemAsync(int id);
+        Task<T> GetItemByTagAsync(string tag);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
     }
 }

@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BertScout2019.Views.ResultPage"
              Title="Event Results">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem>
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ListView 
                     x:Name="EventTeamsListView"

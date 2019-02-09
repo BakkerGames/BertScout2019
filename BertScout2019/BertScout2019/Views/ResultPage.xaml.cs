@@ -1,4 +1,6 @@
-﻿using System;
+﻿// For dropdown menu-use picker, info at https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/picker/
+
+using System;
 using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
 using Xamarin.Forms;

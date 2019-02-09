@@ -19,6 +19,8 @@
                     IsTextPredictionEnabled="False"
                     TextChanged="Add_New_Team_TextChanged"
                     VerticalOptions="Start"
+                    WidthRequest="75"
+                    MaxLength="4"
                     />
             <Button
                     x:Name="Add_NewTeam"

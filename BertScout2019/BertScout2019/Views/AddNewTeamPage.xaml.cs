@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BertScout2019.ViewModels;
+using BertScout2019Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +11,15 @@ using Xamarin.Forms.Xaml;
 
 namespace BertScout2019.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AddNewTeamPage : ContentPage
-	{
-		public AddNewTeamPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AddNewTeamPage : ContentPage
+    {
+        SelectTeamsByEventViewModel viewModel;
+        public AddNewTeamPage()
+        {
+            InitializeComponent();
+            BindingContext = viewModel = new SelectTeamsByEventViewModel();
+        }
 
         private void Add_New_Team_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -40,17 +44,18 @@ namespace BertScout2019.Views
                 this.Title = "Number out of range";
                 return;
             }
-            /*if (App.database.GetTeamAsync(newTeamNumber).Result != null)
+            foreach (Team team in viewModel.Teams)
             {
-                this.Title = "Team Already Exists";
-                return;
-            }*/
-            if (int.TryParse(Add_New_Team.Text, out newTeamNumber))
-            {
-                this.Title = $"Added new team {newTeamNumber}";
-                //Navigation.PushAsync(new SelectEventTeamPage());
-                return;
-            }    
+                if (team.TeamNumber == newTeamNumber)
+                {
+                    this.Title = "Team already exists";
+                    return;
+                }
+            }
+            //todo add new team
+            this.Title = $"Added new team {newTeamNumber}";
+            //Navigation.PushAsync(new SelectEventTeamPage());
+            return;
         }
     }
 }

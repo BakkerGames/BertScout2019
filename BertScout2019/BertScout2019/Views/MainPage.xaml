@@ -54,9 +54,11 @@
                 BackgroundColor="LightGray"
                 />
             <Button
+                x:Name="Button_Event_Results"
                 Text="Event Results" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"
+                Clicked="Button_Event_Results_Clicked" 
                 FontSize="24"
                 Margin="20"
                 WidthRequest="300"

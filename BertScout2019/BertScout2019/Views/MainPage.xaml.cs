@@ -67,6 +67,23 @@ namespace BertScout2019.Views
             _syncFlag = false;
         }
 
+        async private void Button_Event_Results_Clicked(object sender, EventArgs e)
+        {
+            if (_syncFlag)
+            {
+                return;
+            }
+            if (string.IsNullOrEmpty(App.currFRCEventKey))
+            {
+                return;
+            }
+            _syncFlag = true;
+            Button_Match_Scouting.BackgroundColor = App.SelectedButtonColor;
+            await Navigation.PushAsync(new ResultPage());
+            Button_Match_Scouting.BackgroundColor = Color.Default;
+            _syncFlag = false;
+        }
+
         private void MainPage_Version_Label_Clicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))

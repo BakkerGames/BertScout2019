@@ -6,12 +6,12 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="AddTeam"
-            Text="+"
+            Text="Add"
             Clicked="AddTeam_Clicked"
             >
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="options.png"/>
+                    <On Platform="UWP" Value="add.png"/>
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>

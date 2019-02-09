@@ -63,7 +63,7 @@ namespace BertScout2019.Views
             Team newTeam;
             try
             {
-                newTeam = DataStoreTeams.GetItemAsync(newTeamNumber).Result;
+                newTeam = DataStoreTeams.GetItemByTagAsync(newTeamNumber.ToString()).Result;
             }
             catch (Exception ex)
             {

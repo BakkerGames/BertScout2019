@@ -34,6 +34,7 @@
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
                     HorizontalOptions="FillAndExpand"
+                    MaxLength="25"
                     TextChanged="Editor_MatchScouterName_TextChanged"
                     />
             </StackLayout>
@@ -43,6 +44,7 @@
                 FontSize="24"
                 IsSpellCheckEnabled="False"
                 Text=""
+                MaxLength="500"
                 TextChanged="Editor_MatchComment_TextChanged"
                 />
             <Label

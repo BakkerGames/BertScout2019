@@ -22,7 +22,12 @@ namespace BertScout2019.Views
         {
             base.OnAppearing();
             EventTeamMatchesListView.SelectedItem = null;
-            MatchNumberLabelValue.Text = (App.highestMatchNumber + 1).ToString();
+            int tempHighest = App.highestMatchNumber + 1;
+            if (tempHighest > 999)
+            {
+                tempHighest = 999;
+            }
+            MatchNumberLabelValue.Text = tempHighest.ToString();
         }
 
         private async void EventTeamsListMatchView_ItemSelected(object sender, SelectedItemChangedEventArgs args)

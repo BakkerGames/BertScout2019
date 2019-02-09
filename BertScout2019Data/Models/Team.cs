@@ -14,5 +14,20 @@ namespace BertScout2019Data.Models
         public int TeamNumber { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
+
+        public string TeamNumberDashName
+        {
+            get
+            {
+                if (Name.Length > 40)
+                {
+                    return $"{TeamNumber} - {Name.Substring(0, 40)}";
+                }
+                else
+                {
+                    return $"{TeamNumber} - {Name}";
+                }
+            }
+        }
     }
 }

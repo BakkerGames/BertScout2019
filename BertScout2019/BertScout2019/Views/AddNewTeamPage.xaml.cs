@@ -37,15 +37,15 @@ namespace BertScout2019.Views
             }
             _addNewTeamBusy = true;
             doAddNewTeam();
+            Add_New_Team.Text = "";
             _addNewTeamBusy = false;
         }
 
         private void doAddNewTeam()
         {
             int newTeamNumber = 0;
-            if (Add_New_Team.Text == "")
+            if (string.IsNullOrEmpty(Add_New_Team.Text))
             {
-                this.Title = "Must Specify Team Number";
                 return;
             }
             if (!int.TryParse(Add_New_Team.Text, out newTeamNumber))
@@ -58,25 +58,30 @@ namespace BertScout2019.Views
                 this.Title = "Number out of range";
                 return;
             }
-            foreach (Team team in viewModel.Teams)
-            {
-                if (team.TeamNumber == newTeamNumber)
-                {
-                    this.Title = "Team already exists";
-                    return;
-                }
-            }
 
             // add new team
             Team newTeam;
             try
             {
-                newTeam = DataStoreTeams.GetItemByTagAsync(newTeamNumber.ToString()).Result;
+                newTeam = DataStoreTeams.GetItemByTagAsync(newTeamNumber.ToString())?.Result;
+                if (newTeam == null)
+                {
+                    throw new SystemException();
+                }
             }
             catch (Exception)
             {
                 this.Title = $"Team {newTeamNumber} does not exist";
                 return;
+            }
+
+            foreach (Team existing in viewModel.Teams)
+            {
+                if (existing.TeamNumber == newTeamNumber)
+                {
+                    this.Title = $"Team {newTeamNumber} is already in this event";
+                    return;
+                }
             }
 
             EventTeam newEventTeam = new EventTeam()

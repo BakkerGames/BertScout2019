@@ -64,8 +64,21 @@ namespace BertScout2019.Views
             }
         }
 
+        private bool _addNewMatchBusy = false;
         private void AddNewMatch_Clicked(object sender, System.EventArgs e)
         {
+            // prevent multiple clicks at once
+            if (_addNewMatchBusy)
+            {
+                return;
+            }
+            _addNewMatchBusy = true;
+            doAddNewMatch();
+            _addNewMatchBusy = false;
+        }
+
+        private void doAddNewMatch()
+        { 
             int value = int.Parse(MatchNumberLabelValue.Text);
             foreach (EventTeamMatch oldMatch in viewModel.Matches)
             {

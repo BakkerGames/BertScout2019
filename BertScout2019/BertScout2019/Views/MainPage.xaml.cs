@@ -86,6 +86,11 @@ namespace BertScout2019.Views
 
         private void MainPage_Version_Label_Clicked(object sender, EventArgs e)
         {
+            if (_syncFlag)
+            {
+                return;
+            }
+            _syncFlag = true;
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))
             {
                 LabelVersionMessage.Text = "This app was coded by: \nScott, Chloe, & Nate ";
@@ -94,6 +99,7 @@ namespace BertScout2019.Views
             {
                 LabelVersionMessage.Text = "";
             }
+            _syncFlag = false;
         }
     }
 }

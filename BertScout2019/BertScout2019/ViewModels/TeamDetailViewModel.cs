@@ -66,10 +66,6 @@ namespace BertScout2019.ViewModels
             rp += match.HabRankingPoint;
 
             return rp;
-
-
-
-
         }
 
         private int CalculateMatchResult(EventTeamMatch match)

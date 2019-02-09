@@ -1,4 +1,5 @@
-﻿using BertScout2019.ViewModels;
+﻿using BertScout2019.Services;
+using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace BertScout2019.Views
     public partial class AddNewTeamPage : ContentPage
     {
         SelectTeamsByEventViewModel viewModel;
+        public IDataStore<Team> DataStoreTeams;
         public AddNewTeamPage()
         {
             InitializeComponent();
@@ -53,6 +55,19 @@ namespace BertScout2019.Views
                 }
             }
             //todo add new team
+            Team newTeam;
+            try
+            {
+                newTeam = DataStoreTeams.GetItemAsync(newTeamNumber).Result;
+            }
+            catch (Exception ex)
+            {
+                this.Title = ex.Message; // $"Team {newTeamNumber} does not exist";
+                return;
+            }
+            
+            viewModel.Teams.Add(newTeam);
+
             this.Title = $"Added new team {newTeamNumber}";
             //Navigation.PushAsync(new SelectEventTeamPage());
             return;

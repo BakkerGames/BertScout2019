@@ -71,7 +71,7 @@ namespace BertScout2019.Views
         {
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))
             {
-                LabelVersionMessage.Text = "Please don't press that again!";
+                LabelVersionMessage.Text = "This app was coded by: \nScott, Chloe, & Nate ";
             }
             else
             {

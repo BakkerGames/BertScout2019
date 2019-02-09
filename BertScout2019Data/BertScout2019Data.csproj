@@ -75,7 +75,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common.JSON\Common.JSON\Common.JSON.csproj">
+    <ProjectReference Include="..\Common.JSON\Common.JSON.csproj">
       <Project>{ef7b4f31-17b9-40ff-8334-196056bab2d2}</Project>
       <Name>Common.JSON</Name>
     </ProjectReference>

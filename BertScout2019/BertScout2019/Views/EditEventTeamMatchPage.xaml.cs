@@ -711,49 +711,29 @@ namespace BertScout2019.Views
             }
             set
             {
-                int newValue = value;
-                switch (value)
+                Label_Fouls_Value.Text = value.ToString();
+                if (viewModel.item.Fouls != value)
                 {
-                    case 1:
-                        newValue = 1;
-                        Button_Fouls_None.BackgroundColor = App.UnselectedButtonColor;
-                        Button_Fouls_Some.BackgroundColor = App.SelectedButtonColor;
-                        Button_Fouls_Lots.BackgroundColor = App.UnselectedButtonColor;
-                        break;
-                    case 2:
-                        newValue = 2;
-                        Button_Fouls_None.BackgroundColor = App.UnselectedButtonColor;
-                        Button_Fouls_Some.BackgroundColor = App.UnselectedButtonColor;
-                        Button_Fouls_Lots.BackgroundColor = App.SelectedButtonColor;
-                        break;
-                    default:
-                        newValue = 0;
-                        Button_Fouls_None.BackgroundColor = App.SelectedButtonColor;
-                        Button_Fouls_Some.BackgroundColor = App.UnselectedButtonColor;
-                        Button_Fouls_Lots.BackgroundColor = App.UnselectedButtonColor;
-                        break;
-                }
-                if (viewModel.item.Fouls != newValue)
-                {
-                    viewModel.item.Fouls = newValue;
+                    viewModel.item.Fouls = value;
                     App.database.SaveEventTeamMatchAsync(viewModel.item);
                 }
             }
         }
 
-        private void Button_Fouls_None_Clicked(object sender, System.EventArgs e)
+        private void Button_Fouls_Minus_Clicked(object sender, System.EventArgs e)
         {
-            Fouls = 0;
+            if (Fouls > 0)
+            {
+                Fouls--;
+            }
         }
 
-        private void Button_Fouls_Some_Clicked(object sender, System.EventArgs e)
+        private void Button_Fouls_Plus_Clicked(object sender, System.EventArgs e)
         {
-            Fouls = 1;
-        }
-
-        private void Button_Fouls_Lots_Clicked(object sender, System.EventArgs e)
-        {
-            Fouls = 2;
+            if (Fouls < 99)
+            {
+                Fouls++;
+            }
         }
 
         #endregion
@@ -768,49 +748,29 @@ namespace BertScout2019.Views
             }
             set
             {
-                int newValue = value;
-                switch (value)
+                Label_TechFouls_Value.Text = value.ToString();
+                if (viewModel.item.TechFouls != value)
                 {
-                    case 1:
-                        newValue = 1;
-                        Button_TechFouls_None.BackgroundColor = App.UnselectedButtonColor;
-                        Button_TechFouls_Some.BackgroundColor = App.SelectedButtonColor;
-                        Button_TechFouls_Lots.BackgroundColor = App.UnselectedButtonColor;
-                        break;
-                    case 2:
-                        newValue = 2;
-                        Button_TechFouls_None.BackgroundColor = App.UnselectedButtonColor;
-                        Button_TechFouls_Some.BackgroundColor = App.UnselectedButtonColor;
-                        Button_TechFouls_Lots.BackgroundColor = App.SelectedButtonColor;
-                        break;
-                    default:
-                        newValue = 0;
-                        Button_TechFouls_None.BackgroundColor = App.SelectedButtonColor;
-                        Button_TechFouls_Some.BackgroundColor = App.UnselectedButtonColor;
-                        Button_TechFouls_Lots.BackgroundColor = App.UnselectedButtonColor;
-                        break;
-                }
-                if (viewModel.item.TechFouls != newValue)
-                {
-                    viewModel.item.TechFouls = newValue;
+                    viewModel.item.TechFouls = value;
                     App.database.SaveEventTeamMatchAsync(viewModel.item);
                 }
             }
         }
 
-        private void Button_TechFouls_None_Clicked(object sender, System.EventArgs e)
+        private void Button_TechFouls_Minus_Clicked(object sender, System.EventArgs e)
         {
-            TechFouls = 0;
+            if (TechFouls > 0)
+            {
+                TechFouls--;
+            }
         }
 
-        private void Button_TechFouls_Some_Clicked(object sender, System.EventArgs e)
+        private void Button_TechFouls_Plus_Clicked(object sender, System.EventArgs e)
         {
-            TechFouls = 1;
-        }
-
-        private void Button_TechFouls_Lots_Clicked(object sender, System.EventArgs e)
-        {
-            TechFouls = 2;
+            if (TechFouls < 99)
+            {
+                TechFouls++;
+            }
         }
 
         #endregion

@@ -25,7 +25,6 @@ namespace BertScout2019.Views
             viewModel = parentViewModel;
             DataStoreTeams = new SqlDataStoreTeams();
             DataStoreEventTeams = new SqlDataStoreEventTeams();
-
         }
 
         private void Add_New_Team_TextChanged(object sender, TextChangedEventArgs e)
@@ -59,7 +58,8 @@ namespace BertScout2019.Views
                     return;
                 }
             }
-            //todo add new team
+
+            // todo add new team
             Team newTeam;
             try
             {
@@ -70,7 +70,7 @@ namespace BertScout2019.Views
                 this.Title = ex.Message; // $"Team {newTeamNumber} does not exist";
                 return;
             }
-            
+
             EventTeam newEventTeam = new EventTeam()
             {
                 EventKey = App.currFRCEventKey,
@@ -79,7 +79,7 @@ namespace BertScout2019.Views
             DataStoreEventTeams.AddItemAsync(newEventTeam);
 
             bool found = false;
-            for(int i = 0; i < viewModel.Teams.Count; i++)
+            for (int i = 0; i < viewModel.Teams.Count; i++)
             {
                 if (viewModel.Teams[i].TeamNumber > newTeamNumber)
                 {
@@ -92,7 +92,7 @@ namespace BertScout2019.Views
             {
                 viewModel.Teams.Add(newTeam);
             }
-            
+
             this.Title = $"Added new team {newTeamNumber}";
             //Navigation.PushAsync(new SelectEventTeamPage());
             return;

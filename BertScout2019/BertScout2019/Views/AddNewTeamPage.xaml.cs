@@ -19,10 +19,10 @@ namespace BertScout2019.Views
         public IDataStore<Team> DataStoreTeams;
         public IDataStore<EventTeam> DataStoreEventTeams;
 
-        public AddNewTeamPage()
+        public AddNewTeamPage(SelectTeamsByEventViewModel parentViewModel)
         {
             InitializeComponent();
-            BindingContext = viewModel = new SelectTeamsByEventViewModel();
+            viewModel = parentViewModel;
             DataStoreTeams = new SqlDataStoreTeams();
             DataStoreEventTeams = new SqlDataStoreEventTeams();
         }
@@ -71,13 +71,27 @@ namespace BertScout2019.Views
                 return;
             }
 
-            viewModel.Teams.Add(newTeam);
             EventTeam newEventTeam = new EventTeam()
             {
                 EventKey = App.currFRCEventKey,
                 TeamNumber = newTeamNumber,
             };
             DataStoreEventTeams.AddItemAsync(newEventTeam);
+
+            bool found = false;
+            for (int i = 0; i < viewModel.Teams.Count; i++)
+            {
+                if (viewModel.Teams[i].TeamNumber > newTeamNumber)
+                {
+                    viewModel.Teams.Insert(i, newTeam);
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                viewModel.Teams.Add(newTeam);
+            }
 
             this.Title = $"Added new team {newTeamNumber}";
             //Navigation.PushAsync(new SelectEventTeamPage());

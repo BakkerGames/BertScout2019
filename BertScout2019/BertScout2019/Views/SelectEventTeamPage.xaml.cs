@@ -37,8 +37,7 @@ namespace BertScout2019.Views
 
         async private void AddTeam_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new AddNewTeamPage());
-            viewModel = new SelectTeamsByEventViewModel();
+            await Navigation.PushAsync(new AddNewTeamPage(viewModel));
         }
     }
 }

@@ -65,6 +65,17 @@ namespace BertScout2019.Views
                     this.Title = "Team already exists";
                     return;
                 }
+                else
+                {
+                    int teamNumber = team.TeamNumber;
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+                    if (teamNumber == null)
+#pragma warning restore CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+                    {
+                        this.Title = "Team doesn't exist";
+                        return;
+                    }
+                }
             }
 
             // add new team
@@ -87,22 +98,28 @@ namespace BertScout2019.Views
             DataStoreEventTeams.AddItemAsync(newEventTeam);
 
             bool found = false;
+#pragma warning disable CS0162 // Unreachable code detected
             for (int i = 0; i < viewModel.Teams.Count; i++)
+#pragma warning restore CS0162 // Unreachable code detected
             {
                 if (viewModel.Teams[i].TeamNumber > newTeamNumber)
                 {
                     viewModel.Teams.Insert(i, newTeam);
                     found = true;
                     break;
-                }
-            }
-            if (!found)
-            {
-                viewModel.Teams.Add(newTeam);
-            }
 
-            this.Title = $"Added new team {newTeamNumber}";
-            return;
+
+                }
+
+
+                if (found)
+                {
+                    viewModel.Teams.Add(newTeam);
+                }
+
+                this.Title = $"Added new team {newTeamNumber}";
+                return;
+            }
         }
     }
 }

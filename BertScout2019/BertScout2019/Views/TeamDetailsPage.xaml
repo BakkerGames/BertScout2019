@@ -52,13 +52,28 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                    <Label
+                <Label
                     Text="Total RP:" 
                     FontSize="24"
                     WidthRequest="200"
                 />
-                    <Label
+                <Label
                     x:Name="TeamDetails_RP"
+                    Text=""
+                    FontAttributes="Bold"
+                    FontSize="24"
+                />
+            </StackLayout>
+            
+            <!-- Average Score  -->
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="Average Score:" 
+                    FontSize="24"
+                    WidthRequest="200"
+                />
+                <Label
+                    x:Name="TeamDetails_AVGS"
                     Text=""
                     FontAttributes="Bold"
                     FontSize="24"

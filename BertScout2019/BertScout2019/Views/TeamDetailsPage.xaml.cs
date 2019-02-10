@@ -19,10 +19,11 @@ namespace BertScout2019.Views
 
         protected override void OnAppearing()
         {
-            TeamDetails_Number.Text = viewModel.item.TeamNumber.ToString(); //App.currTeamNumber.ToString();
-            TeamDetails_Name.Text = viewModel.item.Name; // App.currTeamName;
-            TeamDetails_Location.Text = viewModel.item.Location; //"anytownusa";
-            TeamDetails_RP.Text = viewModel.TotalRP.ToString();
+            TeamDetails_Number.Text = viewModel.item.TeamNumber.ToString(); //Show Team Number ex: 133
+            TeamDetails_Name.Text = viewModel.item.Name; // Show Team Name ex: Bonny Eagle Robotics Team
+            TeamDetails_Location.Text = viewModel.item.Location; //Show Location ex: Standish, ME, USA
+            TeamDetails_RP.Text = viewModel.TotalRP.ToString(); //Show total RP
+            TeamDetails_AVGS.Text = viewModel.AverageScore.ToString(); //Show Average Score
         }
 
         private void TeamMatchesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

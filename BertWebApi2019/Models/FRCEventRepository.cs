@@ -1,17 +1,30 @@
-﻿using BertScout2019Data.Models;
+﻿using BertScout2019Data.Data;
+using BertScout2019Data.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace FRCEventStore.Models
 {
     public class FRCEventRepository : IFRCEventRepository
     {
+        private const string dbFilename = "bertscout2019.db3";
+        public static BertScout2019Database _database;
+
         private List<FRCEvent> items = new List<FRCEvent>();
         private int _nextId = 1;
 
         public FRCEventRepository()
         {
-            Add(new FRCEvent { Name = "PineTree", EventKey = "NEDIST_PINE_TREE" });
+            // connect to database
+            if (_database == null)
+            {
+                string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), dbFilename);
+                _database = new BertScout2019Database(dbPath);
+            }
+            // fill local list
+            items = _database.GetEventsAsync().Result;
+            //Add(new FRCEvent { Name = "PineTree", EventKey = "NEDIST_PINE_TREE" });
         }
 
         public IEnumerable<FRCEvent> GetAll()

@@ -9,13 +9,13 @@ namespace BertScout2019Data.Data
 {
     public class BertScout2019Database
     {
-        static SQLiteAsyncConnection database;
+        private static SQLiteAsyncConnection _database;
 
         public BertScout2019Database(string dbPath)
         {
             try
             {
-                database = new SQLiteAsyncConnection(dbPath);
+                _database = new SQLiteAsyncConnection(dbPath);
                 CreateTables();
             }
             catch (Exception ex)
@@ -27,25 +27,25 @@ namespace BertScout2019Data.Data
 
         public void DropTables()
         {
-            database.DropTableAsync<FRCEvent>().Wait();
-            database.DropTableAsync<Team>().Wait();
-            database.DropTableAsync<EventTeam>().Wait();
-            database.DropTableAsync<EventTeamMatch>().Wait();
+            _database.DropTableAsync<FRCEvent>().Wait();
+            _database.DropTableAsync<Team>().Wait();
+            _database.DropTableAsync<EventTeam>().Wait();
+            _database.DropTableAsync<EventTeamMatch>().Wait();
         }
 
         public void CreateTables()
         {
-            database.CreateTableAsync<FRCEvent>().Wait();
-            database.CreateTableAsync<Team>().Wait();
-            database.CreateTableAsync<EventTeam>().Wait();
-            database.CreateTableAsync<EventTeamMatch>().Wait();
+            _database.CreateTableAsync<FRCEvent>().Wait();
+            _database.CreateTableAsync<Team>().Wait();
+            _database.CreateTableAsync<EventTeam>().Wait();
+            _database.CreateTableAsync<EventTeamMatch>().Wait();
         }
 
         // FRCEvent
 
         public Task<List<FRCEvent>> GetEventsAsync()
         {
-            return database.Table<FRCEvent>().ToListAsync();
+            return _database.Table<FRCEvent>().ToListAsync();
         }
 
         public Task<FRCEvent> GetEventAsync(string eventKey)
@@ -55,25 +55,30 @@ namespace BertScout2019Data.Data
             query.Append(" WHERE [FRCEvent].[EventKey] = '");
             query.Append(FixSqlValue(eventKey));
             query.Append("'");
-            return database.GetAsync<FRCEvent>(query.ToString());
+            return _database.GetAsync<FRCEvent>(query.ToString());
         }
 
         public Task<int> SaveFRCEventAsync(FRCEvent item)
         {
-        	// note: the caller must let this resolve before item.Id is first
-        	// available, using either "await" or "int x = ...().Result;"
+            // note: the caller must let this resolve before item.Id is first
+            // available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
             }
-            return database.InsertOrReplaceAsync(item);
+            return _database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> DeleteFRCEventAsync(int id)
+        {
+            return _database.DeleteAsync<FRCEvent>(id);
         }
 
         // Team
 
         public Task<List<Team>> GetTeamsAsync()
         {
-            return database.Table<Team>().ToListAsync();
+            return _database.Table<Team>().ToListAsync();
         }
 
         public Task<List<Team>> GetTeamsByEventAsync(string eventKey)
@@ -85,7 +90,7 @@ namespace BertScout2019Data.Data
             query.Append(" WHERE [EventTeam].[EventKey] = '");
             query.Append(FixSqlValue(eventKey));
             query.Append("'");
-            return database.QueryAsync<Team>(query.ToString());
+            return _database.QueryAsync<Team>(query.ToString());
         }
 
         public Task<Team> GetTeamAsync(int teamNumber)
@@ -94,25 +99,30 @@ namespace BertScout2019Data.Data
             query.Append("SELECT [Team].* FROM [Team]");
             query.Append(" WHERE [Team].[TeamNumber] = ");
             query.Append(teamNumber);
-            return database.GetAsync<Team>(query.ToString());
+            return _database.GetAsync<Team>(query.ToString());
         }
 
         public Task<int> SaveTeamAsync(Team item)
         {
-        	// note: the caller must let this resolve before item.Id is first
-        	// available, using either "await" or "int x = ...().Result;"
+            // note: the caller must let this resolve before item.Id is first
+            // available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
             }
-            return database.InsertOrReplaceAsync(item);
+            return _database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> DeleteTeamAsync(int id)
+        {
+            return _database.DeleteAsync<Team>(id);
         }
 
         // EventTeam
 
         public Task<List<EventTeam>> GetEventTeamsAsync()
         {
-            return database.Table<EventTeam>().ToListAsync();
+            return _database.Table<EventTeam>().ToListAsync();
         }
 
         public Task<List<EventTeam>> GetEventTeamsAsync(string eventKey)
@@ -122,7 +132,7 @@ namespace BertScout2019Data.Data
             query.Append(" WHERE [EventTeam].[EventKey] = '");
             query.Append(FixSqlValue(eventKey));
             query.Append("'");
-            return database.QueryAsync<EventTeam>(query.ToString());
+            return _database.QueryAsync<EventTeam>(query.ToString());
         }
 
         public Task<EventTeam> GetEventTeamAsync(string eventKey, int teamNumber)
@@ -134,25 +144,30 @@ namespace BertScout2019Data.Data
             query.Append("'");
             query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
             query.Append(teamNumber);
-            return database.GetAsync<EventTeam>(query.ToString());
+            return _database.GetAsync<EventTeam>(query.ToString());
         }
 
         public Task<int> SaveEventTeamAsync(EventTeam item)
         {
-        	// note: the caller must let this resolve before item.Id is first
-        	// available, using either "await" or "int x = ...().Result;"
+            // note: the caller must let this resolve before item.Id is first
+            // available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
             }
-            return database.InsertOrReplaceAsync(item);
+            return _database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> DeleteEventTeamAsync(int id)
+        {
+            return _database.DeleteAsync<EventTeam>(id);
         }
 
         // EventTeamMatch
 
         public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
         {
-            return database.Table<EventTeamMatch>().ToListAsync();
+            return _database.Table<EventTeamMatch>().ToListAsync();
         }
 
         public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string eventKey, int teamNumber)
@@ -165,7 +180,7 @@ namespace BertScout2019Data.Data
             query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
             query.Append(teamNumber);
             query.Append(" ORDER BY [EventTeamMatch].[MatchNumber]");
-            return database.QueryAsync<EventTeamMatch>(query.ToString());
+            return _database.QueryAsync<EventTeamMatch>(query.ToString());
         }
 
         public Task<EventTeamMatch> GetEventTeamMatchAsync(string eventKey, int teamNumber, int matchNumber)
@@ -179,18 +194,23 @@ namespace BertScout2019Data.Data
             query.Append(teamNumber);
             query.Append(" AND [EventTeamMatch].[MatchNumber] = ");
             query.Append(matchNumber);
-            return database.GetAsync<EventTeamMatch>(query.ToString());
+            return _database.GetAsync<EventTeamMatch>(query.ToString());
         }
 
         public Task<int> SaveEventTeamMatchAsync(EventTeamMatch item)
         {
-        	// note: the caller must let this resolve before item.Id is first
-        	// available, using either "await" or "int x = ...().Result;"
+            // note: the caller must let this resolve before item.Id is first
+            // available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
             }
-            return database.InsertOrReplaceAsync(item);
+            return _database.InsertOrReplaceAsync(item);
+        }
+
+        public Task<int> DeleteEventTeamMatchAsync(int id)
+        {
+            return _database.DeleteAsync<EventTeamMatch>(id);
         }
 
         // internal functions

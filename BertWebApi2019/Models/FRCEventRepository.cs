@@ -6,22 +6,22 @@ namespace FRCEventStore.Models
 {
     public class FRCEventRepository : IFRCEventRepository
     {
-        private List<BertScout2019Data.Models.FRCEvent> FRCEvents = new List<FRCEvent>();
+        private List<FRCEvent> items = new List<FRCEvent>();
         private int _nextId = 1;
 
         public FRCEventRepository()
         {
-            Add(new FRCEvent { Name = "PineTree", EventKey ="NEDIST_PINE_TREE" });
+            Add(new FRCEvent { Name = "PineTree", EventKey = "NEDIST_PINE_TREE" });
         }
 
         public IEnumerable<FRCEvent> GetAll()
         {
-            return FRCEvents;
+            return items;
         }
 
         public FRCEvent Get(int id)
         {
-            return FRCEvents.Find(p => p.Id == id);
+            return items.Find(p => p.Id == id);
         }
 
         public FRCEvent Add(FRCEvent item)
@@ -32,13 +32,13 @@ namespace FRCEventStore.Models
             }
 
             item.Id = _nextId++;
-            FRCEvents.Add(item);
+            items.Add(item);
             return item;
         }
 
         public void Remove(int id)
         {
-            FRCEvents.RemoveAll(p => p.Id == id);
+            items.RemoveAll(p => p.Id == id);
         }
 
         public bool Update(FRCEvent item)
@@ -47,13 +47,13 @@ namespace FRCEventStore.Models
             {
                 throw new ArgumentNullException("item");
             }
-            int index = FRCEvents.FindIndex(p => p.Id == item.Id);
+            int index = items.FindIndex(p => p.Id == item.Id);
             if (index == -1)
             {
                 return false;
             }
-            FRCEvents.RemoveAt(index);
-            FRCEvents.Add(item);
+            items.RemoveAt(index);
+            items.Add(item);
             return true;
         }
     }

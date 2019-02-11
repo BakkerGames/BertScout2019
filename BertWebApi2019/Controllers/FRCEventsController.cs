@@ -28,11 +28,12 @@ namespace FRCEventStore.Controllers
             return item;
         }
 
-        public IEnumerable<FRCEvent> GetFRCEventsByEventKey(string eventKey)
-        {
-            return repository.GetAll().Where(
-                p => string.Equals(p.EventKey, eventKey, StringComparison.OrdinalIgnoreCase));
-        }
+        //todo this seems to be wrong looking at it, plural vs singular
+        //public IEnumerable<FRCEvent> GetFRCEventsByEventKey(string eventKey)
+        //{
+        //    return repository.GetAll().Where(
+        //        p => string.Equals(p.EventKey, eventKey, StringComparison.OrdinalIgnoreCase));
+        //}
 
         public HttpResponseMessage PostFRCEvent(FRCEvent item)
         {

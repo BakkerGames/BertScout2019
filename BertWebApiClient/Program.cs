@@ -1,5 +1,6 @@
 ﻿using BertScout2019Data.Models;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -16,14 +17,12 @@ namespace BertWebApiClient
 
         static HttpClient client = new HttpClient();
         
-
         static void ShowFRCEvent(FRCEvent FRCEvent)
         {
             Console.WriteLine($"Name: {FRCEvent.Name}\tLocation: " +
                 $"{FRCEvent.Location}\tEventKey: {FRCEvent.EventKey}");
         }
 
-        
         static async Task<Uri> CreateFRCEventAsync(FRCEvent FRCEvent)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
@@ -34,21 +33,28 @@ namespace BertWebApiClient
             return response.Headers.Location;
         }
         
-
-        
         static async Task<FRCEvent> GetFRCEventAsync(string path)
         {
-            FRCEvent FRCEvent = null;
+            FRCEvent item = null;
             HttpResponseMessage response = await client.GetAsync(path);
             if (response.IsSuccessStatusCode)
             {
-                FRCEvent = await response.Content.ReadAsAsync<FRCEvent>();
+                item = await response.Content.ReadAsAsync<FRCEvent>();
             }
-            return FRCEvent;
+            return item;
         }
-        
 
-        
+        static async Task<List<FRCEvent>> GetFRCEventsAsync()
+        {
+            List<FRCEvent> items = null;
+            HttpResponseMessage response = await client.GetAsync("api/FRCEvents");
+            if (response.IsSuccessStatusCode)
+            {
+                items = await response.Content.ReadAsAsync<List<FRCEvent>>();
+            }
+            return items;
+        }
+
         static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent FRCEvent)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
@@ -82,33 +88,40 @@ namespace BertWebApiClient
             
             try
             {
-                // Create a new FRCEvent
-                FRCEvent FRCEvent = new FRCEvent
+                List<FRCEvent> items;
+                items = await GetFRCEventsAsync();
+                foreach (FRCEvent showItem in items)
                 {
-                    Name = "Gizmo Event",
-                    Location = "Anytown, ME",
-                    EventKey = "GIZMOS"
-                };
+                    ShowFRCEvent(showItem);
+                }
 
-                var url = await CreateFRCEventAsync(FRCEvent);
-                Console.WriteLine($"Created at {url}");
+                //// Create a new FRCEvent
+                //FRCEvent item = new FRCEvent
+                //{
+                //    Name = "Gizmo Event",
+                //    Location = "Anytown, ME",
+                //    EventKey = "GIZMOS"
+                //};
 
-                // Get the FRCEvent
-                FRCEvent = await GetFRCEventAsync(url.PathAndQuery);
-                ShowFRCEvent(FRCEvent);
+                //var url = await CreateFRCEventAsync(item);
+                //Console.WriteLine($"Created at {url}");
 
-                // Update the FRCEvent
-                Console.WriteLine("Updating Location...");
-                FRCEvent.Location = "Anothertown, ME";
-                await UpdateFRCEventAsync(FRCEvent);
+                //// Get the FRCEvent
+                //item = await GetFRCEventAsync(url.PathAndQuery);
+                //ShowFRCEvent(item);
 
-                // Get the updated FRCEvent
-                FRCEvent = await GetFRCEventAsync(url.PathAndQuery);
-                ShowFRCEvent(FRCEvent);
+                //// Update the FRCEvent
+                //Console.WriteLine("Updating Location...");
+                //item.Location = "Anothertown, ME";
+                //await UpdateFRCEventAsync(item);
 
-                // Delete the FRCEvent
-                var statusCode = await DeleteFRCEventAsync(FRCEvent.Id);
-                Console.WriteLine($"Deleted (HTTP Status = {(int)statusCode})");
+                //// Get the updated FRCEvent
+                //item = await GetFRCEventAsync(url.PathAndQuery);
+                //ShowFRCEvent(item);
+
+                //// Delete the FRCEvent
+                //var statusCode = await DeleteFRCEventAsync(item.Id);
+                //Console.WriteLine($"Deleted (HTTP Status = {(int)statusCode})");
 
             }
             catch (Exception e)

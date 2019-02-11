@@ -1,17 +1,16 @@
-﻿using System;
+﻿using BertScout2019Data.Models;
+using BertWebApi2019.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using BertScout2019Data.Models;
-using FRCEventStore.Models;
 
 namespace FRCEventStore.Controllers
 {
     public class FRCEventsController : ApiController
     {
-        static readonly IFRCEventRepository repository = new FRCEventRepository();
+        static readonly IRepository<FRCEvent> repository = new FRCEventRepository();
 
         public IEnumerable<FRCEvent> GetAllFRCEvents()
         {
@@ -28,27 +27,24 @@ namespace FRCEventStore.Controllers
             return item;
         }
 
-        //todo this seems to be wrong looking at it, plural vs singular
-        //public IEnumerable<FRCEvent> GetFRCEventsByEventKey(string eventKey)
-        //{
-        //    return repository.GetAll().Where(
-        //        p => string.Equals(p.EventKey, eventKey, StringComparison.OrdinalIgnoreCase));
-        //}
+        public FRCEvent GetFRCEventByEventKey(string key)
+        {
+            return repository.GetByKey(key);
+        }
 
         public HttpResponseMessage PostFRCEvent(FRCEvent item)
         {
             item = repository.Add(item);
             var response = Request.CreateResponse<FRCEvent>(HttpStatusCode.Created, item);
-
             string uri = Url.Link("DefaultApi", new { id = item.Id });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutFRCEvent(int id, FRCEvent FRCEvent)
+        public void PutFRCEvent(int id, FRCEvent item)
         {
-            FRCEvent.Id = id;
-            if (!repository.Update(FRCEvent))
+            item.Id = id;
+            if (!repository.Update(item))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }

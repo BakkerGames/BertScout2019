@@ -115,8 +115,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\IFRCEventRepository.cs" />
+    <Compile Include="Models\EventTeamMatchRepository.cs" />
+    <Compile Include="Models\EventTeamRepository.cs" />
+    <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\FRCEventRepository.cs" />
+    <Compile Include="Models\TeamRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

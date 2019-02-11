@@ -11,6 +11,8 @@ namespace BertScout2019Data.Data
     {
         private static SQLiteAsyncConnection _database;
 
+        public const string dbFilename = "bertscout2019.db3";
+
         public BertScout2019Database(string dbPath)
         {
             try

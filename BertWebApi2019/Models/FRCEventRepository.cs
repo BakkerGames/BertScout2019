@@ -12,7 +12,7 @@ namespace FRCEventStore.Models
         public static BertScout2019Database _database;
 
         private List<FRCEvent> items = new List<FRCEvent>();
-        private int _nextId = 1;
+        //private int _nextId = 1;
 
         public FRCEventRepository()
         {
@@ -44,14 +44,18 @@ namespace FRCEventStore.Models
                 throw new ArgumentNullException("item");
             }
 
-            item.Id = _nextId++;
+            // this must finish resolving to get item.Id, either by "await" or by calling ".Result"
+            int result = _database.SaveFRCEventAsync(item).Result;
             items.Add(item);
             return item;
         }
 
         public void Remove(int id)
         {
-            items.RemoveAll(p => p.Id == id);
+            throw new NotImplementedException();
+            //todo _database does not have delete code yet
+            //_database.DeleteFRCEventAsync(item);
+            //items.RemoveAll(p => p.Id == id);
         }
 
         public bool Update(FRCEvent item)
@@ -66,6 +70,8 @@ namespace FRCEventStore.Models
                 return false;
             }
             items.RemoveAt(index);
+            // this must finish resolving to get item.Id, either by "await" or by calling ".Result"
+            int result = _database.SaveFRCEventAsync(item).Result;
             items.Add(item);
             return true;
         }

@@ -13,20 +13,20 @@ namespace BertWebApiClient
     class Program
     {
 
-        private static string baseWebAddress = "http://localhost:64190/";
+        private static readonly string baseWebAddress = "http://localhost:64190/";
 
         static HttpClient client = new HttpClient();
         
-        static void ShowFRCEvent(FRCEvent FRCEvent)
+        static void ShowFRCEvent(FRCEvent item)
         {
-            Console.WriteLine($"Name: {FRCEvent.Name}\tLocation: " +
-                $"{FRCEvent.Location}\tEventKey: {FRCEvent.EventKey}");
+            Console.WriteLine($"Id: {item.Id} - Name: {item.Name} = Location: " +
+                $"{item.Location} - EventKey: {item.EventKey}");
         }
 
-        static async Task<Uri> CreateFRCEventAsync(FRCEvent FRCEvent)
+        static async Task<Uri> CreateFRCEventAsync(FRCEvent item)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
-                "api/FRCEvents", FRCEvent);
+                "api/FRCEvents", item);
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.
@@ -55,15 +55,15 @@ namespace BertWebApiClient
             return items;
         }
 
-        static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent FRCEvent)
+        static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent item)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/FRCEvents/{FRCEvent.Id}", FRCEvent);
+                $"api/FRCEvents/{item.Id}", item);
             response.EnsureSuccessStatusCode();
 
             // Deserialize the updated FRCEvent from the response body.
-            FRCEvent = await response.Content.ReadAsAsync<FRCEvent>();
-            return FRCEvent;
+            item = await response.Content.ReadAsAsync<FRCEvent>();
+            return item;
         }
         
         static async Task<HttpStatusCode> DeleteFRCEventAsync(int? id)
@@ -80,6 +80,8 @@ namespace BertWebApiClient
 
         static async Task RunAsync()
         {
+            List<FRCEvent> items;
+
             // Update port # in the following line.
             client.BaseAddress = new Uri(baseWebAddress);
             client.DefaultRequestHeaders.Accept.Clear();
@@ -88,27 +90,38 @@ namespace BertWebApiClient
             
             try
             {
-                List<FRCEvent> items;
+                // show all frcevents
+                Console.WriteLine("All FRC Events:");
                 items = await GetFRCEventsAsync();
                 foreach (FRCEvent showItem in items)
                 {
                     ShowFRCEvent(showItem);
                 }
+                Console.WriteLine();
 
-                //// Create a new FRCEvent
-                //FRCEvent item = new FRCEvent
-                //{
-                //    Name = "Gizmo Event",
-                //    Location = "Anytown, ME",
-                //    EventKey = "GIZMOS"
-                //};
+                // Create a new FRCEvent
+                FRCEvent item = new FRCEvent
+                {
+                    Name = "Gizmo Event7",
+                    Location = "Anytown, ME",
+                    EventKey = "GIZMOS7"
+                };
 
-                //var url = await CreateFRCEventAsync(item);
-                //Console.WriteLine($"Created at {url}");
+                var url = await CreateFRCEventAsync(item);
+                Console.WriteLine($"Created at {url}");
 
-                //// Get the FRCEvent
-                //item = await GetFRCEventAsync(url.PathAndQuery);
-                //ShowFRCEvent(item);
+                // Get the FRCEvent
+                item = await GetFRCEventAsync(url.PathAndQuery);
+                ShowFRCEvent(item);
+
+                // show all frcevents
+                Console.WriteLine("All FRC Events:");
+                items = await GetFRCEventsAsync();
+                foreach (FRCEvent showItem in items)
+                {
+                    ShowFRCEvent(showItem);
+                }
+                Console.WriteLine();
 
                 //// Update the FRCEvent
                 //Console.WriteLine("Updating Location...");

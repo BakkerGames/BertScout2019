@@ -60,6 +60,8 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveFRCEventAsync(FRCEvent item)
         {
+        	// note: the caller must let this resolve before item.Id is first
+        	// available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
@@ -97,6 +99,8 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveTeamAsync(Team item)
         {
+        	// note: the caller must let this resolve before item.Id is first
+        	// available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
@@ -135,6 +139,8 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveEventTeamAsync(EventTeam item)
         {
+        	// note: the caller must let this resolve before item.Id is first
+        	// available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();
@@ -178,6 +184,8 @@ namespace BertScout2019Data.Data
 
         public Task<int> SaveEventTeamMatchAsync(EventTeamMatch item)
         {
+        	// note: the caller must let this resolve before item.Id is first
+        	// available, using either "await" or "int x = ...().Result;"
             if (item.Uuid == null)
             {
                 item.Uuid = Guid.NewGuid().ToString();

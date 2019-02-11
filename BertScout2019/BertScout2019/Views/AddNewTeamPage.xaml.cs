@@ -2,11 +2,6 @@
 using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,7 +27,20 @@ namespace BertScout2019.Views
 
         }
 
+        private bool _addNewTeamBusy = false;
         private void Add_NewTeam_Clicked(object sender, EventArgs e)
+        {
+            // prevent multiple clicks at once
+            if (_addNewTeamBusy)
+            {
+                return;
+            }
+            _addNewTeamBusy = true;
+            doAddNewTeam();
+            _addNewTeamBusy = false;
+        }
+
+        private void doAddNewTeam()
         {
             int newTeamNumber = 0;
             if (Add_New_Team.Text == "")
@@ -59,15 +67,15 @@ namespace BertScout2019.Views
                 }
             }
 
-            // todo add new team
+            // add new team
             Team newTeam;
             try
             {
                 newTeam = DataStoreTeams.GetItemByTagAsync(newTeamNumber.ToString()).Result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                this.Title = ex.Message; // $"Team {newTeamNumber} does not exist";
+                this.Title = $"Team {newTeamNumber} does not exist";
                 return;
             }
 
@@ -94,7 +102,6 @@ namespace BertScout2019.Views
             }
 
             this.Title = $"Added new team {newTeamNumber}";
-            //Navigation.PushAsync(new SelectEventTeamPage());
             return;
         }
     }

@@ -69,6 +69,7 @@
                 Text=""
                 FontSize="24"
                 HorizontalOptions="CenterAndExpand"
+                HeightRequest="100"
                 />
         </StackLayout>
     </ContentPage.Content>

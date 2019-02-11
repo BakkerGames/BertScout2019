@@ -4,29 +4,32 @@
              x:Class="BertScout2019.Views.AddNewTeamPage"
              Title="Add New Team">
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal">
-            <Label 
+        <StackLayout
+            Margin="10,10,10,10">
+            <StackLayout Orientation="Horizontal">
+                <Label 
                     Text="Number: "
                     FontSize="24"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Start"
-                    />
-            <Entry 
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                />
+                <Entry 
                     x:Name="Add_New_Team"
                     Text=""
                     FontSize="24"
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
                     TextChanged="Add_New_Team_TextChanged"
-                    VerticalOptions="Start"
-                    />
-            <Button
+                    WidthRequest="75"
+                    MaxLength="4"
+                />
+                <Button
                     x:Name="Add_NewTeam"
                     Text="Add"
                     FontSize="24"
                     Clicked="Add_NewTeam_Clicked"
-                    VerticalOptions="Start"
                 />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,13 +6,13 @@ using System.IO;
 
 namespace BertWebApi2019.Models
 {
-    public class FRCEventRepository : IRepository<FRCEvent>
+    public class TeamRepository : IRepository<Team>
     {
         public static BertScout2019Database _database;
 
-        private List<FRCEvent> items = new List<FRCEvent>();
+        private List<Team> items = new List<Team>();
 
-        public FRCEventRepository()
+        public TeamRepository()
         {
             // connect to database
             if (_database == null)
@@ -23,48 +23,48 @@ namespace BertWebApi2019.Models
                 _database = new BertScout2019Database(dbPath);
             }
             // fill local list
-            items = _database.GetEventsAsync().Result;
+            items = _database.GetTeamsAsync().Result;
         }
 
-        public FRCEvent Add(FRCEvent item)
+        public Team Add(Team item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException("item");
             }
             // this must finish resolving to get item.Id
-            int result = _database.SaveFRCEventAsync(item).Result;
+            int result = _database.SaveTeamAsync(item).Result;
             items.Add(item);
             return item;
         }
 
-        public FRCEvent Get(int id)
+        public Team Get(int id)
         {
             return items.Find(p => p.Id == id);
         }
 
-        public IEnumerable<FRCEvent> GetAll()
+        public IEnumerable<Team> GetAll()
         {
             return items;
         }
 
-        public IEnumerable<FRCEvent> GetAllByKey(object key)
+        public IEnumerable<Team> GetAllByKey(object key)
         {
-            return items.FindAll(p => p.EventKey == (string)key);
+            return items.FindAll(p => p.TeamNumber == (int)key);
         }
 
-        public FRCEvent GetByKey(object key)
+        public Team GetByKey(object key)
         {
-            return items.Find(p => p.EventKey == (string)key);
+            return items.Find(p => p.TeamNumber == (int)key);
         }
 
         public void Remove(int id)
         {
-            _database.DeleteFRCEventAsync(id);
+            _database.DeleteTeamAsync(id);
             items.RemoveAll(p => p.Id == id);
         }
 
-        public bool Update(FRCEvent item)
+        public bool Update(Team item)
         {
             if (item == null)
             {
@@ -80,7 +80,7 @@ namespace BertWebApi2019.Models
                 return false;
             }
             items.RemoveAt(index);
-            int result = _database.SaveFRCEventAsync(item).Result;
+            int result = _database.SaveTeamAsync(item).Result;
             items.Add(item);
             return true;
         }

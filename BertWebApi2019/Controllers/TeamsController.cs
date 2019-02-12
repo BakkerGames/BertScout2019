@@ -6,20 +6,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace FRCEventStore.Controllers
+namespace TeamStore.Controllers
 {
-    public class FRCEventsController : ApiController
+    public class TeamsController : ApiController
     {
-        static readonly IRepository<FRCEvent> repository = new FRCEventRepository();
+        static readonly IRepository<Team> repository = new TeamRepository();
 
-        public IEnumerable<FRCEvent> GetAllFRCEvents()
+        public IEnumerable<Team> GetAllTeams()
         {
             return repository.GetAll();
         }
 
-        public FRCEvent GetFRCEvent(int id)
+        public Team GetTeam(int id)
         {
-            FRCEvent item = repository.Get(id);
+            Team item = repository.Get(id);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -27,21 +27,21 @@ namespace FRCEventStore.Controllers
             return item;
         }
 
-        public FRCEvent GetFRCEventByEventKey(string key)
+        public Team GetTeamByTeamNumber(int key)
         {
             return repository.GetByKey(key);
         }
 
-        public HttpResponseMessage PostFRCEvent(FRCEvent item)
+        public HttpResponseMessage PostTeam(Team item)
         {
             item = repository.Add(item);
-            var response = Request.CreateResponse<FRCEvent>(HttpStatusCode.Created, item);
+            var response = Request.CreateResponse<Team>(HttpStatusCode.Created, item);
             string uri = Url.Link("DefaultApi", new { id = item.Id });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutFRCEvent(int id, FRCEvent item)
+        public void PutTeam(int id, Team item)
         {
             item.Id = id;
             if (!repository.Update(item))
@@ -50,7 +50,7 @@ namespace FRCEventStore.Controllers
             }
         }
 
-        public void DeleteFRCEvent(int id)
+        public void DeleteTeam(int id)
         {
             repository.Remove(id);
         }

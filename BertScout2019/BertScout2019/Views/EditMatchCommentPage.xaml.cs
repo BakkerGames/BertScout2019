@@ -81,7 +81,7 @@ namespace BertScout2019.Views
         {
             ErrorMessage.Text = "";
             Editor_MatchComment.IsEnabled = (Editor_MatchScouterName.Text?.Length >= 3);
-            if (SaveName == "" && Editor_MatchScouterName.Text?.Length >= 3)
+            /*if (SaveName == "" && Editor_MatchScouterName.Text?.Length >= 3)
             {
                 SaveName = Editor_MatchScouterName.Text;
             }
@@ -89,7 +89,7 @@ namespace BertScout2019.Views
             else if (SaveName != "" && Editor_MatchScouterName.Text?.Length > 3)
             {
                 Editor_MatchScouterName.Text = SaveName;
-            }
+            }*/
         }
     }
 }

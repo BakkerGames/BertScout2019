@@ -39,5 +39,15 @@ namespace BertScout2019.Views
             App.currTeamName = item.Name;
             await Navigation.PushAsync(new SelectEventTeamMatchPage(App.currFRCEventKey, item));
         }
+
+        private void RP_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AvgScore_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,19 +33,7 @@
                         <ViewCell>
                             <StackLayout Padding="10">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding TeamNumber}"
-                                           LineBreakMode="NoWrap"
-                                           Style="{DynamicResource ListItemTextStyle}"
-                                           FontAttributes="Bold"
-                                           FontSize="24"
-                                           />
-                                    <Label Text="-"
-                                           LineBreakMode="NoWrap"
-                                           Style="{DynamicResource ListItemTextStyle}"
-                                           FontAttributes="Bold"
-                                           FontSize="24"
-                                           />
-                                    <Label Text="{Binding Name}"
+                                    <Label Text="{Binding TeamNumberDashName}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"

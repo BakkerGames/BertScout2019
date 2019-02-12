@@ -46,6 +46,7 @@
                 Text=""
                 MaxLength="500"
                 TextChanged="Editor_MatchComment_TextChanged"
+                IsEnabled="False"
                 />
             <Label
                 x:Name="ErrorMessage"

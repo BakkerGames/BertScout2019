@@ -37,7 +37,6 @@ namespace BertScout2019.Views
                 foreach (var item in frcEvents)
                 {
                     item.Id = null;
-                    item.Uuid = item.EventKey;
                     int result = App.Database.SaveFRCEventAsync(item).Result;
                 }
                 // put teams from xml into database
@@ -45,7 +44,6 @@ namespace BertScout2019.Views
                 foreach (var item in teams)
                 {
                     item.Id = null;
-                    item.Uuid = item.TeamNumber.ToString();
                     int result = App.Database.SaveTeamAsync(item).Result;
                 }
                 // put eventteams from xml into database
@@ -53,7 +51,6 @@ namespace BertScout2019.Views
                 foreach (var item in eventTeams)
                 {
                     item.Id = null;
-                    item.Uuid = $"{item.EventKey}:{item.TeamNumber}";
                     int result = App.Database.SaveEventTeamAsync(item).Result;
                 }
                 App.currFRCEventKey = "";

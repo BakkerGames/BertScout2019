@@ -2,7 +2,6 @@
 using BertScout2019Data.Models;
 using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace BertScout2019.ViewModels
@@ -39,7 +38,7 @@ namespace BertScout2019.ViewModels
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex);
+                Title = ex.Message;
             }
             finally
             {

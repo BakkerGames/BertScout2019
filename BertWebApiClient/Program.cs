@@ -1,63 +1,69 @@
 ﻿using BertScout2019Data.Models;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace HttpClientSample
+namespace BertWebApiClient
 {
     
 
     class Program
     {
 
-        private static string baseWebAddress = "http://localhost:64190/";
+        private static readonly string baseWebAddress = "http://localhost:64190/";
 
         static HttpClient client = new HttpClient();
         
-
-        static void ShowFRCEvent(FRCEvent FRCEvent)
+        static void ShowFRCEvent(FRCEvent item)
         {
-            Console.WriteLine($"Name: {FRCEvent.Name}\tLocation: " +
-                $"{FRCEvent.Location}\tEventKey: {FRCEvent.EventKey}");
+            Console.WriteLine($"Id: {item.Id} - Name: {item.Name} = Location: " +
+                $"{item.Location} - EventKey: {item.EventKey}");
         }
 
-        
-        static async Task<Uri> CreateFRCEventAsync(FRCEvent FRCEvent)
+        static async Task<Uri> CreateFRCEventAsync(FRCEvent item)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
-                "api/FRCEvents", FRCEvent);
+                "api/FRCEvents", item);
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.
             return response.Headers.Location;
         }
         
-
-        
         static async Task<FRCEvent> GetFRCEventAsync(string path)
         {
-            FRCEvent FRCEvent = null;
+            FRCEvent item = null;
             HttpResponseMessage response = await client.GetAsync(path);
             if (response.IsSuccessStatusCode)
             {
-                FRCEvent = await response.Content.ReadAsAsync<FRCEvent>();
+                item = await response.Content.ReadAsAsync<FRCEvent>();
             }
-            return FRCEvent;
+            return item;
         }
-        
 
-        
-        static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent FRCEvent)
+        static async Task<List<FRCEvent>> GetFRCEventsAsync()
+        {
+            List<FRCEvent> items = null;
+            HttpResponseMessage response = await client.GetAsync("api/FRCEvents");
+            if (response.IsSuccessStatusCode)
+            {
+                items = await response.Content.ReadAsAsync<List<FRCEvent>>();
+            }
+            return items;
+        }
+
+        static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent item)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/FRCEvents/{FRCEvent.Id}", FRCEvent);
+                $"api/FRCEvents/{item.Id}", item);
             response.EnsureSuccessStatusCode();
 
             // Deserialize the updated FRCEvent from the response body.
-            FRCEvent = await response.Content.ReadAsAsync<FRCEvent>();
-            return FRCEvent;
+            item = await response.Content.ReadAsAsync<FRCEvent>();
+            return item;
         }
         
         static async Task<HttpStatusCode> DeleteFRCEventAsync(int? id)
@@ -74,6 +80,8 @@ namespace HttpClientSample
 
         static async Task RunAsync()
         {
+            List<FRCEvent> items;
+
             // Update port # in the following line.
             client.BaseAddress = new Uri(baseWebAddress);
             client.DefaultRequestHeaders.Accept.Clear();
@@ -82,33 +90,51 @@ namespace HttpClientSample
             
             try
             {
-                // Create a new FRCEvent
-                FRCEvent FRCEvent = new FRCEvent
+                // show all frcevents
+                Console.WriteLine("All FRC Events:");
+                items = await GetFRCEventsAsync();
+                foreach (FRCEvent showItem in items)
                 {
-                    Name = "Gizmo Event",
+                    ShowFRCEvent(showItem);
+                }
+                Console.WriteLine();
+
+                // Create a new FRCEvent
+                FRCEvent item = new FRCEvent
+                {
+                    Name = "Gizmo Event7",
                     Location = "Anytown, ME",
-                    EventKey = "GIZMOS"
+                    EventKey = "GIZMOS7"
                 };
 
-                var url = await CreateFRCEventAsync(FRCEvent);
+                var url = await CreateFRCEventAsync(item);
                 Console.WriteLine($"Created at {url}");
 
                 // Get the FRCEvent
-                FRCEvent = await GetFRCEventAsync(url.PathAndQuery);
-                ShowFRCEvent(FRCEvent);
+                item = await GetFRCEventAsync(url.PathAndQuery);
+                ShowFRCEvent(item);
 
-                // Update the FRCEvent
-                Console.WriteLine("Updating Location...");
-                FRCEvent.Location = "Anothertown, ME";
-                await UpdateFRCEventAsync(FRCEvent);
+                // show all frcevents
+                Console.WriteLine("All FRC Events:");
+                items = await GetFRCEventsAsync();
+                foreach (FRCEvent showItem in items)
+                {
+                    ShowFRCEvent(showItem);
+                }
+                Console.WriteLine();
 
-                // Get the updated FRCEvent
-                FRCEvent = await GetFRCEventAsync(url.PathAndQuery);
-                ShowFRCEvent(FRCEvent);
+                //// Update the FRCEvent
+                //Console.WriteLine("Updating Location...");
+                //item.Location = "Anothertown, ME";
+                //await UpdateFRCEventAsync(item);
 
-                // Delete the FRCEvent
-                var statusCode = await DeleteFRCEventAsync(FRCEvent.Id);
-                Console.WriteLine($"Deleted (HTTP Status = {(int)statusCode})");
+                //// Get the updated FRCEvent
+                //item = await GetFRCEventAsync(url.PathAndQuery);
+                //ShowFRCEvent(item);
+
+                //// Delete the FRCEvent
+                //var statusCode = await DeleteFRCEventAsync(item.Id);
+                //Console.WriteLine($"Deleted (HTTP Status = {(int)statusCode})");
 
             }
             catch (Exception e)

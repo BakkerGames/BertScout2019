@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientSample", "HttpClientSample.csproj", "{F5F23E51-A57D-4140-AD19-B54DDF8B2CF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertWebApiClient", "BertWebApiClient\BertWebApiClient.csproj", "{F5F23E51-A57D-4140-AD19-B54DDF8B2CF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "..\BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

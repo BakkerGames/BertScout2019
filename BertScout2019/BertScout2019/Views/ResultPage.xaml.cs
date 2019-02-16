@@ -13,13 +13,13 @@ namespace BertScout2019.Views
     public partial class ResultPage : ContentPage
 
     {
-        SelectTeamsByEventViewModel viewModel;
+        SortedTeamsByEventViewModel viewModel;
 
         public ResultPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new SelectTeamsByEventViewModel();
+            BindingContext = viewModel = new SortedTeamsByEventViewModel();
         }
 
         protected override void OnAppearing()

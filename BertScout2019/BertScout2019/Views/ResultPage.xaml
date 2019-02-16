@@ -53,13 +53,25 @@
                                            FontAttributes="Bold"
                                            FontSize="24"
                                            />
-                                    <Label Text="-"
+                                    <Label Text="- RP:"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
                                            FontSize="24"
                                            />
-                                    <Label Text="{Binding Name}"
+                                    <Label Text="{Binding TotalRP}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="- AvgScore:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="{Binding AverageScore}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"

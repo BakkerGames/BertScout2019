@@ -78,9 +78,9 @@ namespace BertScout2019.Views
                 return;
             }
             _syncFlag = true;
-            Button_Match_Scouting.BackgroundColor = App.SelectedButtonColor;
+            Button_Event_Results.BackgroundColor = App.SelectedButtonColor;
             await Navigation.PushAsync(new ResultPage());
-            Button_Match_Scouting.BackgroundColor = Color.Default;
+            Button_Event_Results.BackgroundColor = Color.Default;
             _syncFlag = false;
         }
 
@@ -93,7 +93,7 @@ namespace BertScout2019.Views
             _syncFlag = true;
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))
             {
-                LabelVersionMessage.Text = "This app was coded by: \nScott, Chloe, & Nate ";
+                LabelVersionMessage.Text = "This app was coded by:\nScott, Chloe, & Nate ";
             }
             else
             {

@@ -16,7 +16,7 @@ namespace BertScout2019.ViewModels
         public int TotalScore = 0;
         public int MatchCount = 0;
         public int AverageScore = 0;
-        
+
         public IDataStore<EventTeamMatch> DataStoreMatch;
 
         public ObservableCollection<MatchResult> MatchResults { get; set; }
@@ -47,13 +47,16 @@ namespace BertScout2019.ViewModels
                     // todo fill in text with useful match results
                     obj.Text1 = $"Match {match.MatchNumber}";
                     obj.Text2 = $"Score = {CalculateMatchResult(match)} RP = {CalculateMatchRP(match)}";
-                    TotalRP += CalculateMatchRP(match);
-                    TotalScore += CalculateMatchResult(match);
-                    MatchCount++;
-                    //AVGS = AVGScore(match);
-                    MatchResults.Add(obj);
+                    int rp = CalculateMatchRP(match);
+                    int matchScore = CalculateMatchResult(match);
+                    if (rp > 0 || matchScore > 0 || match.Broken > 0)
+                    {
+                        TotalRP += rp;
+                        TotalScore += matchScore;
+                        MatchCount++;
+                        MatchResults.Add(obj);
+                    }
                 }
-
                 AverageScore = TotalScore / MatchCount;
             }
             catch (Exception ex)

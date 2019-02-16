@@ -9,15 +9,15 @@ using Xamarin.Forms.Xaml;
 namespace BertScout2019.Views
 {
 
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ResultPage : ContentPage
-        
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ResultPage : ContentPage
+
+    {
         SelectTeamsByEventViewModel viewModel;
 
-        public ResultPage ()
-		{
-			InitializeComponent ();
+        public ResultPage()
+        {
+            InitializeComponent();
 
             BindingContext = viewModel = new SelectTeamsByEventViewModel();
         }
@@ -42,12 +42,14 @@ namespace BertScout2019.Views
 
         private void RP_Clicked(object sender, EventArgs e)
         {
-
+            RP.BackgroundColor = App.SelectedButtonColor;
+            AvgScore.BackgroundColor = App.UnselectedButtonColor;
         }
 
         private void AvgScore_Clicked(object sender, EventArgs e)
         {
-
+            AvgScore.BackgroundColor = App.SelectedButtonColor;
+            RP.BackgroundColor = App.UnselectedButtonColor;
         }
     }
 }

@@ -17,8 +17,9 @@
                     HorizontalOptions="Start"
                     VerticalOptions="Start"
                     FontSize="24"
-                    WidthRequest="150"
+                    WidthRequest="200"
                     Clicked="RP_Clicked"
+                    BackgroundColor="LightGray"
                 />
                 <Button
                     x:Name="AvgScore"
@@ -28,6 +29,7 @@
                     FontSize="24"
                     WidthRequest="200"
                     Clicked="AvgScore_Clicked"
+                    BackgroundColor="LightGray"
                 />
             </StackLayout>
             <ListView 

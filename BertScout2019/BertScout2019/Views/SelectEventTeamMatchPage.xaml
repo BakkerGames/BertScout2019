@@ -15,6 +15,11 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
+        <!-- <ToolbarItem
+            x:Name="Good_luck"
+            Text="  "
+            Clicked="Good_luck_Clicked"
+            /> -->
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

@@ -9,6 +9,16 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <a href="./api/FRCEvents">FRCEvents</a>
+        </div>
+        <div>
+            <a href="./api/Teams">Teams</a>
+        </div>
+        <div>
+            <a href="./api/EventTeams">Teams in each Event</a>
+        </div>
+        <div>
+            <a href="./api/EventTeamMatches">Matches for each Team for each Event</a>
         </div>
     </form>
 </body>

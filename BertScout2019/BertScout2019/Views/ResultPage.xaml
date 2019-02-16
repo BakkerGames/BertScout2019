@@ -4,7 +4,35 @@
              x:Class="BertScout2019.Views.ResultPage"
              Title="Event Results">
     <ContentPage.Content>
-        <ListView 
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                <Label
+                    Text="Sort By:"
+                    FontSize="24"
+                    Margin="0,5,0,10"
+                />
+                <Button
+                    x:Name="RP"
+                    Text="RP"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="24"
+                    WidthRequest="200"
+                    Clicked="RP_Clicked"
+                    BackgroundColor="LightGray"
+                />
+                <Button
+                    x:Name="AvgScore"
+                    Text="Avg. Score"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="24"
+                    WidthRequest="200"
+                    Clicked="AvgScore_Clicked"
+                    BackgroundColor="LightGray"
+                />
+            </StackLayout>
+            <ListView 
                     x:Name="EventTeamsListView"
                     ItemsSource="{Binding Teams}"
                     VerticalOptions="FillAndExpand"
@@ -14,34 +42,47 @@
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     CachingStrategy="RecycleElement"
                     >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding TeamNumber}"
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding TeamNumber}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
                                            FontSize="24"
                                            />
-                                <Label Text="-"
+                                    <Label Text="- RP:"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
                                            FontSize="24"
                                            />
-                                <Label Text="{Binding Name}"
+                                    <Label Text="{Binding TotalRP}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
                                            FontSize="24"
                                            />
+                                    <Label Text="- AvgScore:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="{Binding AverageScore}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

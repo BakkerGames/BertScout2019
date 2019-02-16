@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace BertWebApi2019.Models
+namespace BertWebApi2019v2.Models
 {
     public class FRCEventRepository : IRepository<FRCEvent>
     {

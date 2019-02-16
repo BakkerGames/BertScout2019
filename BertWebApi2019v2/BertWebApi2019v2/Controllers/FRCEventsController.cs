@@ -1,12 +1,12 @@
 ﻿using BertScout2019Data.Models;
-using BertWebApi2019.Models;
+using BertWebApi2019v2.Models;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace FRCEventStore.Controllers
+namespace BertWebApi2019v2.Controllers
 {
     public class FRCEventsController : ApiController
     {

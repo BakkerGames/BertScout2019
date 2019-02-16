@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BertWebApi2019.Models
+namespace BertWebApi2019v2.Models
 {
     interface IRepository<T>
     {

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertWebApi2019", "BertWebApi2019\BertWebApi2019.csproj", "{28888A73-B03A-4698-901E-D1181497280A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertWebApi2019v2", "BertWebApi2019v2\BertWebApi2019v2.csproj", "{69BB83E9-4547-44EC-8F3C-0D9A1F9FD7F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BertScout2019Data", "..\BertScout2019Data\BertScout2019Data.csproj", "{180DF173-92F6-45C4-9E4B-AE81568F507B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.JSON", "Common.JSON\Common.JSON.csproj", "{EF7B4F31-17B9-40FF-8334-196056BAB2D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.JSON", "..\Common.JSON\Common.JSON.csproj", "{EF7B4F31-17B9-40FF-8334-196056BAB2D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{28888A73-B03A-4698-901E-D1181497280A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28888A73-B03A-4698-901E-D1181497280A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28888A73-B03A-4698-901E-D1181497280A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28888A73-B03A-4698-901E-D1181497280A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BB83E9-4547-44EC-8F3C-0D9A1F9FD7F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BB83E9-4547-44EC-8F3C-0D9A1F9FD7F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BB83E9-4547-44EC-8F3C-0D9A1F9FD7F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BB83E9-4547-44EC-8F3C-0D9A1F9FD7F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{180DF173-92F6-45C4-9E4B-AE81568F507B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{180DF173-92F6-45C4-9E4B-AE81568F507B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180DF173-92F6-45C4-9E4B-AE81568F507B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,6 +32,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8FCC4254-AB33-42CD-8D2D-974E1CAE2277}
+		SolutionGuid = {9B147115-D6D4-450E-A965-1905B060E163}
 	EndGlobalSection
 EndGlobal

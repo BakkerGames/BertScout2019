@@ -1,4 +1,6 @@
-﻿using System;
+﻿// For dropdown menu-use picker, info at https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/picker/
+
+using System;
 using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
 using Xamarin.Forms;
@@ -7,17 +9,17 @@ using Xamarin.Forms.Xaml;
 namespace BertScout2019.Views
 {
 
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ResultPage : ContentPage
-        
-	{
-        SelectTeamsByEventViewModel viewModel;
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ResultPage : ContentPage
 
-        public ResultPage ()
-		{
-			InitializeComponent ();
+    {
+        SortedTeamsByEventViewModel viewModel;
 
-            BindingContext = viewModel = new SelectTeamsByEventViewModel();
+        public ResultPage()
+        {
+            InitializeComponent();
+
+            BindingContext = viewModel = new SortedTeamsByEventViewModel();
         }
 
         protected override void OnAppearing()
@@ -36,6 +38,18 @@ namespace BertScout2019.Views
             App.currTeamNumber = item.TeamNumber;
             App.currTeamName = item.Name;
             await Navigation.PushAsync(new SelectEventTeamMatchPage(App.currFRCEventKey, item));
+        }
+
+        private void RP_Clicked(object sender, EventArgs e)
+        {
+            RP.BackgroundColor = App.SelectedButtonColor;
+            AvgScore.BackgroundColor = App.UnselectedButtonColor;
+        }
+
+        private void AvgScore_Clicked(object sender, EventArgs e)
+        {
+            AvgScore.BackgroundColor = App.SelectedButtonColor;
+            RP.BackgroundColor = App.UnselectedButtonColor;
         }
     }
 }

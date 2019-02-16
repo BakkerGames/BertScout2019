@@ -122,5 +122,10 @@ namespace BertScout2019.Views
         {
             await Navigation.PushAsync(new TeamDetailsPage(currTeam));
         }
+
+        private void Good_luck_Clicked(object sender, System.EventArgs e)
+        {
+            Title = "Good luck teams!";
+        }
     }
 }

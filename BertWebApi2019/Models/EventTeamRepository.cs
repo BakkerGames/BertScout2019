@@ -18,7 +18,8 @@ namespace BertWebApi2019.Models
             if (_database == null)
             {
                 string dbPath = Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                    AppDomain.CurrentDomain.BaseDirectory
+                    , "App_Data"
                     , BertScout2019Database.dbFilename);
                 _database = new BertScout2019Database(dbPath);
             }

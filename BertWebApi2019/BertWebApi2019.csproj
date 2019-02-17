@@ -107,6 +107,7 @@
     <Compile Include="Controllers\FRCEventsController.cs" />
     <Compile Include="Controllers\EventTeamsController.cs" />
     <Compile Include="Controllers\EventTeamMatchesController.cs" />
+    <Compile Include="Controllers\ResetDatabaseController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -126,6 +127,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\bertscout2019.db3" />
+    <Content Include="App_Data\bertscout2019.db3-shm" />
+    <Content Include="App_Data\bertscout2019.db3-wal" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
@@ -135,9 +139,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BertScout2019Data\BertScout2019Data.csproj">
       <Project>{180df173-92f6-45c4-9e4b-ae81568f507b}</Project>

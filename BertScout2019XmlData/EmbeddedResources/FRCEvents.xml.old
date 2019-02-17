@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfFRCEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FRCEvent>
-    <Uuid>80811106-f404-472a-9bd3-15bdfcb68474</Uuid>
+    <Id>0</Id>
     <EventKey>TEST</EventKey>
     <Name>Testing</Name>
     <Location>TBD</Location>
@@ -9,7 +9,7 @@
     <EndDate>2019-12-31</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Uuid>738b3c6a-557c-4419-a9eb-51eb3eab4e34</Uuid>
+    <Id>0</Id>
     <EventKey>WEEKZERO</EventKey>
     <Name>Week Zero</Name>
     <Location>TBD</Location>
@@ -17,7 +17,7 @@
     <EndDate>2019-02-16</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Uuid>9d290608-9151-4ac5-97a6-648160cac29e</Uuid>
+    <Id>0</Id>
     <EventKey>NEDIST_SOUTHERNNH</EventKey>
     <Name>NE District Southern NH Event</Name>
     <Location>Bedford, NH, USA</Location>
@@ -25,7 +25,7 @@
     <EndDate>2019-03-17</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Uuid>417bb61d-caf0-4680-8755-6ad52ff938a0</Uuid>
+    <Id>0</Id>
     <EventKey>NEDIST_RHODEISLAND</EventKey>
     <Name>NE District Rhode Island Event</Name>
     <Location>Smithfield, RI, USA</Location>
@@ -33,7 +33,7 @@
     <EndDate>2019-03-24</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Uuid>c58e36bf-57c6-4ea6-bb57-dd5fb1121aa7</Uuid>
+    <Id>0</Id>
     <EventKey>NEDIST_PINETREE</EventKey>
     <Name>NE District Pine Tree Event</Name>
     <Location>Lewiston, ME, USA</Location>
@@ -41,7 +41,7 @@
     <EndDate>2019-04-06</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Uuid>add116f4-cc0d-4802-a286-1ad2b9492bd0</Uuid>
+    <Id>0</Id>
     <EventKey>NEDIST_CHAMP</EventKey>
     <Name>New England District Championship</Name>
     <Location>Worcester, MA, USA</Location>
@@ -49,7 +49,7 @@
     <EndDate>2019-04-13</EndDate>
   </FRCEvent>
   <FRCEvent>
-    <Uuid>63b43f1e-84b9-45d1-8160-dcd1b18d501c</Uuid>
+    <Id>0</Id>
     <EventKey>WORLD_DETROIT</EventKey>
     <Name>2019 FIRST Championship Detroit</Name>
     <Location>Detroit, MI, USA</Location>

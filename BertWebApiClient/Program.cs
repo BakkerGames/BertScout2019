@@ -8,70 +8,11 @@ using System.Threading.Tasks;
 
 namespace BertWebApiClient
 {
-    
-
-    class Program
+    public partial class Program
     {
-
         private static readonly string baseWebAddress = "http://localhost:64190/";
 
         static HttpClient client = new HttpClient();
-        
-        static void ShowFRCEvent(FRCEvent item)
-        {
-            Console.WriteLine($"Id: {item.Id} - Name: {item.Name} = Location: " +
-                $"{item.Location} - EventKey: {item.EventKey}");
-        }
-
-        static async Task<Uri> CreateFRCEventAsync(FRCEvent item)
-        {
-            HttpResponseMessage response = await client.PostAsJsonAsync(
-                "api/FRCEvents", item);
-            response.EnsureSuccessStatusCode();
-
-            // return URI of the created resource.
-            return response.Headers.Location;
-        }
-        
-        static async Task<FRCEvent> GetFRCEventAsync(string path)
-        {
-            FRCEvent item = null;
-            HttpResponseMessage response = await client.GetAsync(path);
-            if (response.IsSuccessStatusCode)
-            {
-                item = await response.Content.ReadAsAsync<FRCEvent>();
-            }
-            return item;
-        }
-
-        static async Task<List<FRCEvent>> GetFRCEventsAsync()
-        {
-            List<FRCEvent> items = null;
-            HttpResponseMessage response = await client.GetAsync("api/FRCEvents");
-            if (response.IsSuccessStatusCode)
-            {
-                items = await response.Content.ReadAsAsync<List<FRCEvent>>();
-            }
-            return items;
-        }
-
-        static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent item)
-        {
-            HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/FRCEvents/{item.Id}", item);
-            response.EnsureSuccessStatusCode();
-
-            // Deserialize the updated FRCEvent from the response body.
-            item = await response.Content.ReadAsAsync<FRCEvent>();
-            return item;
-        }
-        
-        static async Task<HttpStatusCode> DeleteFRCEventAsync(int? id)
-        {
-            HttpResponseMessage response = await client.DeleteAsync(
-                $"api/FRCEvents/{id}");
-            return response.StatusCode;
-        }
 
         static void Main()
         {
@@ -123,6 +64,11 @@ namespace BertWebApiClient
                 }
                 Console.WriteLine();
 
+                EventTeamMatch eventTeamMatch = new EventTeamMatch();
+                eventTeamMatch.EventKey = "WEEKZERO";
+                eventTeamMatch.TeamNumber = 133;
+                eventTeamMatch.MatchNumber = 17;
+
                 //// Update the FRCEvent
                 //Console.WriteLine("Updating Location...");
                 //item.Location = "Anothertown, ME";
@@ -144,6 +90,5 @@ namespace BertWebApiClient
 
             Console.ReadLine();
         }
-        
     }
 }

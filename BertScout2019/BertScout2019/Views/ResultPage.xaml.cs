@@ -1,6 +1,7 @@
 ﻿// For dropdown menu-use picker, info at https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/picker/
 
 using System;
+using BertScout2019.Models;
 using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
 using Xamarin.Forms;
@@ -30,14 +31,18 @@ namespace BertScout2019.Views
 
         private async void EventTeamsListView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            Team item = (Team)args.SelectedItem;
+            /*Team item = (Team)args.SelectedItem;
             if (item == null)
             {
                 return;
             }
             App.currTeamNumber = item.TeamNumber;
             App.currTeamName = item.Name;
-            await Navigation.PushAsync(new SelectEventTeamMatchPage(App.currFRCEventKey, item));
+            await Navigation.PushAsync(new SelectEventTeamMatchPage(App.currFRCEventKey, item));*/
+            // todo fix this
+            //TeamResult teamResult = (TeamResult)args.SelectedItem;
+            //Team currTeam = App.database.GetTeamAsync(teamResult.TeamNumber);
+            //await Navigation.PushAsync(new TeamDetailsPage(currTeam));
         }
 
         private void RP_Clicked(object sender, EventArgs e)

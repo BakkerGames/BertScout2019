@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BertScout2019Data.Models;
+using System;
+using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Xamarin.Forms;
@@ -29,31 +32,52 @@ namespace BertScout2019.Views
             RunAsync();
         }
 
-        private void RunAsync()
+        private async void RunAsync()
         {
-            //List<EventTeamMatch> items;
+            HttpResponseMessage response;
 
             try
             {
-                // Update port # in the following line.
-                string uri = App.syncIpAddress;
-                if (!uri.StartsWith("http"))
-                {
-                    uri = $"http://{uri}";
-                }
-                uri += "/bertscout2019/";
+                // get the url for the
+                string uri = $"http://{App.syncIpAddress}/bertscout2019/";
                 App.client.BaseAddress = new Uri(uri);
                 App.client.DefaultRequestHeaders.Accept.Clear();
                 App.client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
-                string result = "";
-                HttpResponseMessage response = App.client.GetAsync("api/FRCEvents/1").Result;
-                if (response.IsSuccessStatusCode)
+                //string result = "";
+                //HttpResponseMessage response = App.client.GetAsync("api/FRCEvents/1").Result;
+                //if (response.IsSuccessStatusCode)
+                //{
+                //    result = response.Content.ReadAsStringAsync().Result;
+                //}
+                //Label_Results.Text = result;
+
+                List<EventTeamMatch> matches = App.Database.GetEventTeamMatchesAsync(App.currFRCEventKey).Result;
+                List<EventTeamMatch> updatedMatches = new List<EventTeamMatch>();
+
+                foreach (EventTeamMatch match in matches)
                 {
-                    result = response.Content.ReadAsStringAsync().Result;
+                    if (match.Changed > 0)
+                    {
+                        response = await App.client.PostAsXmlAsync("api/EventTeamMatches", match);
+                        response.EnsureSuccessStatusCode();
+                        //updatedMatches.Add(match);
+                    }
                 }
-                Label_Results.Text = result;
+                //if (updatedMatches.Count > 0)
+                //{
+                //    response = await App.client.PostAsJsonAsync("api/EventTeamMatches", updatedMatches);
+                //    response.EnsureSuccessStatusCode();
+                //}
+
+
+
+
+                //App.client.PutAsync("api/EventTeamMatches", match);
+
+
+
 
                 //// show all frcevents
                 //Console.WriteLine("All FRC Events:");

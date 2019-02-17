@@ -10,7 +10,7 @@ namespace BertWebApiClient
 {
     public partial class Program
     {
-        private static readonly string baseWebAddress = "http://localhost:64190/";
+        private static readonly string baseWebAddress = "http://localhost/bertscout2019/";
 
         static HttpClient client = new HttpClient();
 
@@ -31,14 +31,14 @@ namespace BertWebApiClient
             
             try
             {
-                // show all frcevents
-                Console.WriteLine("All FRC Events:");
-                items = await GetFRCEventsAsync();
-                foreach (FRCEvent showItem in items)
-                {
-                    ShowFRCEvent(showItem);
-                }
-                Console.WriteLine();
+                //// show all frcevents
+                //Console.WriteLine("All FRC Events:");
+                //items = await GetFRCEventsAsync();
+                //foreach (FRCEvent showItem in items)
+                //{
+                //    ShowFRCEvent(showItem);
+                //}
+                //Console.WriteLine();
 
                 //// Create a new FRCEvent
                 //FRCEvent item = new FRCEvent

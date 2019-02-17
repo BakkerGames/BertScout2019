@@ -17,7 +17,7 @@ namespace BertWebApiClient
 
         static async Task<Uri> CreateEventTeamMatchAsync(EventTeamMatch item)
         {
-            HttpResponseMessage response = await client.PostAsJsonAsync(
+            HttpResponseMessage response = await client.PostAsXmlAsync(
                 "api/EventTeamMatches", item);
             response.EnsureSuccessStatusCode();
 

@@ -1,6 +1,4 @@
-﻿using BertScout2019Data.Models;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Xamarin.Forms;
@@ -38,7 +36,13 @@ namespace BertScout2019.Views
             try
             {
                 // Update port # in the following line.
-                App.client.BaseAddress = new Uri(App.syncIpAddress);
+                string uri = App.syncIpAddress;
+                if (!uri.StartsWith("http"))
+                {
+                    uri = $"http://{uri}";
+                }
+                uri += "/bertscout2019/";
+                App.client.BaseAddress = new Uri(uri);
                 App.client.DefaultRequestHeaders.Accept.Clear();
                 App.client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));

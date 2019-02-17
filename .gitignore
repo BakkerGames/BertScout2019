@@ -265,3 +265,6 @@ __pycache__/
 *.bak
 *.orig
 
+# local rules
+!*.pubxml.user
+

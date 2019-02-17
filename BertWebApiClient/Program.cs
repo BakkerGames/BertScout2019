@@ -40,34 +40,39 @@ namespace BertWebApiClient
                 }
                 Console.WriteLine();
 
-                // Create a new FRCEvent
-                FRCEvent item = new FRCEvent
-                {
-                    Name = "Gizmo Event7",
-                    Location = "Anytown, ME",
-                    EventKey = "GIZMOS7"
-                };
+                //// Create a new FRCEvent
+                //FRCEvent item = new FRCEvent
+                //{
+                //    Name = "Gizmo Event7",
+                //    Location = "Anytown, ME",
+                //    EventKey = "GIZMOS7",
+                //    Changed = 1,
+                //};
 
-                var url = await CreateFRCEventAsync(item);
-                Console.WriteLine($"Created at {url}");
+                //var url = await CreateFRCEventAsync(item);
+                //Console.WriteLine($"Created at {url}");
 
-                // Get the FRCEvent
-                item = await GetFRCEventAsync(url.PathAndQuery);
-                ShowFRCEvent(item);
+                //// Get the FRCEvent
+                //item = await GetFRCEventAsync(url.PathAndQuery);
+                //ShowFRCEvent(item);
 
-                // show all frcevents
-                Console.WriteLine("All FRC Events:");
-                items = await GetFRCEventsAsync();
-                foreach (FRCEvent showItem in items)
-                {
-                    ShowFRCEvent(showItem);
-                }
-                Console.WriteLine();
+                //// show all frcevents
+                //Console.WriteLine("All FRC Events:");
+                //items = await GetFRCEventsAsync();
+                //foreach (FRCEvent showItem in items)
+                //{
+                //    ShowFRCEvent(showItem);
+                //}
+                //Console.WriteLine();
 
                 EventTeamMatch eventTeamMatch = new EventTeamMatch();
                 eventTeamMatch.EventKey = "WEEKZERO";
                 eventTeamMatch.TeamNumber = 133;
                 eventTeamMatch.MatchNumber = 17;
+                eventTeamMatch.Changed = 1;
+
+                var urlEtm = await CreateEventTeamMatchAsync(eventTeamMatch);
+                Console.WriteLine($"Created at {urlEtm}");
 
                 //// Update the FRCEvent
                 //Console.WriteLine("Updating Location...");

@@ -60,6 +60,16 @@ namespace BertScout2019Data.Data
             return _database.GetAsync<FRCEvent>(query.ToString());
         }
 
+        public Task<FRCEvent> GetEventAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [FRCEvent].* FROM [FRCEvent]");
+            query.Append(" WHERE [FRCEvent].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
+            return _database.GetAsync<FRCEvent>(query.ToString());
+        }
+
         public Task<int> SaveFRCEventAsync(FRCEvent item)
         {
             // note: the caller must let this resolve before item.Id is first
@@ -101,6 +111,16 @@ namespace BertScout2019Data.Data
             query.Append("SELECT [Team].* FROM [Team]");
             query.Append(" WHERE [Team].[TeamNumber] = ");
             query.Append(teamNumber);
+            return _database.GetAsync<Team>(query.ToString());
+        }
+
+        public Task<Team> GetTeamAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [Team].* FROM [Team]");
+            query.Append(" WHERE [Team].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
             return _database.GetAsync<Team>(query.ToString());
         }
 
@@ -146,6 +166,16 @@ namespace BertScout2019Data.Data
             query.Append("'");
             query.Append(" AND [EventTeamMatch].[TeamNumber] = ");
             query.Append(teamNumber);
+            return _database.GetAsync<EventTeam>(query.ToString());
+        }
+
+        public Task<EventTeam> GetEventTeamAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeam].* FROM [EventTeam]");
+            query.Append(" WHERE [EventTeam].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
             return _database.GetAsync<EventTeam>(query.ToString());
         }
 
@@ -196,6 +226,16 @@ namespace BertScout2019Data.Data
             query.Append(teamNumber);
             query.Append(" AND [EventTeamMatch].[MatchNumber] = ");
             query.Append(matchNumber);
+            return _database.GetAsync<EventTeamMatch>(query.ToString());
+        }
+
+        public Task<EventTeamMatch> GetEventTeamMatchAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
+            query.Append(" WHERE [EventTeamMatch].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
             return _database.GetAsync<EventTeamMatch>(query.ToString());
         }
 

@@ -2,6 +2,7 @@
 using BertScout2019Data.Data;
 using System;
 using System.IO;
+using System.Net.Http;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,16 +25,21 @@ namespace BertScout2019
         static public string currTeamName { get; set; }
         static public int currMatchNumber { get; set; }
         static public int highestMatchNumber { get; set; } = 0;
+        static public string syncIpAddress { get; set; } = "";
 
         // app database
         private const string dbFilename = "bertscout2019.db3";
         static public BertScout2019Database database;
+
+        // http client for syncing
+        static public HttpClient client = new HttpClient();
 
         // app properties saved by OnSleep()
         private const string propNameVersionNumber = "currentVersionNumber";
         private const string propNameFRCEventKey = "currentFRCEventKey";
         private const string propNameFRCEventName = "currentFRCEventName";
         private const string propNameHighestMatchNumber = "highestMatchNumber";
+        private const string propNameIpAddress = "syncIpAddress";
 
         public App()
         {
@@ -54,6 +60,10 @@ namespace BertScout2019
                     {
                         highestMatchNumber = (int)Properties[propNameHighestMatchNumber];
                     }
+                    if (Properties.ContainsKey(propNameIpAddress))
+                    {
+                        syncIpAddress = (string)Properties[propNameIpAddress];
+                    }
                 }
             }
             catch (Exception)
@@ -62,6 +72,7 @@ namespace BertScout2019
                 Properties[propNameFRCEventKey] = "";
                 Properties[propNameFRCEventName] = "";
                 Properties[propNameHighestMatchNumber] = 0;
+                Properties[propNameIpAddress] = "";
             }
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage())
@@ -94,6 +105,7 @@ namespace BertScout2019
             Properties[propNameFRCEventKey] = currFRCEventKey;
             Properties[propNameFRCEventName] = currFRCEventName;
             Properties[propNameHighestMatchNumber] = highestMatchNumber;
+            Properties[propNameIpAddress] = syncIpAddress;
         }
 
         protected override void OnResume()

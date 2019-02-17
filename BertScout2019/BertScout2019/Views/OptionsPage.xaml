@@ -7,6 +7,18 @@
         <StackLayout
             VerticalOptions="CenterAndExpand">
             <Button
+                x:Name="Button_SyncDatabase"
+                Text="Sync Database"
+                Clicked="Button_SyncDatabase_Clicked"
+                BackgroundColor="#B19CD9"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="24"
+                Margin="20,20,20,20"
+                WidthRequest="300"
+                IsEnabled="True"
+                />
+            <Button
                 x:Name="Reset_Database_Button"
                 Text="Reset Database"
                 Clicked="Reset_Database_Button_Clicked"

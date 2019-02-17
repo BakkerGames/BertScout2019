@@ -10,6 +10,7 @@ namespace BertScout2019.Views
     public partial class OptionsPage : ContentPage
     {
         private bool _nateSyncFlag = false;
+        private bool _syncFlag;
 
         public IDataStore<FRCEvent> DataStoreFRCEvents => new XmlDataStoreFRCEvent();
         public IDataStore<Team> DataStoreTeams => new XmlDataStoreTeams();
@@ -74,6 +75,19 @@ namespace BertScout2019.Views
                 return;
             }
             Reset_Database_Button.IsEnabled = (Entry_OptionPassword_Value.Text.ToLower() == App.OptionPassword.ToLower());
+        }
+
+        private async void Button_SyncDatabase_Clicked(object sender, EventArgs e)
+        {
+            if (_syncFlag)
+            {
+                return;
+            }
+            _syncFlag = true;
+            Button_SyncDatabase.BackgroundColor = App.SelectedButtonColor;
+            await Navigation.PushAsync(new SyncDatabasePage());
+            Button_SyncDatabase.BackgroundColor = App.UnselectedButtonColor;
+            _syncFlag = false;
         }
     }
 }

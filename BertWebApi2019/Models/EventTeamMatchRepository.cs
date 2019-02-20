@@ -33,9 +33,13 @@ namespace BertWebApi2019.Models
             {
                 throw new ArgumentNullException("item");
             }
-            // this must finish resolving to get item.Id
-            int result = _database.SaveEventTeamMatchAsync(item).Result;
-            items.Add(item);
+            EventTeamMatch oldItem = items.Find(p => p.Uuid == item.Uuid);
+            if (oldItem == null)
+            {
+                // this must finish resolving to get item.Id
+                int result = _database.SaveEventTeamMatchAsync(item).Result;
+                items.Add(item);
+            }
             return item;
         }
 

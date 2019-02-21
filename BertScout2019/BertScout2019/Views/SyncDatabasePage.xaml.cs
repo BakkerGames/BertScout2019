@@ -1,7 +1,9 @@
 ﻿using BertScout2019Data.Models;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -30,9 +32,21 @@ namespace BertScout2019.Views
             RunAsync();
         }
 
+        static async Task<List<FRCEvent>> GetFRCEventsAsync()
+        {
+            List<FRCEvent> items = null;
+            HttpResponseMessage response = await App.client.GetAsync("api/FRCEvents");
+            if (response.IsSuccessStatusCode)
+            {
+                string tempResult = await response.Content.ReadAsStringAsync();
+            }
+            return items;
+        }
+
         private void RunAsync()
         {
             //List<EventTeamMatch> items;
+            List<FRCEvent> frcEvents;
 
             try
             {
@@ -42,19 +56,22 @@ namespace BertScout2019.Views
                 {
                     uri = $"http://{uri}";
                 }
-                uri += "/bertscout2019/";
+                uri += "/";
+                //uri += "/bertscout2019/";
                 App.client.BaseAddress = new Uri(uri);
                 App.client.DefaultRequestHeaders.Accept.Clear();
                 App.client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
-                //string result = "";
-                //HttpResponseMessage response = App.client.GetAsync("api/FRCEvents/1").Result;
-                //if (response.IsSuccessStatusCode)
-                //{
-                //    result = response.Content.ReadAsStringAsync().Result;
-                //}
-                //Label_Results.Text = result;
+                //frcEvents = GetFRCEventsAsync().Result;
+
+                string result = "";
+                HttpResponseMessage response = App.client.GetAsync("api/FRCEvents/1").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    result = response.Content.ReadAsStringAsync().Result;
+                }
+                Label_Results.Text = result;
 
                 //// show all frcevents
                 //Console.WriteLine("All FRC Events:");
@@ -90,24 +107,24 @@ namespace BertScout2019.Views
                 //}
                 //Console.WriteLine();
 
-                EventTeamMatch eventTeamMatch = new EventTeamMatch();
-                eventTeamMatch.EventKey = "WEEKZERO";
-                eventTeamMatch.TeamNumber = 133;
-                eventTeamMatch.MatchNumber = 17;
-                eventTeamMatch.Changed = 1;
-                StringContent content = new StringContent(eventTeamMatch.ToString());
+                ////EventTeamMatch eventTeamMatch = new EventTeamMatch();
+                ////eventTeamMatch.EventKey = "WEEKZERO";
+                ////eventTeamMatch.TeamNumber = 133;
+                ////eventTeamMatch.MatchNumber = 17;
+                ////eventTeamMatch.Changed = 1;
+                ////StringContent content = new StringContent(eventTeamMatch.ToString());
 
-                string result;
-                HttpResponseMessage response = App.client.PostAsync("api/EventTeamMatches", content).Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    result = response.Content.ReadAsStringAsync().Result;
-                }
-                else
-                {
-                    result = "error!";
-                }
-                Label_Results.Text = result;
+                ////string result;
+                ////HttpResponseMessage response = App.client.PostAsync("api/EventTeamMatches", content).Result;
+                ////if (response.IsSuccessStatusCode)
+                ////{
+                ////    result = response.Content.ReadAsStringAsync().Result;
+                ////}
+                ////else
+                ////{
+                ////    result = "error!";
+                ////}
+                ////Label_Results.Text = result;
 
                 //var urlEtm = await CreateEventTeamMatchAsync(eventTeamMatch);
                 //Console.WriteLine($"Created at {urlEtm}");

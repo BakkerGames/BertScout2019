@@ -21,8 +21,7 @@ namespace BertWebApiClient
 
         static async Task<Uri> CreateFRCEventAsync(FRCEvent item)
         {
-            HttpResponseMessage response = await client.PostAsJsonAsync(
-                "api/FRCEvents", item);
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/FRCEvents", item);
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.

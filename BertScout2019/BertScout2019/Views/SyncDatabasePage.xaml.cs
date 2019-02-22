@@ -56,7 +56,7 @@ namespace BertScout2019.Views
         static Uri UpdateFRCEventAsync(FRCEvent item)
         {
             StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PutAsync("api/FRCEvents", content).Result;
+            HttpResponseMessage response = App.client.PutAsync($"api/FRCEvents?uuid={item.Uuid}", content).Result;
             response.EnsureSuccessStatusCode();
             // return URI of the created resource.
             return response.Headers.Location;
@@ -96,6 +96,10 @@ namespace BertScout2019.Views
                 };
                 Uri url = CreateFRCEventAsync(item);
                 Label_Results.Text = $"Created at {url.PathAndQuery}";
+
+                item.Name += "-A";
+                item.Changed++;
+                UpdateFRCEventAsync(item);
 
                 // ------------------------------------------------------------------------
 

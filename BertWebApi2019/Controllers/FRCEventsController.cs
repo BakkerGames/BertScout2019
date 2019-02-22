@@ -17,9 +17,9 @@ namespace FRCEventStore.Controllers
             return repository.GetAll();
         }
 
-        public FRCEvent GetFRCEvent(int id)
+        public FRCEvent GetFRCEvent(string uuid)
         {
-            FRCEvent item = repository.Get(id);
+            FRCEvent item = repository.GetByUuid(uuid);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -35,24 +35,24 @@ namespace FRCEventStore.Controllers
         public HttpResponseMessage PostFRCEvent(FRCEvent item)
         {
             item = repository.Add(item);
-            var response = Request.CreateResponse<FRCEvent>(HttpStatusCode.Created, item);
-            string uri = Url.Link("DefaultApi", new { id = item.Id });
+            var response = Request.CreateResponse(HttpStatusCode.Created, item);
+            string uri = Url.Link("DefaultApi", new { uuid = item.Uuid });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutFRCEvent(int id, FRCEvent item)
+        public void PutFRCEvent(string uuid, FRCEvent item)
         {
-            item.Id = id;
+            item.Uuid = uuid;
             if (!repository.Update(item))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
         }
 
-        public void DeleteFRCEvent(int id)
+        public void DeleteFRCEvent(string uuid)
         {
-            repository.Remove(id);
+            repository.RemoveByUuid(uuid);
         }
     }
 }

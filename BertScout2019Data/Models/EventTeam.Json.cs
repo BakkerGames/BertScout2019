@@ -23,5 +23,19 @@ namespace BertScout2019Data.Models
         {
             return ToJson().ToString();
         }
+
+        public static EventTeam Parse(string value)
+        {
+            JObject item = JObject.Parse(value);
+            EventTeam result = new EventTeam()
+            {
+                Id = (int)item.GetValue("Id"),
+                Uuid = (string)item.GetValue("Uuid"),
+                Changed = (int)item.GetValue("Changed"),
+                EventKey = (string)item.GetValue("EventKey"),
+                TeamNumber = (int)item.GetValue("TeamNumber"),
+            };
+            return result;
+        }
     }
 }

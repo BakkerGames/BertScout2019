@@ -3,6 +3,7 @@ using BertScout2019Data.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace BertWebApi2019.Models
 {
@@ -48,19 +49,31 @@ namespace BertWebApi2019.Models
             return items.Find(p => p.Id == id);
         }
 
+        public EventTeamMatch GetByUuid(string uuid)
+        {
+            return items.Find(p => p.Uuid == uuid);
+        }
+
         public IEnumerable<EventTeamMatch> GetAll()
         {
             return items;
         }
 
-        public IEnumerable<EventTeamMatch> GetAllByKey(object key)
+        public IEnumerable<EventTeamMatch> GetAllByKey(string key)
         {
-            return items.FindAll(p => p.EventKey == (string)key);
+            // key = "EventKey|TeamNumber"
+            string[] keys = key.Split('|');
+            return items.FindAll(p => p.EventKey == keys[0]
+                                      && p.TeamNumber == int.Parse(keys[1]));
         }
 
-        public EventTeamMatch GetByKey(object key)
+        public EventTeamMatch GetByKey(string key)
         {
-            return items.Find(p => p.EventKey == (string)key);
+            // key = "EventKey|TeamNumber|MatchNumber"
+            string[] keys = key.Split('|');
+            return items.Find(p => p.EventKey == keys[0]
+                                   && p.TeamNumber == int.Parse(keys[1])
+                                   && p.MatchNumber == int.Parse(keys[2]));
         }
 
         public void Remove(int id)
@@ -69,21 +82,28 @@ namespace BertWebApi2019.Models
             items.RemoveAll(p => p.Id == id);
         }
 
+        public void RemoveByUuid(string uuid)
+        {
+            Remove(GetByUuid(uuid).Id.Value);
+        }
+
         public bool Update(EventTeamMatch item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException("item");
             }
-            if (item.Id == null)
+            if (item.Uuid == null)
             {
-                throw new ArgumentNullException("item.Id");
+                throw new ArgumentNullException("item.Uuid");
             }
-            int index = items.FindIndex(p => p.Id == item.Id);
+            int index = items.FindIndex(p => p.Uuid == item.Uuid);
             if (index == -1)
             {
                 return false;
             }
+            // update the id to match the local database
+            item.Id = items.ElementAt(index).Id;
             items.RemoveAt(index);
             int result = _database.SaveEventTeamMatchAsync(item).Result;
             items.Add(item);

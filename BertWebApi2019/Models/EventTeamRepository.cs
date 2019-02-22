@@ -3,6 +3,7 @@ using BertScout2019Data.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace BertWebApi2019.Models
 {
@@ -33,9 +34,13 @@ namespace BertWebApi2019.Models
             {
                 throw new ArgumentNullException("item");
             }
-            // this must finish resolving to get item.Id
-            int result = _database.SaveEventTeamAsync(item).Result;
-            items.Add(item);
+            EventTeam oldItem = items.Find(p => p.Uuid == item.Uuid);
+            if (oldItem == null)
+            {
+                // this must finish resolving to get item.Id
+                int result = _database.SaveEventTeamAsync(item).Result;
+                items.Add(item);
+            }
             return item;
         }
 
@@ -44,20 +49,28 @@ namespace BertWebApi2019.Models
             return items.Find(p => p.Id == id);
         }
 
+        public EventTeam GetByUuid(string uuid)
+        {
+            return items.Find(p => p.Uuid == uuid);
+        }
+
         public IEnumerable<EventTeam> GetAll()
         {
             return items;
         }
 
-        public IEnumerable<EventTeam> GetAllByKey(object key)
+        public IEnumerable<EventTeam> GetAllByKey(string key)
         {
-            return items.FindAll(p => p.EventKey == (string)key);
+            // key = "EventKey"
+            return items.FindAll(p => p.EventKey == key);
         }
 
-        public EventTeam GetByKey(object key)
+        public EventTeam GetByKey(string key)
         {
-            string[] keys = (string[])key;
-            return items.Find(p => p.EventKey == keys[0] && p.TeamNumber == int.Parse(keys[1]));
+            // key = "EventKey|TeamNumber"
+            string[] keys = key.Split('|');
+            return items.Find(p => p.EventKey == keys[0]
+                              && p.TeamNumber == int.Parse(keys[1]));
         }
 
         public void Remove(int id)
@@ -66,21 +79,28 @@ namespace BertWebApi2019.Models
             items.RemoveAll(p => p.Id == id);
         }
 
+        public void RemoveByUuid(string uuid)
+        {
+            Remove(GetByUuid(uuid).Id.Value);
+        }
+
         public bool Update(EventTeam item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException("item");
             }
-            if (item.Id == null)
+            if (item.Uuid == null)
             {
-                throw new ArgumentNullException("item.Id");
+                throw new ArgumentNullException("item.Uuid");
             }
-            int index = items.FindIndex(p => p.Id == item.Id);
+            int index = items.FindIndex(p => p.Uuid == item.Uuid);
             if (index == -1)
             {
                 return false;
             }
+            // update the id to match the local database
+            item.Id = items.ElementAt(index).Id;
             items.RemoveAt(index);
             int result = _database.SaveEventTeamAsync(item).Result;
             items.Add(item);

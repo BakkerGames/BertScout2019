@@ -56,22 +56,29 @@ namespace BertScout2019.Views
                 {
                     uri = $"http://{uri}";
                 }
-                uri += "/";
+                if (!uri.EndsWith("/"))
+                {
+                    uri += "/";
+                }
                 //uri += "/bertscout2019/";
                 App.client.BaseAddress = new Uri(uri);
                 App.client.DefaultRequestHeaders.Accept.Clear();
                 App.client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
-                //frcEvents = GetFRCEventsAsync().Result;
-
                 string result = "";
-                HttpResponseMessage response = App.client.GetAsync("api/FRCEvents/1").Result;
+                HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches/1").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     result = response.Content.ReadAsStringAsync().Result;
+                    EventTeamMatch newETM = EventTeamMatch.Parse(result);
+                    Label_Results.Text = newETM.ToString();
                 }
-                Label_Results.Text = result;
+
+
+                // ------------------------------------------------------------------------
+
+                //frcEvents = GetFRCEventsAsync().Result;
 
                 //// show all frcevents
                 //Console.WriteLine("All FRC Events:");

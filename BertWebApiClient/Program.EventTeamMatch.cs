@@ -11,8 +11,12 @@ namespace BertWebApiClient
     {
         static void ShowEventTeamMatch(EventTeamMatch item)
         {
-            Console.WriteLine($"Id: {item.Id} - EventKey: {item.EventKey}" +
-                $" - Team: {item.TeamNumber} - Match: {item.MatchNumber}");
+            Console.WriteLine(
+                $"Id: {item.Id} - Uuid: {item.Uuid}" +
+                $" - EventKey: {item.EventKey}" +
+                $" - Team: {item.TeamNumber}" +
+                $" - Match: {item.MatchNumber}" +
+                $" - AllianceResult = {item.AllianceResult}");
         }
 
         static async Task<Uri> CreateEventTeamMatchAsync(EventTeamMatch item)
@@ -36,7 +40,7 @@ namespace BertWebApiClient
             return item;
         }
 
-        static async Task<List<EventTeamMatch>> GetEventTeamMatchsAsync()
+        static async Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
         {
             List<EventTeamMatch> items = null;
             HttpResponseMessage response = await client.GetAsync("api/EventTeamMatches");
@@ -50,7 +54,7 @@ namespace BertWebApiClient
         static async Task<EventTeamMatch> UpdateEventTeamMatchAsync(EventTeamMatch item)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/EventTeamMatchs/{item.Id}", item);
+                $"api/EventTeamMatchs?uuid={item.Uuid}", item);
             response.EnsureSuccessStatusCode();
 
             // Deserialize the updated EventTeamMatch from the response body.

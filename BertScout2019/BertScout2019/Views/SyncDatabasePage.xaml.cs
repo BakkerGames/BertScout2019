@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,7 +22,7 @@ namespace BertScout2019.Views
 
         private void Entry_IpAddress_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            // nothing to do here
         }
 
         private void Button_Sync_Clicked(object sender, EventArgs e)
@@ -43,10 +44,28 @@ namespace BertScout2019.Views
             return items;
         }
 
+        static Uri CreateFRCEventAsync(FRCEvent item)
+        {
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
+            HttpResponseMessage response = App.client.PostAsync("api/FRCEvents", content).Result;
+            response.EnsureSuccessStatusCode();
+            // return URI of the created resource.
+            return response.Headers.Location;
+        }
+
+        static Uri UpdateFRCEventAsync(FRCEvent item)
+        {
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
+            HttpResponseMessage response = App.client.PutAsync("api/FRCEvents", content).Result;
+            response.EnsureSuccessStatusCode();
+            // return URI of the created resource.
+            return response.Headers.Location;
+        }
+
         private void RunAsync()
         {
             //List<EventTeamMatch> items;
-            List<FRCEvent> frcEvents;
+            //List<FRCEvent> frcEvents;
 
             try
             {
@@ -66,15 +85,29 @@ namespace BertScout2019.Views
                 App.client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
-                string result = "";
-                HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches/1").Result;
-                if (response.IsSuccessStatusCode)
+                // Create a new FRCEvent
+                FRCEvent item = new FRCEvent
                 {
-                    result = response.Content.ReadAsStringAsync().Result;
-                    EventTeamMatch newETM = EventTeamMatch.Parse(result);
-                    Label_Results.Text = newETM.ToString();
-                }
+                    Uuid = Guid.NewGuid().ToString(),
+                    Name = "Gizmo Event4202",
+                    Location = "Anytown, ME",
+                    EventKey = "GIZMOS4202",
+                    Changed = 1,
+                };
+                Uri url = CreateFRCEventAsync(item);
+                Label_Results.Text = $"Created at {url.PathAndQuery}";
 
+                // ------------------------------------------------------------------------
+
+                //// ### get frcevent works ###
+                //string result = "";
+                //HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches?uuid=21d82936-b562-41ff-9020-068bdf9222a6").Result;
+                //if (response.IsSuccessStatusCode)
+                //{
+                //    result = response.Content.ReadAsStringAsync().Result;
+                //    EventTeamMatch newETM = EventTeamMatch.Parse(result);
+                //    Label_Results.Text = newETM.ToString();
+                //}
 
                 // ------------------------------------------------------------------------
 

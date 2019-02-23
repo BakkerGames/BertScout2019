@@ -27,20 +27,52 @@ namespace BertScout2019Data.Data
             }
         }
 
-        public void DropTables()
+        public string DropTables()
         {
-            _database.DropTableAsync<FRCEvent>().Wait();
-            _database.DropTableAsync<Team>().Wait();
-            _database.DropTableAsync<EventTeam>().Wait();
-            _database.DropTableAsync<EventTeamMatch>().Wait();
+            try
+            {
+                _database.DropTableAsync<FRCEvent>().Wait();
+                _database.DropTableAsync<Team>().Wait();
+                _database.DropTableAsync<EventTeam>().Wait();
+                _database.DropTableAsync<EventTeamMatch>().Wait();
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
-        public void CreateTables()
+        public string CreateTables()
         {
-            _database.CreateTableAsync<FRCEvent>().Wait();
-            _database.CreateTableAsync<Team>().Wait();
-            _database.CreateTableAsync<EventTeam>().Wait();
-            _database.CreateTableAsync<EventTeamMatch>().Wait();
+            try
+            {
+                _database.CreateTableAsync<FRCEvent>().Wait();
+                _database.CreateTableAsync<Team>().Wait();
+                _database.CreateTableAsync<EventTeam>().Wait();
+                _database.CreateTableAsync<EventTeamMatch>().Wait();
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string ClearTables()
+        {
+            try
+            {
+                _database.DeleteAllAsync<FRCEvent>().Wait();
+                _database.DeleteAllAsync<Team>().Wait();
+                _database.DeleteAllAsync<EventTeam>().Wait();
+                _database.DeleteAllAsync<EventTeamMatch>().Wait();
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         // FRCEvent

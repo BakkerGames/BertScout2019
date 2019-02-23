@@ -16,7 +16,7 @@ namespace BertScout2019
         static public Color SelectedButtonColor = Color.FromHex(BertColor);
         static public Color UnselectedButtonColor = Color.LightGray;
         static public double dbVersion = 1.3;
-        static public string OptionPassword = "bertdata";
+        static public string OptionPassword = "letmein";
 
         // app properties for easy page communication
         static public string currFRCEventKey { get; set; }

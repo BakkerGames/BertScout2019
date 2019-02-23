@@ -66,8 +66,8 @@ namespace BertScout2019.Views
 
         private void RunAsync()
         {
-            //List<EventTeamMatch> items;
-            //List<FRCEvent> frcEvents;
+            List<EventTeamMatch> matches;
+
             Label_Results.Text = "";
 
             try
@@ -103,29 +103,32 @@ namespace BertScout2019.Views
 
                 // ### get frcevent works ###
                 string result = "";
-                HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches?uuid=21d82936-b562-41ff-9020-068bdf9222a6").Result;
+                HttpResponseMessage response = App.client.GetAsync("api/FRCEvents?uuid=63b43f1e-84b9-45d1-8160-dcd1b18d501c").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     result = response.Content.ReadAsStringAsync().Result;
-                    EventTeamMatch newETM = EventTeamMatch.Parse(result);
-                    Label_Results.Text = newETM.ToString();
+                    FRCEvent frcEvent = FRCEvent.Parse(result);
+                    Label_Results.Text += "\n\n";
+                    Label_Results.Text += frcEvent.ToString();
                 }
 
                 // Create a new FRCEvent
                 FRCEvent item = new FRCEvent
                 {
                     Uuid = Guid.NewGuid().ToString(),
-                    Name = "Gizmo Event4202",
+                    Name = "Gizmo Event4203",
                     Location = "Anytown, ME",
-                    EventKey = "GIZMOS4202",
+                    EventKey = "GIZMOS4203",
                     Changed = 1,
                 };
                 Uri url = CreateFRCEventAsync(item);
-                Label_Results.Text += $"\nCreated at {url.PathAndQuery}";
+                Label_Results.Text += $"\n\nCreated at {url.PathAndQuery}";
+                Label_Results.Text += $"\n{item.Uuid}";
 
                 item.Name += "-A";
                 item.Changed++;
                 UpdateFRCEventAsync(item);
+                Label_Results.Text += $"\n{item.Name}";
 
                 // ------------------------------------------------------------------------
 

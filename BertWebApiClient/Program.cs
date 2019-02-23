@@ -9,7 +9,7 @@ namespace BertWebApiClient
 {
     public partial class Program
     {
-        private static readonly string baseWebAddress = "http://localhost:64190/";
+        private static readonly string baseWebAddress = "http://localhost/bertscout2019/";
 
         static HttpClient client = new HttpClient();
 

@@ -13,6 +13,8 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SyncDatabasePage : ContentPage
     {
+        private static bool syncFlag = false;
+
         public SyncDatabasePage()
         {
             InitializeComponent();
@@ -66,24 +68,48 @@ namespace BertScout2019.Views
         {
             //List<EventTeamMatch> items;
             //List<FRCEvent> frcEvents;
+            Label_Results.Text = "";
 
             try
             {
-                // Update port # in the following line.
-                string uri = App.syncIpAddress;
-                if (!uri.StartsWith("http"))
+                if (!syncFlag)
                 {
-                    uri = $"http://{uri}";
+                    syncFlag = true;
+                    Entry_IpAddress.IsEnabled = false;
+                    // Update port # in the following line.
+                    string uri = App.syncIpAddress;
+                    if (!uri.EndsWith("/"))
+                    {
+                        uri += "/";
+                    }
+                    if (!uri.Contains(":"))
+                    {
+                        uri += "bertscout2019/";
+                    }
+                    if (!uri.StartsWith("http"))
+                    {
+                        uri = $"http://{uri}";
+                    }
+                    if (!uri.EndsWith("/"))
+                    {
+                        uri += "/";
+                    }
+                    Label_Results.Text += uri;
+                    App.client.BaseAddress = new Uri(uri);
+                    App.client.DefaultRequestHeaders.Accept.Clear();
+                    App.client.DefaultRequestHeaders.Accept.Add(
+                        new MediaTypeWithQualityHeaderValue("application/json"));
                 }
-                if (!uri.EndsWith("/"))
+
+                // ### get frcevent works ###
+                string result = "";
+                HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches?uuid=21d82936-b562-41ff-9020-068bdf9222a6").Result;
+                if (response.IsSuccessStatusCode)
                 {
-                    uri += "/";
+                    result = response.Content.ReadAsStringAsync().Result;
+                    EventTeamMatch newETM = EventTeamMatch.Parse(result);
+                    Label_Results.Text = newETM.ToString();
                 }
-                //uri += "/bertscout2019/";
-                App.client.BaseAddress = new Uri(uri);
-                App.client.DefaultRequestHeaders.Accept.Clear();
-                App.client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // Create a new FRCEvent
                 FRCEvent item = new FRCEvent
@@ -95,7 +121,7 @@ namespace BertScout2019.Views
                     Changed = 1,
                 };
                 Uri url = CreateFRCEventAsync(item);
-                Label_Results.Text = $"Created at {url.PathAndQuery}";
+                Label_Results.Text += $"\nCreated at {url.PathAndQuery}";
 
                 item.Name += "-A";
                 item.Changed++;

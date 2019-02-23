@@ -12,11 +12,15 @@ namespace TeamStore.Controllers
     {
         static readonly IRepository<Team> repository = new TeamRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<Team> GetAllTeams()
         {
             return repository.GetAll();
         }
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public Team GetTeam(string uuid)
         {
             Team item = repository.GetByUuid(uuid);
@@ -32,6 +36,8 @@ namespace TeamStore.Controllers
             return repository.GetByKey(key.ToString());
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostTeam(Team item)
         {
             item = repository.Add(item);
@@ -41,6 +47,8 @@ namespace TeamStore.Controllers
             return response;
         }
 
+        [AcceptVerbs("PUT")]
+        [HttpPut]
         public void PutTeam(string uuid, Team item)
         {
             item.Uuid = uuid;
@@ -50,6 +58,8 @@ namespace TeamStore.Controllers
             }
         }
 
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
         public void DeleteTeam(string uuid)
         {
             repository.RemoveByUuid(uuid);

@@ -32,10 +32,10 @@ namespace BertWebApi2019.Controllers
         {
             try
             {
+                DateTime startTime = DateTime.UtcNow;
+
                 _database.DropTables();
                 _database.CreateTables();
-
-                DateTime startTime = DateTime.UtcNow;
 
                 // fill the database with xml data
 
@@ -85,7 +85,8 @@ namespace BertWebApi2019.Controllers
 
                 return "Reset database complete - " +
                     $"\nStartTime: {startTime} - EndTime: {endTime}" +
-                    $"\nFRCEVents: {frcEventCount} - Teams: {teamCount} - EventTeams: {eventTeamCount}";
+                    $"\nFRCEVents: {frcEventCount} - Teams: {teamCount} - EventTeams: {eventTeamCount}" +
+                    "";
             }
             catch (Exception ex)
             {

@@ -12,11 +12,15 @@ namespace EventTeamStore.Controllers
     {
         static readonly IRepository<EventTeam> repository = new EventTeamRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<EventTeam> GetAllEventTeams()
         {
             return repository.GetAll();
         }
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public EventTeam GetEventTeam(string uuid)
         {
             EventTeam item = repository.GetByUuid(uuid);
@@ -32,6 +36,8 @@ namespace EventTeamStore.Controllers
             return repository.GetByKey(key);
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostEventTeam(EventTeam item)
         {
             item = repository.Add(item);
@@ -41,6 +47,8 @@ namespace EventTeamStore.Controllers
             return response;
         }
 
+        [AcceptVerbs("PUT")]
+        [HttpPut]
         public void PutEventTeam(string uuid, EventTeam item)
         {
             item.Uuid = uuid;
@@ -50,6 +58,8 @@ namespace EventTeamStore.Controllers
             }
         }
 
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
         public void DeleteEventTeam(string uuid)
         {
             repository.RemoveByUuid(uuid);

@@ -12,11 +12,15 @@ namespace EventTeamMatchestore.Controllers
     {
         static readonly IRepository<EventTeamMatch> repository = new EventTeamMatchRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<EventTeamMatch> GetAllEventTeamMatches()
         {
             return repository.GetAll();
         }
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public EventTeamMatch GetEventTeamMatch(string uuid)
         {
             EventTeamMatch item = repository.GetByUuid(uuid);
@@ -32,6 +36,8 @@ namespace EventTeamMatchestore.Controllers
             return repository.GetByKey(key.ToString());
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostEventTeamMatch(EventTeamMatch item)
         {
             item = repository.Add(item);
@@ -41,6 +47,8 @@ namespace EventTeamMatchestore.Controllers
             return response;
         }
 
+        [AcceptVerbs("PUT")]
+        [HttpPut]
         public void PutEventTeamMatch(string uuid, EventTeamMatch item)
         {
             item.Uuid = uuid;
@@ -50,6 +58,8 @@ namespace EventTeamMatchestore.Controllers
             }
         }
 
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
         public void DeleteEventTeamMatch(string uuid)
         {
             repository.RemoveByUuid(uuid);

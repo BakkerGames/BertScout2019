@@ -63,10 +63,10 @@ namespace BertScout2019Data.Data
         {
             try
             {
-                _database.DeleteAllAsync<FRCEvent>().Wait();
-                _database.DeleteAllAsync<Team>().Wait();
-                _database.DeleteAllAsync<EventTeam>().Wait();
-                _database.DeleteAllAsync<EventTeamMatch>().Wait();
+                _database.ExecuteAsync("TRUNCATE TABLE [FRCEvent];");
+                _database.ExecuteAsync("TRUNCATE TABLE [Team];");
+                _database.ExecuteAsync("TRUNCATE TABLE [EventTeam];");
+                _database.ExecuteAsync("TRUNCATE TABLE [EventTeamMatch];");
                 return "OK";
             }
             catch (Exception ex)

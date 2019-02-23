@@ -12,11 +12,15 @@ namespace FRCEventStore.Controllers
     {
         static readonly IRepository<FRCEvent> repository = new FRCEventRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<FRCEvent> GetAllFRCEvents()
         {
             return repository.GetAll();
         }
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public FRCEvent GetFRCEvent(string uuid)
         {
             FRCEvent item = repository.GetByUuid(uuid);
@@ -32,6 +36,8 @@ namespace FRCEventStore.Controllers
             return repository.GetByKey(key);
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostFRCEvent(FRCEvent item)
         {
             item = repository.Add(item);
@@ -41,6 +47,8 @@ namespace FRCEventStore.Controllers
             return response;
         }
 
+        [AcceptVerbs("PUT")]
+        [HttpPut]
         public void PutFRCEvent(string uuid, FRCEvent item)
         {
             item.Uuid = uuid;
@@ -50,6 +58,8 @@ namespace FRCEventStore.Controllers
             }
         }
 
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
         public void DeleteFRCEvent(string uuid)
         {
             repository.RemoveByUuid(uuid);

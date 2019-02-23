@@ -20,6 +20,9 @@
         <div>
             <a href="./api/EventTeamMatches">Matches for each Team for each Event</a>
         </div>
+        <div>
+            <a href="./api/ResetDatabase">Reset Database</a>
+        </div>
     </form>
 </body>
 </html>

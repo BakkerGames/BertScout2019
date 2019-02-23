@@ -10,31 +10,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/bertscout2019.db3">
-      <publishTime>02/21/2019 21:22:03</publishTime>
+      <publishTime>02/23/2019 13:26:29</publishTime>
     </File>
     <File Include="App_Data/bertscout2019.db3-shm">
-      <publishTime>02/21/2019 22:13:32</publishTime>
+      <publishTime>02/23/2019 13:25:20</publishTime>
     </File>
     <File Include="App_Data/bertscout2019.db3-wal">
-      <publishTime>02/21/2019 22:16:11</publishTime>
+      <publishTime>02/23/2019 13:26:40</publishTime>
     </File>
     <File Include="bin/BertScout2019Data.dll">
-      <publishTime>02/22/2019 19:37:38</publishTime>
+      <publishTime>02/23/2019 13:32:26</publishTime>
     </File>
     <File Include="bin/BertScout2019Data.dll.config">
       <publishTime>02/19/2019 18:49:12</publishTime>
     </File>
     <File Include="bin/BertScout2019Data.pdb">
-      <publishTime>02/22/2019 19:37:38</publishTime>
+      <publishTime>02/23/2019 13:32:26</publishTime>
+    </File>
+    <File Include="bin/BertScout2019XmlData.dll">
+      <publishTime>02/23/2019 13:32:26</publishTime>
+    </File>
+    <File Include="bin/BertScout2019XmlData.pdb">
+      <publishTime>02/23/2019 13:32:26</publishTime>
     </File>
     <File Include="bin/BertWebApi2019.dll">
-      <publishTime>02/22/2019 19:37:39</publishTime>
+      <publishTime>02/23/2019 13:32:27</publishTime>
     </File>
     <File Include="bin/BertWebApi2019.pdb">
-      <publishTime>02/22/2019 19:37:39</publishTime>
+      <publishTime>02/23/2019 13:32:27</publishTime>
     </File>
     <File Include="bin/Common.JSON.dll">
-      <publishTime>02/22/2019 19:37:37</publishTime>
+      <publishTime>02/23/2019 13:32:26</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -223,13 +229,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/18/2018 02:20:22</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>02/17/2019 10:40:33</publishTime>
+      <publishTime>02/23/2019 12:13:55</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>02/16/2019 17:02:43</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/22/2019 19:41:45</publishTime>
+      <publishTime>02/23/2019 13:32:43</publishTime>
     </File>
     <File Include="x64/e_sqlite3.dll">
       <publishTime>12/18/2018 02:20:32</publishTime>

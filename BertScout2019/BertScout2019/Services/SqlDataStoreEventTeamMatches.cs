@@ -7,45 +7,72 @@ namespace BertScout2019.Services
 {
     public class SqlDataStoreEventTeamMatches : IDataStore<EventTeamMatch>
     {
-        List<EventTeamMatch> items;
+        private List<EventTeamMatch> items;
 
         public SqlDataStoreEventTeamMatches()
         {
-            // must complete, so don't async/await
-            items = App.Database.GetEventTeamMatchesAsync().Result;
+        }
+
+        private void FillList()
+        {
+            if (items == null)
+            {
+                // must complete, so don't async/await
+                items = App.Database.GetEventTeamMatchesAsync().Result;
+            }
         }
 
         public async Task<bool> AddItemAsync(EventTeamMatch item)
         {
+            FillList();
             items.Add(item);
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(int id)
         {
+            FillList();
             var oldItem = items.Where((EventTeamMatch arg) => arg.Id == id).FirstOrDefault();
+            items.Remove(oldItem);
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DeleteItemAsync(string uuid)
+        {
+            FillList();
+            var oldItem = items.Where((EventTeamMatch arg) => arg.Uuid == uuid).FirstOrDefault();
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
 
         public async Task<EventTeamMatch> GetItemAsync(int id)
         {
+            FillList();
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public Task<EventTeamMatch> GetItemByTagAsync(string tag)
+        public async Task<EventTeamMatch> GetItemAsync(string uuid)
         {
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.Uuid == uuid));
+        }
+
+        public Task<EventTeamMatch> GetItemByKeyAsync(string key)
+        {
+            //FillList();
             throw new System.NotImplementedException();
         }
 
         public async Task<IEnumerable<EventTeamMatch>> GetItemsAsync(bool forceRefresh = false)
         {
+            FillList();
             return await Task.FromResult(items);
         }
 
         public async Task<bool> UpdateItemAsync(EventTeamMatch item)
         {
-            var oldItem = items.Where((EventTeamMatch arg) => arg.Id == item.Id).FirstOrDefault();
+            FillList();
+            var oldItem = items.Where((EventTeamMatch arg) => arg.Uuid == item.Uuid).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
             return await Task.FromResult(true);

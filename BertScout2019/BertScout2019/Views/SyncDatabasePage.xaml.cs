@@ -1,4 +1,5 @@
-﻿using BertScout2019Data.Models;
+﻿using BertScout2019.Services;
+using BertScout2019Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -13,6 +14,11 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SyncDatabasePage : ContentPage
     {
+        public IDataStore<FRCEvent> WebDataFRCEvents => new WebDataStoreFRCEvents();
+        public IDataStore<Team> WebDataTeams => new WebDataStoreTeams();
+        public IDataStore<EventTeam> WebDataEventTeams => new WebDataStoreEventTeams();
+        public IDataStore<EventTeamMatch> WebDataEventTeamMatches => new WebDataStoreEventTeamMatches();
+
         private static bool syncFlag = false;
 
         public SyncDatabasePage()
@@ -35,38 +41,38 @@ namespace BertScout2019.Views
             RunAsync();
         }
 
-        static async Task<List<FRCEvent>> GetFRCEventsAsync()
-        {
-            List<FRCEvent> items = null;
-            HttpResponseMessage response = await App.client.GetAsync("api/FRCEvents");
-            if (response.IsSuccessStatusCode)
-            {
-                string tempResult = await response.Content.ReadAsStringAsync();
-            }
-            return items;
-        }
+        //static async Task<List<FRCEvent>> GetFRCEventsAsync()
+        //{
+        //    List<FRCEvent> items = null;
+        //    HttpResponseMessage response = await App.client.GetAsync("api/FRCEvents");
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        string tempResult = await response.Content.ReadAsStringAsync();
+        //    }
+        //    return items;
+        //}
 
-        static Uri CreateFRCEventAsync(FRCEvent item)
-        {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PostAsync("api/FRCEvents", content).Result;
-            response.EnsureSuccessStatusCode();
-            // return URI of the created resource.
-            return response.Headers.Location;
-        }
+        //static Uri CreateFRCEventAsync(FRCEvent item)
+        //{
+        //    StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
+        //    HttpResponseMessage response = App.client.PostAsync("api/FRCEvents", content).Result;
+        //    response.EnsureSuccessStatusCode();
+        //    // return URI of the created resource.
+        //    return response.Headers.Location;
+        //}
 
-        static Uri UpdateFRCEventAsync(FRCEvent item)
-        {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PutAsync($"api/FRCEvents?uuid={item.Uuid}", content).Result;
-            response.EnsureSuccessStatusCode();
-            // return URI of the created resource.
-            return response.Headers.Location;
-        }
+        //static Uri UpdateFRCEventAsync(FRCEvent item)
+        //{
+        //    StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
+        //    HttpResponseMessage response = App.client.PutAsync($"api/FRCEvents?uuid={item.Uuid}", content).Result;
+        //    response.EnsureSuccessStatusCode();
+        //    // return URI of the created resource.
+        //    return response.Headers.Location;
+        //}
 
         private void RunAsync()
         {
-            List<EventTeamMatch> matches;
+            //List<EventTeamMatch> matches;
 
             Label_Results.Text = "";
 
@@ -102,32 +108,33 @@ namespace BertScout2019.Views
                 }
 
                 // ### get frcevent works ###
-                string result = "";
-                HttpResponseMessage response = App.client.GetAsync("api/FRCEvents?uuid=63b43f1e-84b9-45d1-8160-dcd1b18d501c").Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    result = response.Content.ReadAsStringAsync().Result;
-                    FRCEvent frcEvent = FRCEvent.Parse(result);
-                    Label_Results.Text += "\n\n";
-                    Label_Results.Text += frcEvent.ToString();
-                }
+                //string result = "";
+                //HttpResponseMessage response = App.client.GetAsync("api/FRCEvents?uuid=63b43f1e-84b9-45d1-8160-dcd1b18d501c").Result;
+                //if (response.IsSuccessStatusCode)
+                //{
+                //    result = response.Content.ReadAsStringAsync().Result;
+                //    FRCEvent frcEvent = FRCEvent.Parse(result);
+                //    Label_Results.Text += "\n\n";
+                //    Label_Results.Text += frcEvent.ToString();
+                //}
 
                 // Create a new FRCEvent
                 FRCEvent item = new FRCEvent
                 {
                     Uuid = Guid.NewGuid().ToString(),
-                    Name = "Gizmo Event4203",
+                    Name = "Gizmo Event4204",
                     Location = "Anytown, ME",
-                    EventKey = "GIZMOS4203",
+                    EventKey = "GIZMOS4204",
                     Changed = 1,
                 };
-                Uri url = CreateFRCEventAsync(item);
-                Label_Results.Text += $"\n\nCreated at {url.PathAndQuery}";
-                Label_Results.Text += $"\n{item.Uuid}";
+                WebDataFRCEvents.AddItemAsync(item);
+                //Uri url = CreateFRCEventAsync(item);
+                Label_Results.Text += $"\n\nCreated: {item.Uuid}";
 
                 item.Name += "-A";
                 item.Changed++;
-                UpdateFRCEventAsync(item);
+                //UpdateFRCEventAsync(item);
+                WebDataFRCEvents.UpdateItemAsync(item);
                 Label_Results.Text += $"\n{item.Name}";
 
                 // ------------------------------------------------------------------------

@@ -7,50 +7,73 @@ namespace BertScout2019.Services
 {
     public class SqlDataStoreFRCEvents : IDataStore<FRCEvent>
     {
-        List<FRCEvent> items;
+        private List<FRCEvent> items;
 
         public SqlDataStoreFRCEvents()
         {
-            // must complete, so don't async/await
-            items = App.Database.GetEventsAsync().Result;
+        }
+
+        public void FillList()
+        {
+            if (items == null)
+            {
+                // must complete, so don't async/await
+                items = App.Database.GetEventsAsync().Result;
+            }
         }
 
         public async Task<bool> AddItemAsync(FRCEvent item)
         {
+            FillList();
             items.Add(item);
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(int id)
         {
+            FillList();
             var oldItem = items.Where((FRCEvent arg) => arg.Id == id).FirstOrDefault();
+            items.Remove(oldItem);
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DeleteItemAsync(string uuid)
+        {
+            FillList();
+            var oldItem = items.Where((FRCEvent arg) => arg.Uuid == uuid).FirstOrDefault();
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
 
         public async Task<FRCEvent> GetItemAsync(int id)
         {
+            FillList();
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<FRCEvent> GetItemAsync(string eventKey)
+        public async Task<FRCEvent> GetItemAsync(string uuid)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == eventKey));
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.Uuid == uuid));
         }
 
-        public Task<FRCEvent> GetItemByTagAsync(string tag)
+        public async Task<FRCEvent> GetItemByKeyAsync(string key)
         {
-            throw new System.NotImplementedException();
+            // key = EventKey
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == key));
         }
 
         public async Task<IEnumerable<FRCEvent>> GetItemsAsync(bool forceRefresh = false)
         {
+            FillList();
             return await Task.FromResult(items);
         }
 
         public async Task<bool> UpdateItemAsync(FRCEvent item)
         {
-            var oldItem = items.Where((FRCEvent arg) => arg.Id == item.Id).FirstOrDefault();
+            FillList();
+            var oldItem = items.Where((FRCEvent arg) => arg.Uuid == item.Uuid).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
             return await Task.FromResult(true);

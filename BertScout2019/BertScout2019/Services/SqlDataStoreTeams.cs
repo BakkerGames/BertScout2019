@@ -7,45 +7,73 @@ namespace BertScout2019.Services
 {
     public class SqlDataStoreTeams : IDataStore<Team>
     {
-        List<Team> items;
+        private List<Team> items;
 
         public SqlDataStoreTeams()
         {
-            // must complete, so don't async/await
-            items = App.Database.GetTeamsAsync().Result;
+        }
+
+        private void FillList()
+        {
+            if (items == null)
+            {
+                // must complete, so don't async/await
+                items = App.Database.GetTeamsAsync().Result;
+            }
         }
 
         public async Task<bool> AddItemAsync(Team item)
         {
+            FillList();
             items.Add(item);
             return await Task.FromResult(true);
         }
 
         public async Task<bool> DeleteItemAsync(int id)
         {
+            FillList();
             var oldItem = items.Where((Team arg) => arg.Id == id).FirstOrDefault();
+            items.Remove(oldItem);
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DeleteItemAsync(string uuid)
+        {
+            FillList();
+            var oldItem = items.Where((Team arg) => arg.Uuid == uuid).FirstOrDefault();
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
 
         public async Task<Team> GetItemAsync(int id)
         {
+            FillList();
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<Team> GetItemByTagAsync(string tag)
+        public async Task<Team> GetItemAsync(string uuid)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.TeamNumber.ToString() == tag));
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.Uuid == uuid));
+        }
+
+        public async Task<Team> GetItemByKeyAsync(string key)
+        {
+            // key = TeamNumber
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.TeamNumber.ToString() == key));
         }
 
         public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
         {
+            FillList();
             return await Task.FromResult(items);
         }
 
         public async Task<bool> UpdateItemAsync(Team item)
         {
-            var oldItem = items.Where((Team arg) => arg.Id == item.Id).FirstOrDefault();
+            FillList();
+            var oldItem = items.Where((Team arg) => arg.Uuid == item.Uuid).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
             return await Task.FromResult(true);

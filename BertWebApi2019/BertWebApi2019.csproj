@@ -128,8 +128,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\bertscout2019.db3" />
-    <Content Include="App_Data\bertscout2019.db3-shm" />
-    <Content Include="App_Data\bertscout2019.db3-wal" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">

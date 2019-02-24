@@ -96,7 +96,7 @@ namespace BertScout2019.Views
                         updatedCount++;
                     }
                     // save it so .Changed is updated
-                    App.database.SaveEventTeamMatchAsync(item);
+                    SqlDataEventTeamMatches.UpdateItemAsync(item);
                 }
             }
 

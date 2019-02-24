@@ -51,10 +51,15 @@ namespace EventTeamStore.Controllers
         [HttpPut]
         public void PutEventTeam(string uuid, EventTeam item)
         {
-            item.Uuid = uuid;
-            if (!repository.Update(item))
+            EventTeam oldItem = repository.GetByUuid(uuid);
+            // only update if new .Changed is greater
+            if (oldItem != null && oldItem.Changed < item.Changed)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                item.Uuid = uuid;
+                if (!repository.Update(item))
+                {
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
+                }
             }
         }
 

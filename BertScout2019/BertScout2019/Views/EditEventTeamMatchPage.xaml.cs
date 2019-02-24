@@ -14,6 +14,11 @@ namespace BertScout2019.Views
         {
             InitializeComponent();
 
+            if (item.Changed % 2 == 0) // change from even to odd, odd = must upload
+            {
+                item.Changed++;
+            }
+
             BindingContext = viewModel = new EditEventTeamMatchViewModel(item);
 
             SetButtons();

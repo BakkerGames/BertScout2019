@@ -89,7 +89,7 @@ namespace BertScout2019.Views
                 EventKey = App.currFRCEventKey,
                 TeamNumber = newTeamNumber,
             };
-            newEventTeam.Changed = 1;
+            newEventTeam.Changed = 1; // odd = must upload
             DataStoreEventTeams.AddItemAsync(newEventTeam);
 
             bool found = false;

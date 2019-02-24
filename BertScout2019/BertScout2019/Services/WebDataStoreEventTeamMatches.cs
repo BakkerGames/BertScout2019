@@ -13,6 +13,18 @@ namespace BertScout2019.Services
         private readonly string apiPath = "api/EventTeamMatches";
         private readonly string mediaType = "application/json";
 
+        private string _eventKey = null;
+
+        public WebDataStoreEventTeamMatches()
+        {
+            _eventKey = null;
+        }
+
+        public WebDataStoreEventTeamMatches(string eventKey)
+        {
+            _eventKey = eventKey;
+        }
+
         public async Task<bool> AddItemAsync(EventTeamMatch item)
         {
             StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
@@ -56,7 +68,11 @@ namespace BertScout2019.Services
                 JArray tempJArray = JArray.Parse(tempResult);
                 foreach (JObject item in tempJArray)
                 {
-                    items.Add(EventTeamMatch.Parse(item.ToString()));
+                    EventTeamMatch matchItem = EventTeamMatch.Parse(item.ToString());
+                    if (_eventKey == null || matchItem.EventKey == _eventKey)
+                    {
+                        items.Add(matchItem);
+                    }
                 }
             }
             return items;

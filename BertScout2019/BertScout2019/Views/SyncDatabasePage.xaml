@@ -22,14 +22,25 @@
                     IsPassword="False"
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
-                    TextChanged="Entry_IpAddress_TextChanged"
                     />
             </StackLayout>
             <StackLayout>
                 <Button
-                    x:Name="Button_Sync"
-                    Text="Sync"
-                    Clicked="Button_Sync_Clicked"
+                    x:Name="Button_Upload"
+                    Text="Upload Data"
+                    Clicked="Button_Upload_Clicked"
+                    BackgroundColor="#B19CD9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Margin="20"
+                    WidthRequest="300"
+                    IsEnabled="True"
+                    />
+                <Button
+                    x:Name="Button_Download"
+                    Text="Download Data"
+                    Clicked="Button_Download_Clicked"
                     BackgroundColor="#B19CD9"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"

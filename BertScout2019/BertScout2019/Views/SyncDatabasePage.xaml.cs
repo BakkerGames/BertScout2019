@@ -1,5 +1,6 @@
 ﻿using BertScout2019.Services;
 using BertScout2019Data.Models;
+using Common.JSON;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -14,220 +15,149 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SyncDatabasePage : ContentPage
     {
-        public IDataStore<FRCEvent> WebDataFRCEvents => new WebDataStoreFRCEvents();
-        public IDataStore<Team> WebDataTeams => new WebDataStoreTeams();
-        public IDataStore<EventTeam> WebDataEventTeams => new WebDataStoreEventTeams();
-        public IDataStore<EventTeamMatch> WebDataEventTeamMatches => new WebDataStoreEventTeamMatches();
+        public IDataStore<EventTeamMatch> SqlDataEventTeamMatches;
+        public IDataStore<EventTeamMatch> WebDataEventTeamMatches;
 
-        private static bool syncFlag = false;
+        private static bool _initialSetup = false;
+        private static bool _isBusy = false;
 
         public SyncDatabasePage()
         {
             InitializeComponent();
             Title = "Sync local data with website";
             Entry_IpAddress.Text = App.syncIpAddress;
+            SqlDataEventTeamMatches = new SqlDataStoreEventTeamMatches(App.currFRCEventKey);
+            WebDataEventTeamMatches = new WebDataStoreEventTeamMatches();
         }
 
-        private void Entry_IpAddress_TextChanged(object sender, TextChangedEventArgs e)
+        private void PrepareSync()
         {
-            // nothing to do here
-        }
-
-        private void Button_Sync_Clicked(object sender, EventArgs e)
-        {
-            // save ip address
-            App.syncIpAddress = Entry_IpAddress.Text;
-            // sync to database
-            RunAsync();
-        }
-
-        //static async Task<List<FRCEvent>> GetFRCEventsAsync()
-        //{
-        //    List<FRCEvent> items = null;
-        //    HttpResponseMessage response = await App.client.GetAsync("api/FRCEvents");
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        string tempResult = await response.Content.ReadAsStringAsync();
-        //    }
-        //    return items;
-        //}
-
-        //static Uri CreateFRCEventAsync(FRCEvent item)
-        //{
-        //    StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-        //    HttpResponseMessage response = App.client.PostAsync("api/FRCEvents", content).Result;
-        //    response.EnsureSuccessStatusCode();
-        //    // return URI of the created resource.
-        //    return response.Headers.Location;
-        //}
-
-        //static Uri UpdateFRCEventAsync(FRCEvent item)
-        //{
-        //    StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-        //    HttpResponseMessage response = App.client.PutAsync($"api/FRCEvents?uuid={item.Uuid}", content).Result;
-        //    response.EnsureSuccessStatusCode();
-        //    // return URI of the created resource.
-        //    return response.Headers.Location;
-        //}
-
-        private void RunAsync()
-        {
-            //List<EventTeamMatch> matches;
-
-            Label_Results.Text = "";
-
-            try
+            if (!_initialSetup)
             {
-                if (!syncFlag)
+                _initialSetup = true;
+                // save ip address
+                App.syncIpAddress = Entry_IpAddress.Text;
+                Entry_IpAddress.IsEnabled = false;
+                // Update port # in the following line.
+                string uri = App.syncIpAddress;
+                if (!uri.EndsWith("/"))
                 {
-                    syncFlag = true;
-                    Entry_IpAddress.IsEnabled = false;
-                    // Update port # in the following line.
-                    string uri = App.syncIpAddress;
-                    if (!uri.EndsWith("/"))
-                    {
-                        uri += "/";
-                    }
-                    if (!uri.Contains(":"))
-                    {
-                        uri += "bertscout2019/";
-                    }
-                    if (!uri.StartsWith("http"))
-                    {
-                        uri = $"http://{uri}";
-                    }
-                    if (!uri.EndsWith("/"))
-                    {
-                        uri += "/";
-                    }
-                    Label_Results.Text += uri;
-                    App.client.BaseAddress = new Uri(uri);
-                    App.client.DefaultRequestHeaders.Accept.Clear();
-                    App.client.DefaultRequestHeaders.Accept.Add(
-                        new MediaTypeWithQualityHeaderValue("application/json"));
+                    uri += "/";
                 }
-
-                // ### get frcevent works ###
-                //string result = "";
-                //HttpResponseMessage response = App.client.GetAsync("api/FRCEvents?uuid=63b43f1e-84b9-45d1-8160-dcd1b18d501c").Result;
-                //if (response.IsSuccessStatusCode)
-                //{
-                //    result = response.Content.ReadAsStringAsync().Result;
-                //    FRCEvent frcEvent = FRCEvent.Parse(result);
-                //    Label_Results.Text += "\n\n";
-                //    Label_Results.Text += frcEvent.ToString();
-                //}
-
-                // Create a new FRCEvent
-                FRCEvent item = new FRCEvent
+                if (!uri.Contains(":"))
                 {
-                    Uuid = Guid.NewGuid().ToString(),
-                    Name = "Gizmo Event4204",
-                    Location = "Anytown, ME",
-                    EventKey = "GIZMOS4204",
-                    Changed = 1,
-                };
-                WebDataFRCEvents.AddItemAsync(item);
-                //Uri url = CreateFRCEventAsync(item);
-                Label_Results.Text += $"\n\nCreated: {item.Uuid}";
-
-                item.Name += "-A";
-                item.Changed++;
-                //UpdateFRCEventAsync(item);
-                WebDataFRCEvents.UpdateItemAsync(item);
-                Label_Results.Text += $"\n{item.Name}";
-
-                // ------------------------------------------------------------------------
-
-                //// ### get frcevent works ###
-                //string result = "";
-                //HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches?uuid=21d82936-b562-41ff-9020-068bdf9222a6").Result;
-                //if (response.IsSuccessStatusCode)
-                //{
-                //    result = response.Content.ReadAsStringAsync().Result;
-                //    EventTeamMatch newETM = EventTeamMatch.Parse(result);
-                //    Label_Results.Text = newETM.ToString();
-                //}
-
-                // ------------------------------------------------------------------------
-
-                //frcEvents = GetFRCEventsAsync().Result;
-
-                //// show all frcevents
-                //Console.WriteLine("All FRC Events:");
-                //items = await GetFRCEventsAsync();
-                //foreach (FRCEvent showItem in items)
-                //{
-                //    ShowFRCEvent(showItem);
-                //}
-                //Console.WriteLine();
-
-                //// Create a new FRCEvent
-                //FRCEvent item = new FRCEvent
-                //{
-                //    Name = "Gizmo Event7",
-                //    Location = "Anytown, ME",
-                //    EventKey = "GIZMOS7",
-                //    Changed = 1,
-                //};
-
-                //var url = await CreateFRCEventAsync(item);
-                //Console.WriteLine($"Created at {url}");
-
-                //// Get the FRCEvent
-                //item = await GetFRCEventAsync(url.PathAndQuery);
-                //ShowFRCEvent(item);
-
-                //// show all frcevents
-                //Console.WriteLine("All FRC Events:");
-                //items = await GetFRCEventsAsync();
-                //foreach (FRCEvent showItem in items)
-                //{
-                //    ShowFRCEvent(showItem);
-                //}
-                //Console.WriteLine();
-
-                ////EventTeamMatch eventTeamMatch = new EventTeamMatch();
-                ////eventTeamMatch.EventKey = "WEEKZERO";
-                ////eventTeamMatch.TeamNumber = 133;
-                ////eventTeamMatch.MatchNumber = 17;
-                ////eventTeamMatch.Changed = 1;
-                ////StringContent content = new StringContent(eventTeamMatch.ToString());
-
-                ////string result;
-                ////HttpResponseMessage response = App.client.PostAsync("api/EventTeamMatches", content).Result;
-                ////if (response.IsSuccessStatusCode)
-                ////{
-                ////    result = response.Content.ReadAsStringAsync().Result;
-                ////}
-                ////else
-                ////{
-                ////    result = "error!";
-                ////}
-                ////Label_Results.Text = result;
-
-                //var urlEtm = await CreateEventTeamMatchAsync(eventTeamMatch);
-                //Console.WriteLine($"Created at {urlEtm}");
-
-                //// Update the FRCEvent
-                //Console.WriteLine("Updating Location...");
-                //item.Location = "Anothertown, ME";
-                //await UpdateFRCEventAsync(item);
-
-                //// Get the updated FRCEvent
-                //item = await GetFRCEventAsync(url.PathAndQuery);
-                //ShowFRCEvent(item);
-
-                //// Delete the FRCEvent
-                //var statusCode = await DeleteFRCEventAsync(item.Id);
-                //Console.WriteLine($"Deleted (HTTP Status = {(int)statusCode})");
-
+                    uri += "bertscout2019/";
+                }
+                if (!uri.StartsWith("http"))
+                {
+                    uri = $"http://{uri}";
+                }
+                if (!uri.EndsWith("/"))
+                {
+                    uri += "/";
+                }
+                Label_Results.Text += uri;
+                App.client.BaseAddress = new Uri(uri);
+                App.client.DefaultRequestHeaders.Accept.Clear();
+                App.client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
             }
-            catch (Exception ex)
+        }
+
+        private void Button_Upload_Clicked(object sender, EventArgs e)
+        {
+            if (_isBusy)
             {
-                // todo any error here?
-                Label_Results.Text = ex.Message;
+                return;
             }
+            _isBusy = true;
+            PrepareSync();
+
+            Label_Results.Text = "Uploading data...";
+            int addedCount = 0;
+            int updatedCount = 0;
+
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+
+            foreach (EventTeamMatch item in matches)
+            {
+                if (item.Changed % 2 == 1)
+                {
+                    item.Changed++; // change odd to even = no upload next time
+                    if (item.Changed <= 2) // first time sending
+                    {
+                        WebDataEventTeamMatches.AddItemAsync(item);
+                        addedCount++;
+                    }
+                    else
+                    {
+                        WebDataEventTeamMatches.UpdateItemAsync(item);
+                        updatedCount++;
+                    }
+                    // save it so .Changed is updated
+                    App.database.SaveEventTeamMatchAsync(item);
+                }
+            }
+
+            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount}";
+
+            _isBusy = false;
+        }
+
+        private void Button_Download_Clicked(object sender, EventArgs e)
+        {
+            if (_isBusy)
+            {
+                return;
+            }
+            _isBusy = true;
+            PrepareSync();
+
+            Label_Results.Text = "Downloading data...";
+            int addedCount = 0;
+            int updatedCount = 0;
+            int notChangedCount = 0;
+
+            List<EventTeamMatch> matches;
+            //matches = GetEventTeamMatchesAsync().Result;
+            matches = (List<EventTeamMatch>)WebDataEventTeamMatches.GetItemsAsync().Result;
+
+            foreach (EventTeamMatch item in matches)
+            {
+                EventTeamMatch matchItem = App.database.GetEventTeamMatchAsyncUuid(item.Uuid).Result;
+
+                if (matchItem == null)
+                {
+                    App.database.SaveEventTeamMatchAsync(item);
+                    addedCount++;
+                }
+                else if (matchItem.Changed < item.Changed)
+                {
+                    App.database.SaveEventTeamMatchAsync(item);
+                    updatedCount++;
+                }
+            }
+
+            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
+
+            _isBusy = false;
+        }
+
+        private async Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
+        {
+            List<EventTeamMatch> items = null;
+            HttpResponseMessage response = await App.client.GetAsync("api/EventTeamMatches");
+            if (response.IsSuccessStatusCode)
+            {
+                string tempResult = await response.Content.ReadAsStringAsync();
+                JArray tempJArray = JArray.Parse(tempResult);
+                foreach (JObject item in tempJArray)
+                {
+                    EventTeamMatch matchItem = EventTeamMatch.Parse(item.ToString());
+                    items.Add(matchItem);
+                }
+            }
+            return items;
         }
     }
 }

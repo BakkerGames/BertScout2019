@@ -51,10 +51,15 @@ namespace EventTeamMatchestore.Controllers
         [HttpPut]
         public void PutEventTeamMatch(string uuid, EventTeamMatch item)
         {
-            item.Uuid = uuid;
-            if (!repository.Update(item))
+            EventTeamMatch oldItem = repository.GetByUuid(uuid);
+            // only update if new .Changed is greater
+            if (oldItem != null && oldItem.Changed < item.Changed)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                item.Uuid = uuid;
+                if (!repository.Update(item))
+                {
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
+                }
             }
         }
 

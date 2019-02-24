@@ -20,7 +20,7 @@ namespace BertWebApiClient
 
         static async Task RunAsync()
         {
-            List<FRCEvent> items;
+            //List<FRCEvent> items;
             List<EventTeamMatch> itemsETM;
 
             // Update port # in the following line.

@@ -3,6 +3,7 @@ using BertScout2019Data.Models;
 using Common.JSON;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -57,6 +58,7 @@ namespace BertScout2019.Views
                     uri += "/";
                 }
                 Label_Results.Text += uri;
+                App.client = new HttpClient();                    ;
                 App.client.BaseAddress = new Uri(uri);
                 App.client.DefaultRequestHeaders.Accept.Clear();
                 App.client.DefaultRequestHeaders.Accept.Add(
@@ -118,46 +120,47 @@ namespace BertScout2019.Views
             int updatedCount = 0;
             int notChangedCount = 0;
 
-            List<EventTeamMatch> matches;
-            //matches = GetEventTeamMatchesAsync().Result;
-            matches = (List<EventTeamMatch>)WebDataEventTeamMatches.GetItemsAsync().Result;
+            //List<EventTeamMatch> matches;
+            //matches = (List<EventTeamMatch>)WebDataEventTeamMatches.GetItemsAsync().Result;
 
-            foreach (EventTeamMatch item in matches)
-            {
-                EventTeamMatch matchItem = App.database.GetEventTeamMatchAsyncUuid(item.Uuid).Result;
+            //foreach (EventTeamMatch item in matches)
+            //{
+            //    EventTeamMatch matchItem = App.database.GetEventTeamMatchAsyncUuid(item.Uuid).Result;
 
-                if (matchItem == null)
-                {
-                    App.database.SaveEventTeamMatchAsync(item);
-                    addedCount++;
-                }
-                else if (matchItem.Changed < item.Changed)
-                {
-                    App.database.SaveEventTeamMatchAsync(item);
-                    updatedCount++;
-                }
-            }
+            //    if (matchItem == null)
+            //    {
+            //        App.database.SaveEventTeamMatchAsync(item);
+            //        addedCount++;
+            //    }
+            //    else if (matchItem.Changed < item.Changed)
+            //    {
+            //        App.database.SaveEventTeamMatchAsync(item);
+            //        updatedCount++;
+            //    }
+            //}
+
+            EventTeamMatch match = WebDataEventTeamMatches.GetItemAsync("3a559ac2-49c1-419c-820e-ec0c80632d88").Result;
 
             Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
 
             _isBusy = false;
         }
 
-        private async Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
-        {
-            List<EventTeamMatch> items = null;
-            HttpResponseMessage response = await App.client.GetAsync("api/EventTeamMatches");
-            if (response.IsSuccessStatusCode)
-            {
-                string tempResult = await response.Content.ReadAsStringAsync();
-                JArray tempJArray = JArray.Parse(tempResult);
-                foreach (JObject item in tempJArray)
-                {
-                    EventTeamMatch matchItem = EventTeamMatch.Parse(item.ToString());
-                    items.Add(matchItem);
-                }
-            }
-            return items;
-        }
+        //private async Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
+        //{
+        //    List<EventTeamMatch> items = null;
+        //    HttpResponseMessage response = await App.client.GetAsync("api/EventTeamMatches");
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        string tempResult = await response.Content.ReadAsStringAsync();
+        //        JArray tempJArray = JArray.Parse(tempResult);
+        //        foreach (JObject item in tempJArray)
+        //        {
+        //            EventTeamMatch matchItem = EventTeamMatch.Parse(item.ToString());
+        //            items.Add(matchItem);
+        //        }
+        //    }
+        //    return items;
+        //}
     }
 }

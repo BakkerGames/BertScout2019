@@ -10,37 +10,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/bertscout2019.db3">
-      <publishTime>02/23/2019 13:26:29</publishTime>
+      <publishTime>02/24/2019 12:02:00</publishTime>
     </File>
     <File Include="App_Data/bertscout2019.db3-shm">
-      <publishTime>02/23/2019 13:25:20</publishTime>
+      <publishTime>02/24/2019 12:52:28</publishTime>
     </File>
     <File Include="App_Data/bertscout2019.db3-wal">
-      <publishTime>02/23/2019 13:26:40</publishTime>
+      <publishTime>02/24/2019 12:52:40</publishTime>
     </File>
     <File Include="bin/BertScout2019Data.dll">
-      <publishTime>02/24/2019 09:10:24</publishTime>
+      <publishTime>02/24/2019 12:24:26</publishTime>
     </File>
     <File Include="bin/BertScout2019Data.dll.config">
       <publishTime>02/19/2019 18:49:12</publishTime>
     </File>
     <File Include="bin/BertScout2019Data.pdb">
-      <publishTime>02/24/2019 09:10:24</publishTime>
+      <publishTime>02/24/2019 12:24:26</publishTime>
     </File>
     <File Include="bin/BertScout2019XmlData.dll">
-      <publishTime>02/24/2019 09:10:24</publishTime>
+      <publishTime>02/24/2019 12:24:25</publishTime>
     </File>
     <File Include="bin/BertScout2019XmlData.pdb">
-      <publishTime>02/24/2019 09:10:24</publishTime>
+      <publishTime>02/24/2019 12:24:25</publishTime>
     </File>
     <File Include="bin/BertWebApi2019.dll">
-      <publishTime>02/24/2019 09:10:29</publishTime>
+      <publishTime>02/24/2019 12:52:17</publishTime>
     </File>
     <File Include="bin/BertWebApi2019.pdb">
-      <publishTime>02/24/2019 09:10:29</publishTime>
+      <publishTime>02/24/2019 12:52:17</publishTime>
     </File>
     <File Include="bin/Common.JSON.dll">
-      <publishTime>02/24/2019 09:10:24</publishTime>
+      <publishTime>02/24/2019 12:24:25</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>

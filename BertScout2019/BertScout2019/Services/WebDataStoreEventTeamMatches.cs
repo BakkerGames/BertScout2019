@@ -48,9 +48,11 @@ namespace BertScout2019.Services
             throw new NotImplementedException();
         }
 
-        public Task<EventTeamMatch> GetItemAsync(string uuid)
+        public async Task<EventTeamMatch> GetItemAsync(string uuid)
         {
-            throw new NotImplementedException();
+            string result = await App.client.GetStringAsync($"{apiPath}?uuid={uuid}");
+            EventTeamMatch item = EventTeamMatch.Parse(result);
+            return item;
         }
 
         public Task<EventTeamMatch> GetItemByKeyAsync(string key)

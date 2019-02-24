@@ -32,7 +32,7 @@ namespace BertScout2019
         static public BertScout2019Database database;
 
         // http client for syncing
-        static public HttpClient client = new HttpClient();
+        static public HttpClient client; // = new HttpClient();
 
         // app properties saved by OnSleep()
         private const string propNameVersionNumber = "currentVersionNumber";

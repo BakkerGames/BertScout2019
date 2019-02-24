@@ -28,6 +28,14 @@ namespace TestConsoleApp
             Console.WriteLine($"Name: {frcEvent.Name}");
         }
 
+        static void ShowAllFRCEvents(List<FRCEvent> frcEvents)
+        {
+            foreach (FRCEvent item in frcEvents)
+            {
+                ShowFRCEvent(item);
+            }
+        }
+
         static async Task<Uri> CreateFRCEventAsync(FRCEvent frcEvent)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
@@ -86,7 +94,7 @@ namespace TestConsoleApp
         static async Task RunAsync()
         {
             // Update port # in the following line.
-            client.BaseAddress = new Uri("http://localhost:49991/");
+            client.BaseAddress = new Uri("http://localhost:64190/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -94,16 +102,17 @@ namespace TestConsoleApp
             try
             {
 
-                List<FRCEvent> frcEvents = await GetFRCEventsAsync("http://localhost:49991/GetFRCEvents");
+                List<FRCEvent> frcEvents = await GetFRCEventsAsync("http://localhost:64190/api/FRCEvents");
+                ShowAllFRCEvents(frcEvents);
 
-                //// Create a new frcEvent
-                //FRCEvent frcEvent = new FRCEvent
-                //{
-                //    Name = "Gizmo",
-                //};
+                // Create a new frcEvent
+                FRCEvent frcEvent = new FRCEvent
+                {
+                    Name = "Gizmo",
+                };
 
-                //var url = await CreateFRCEventAsync(frcEvent);
-                //Console.WriteLine($"Created at {url}");
+                var url = await CreateFRCEventAsync(frcEvent);
+                Console.WriteLine($"Created at {url}");
 
                 //// Get the frcEvent
                 //frcEvent = await GetFRCEventAsync(url.PathAndQuery);

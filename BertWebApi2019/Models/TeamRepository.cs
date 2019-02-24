@@ -3,6 +3,7 @@ using BertScout2019Data.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace BertWebApi2019.Models
 {
@@ -18,7 +19,8 @@ namespace BertWebApi2019.Models
             if (_database == null)
             {
                 string dbPath = Path.Combine(
-                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                    AppDomain.CurrentDomain.BaseDirectory
+                    , "App_Data"
                     , BertScout2019Database.dbFilename);
                 _database = new BertScout2019Database(dbPath);
             }
@@ -32,9 +34,13 @@ namespace BertWebApi2019.Models
             {
                 throw new ArgumentNullException("item");
             }
-            // this must finish resolving to get item.Id
-            int result = _database.SaveTeamAsync(item).Result;
-            items.Add(item);
+            Team oldItem = items.Find(p => p.Uuid == item.Uuid);
+            if (oldItem == null)
+            {
+                // this must finish resolving to get item.Id
+                int result = _database.SaveTeamAsync(item).Result;
+                items.Add(item);
+            }
             return item;
         }
 
@@ -43,19 +49,26 @@ namespace BertWebApi2019.Models
             return items.Find(p => p.Id == id);
         }
 
+        public Team GetByUuid(string uuid)
+        {
+            return items.Find(p => p.Uuid == uuid);
+        }
+
         public IEnumerable<Team> GetAll()
         {
             return items;
         }
 
-        public IEnumerable<Team> GetAllByKey(object key)
+        public IEnumerable<Team> GetAllByKey(string key)
         {
-            return items.FindAll(p => p.TeamNumber == (int)key);
+            // key = partial team name
+            return items.FindAll(p => p.Name.Contains(key));
         }
 
-        public Team GetByKey(object key)
+        public Team GetByKey(string key)
         {
-            return items.Find(p => p.TeamNumber == (int)key);
+            // key = TeamNumber
+            return items.Find(p => p.TeamNumber == int.Parse(key));
         }
 
         public void Remove(int id)
@@ -64,21 +77,28 @@ namespace BertWebApi2019.Models
             items.RemoveAll(p => p.Id == id);
         }
 
+        public void RemoveByUuid(string uuid)
+        {
+            Remove(GetByUuid(uuid).Id.Value);
+        }
+
         public bool Update(Team item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException("item");
             }
-            if (item.Id == null)
+            if (item.Uuid == null)
             {
-                throw new ArgumentNullException("item.Id");
+                throw new ArgumentNullException("item.Uuid");
             }
-            int index = items.FindIndex(p => p.Id == item.Id);
+            int index = items.FindIndex(p => p.Uuid == item.Uuid);
             if (index == -1)
             {
                 return false;
             }
+            // update the id to match the local database
+            item.Id = items.ElementAt(index).Id;
             items.RemoveAt(index);
             int result = _database.SaveTeamAsync(item).Result;
             items.Add(item);

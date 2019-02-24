@@ -14,7 +14,17 @@ namespace BertScout2019.Views
         {
             InitializeComponent();
 
+            if (item.Changed % 2 == 0) // change from even to odd, odd = must upload
+            {
+                item.Changed++;
+            }
+
             BindingContext = viewModel = new EditEventTeamMatchViewModel(item);
+
+#if DEBUG
+            LabelChangeVersion.Text = $"Change Version: {item.Changed}";
+            LabelChangeVersion.IsVisible = true;
+#endif
 
             SetButtons();
         }

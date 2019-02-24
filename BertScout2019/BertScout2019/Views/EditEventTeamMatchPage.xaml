@@ -589,7 +589,7 @@
                         Clicked="Button_TechFouls_Plus_Clicked"
                         />
                 </StackLayout>
-                
+
                 <StackLayout Orientation="Horizontal">
                     <Label
                         Text="Broken:"
@@ -715,6 +715,16 @@
                         BackgroundColor="LightGray"
                         Clicked="Button_HabRankingPoint_Yes_Clicked"
                         />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        x:Name="LabelChangeVersion"
+                        Text=""
+                        HorizontalOptions="Center"
+                        FontSize="24"
+                        IsVisible="False"
+                    />
                 </StackLayout>
 
             </StackLayout>

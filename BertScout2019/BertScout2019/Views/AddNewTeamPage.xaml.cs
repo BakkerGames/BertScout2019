@@ -63,7 +63,7 @@ namespace BertScout2019.Views
             Team newTeam;
             try
             {
-                newTeam = DataStoreTeams.GetItemByTagAsync(newTeamNumber.ToString())?.Result;
+                newTeam = DataStoreTeams.GetItemByKeyAsync(newTeamNumber.ToString())?.Result;
                 if (newTeam == null)
                 {
                     throw new SystemException();
@@ -89,6 +89,7 @@ namespace BertScout2019.Views
                 EventKey = App.currFRCEventKey,
                 TeamNumber = newTeamNumber,
             };
+            newEventTeam.Changed = 1; // odd = must upload
             DataStoreEventTeams.AddItemAsync(newEventTeam);
 
             bool found = false;

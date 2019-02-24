@@ -96,6 +96,7 @@ namespace BertScout2019.Views
             newMatch.EventKey = App.currFRCEventKey;
             newMatch.TeamNumber = App.currTeamNumber;
             newMatch.MatchNumber = value;
+            newMatch.Changed = 1; // odd = must upload
             App.database.SaveEventTeamMatchAsync(newMatch);
             if (App.highestMatchNumber < value)
             {

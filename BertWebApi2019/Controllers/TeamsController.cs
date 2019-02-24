@@ -12,14 +12,18 @@ namespace TeamStore.Controllers
     {
         static readonly IRepository<Team> repository = new TeamRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<Team> GetAllTeams()
         {
             return repository.GetAll();
         }
 
-        public Team GetTeam(int id)
+        [AcceptVerbs("GET")]
+        [HttpGet]
+        public Team GetTeam(string uuid)
         {
-            Team item = repository.Get(id);
+            Team item = repository.GetByUuid(uuid);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -29,30 +33,37 @@ namespace TeamStore.Controllers
 
         public Team GetTeamByTeamNumber(int key)
         {
-            return repository.GetByKey(key);
+            return repository.GetByKey(key.ToString());
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostTeam(Team item)
         {
+            item.Id = null; // clear for autoincrement
             item = repository.Add(item);
-            var response = Request.CreateResponse<Team>(HttpStatusCode.Created, item);
-            string uri = Url.Link("DefaultApi", new { id = item.Id });
+            var response = Request.CreateResponse(HttpStatusCode.Created, item);
+            string uri = Url.Link("DefaultApi", new { uuid = item.Uuid });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutTeam(int id, Team item)
+        [AcceptVerbs("PUT")]
+        [HttpPut]
+        public void PutTeam(string uuid, Team item)
         {
-            item.Id = id;
+            item.Uuid = uuid;
             if (!repository.Update(item))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
         }
 
-        public void DeleteTeam(int id)
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
+        public void DeleteTeam(string uuid)
         {
-            repository.Remove(id);
+            repository.RemoveByUuid(uuid);
         }
     }
 }

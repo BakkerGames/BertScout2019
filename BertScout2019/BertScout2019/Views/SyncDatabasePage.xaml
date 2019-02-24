@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BertScout2019.Views.SyncDatabasePage">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="10,10,10,10"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="IPAddress:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    FontSize="24"
+                    />
+                <Entry
+                    x:Name="Entry_IpAddress"
+                    Text=""
+                    FontSize="24"
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="False"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    />
+            </StackLayout>
+            <StackLayout>
+                <Button
+                    x:Name="Button_Upload"
+                    Text="Upload Data"
+                    Clicked="Button_Upload_Clicked"
+                    BackgroundColor="#B19CD9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Margin="20"
+                    WidthRequest="300"
+                    IsEnabled="True"
+                    />
+                <Button
+                    x:Name="Button_Download"
+                    Text="Download Data"
+                    Clicked="Button_Download_Clicked"
+                    BackgroundColor="#B19CD9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Margin="20"
+                    WidthRequest="300"
+                    IsEnabled="True"
+                    />
+                <Label
+                    x:Name="Label_Results"
+                    Text=""
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

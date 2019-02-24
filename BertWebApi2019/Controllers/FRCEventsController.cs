@@ -12,14 +12,18 @@ namespace FRCEventStore.Controllers
     {
         static readonly IRepository<FRCEvent> repository = new FRCEventRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<FRCEvent> GetAllFRCEvents()
         {
             return repository.GetAll();
         }
 
-        public FRCEvent GetFRCEvent(int id)
+        [AcceptVerbs("GET")]
+        [HttpGet]
+        public FRCEvent GetFRCEvent(string uuid)
         {
-            FRCEvent item = repository.Get(id);
+            FRCEvent item = repository.GetByUuid(uuid);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -32,27 +36,34 @@ namespace FRCEventStore.Controllers
             return repository.GetByKey(key);
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostFRCEvent(FRCEvent item)
         {
+            item.Id = null; // clear for autoincrement
             item = repository.Add(item);
-            var response = Request.CreateResponse<FRCEvent>(HttpStatusCode.Created, item);
-            string uri = Url.Link("DefaultApi", new { id = item.Id });
+            var response = Request.CreateResponse(HttpStatusCode.Created, item);
+            string uri = Url.Link("DefaultApi", new { uuid = item.Uuid });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutFRCEvent(int id, FRCEvent item)
+        [AcceptVerbs("PUT")]
+        [HttpPut]
+        public void PutFRCEvent(string uuid, FRCEvent item)
         {
-            item.Id = id;
+            item.Uuid = uuid;
             if (!repository.Update(item))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
         }
 
-        public void DeleteFRCEvent(int id)
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
+        public void DeleteFRCEvent(string uuid)
         {
-            repository.Remove(id);
+            repository.RemoveByUuid(uuid);
         }
     }
 }

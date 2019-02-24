@@ -24,5 +24,22 @@ namespace BertScout2019Data.Models
         {
             return ToJson().ToString();
         }
+
+        public static FRCEvent Parse(string value)
+        {
+            JObject item = JObject.Parse(value);
+            FRCEvent result = new FRCEvent()
+            {
+                Id = (int)item.GetValue("Id"),
+                Uuid = (string)item.GetValue("Uuid"),
+                Changed = (int)item.GetValue("Changed"),
+                EventKey = (string)item.GetValue("EventKey"),
+                Name = (string)item.GetValue("Name"),
+                Location = (string)item.GetValue("Location"),
+                StartDate = (string)item.GetValue("StartDate"),
+                EndDate = (string)item.GetValue("EndDate"),
+            };
+            return result;
+        }
     }
 }

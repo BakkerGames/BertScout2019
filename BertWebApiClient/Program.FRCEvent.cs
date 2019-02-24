@@ -11,14 +11,17 @@ namespace BertWebApiClient
     {
         static void ShowFRCEvent(FRCEvent item)
         {
-            Console.WriteLine($"Id: {item.Id} - Name: {item.Name} = Location: " +
-                $"{item.Location} - EventKey: {item.EventKey}");
+            Console.WriteLine(
+                $"Id: {item.Id} - Uuid: {item.Uuid}" +
+                $" - EventKey: {item.EventKey}" +
+                $" - Name: {item.Name}" +
+                $" - Location: {item.Location}");
+
         }
 
         static async Task<Uri> CreateFRCEventAsync(FRCEvent item)
         {
-            HttpResponseMessage response = await client.PostAsJsonAsync(
-                "api/FRCEvents", item);
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/FRCEvents", item);
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.
@@ -50,7 +53,7 @@ namespace BertWebApiClient
         static async Task<FRCEvent> UpdateFRCEventAsync(FRCEvent item)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/FRCEvents/{item.Id}", item);
+                $"api/FRCEvents?uuid={item.Uuid}", item);
             response.EnsureSuccessStatusCode();
 
             // Deserialize the updated FRCEvent from the response body.

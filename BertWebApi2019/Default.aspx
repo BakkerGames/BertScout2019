@@ -18,7 +18,7 @@
             <a href="./api/EventTeams">Teams in each Event</a>
         </div>
         <div>
-            <a href="./api/EventTeamMatches">Matches for each Team for each Event</a>
+            <a href="./api/EventTeamMatches">Show matches for teams by event</a>
         </div>
     </form>
 </body>

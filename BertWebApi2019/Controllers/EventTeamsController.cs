@@ -12,14 +12,18 @@ namespace EventTeamStore.Controllers
     {
         static readonly IRepository<EventTeam> repository = new EventTeamRepository();
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public IEnumerable<EventTeam> GetAllEventTeams()
         {
             return repository.GetAll();
         }
 
-        public EventTeam GetEventTeam(int id)
+        [AcceptVerbs("GET")]
+        [HttpGet]
+        public EventTeam GetEventTeam(string uuid)
         {
-            EventTeam item = repository.Get(id);
+            EventTeam item = repository.GetByUuid(uuid);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -27,32 +31,44 @@ namespace EventTeamStore.Controllers
             return item;
         }
 
-        public EventTeam GetEventTeamByEventTeamNumber(int key)
+        public EventTeam GetEventTeamByEventTeamNumber(string key)
         {
             return repository.GetByKey(key);
         }
 
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostEventTeam(EventTeam item)
         {
+            item.Id = null; // clear for autoincrement
             item = repository.Add(item);
-            var response = Request.CreateResponse<EventTeam>(HttpStatusCode.Created, item);
-            string uri = Url.Link("DefaultApi", new { id = item.Id });
+            var response = Request.CreateResponse(HttpStatusCode.Created, item);
+            string uri = Url.Link("DefaultApi", new { uuid = item.Uuid });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutEventTeam(int id, EventTeam item)
+        [AcceptVerbs("PUT")]
+        [HttpPut]
+        public void PutEventTeam(string uuid, EventTeam item)
         {
-            item.Id = id;
-            if (!repository.Update(item))
+            EventTeam oldItem = repository.GetByUuid(uuid);
+            // only update if new .Changed is greater
+            if (oldItem != null && oldItem.Changed < item.Changed)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                item.Uuid = uuid;
+                if (!repository.Update(item))
+                {
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
+                }
             }
         }
 
-        public void DeleteEventTeam(int id)
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
+        public void DeleteEventTeam(string uuid)
         {
-            repository.Remove(id);
+            repository.RemoveByUuid(uuid);
         }
     }
 }

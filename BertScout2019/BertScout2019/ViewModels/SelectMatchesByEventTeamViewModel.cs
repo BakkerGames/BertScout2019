@@ -14,7 +14,7 @@ namespace BertScout2019.ViewModels
 
         public SelectMatchesByEventTeamViewModel(string eventKey, Team team)
         {
-            DataStoreMatch = new SqlDataStoreMatchesByEventTeam(eventKey, team.TeamNumber);
+            DataStoreMatch = new SqlDataStoreEventTeamMatches(eventKey, team.TeamNumber);
             Title = $"Team {team.TeamNumber} - {team.Name}";
             Matches = new ObservableCollection<EventTeamMatch>();
             ExecuteLoadEventTeamMatchesCommand();

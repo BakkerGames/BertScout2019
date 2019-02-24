@@ -27,20 +27,52 @@ namespace BertScout2019Data.Data
             }
         }
 
-        public void DropTables()
+        public string DropTables()
         {
-            _database.DropTableAsync<FRCEvent>().Wait();
-            _database.DropTableAsync<Team>().Wait();
-            _database.DropTableAsync<EventTeam>().Wait();
-            _database.DropTableAsync<EventTeamMatch>().Wait();
+            try
+            {
+                _database.DropTableAsync<FRCEvent>().Wait();
+                _database.DropTableAsync<Team>().Wait();
+                _database.DropTableAsync<EventTeam>().Wait();
+                _database.DropTableAsync<EventTeamMatch>().Wait();
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
-        public void CreateTables()
+        public string CreateTables()
         {
-            _database.CreateTableAsync<FRCEvent>().Wait();
-            _database.CreateTableAsync<Team>().Wait();
-            _database.CreateTableAsync<EventTeam>().Wait();
-            _database.CreateTableAsync<EventTeamMatch>().Wait();
+            try
+            {
+                _database.CreateTableAsync<FRCEvent>().Wait();
+                _database.CreateTableAsync<Team>().Wait();
+                _database.CreateTableAsync<EventTeam>().Wait();
+                _database.CreateTableAsync<EventTeamMatch>().Wait();
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string ClearTables()
+        {
+            try
+            {
+                _database.ExecuteAsync("TRUNCATE TABLE [FRCEvent];");
+                _database.ExecuteAsync("TRUNCATE TABLE [Team];");
+                _database.ExecuteAsync("TRUNCATE TABLE [EventTeam];");
+                _database.ExecuteAsync("TRUNCATE TABLE [EventTeamMatch];");
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         // FRCEvent
@@ -56,6 +88,16 @@ namespace BertScout2019Data.Data
             query.Append("SELECT [FRCEvent].* FROM [FRCEvent]");
             query.Append(" WHERE [FRCEvent].[EventKey] = '");
             query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            return _database.GetAsync<FRCEvent>(query.ToString());
+        }
+
+        public Task<FRCEvent> GetEventAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [FRCEvent].* FROM [FRCEvent]");
+            query.Append(" WHERE [FRCEvent].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
             query.Append("'");
             return _database.GetAsync<FRCEvent>(query.ToString());
         }
@@ -104,6 +146,16 @@ namespace BertScout2019Data.Data
             return _database.GetAsync<Team>(query.ToString());
         }
 
+        public Task<Team> GetTeamAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [Team].* FROM [Team]");
+            query.Append(" WHERE [Team].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
+            return _database.GetAsync<Team>(query.ToString());
+        }
+
         public Task<int> SaveTeamAsync(Team item)
         {
             // note: the caller must let this resolve before item.Id is first
@@ -149,6 +201,16 @@ namespace BertScout2019Data.Data
             return _database.GetAsync<EventTeam>(query.ToString());
         }
 
+        public Task<EventTeam> GetEventTeamAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeam].* FROM [EventTeam]");
+            query.Append(" WHERE [EventTeam].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
+            return _database.GetAsync<EventTeam>(query.ToString());
+        }
+
         public Task<int> SaveEventTeamAsync(EventTeam item)
         {
             // note: the caller must let this resolve before item.Id is first
@@ -170,6 +232,17 @@ namespace BertScout2019Data.Data
         public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
         {
             return _database.Table<EventTeamMatch>().ToListAsync();
+        }
+
+        public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string eventKey)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
+            query.Append(" WHERE [EventTeamMatch].[EventKey] = '");
+            query.Append(FixSqlValue(eventKey));
+            query.Append("'");
+            query.Append(" ORDER BY [EventTeamMatch].[TeamNumber], [EventTeamMatch].[MatchNumber]");
+            return _database.QueryAsync<EventTeamMatch>(query.ToString());
         }
 
         public Task<List<EventTeamMatch>> GetEventTeamMatchesAsync(string eventKey, int teamNumber)
@@ -196,6 +269,16 @@ namespace BertScout2019Data.Data
             query.Append(teamNumber);
             query.Append(" AND [EventTeamMatch].[MatchNumber] = ");
             query.Append(matchNumber);
+            return _database.GetAsync<EventTeamMatch>(query.ToString());
+        }
+
+        public Task<EventTeamMatch> GetEventTeamMatchAsyncUuid(string uuid)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT [EventTeamMatch].* FROM [EventTeamMatch]");
+            query.Append(" WHERE [EventTeamMatch].[Uuid] = '");
+            query.Append(FixSqlValue(uuid));
+            query.Append("'");
             return _database.GetAsync<EventTeamMatch>(query.ToString());
         }
 

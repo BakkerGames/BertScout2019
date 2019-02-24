@@ -8,10 +8,20 @@ namespace BertScout2019.Services
 {
     public class SqlDataStoreEventTeams : IDataStore<EventTeam>
     {
+        private bool _paramsFlag = false;
+        private string _eventKey = "";
+
         private List<EventTeam> items;
 
         public SqlDataStoreEventTeams()
         {
+            _paramsFlag = false;
+        }
+
+        public SqlDataStoreEventTeams(string eventKey)
+        {
+            _paramsFlag = true;
+            _eventKey = eventKey;
         }
 
         private void FillList()
@@ -19,7 +29,14 @@ namespace BertScout2019.Services
             if (items == null)
             {
                 // must complete, so don't async/await
-                items = App.Database.GetEventTeamsAsync().Result;
+                if (_paramsFlag)
+                {
+                    items = App.Database.GetEventTeamsAsync(_eventKey).Result;
+                }
+                else
+                {
+                    items = App.Database.GetEventTeamsAsync().Result;
+                }
             }
         }
 
@@ -31,7 +48,7 @@ namespace BertScout2019.Services
                 item.Uuid = Guid.NewGuid().ToString();
             }
             await App.database.SaveEventTeamAsync(item);
-            items = App.Database.GetEventTeamsAsync().Result;
+            items.Add(item);
             return await Task.FromResult(true);
         }
 
@@ -51,22 +68,25 @@ namespace BertScout2019.Services
             return await Task.FromResult(true);
         }
 
-        public Task<EventTeam> GetItemAsync(int id)
+        public async Task<EventTeam> GetItemAsync(int id)
         {
-            //FillList();
-            throw new System.NotImplementedException();
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public Task<EventTeam> GetItemAsync(string uuid)
+        public async Task<EventTeam> GetItemAsync(string uuid)
         {
-            //FillList();
-            throw new NotImplementedException();
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.Uuid == uuid));
         }
 
-        public Task<EventTeam> GetItemByKeyAsync(string key)
+        public async Task<EventTeam> GetItemByKeyAsync(string key)
         {
-            //FillList();
-            throw new System.NotImplementedException();
+            // key = EventKey|TeamNumber
+            string[] keys = key.Split('|');
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == keys[0] &&
+                                                              s.TeamNumber == int.Parse(keys[1])));
         }
 
         public async Task<IEnumerable<EventTeam>> GetItemsAsync(bool forceRefresh = false)
@@ -75,10 +95,13 @@ namespace BertScout2019.Services
             return await Task.FromResult(items);
         }
 
-        public Task<bool> UpdateItemAsync(EventTeam item)
+        public async Task<bool> UpdateItemAsync(EventTeam item)
         {
-            //FillList();
-            throw new System.NotImplementedException();
+            FillList();
+            var oldItem = items.Where((EventTeam arg) => arg.Uuid == item.Uuid).FirstOrDefault();
+            items.Remove(oldItem);
+            items.Add(item);
+            return await Task.FromResult(true);
         }
     }
 }

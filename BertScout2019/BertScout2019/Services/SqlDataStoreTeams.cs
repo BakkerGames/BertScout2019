@@ -1,4 +1,5 @@
 ﻿using BertScout2019Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,10 +8,20 @@ namespace BertScout2019.Services
 {
     public class SqlDataStoreTeams : IDataStore<Team>
     {
+        private bool _paramsFlag = false;
+        private string _eventKey = "";
+
         private List<Team> items;
 
         public SqlDataStoreTeams()
         {
+            _paramsFlag = false;
+        }
+
+        public SqlDataStoreTeams(string eventKey)
+        {
+            _paramsFlag = true;
+            _eventKey = eventKey;
         }
 
         private void FillList()
@@ -18,13 +29,25 @@ namespace BertScout2019.Services
             if (items == null)
             {
                 // must complete, so don't async/await
-                items = App.Database.GetTeamsAsync().Result;
+                if (_paramsFlag)
+                {
+                    items = App.Database.GetTeamsByEventAsync(_eventKey).Result;
+                }
+                else
+                {
+                    items = App.Database.GetTeamsAsync().Result;
+                }
             }
         }
 
         public async Task<bool> AddItemAsync(Team item)
         {
             FillList();
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
+            await App.database.SaveTeamAsync(item);
             items.Add(item);
             return await Task.FromResult(true);
         }

@@ -1,4 +1,5 @@
 ﻿using BertScout2019Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,6 +30,11 @@ namespace BertScout2019.Services
         public async Task<bool> AddItemAsync(EventTeamMatch item)
         {
             FillList();
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
+            await App.database.SaveEventTeamMatchAsync(item);
             items.Add(item);
             return await Task.FromResult(true);
         }
@@ -55,6 +61,12 @@ namespace BertScout2019.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
+        public async Task<EventTeamMatch> GetItemAsync(string uuid)
+        {
+            FillList();
+            return await Task.FromResult(items.FirstOrDefault(s => s.Uuid == uuid));
+        }
+
         public async Task<EventTeamMatch> GetItemAsync(string eventKey, int teamNumber, int matchNumber)
         {
             FillList();
@@ -63,15 +75,14 @@ namespace BertScout2019.Services
                                                               && s.MatchNumber == matchNumber));
         }
 
-        public async Task<EventTeamMatch> GetItemAsync(string uuid)
-        {
-            FillList();
-            return await Task.FromResult(items.FirstOrDefault(s => s.Uuid == uuid));
-        }
-
         public Task<EventTeamMatch> GetItemByKeyAsync(string key)
         {
-            throw new System.NotImplementedException();
+            // key = EventKey|TeamNumber|MatchNumber
+            FillList();
+            string[] keys = key.Split('|');
+            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == keys[0]
+                                                              && s.TeamNumber == int.Parse(keys[1])
+                                                              && s.MatchNumber == int.Parse(keys[2])));
         }
 
         public async Task<IEnumerable<EventTeamMatch>> GetItemsAsync(bool forceRefresh = false)

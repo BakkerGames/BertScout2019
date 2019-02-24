@@ -1,4 +1,5 @@
 ﻿using BertScout2019Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace BertScout2019.Services
         {
         }
 
-        public void FillList()
+        private void FillList()
         {
             if (items == null)
             {
@@ -25,6 +26,11 @@ namespace BertScout2019.Services
         public async Task<bool> AddItemAsync(FRCEvent item)
         {
             FillList();
+            if (item.Uuid == null)
+            {
+                item.Uuid = Guid.NewGuid().ToString();
+            }
+            await App.database.SaveFRCEventAsync(item);
             items.Add(item);
             return await Task.FromResult(true);
         }

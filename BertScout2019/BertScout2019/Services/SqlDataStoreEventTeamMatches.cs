@@ -7,10 +7,22 @@ namespace BertScout2019.Services
 {
     public class SqlDataStoreEventTeamMatches : IDataStore<EventTeamMatch>
     {
+        private bool _paramsFlag = false;
+        private string _eventKey = "";
+        private int _teamNumber = 0;
+
         private List<EventTeamMatch> items;
 
         public SqlDataStoreEventTeamMatches()
         {
+            _paramsFlag = false;
+        }
+
+        public SqlDataStoreEventTeamMatches(string eventKey, int teamNumber)
+        {
+            _paramsFlag = true;
+            _eventKey = eventKey;
+            _teamNumber = teamNumber;
         }
 
         private void FillList()
@@ -18,7 +30,14 @@ namespace BertScout2019.Services
             if (items == null)
             {
                 // must complete, so don't async/await
-                items = App.Database.GetEventTeamMatchesAsync().Result;
+                if (_paramsFlag)
+                {
+                    items = App.Database.GetEventTeamMatchesAsync(_eventKey, _teamNumber).Result;
+                }
+                else
+                {
+                    items = App.Database.GetEventTeamMatchesAsync().Result;
+                }
             }
         }
 

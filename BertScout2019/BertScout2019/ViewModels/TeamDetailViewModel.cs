@@ -26,7 +26,7 @@ namespace BertScout2019.ViewModels
             this.item = item;
             Title = $"Team {App.currTeamNumber} Details";
             MatchResults = new ObservableCollection<MatchResult>();
-            DataStoreMatch = new SqlDataStoreMatchesByEventTeam(App.currFRCEventKey, item.TeamNumber);
+            DataStoreMatch = new SqlDataStoreEventTeamMatches(App.currFRCEventKey, item.TeamNumber);
             ExecuteLoadEventTeamMatchesCommand();
         }
 

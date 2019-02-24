@@ -27,6 +27,8 @@
     <Compile Remove="Models\Team.cs" />
     <Compile Remove="Services\MockDataStore.cs" />
     <Compile Remove="Services\MockDataStoreFRCEvent.cs" />
+    <Compile Remove="Services\SqlDataStoreMatchesByEventTeam.cs" />
+    <Compile Remove="Services\SqlDataStoreTeamsByEvent.cs" />
     <Compile Remove="ViewModels\AboutViewModel.cs" />
     <Compile Remove="ViewModels\FRCEventDetailViewModel.cs" />
     <Compile Remove="ViewModels\ItemDetailViewModel.cs" />

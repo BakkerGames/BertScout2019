@@ -51,7 +51,7 @@
                     />
                 <Label
                     x:Name="Label_Results"
-                    Text="Hello!"
+                    Text=""
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
                     />

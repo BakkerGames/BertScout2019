@@ -48,7 +48,8 @@ namespace BertScout2019.Services
                 item.Uuid = Guid.NewGuid().ToString();
             }
             await App.database.SaveTeamAsync(item);
-            items.Add(item);
+            items = null;
+            FillList();
             return await Task.FromResult(true);
         }
 
@@ -56,6 +57,7 @@ namespace BertScout2019.Services
         {
             FillList();
             var oldItem = items.Where((Team arg) => arg.Id == id).FirstOrDefault();
+            await App.database.DeleteTeamAsync(oldItem.Id.Value);
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
@@ -64,6 +66,7 @@ namespace BertScout2019.Services
         {
             FillList();
             var oldItem = items.Where((Team arg) => arg.Uuid == uuid).FirstOrDefault();
+            await App.database.DeleteTeamAsync(oldItem.Id.Value);
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
@@ -97,8 +100,11 @@ namespace BertScout2019.Services
         {
             FillList();
             var oldItem = items.Where((Team arg) => arg.Uuid == item.Uuid).FirstOrDefault();
+            item.Id = oldItem.Id;
             items.Remove(oldItem);
-            items.Add(item);
+            await App.database.SaveTeamAsync(item);
+            items = null;
+            FillList();
             return await Task.FromResult(true);
         }
     }

@@ -48,7 +48,8 @@ namespace BertScout2019.Services
                 item.Uuid = Guid.NewGuid().ToString();
             }
             await App.database.SaveEventTeamAsync(item);
-            items.Add(item);
+            items = null;
+            FillList();
             return await Task.FromResult(true);
         }
 
@@ -56,6 +57,7 @@ namespace BertScout2019.Services
         {
             FillList();
             var oldItem = items.Where((EventTeam arg) => arg.Id == id).FirstOrDefault();
+            await App.database.DeleteEventTeamAsync(oldItem.Id.Value);
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
@@ -64,6 +66,7 @@ namespace BertScout2019.Services
         {
             FillList();
             var oldItem = items.Where((EventTeam arg) => arg.Uuid == uuid).FirstOrDefault();
+            await App.database.DeleteEventTeamAsync(oldItem.Id.Value);
             items.Remove(oldItem);
             return await Task.FromResult(true);
         }
@@ -85,8 +88,8 @@ namespace BertScout2019.Services
             // key = EventKey|TeamNumber
             string[] keys = key.Split('|');
             FillList();
-            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == keys[0] &&
-                                                              s.TeamNumber == int.Parse(keys[1])));
+            return await Task.FromResult(items.FirstOrDefault(s => s.EventKey == keys[0]
+                                                              && s.TeamNumber == int.Parse(keys[1])));
         }
 
         public async Task<IEnumerable<EventTeam>> GetItemsAsync(bool forceRefresh = false)
@@ -99,8 +102,11 @@ namespace BertScout2019.Services
         {
             FillList();
             var oldItem = items.Where((EventTeam arg) => arg.Uuid == item.Uuid).FirstOrDefault();
+            item.Id = oldItem.Id;
             items.Remove(oldItem);
-            items.Add(item);
+            await App.database.SaveEventTeamAsync(item);
+            items = null;
+            FillList();
             return await Task.FromResult(true);
         }
     }

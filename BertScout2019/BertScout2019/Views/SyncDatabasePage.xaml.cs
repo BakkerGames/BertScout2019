@@ -3,11 +3,8 @@ using BertScout2019Data.Models;
 using Common.JSON;
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,6 +15,8 @@ namespace BertScout2019.Views
     {
         public IDataStore<EventTeamMatch> SqlDataEventTeamMatches;
         public IDataStore<EventTeamMatch> WebDataEventTeamMatches;
+
+        private readonly string _mediaType = "application/json";
 
         private static bool _initialSetup = false;
         private static bool _isBusy = false;
@@ -36,10 +35,11 @@ namespace BertScout2019.Views
             if (!_initialSetup)
             {
                 _initialSetup = true;
+
                 // save ip address
                 App.syncIpAddress = Entry_IpAddress.Text;
                 Entry_IpAddress.IsEnabled = false;
-                // Update port # in the following line.
+
                 string uri = App.syncIpAddress;
                 if (!uri.EndsWith("/"))
                 {
@@ -57,12 +57,11 @@ namespace BertScout2019.Views
                 {
                     uri += "/";
                 }
-                Label_Results.Text += uri;
-                App.client = new HttpClient();                    ;
+
+                App.client = new HttpClient(); ;
                 App.client.BaseAddress = new Uri(uri);
                 App.client.DefaultRequestHeaders.Accept.Clear();
-                App.client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
+                App.client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(_mediaType));
             }
         }
 
@@ -113,54 +112,48 @@ namespace BertScout2019.Views
                 return;
             }
             _isBusy = true;
+
             PrepareSync();
 
-            Label_Results.Text = "Downloading data...";
             int addedCount = 0;
             int updatedCount = 0;
             int notChangedCount = 0;
 
-            //List<EventTeamMatch> matches;
-            //matches = (List<EventTeamMatch>)WebDataEventTeamMatches.GetItemsAsync().Result;
+            Label_Results.Text = "Downloading data...";
 
-            //foreach (EventTeamMatch item in matches)
-            //{
-            //    EventTeamMatch matchItem = App.database.GetEventTeamMatchAsyncUuid(item.Uuid).Result;
+            HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches").Result;
+            response.EnsureSuccessStatusCode();
+            if (response.IsSuccessStatusCode)
+            {
+                string result = response.Content.ReadAsStringAsync().Result;
+                JArray results = JArray.Parse(result);
+                foreach (JObject obj in results)
+                {
+                    EventTeamMatch oldItem = null;
+                    EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
 
-            //    if (matchItem == null)
-            //    {
-            //        App.database.SaveEventTeamMatchAsync(item);
-            //        addedCount++;
-            //    }
-            //    else if (matchItem.Changed < item.Changed)
-            //    {
-            //        App.database.SaveEventTeamMatchAsync(item);
-            //        updatedCount++;
-            //    }
-            //}
+                    oldItem = SqlDataEventTeamMatches.GetItemAsync(item.Uuid).Result;
 
-            EventTeamMatch match = WebDataEventTeamMatches.GetItemAsync("3a559ac2-49c1-419c-820e-ec0c80632d88").Result;
+                    if (oldItem == null)
+                    {
+                        SqlDataEventTeamMatches.AddItemAsync(item);
+                        addedCount++;
+                    }
+                    else if (oldItem.Changed < item.Changed)
+                    {
+                        SqlDataEventTeamMatches.UpdateItemAsync(item);
+                        updatedCount++;
+                    }
+                    else
+                    {
+                        notChangedCount++;
+                    }
+                }
+            }
 
             Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
 
             _isBusy = false;
         }
-
-        //private async Task<List<EventTeamMatch>> GetEventTeamMatchesAsync()
-        //{
-        //    List<EventTeamMatch> items = null;
-        //    HttpResponseMessage response = await App.client.GetAsync("api/EventTeamMatches");
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        string tempResult = await response.Content.ReadAsStringAsync();
-        //        JArray tempJArray = JArray.Parse(tempResult);
-        //        foreach (JObject item in tempJArray)
-        //        {
-        //            EventTeamMatch matchItem = EventTeamMatch.Parse(item.ToString());
-        //            items.Add(matchItem);
-        //        }
-        //    }
-        //    return items;
-        //}
     }
 }

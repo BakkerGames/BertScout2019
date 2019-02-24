@@ -21,6 +21,11 @@ namespace BertScout2019.Views
 
             BindingContext = viewModel = new EditEventTeamMatchViewModel(item);
 
+#if DEBUG
+            LabelChangeVersion.Text = $"Change Version: {item.Changed}";
+            LabelChangeVersion.IsVisible = true;
+#endif
+
             SetButtons();
         }
 

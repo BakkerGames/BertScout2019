@@ -9,19 +9,19 @@ namespace BertWebApiClient
 {
     public partial class Program
     {
-        private static readonly string baseWebAddress = "http://localhost/bertscout2019/";
+        private static string baseWebAddress;
 
         static HttpClient client = new HttpClient();
 
         static void Main()
         {
+            //baseWebAddress = "http://localhost:61490/";
+            baseWebAddress = "http://192.168.1.4/bertscout2019/";
             RunAsync().GetAwaiter().GetResult();
         }
 
         static async Task RunAsync()
         {
-            //List<FRCEvent> items;
-            List<EventTeamMatch> itemsETM;
 
             // Update port # in the following line.
             client.BaseAddress = new Uri(baseWebAddress);
@@ -31,14 +31,15 @@ namespace BertWebApiClient
 
             try
             {
-                //// show all frcevents
-                //Console.WriteLine("All FRC Events:");
-                //items = await GetFRCEventsAsync();
-                //foreach (FRCEvent showItem in items)
-                //{
-                //    ShowFRCEvent(showItem);
-                //}
-                //Console.WriteLine();
+                // show all frcevents
+                List<FRCEvent> items;
+                Console.WriteLine("All FRC Events:");
+                items = await GetFRCEventsAsync();
+                foreach (FRCEvent showItem in items)
+                {
+                    ShowFRCEvent(showItem);
+                }
+                Console.WriteLine();
 
                 //// Create a new FRCEvent
                 //FRCEvent item = new FRCEvent
@@ -52,6 +53,7 @@ namespace BertWebApiClient
                 //Console.WriteLine($"Created at {url}");
 
                 // show all matches
+                List<EventTeamMatch> itemsETM;
                 Console.WriteLine("All EventTeamMatches:");
                 itemsETM = await GetEventTeamMatchesAsync();
                 foreach (EventTeamMatch showItemETM in itemsETM)
@@ -60,25 +62,25 @@ namespace BertWebApiClient
                 }
                 Console.WriteLine();
 
-                // Create a new EventTeamMatch
-                EventTeamMatch itemETM = new EventTeamMatch
-                {
-                    EventKey = "TEST",
-                    TeamNumber = 133,
-                    MatchNumber = 5,
-                    AllianceResult = 1,
-                };
-                var urlETM = await CreateEventTeamMatchAsync(itemETM);
-                Console.WriteLine($"Created at {urlETM}");
+                //// Create a new EventTeamMatch
+                //EventTeamMatch itemETM = new EventTeamMatch
+                //{
+                //    EventKey = "TEST",
+                //    TeamNumber = 133,
+                //    MatchNumber = 5,
+                //    AllianceResult = 1,
+                //};
+                //var urlETM = await CreateEventTeamMatchAsync(itemETM);
+                //Console.WriteLine($"Created at {urlETM}");
 
-                // show all matches
-                Console.WriteLine("All EventTeamMatches:");
-                itemsETM = await GetEventTeamMatchesAsync();
-                foreach (EventTeamMatch showItemETM in itemsETM)
-                {
-                    ShowEventTeamMatch(showItemETM);
-                }
-                Console.WriteLine();
+                //// show all matches
+                //Console.WriteLine("All EventTeamMatches:");
+                //itemsETM = await GetEventTeamMatchesAsync();
+                //foreach (EventTeamMatch showItemETM in itemsETM)
+                //{
+                //    ShowEventTeamMatch(showItemETM);
+                //}
+                //Console.WriteLine();
 
                 //// Get the FRCEvent
                 //item = await GetFRCEventAsync(url.PathAndQuery);

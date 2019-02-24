@@ -40,6 +40,7 @@ namespace FRCEventStore.Controllers
         [HttpPost]
         public HttpResponseMessage PostFRCEvent(FRCEvent item)
         {
+            item.Id = null; // clear for autoincrement
             item = repository.Add(item);
             var response = Request.CreateResponse(HttpStatusCode.Created, item);
             string uri = Url.Link("DefaultApi", new { uuid = item.Uuid });

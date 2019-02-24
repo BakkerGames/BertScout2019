@@ -10,10 +10,13 @@ namespace BertScout2019.Services
 {
     public class WebDataStoreEventTeams : IDataStore<EventTeam>
     {
+        private readonly string apiPath = "api/EventTeams";
+        private readonly string mediaType = "application/json";
+
         public async Task<bool> AddItemAsync(EventTeam item)
         {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PostAsync("api/EventTeams", content).Result;
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
+            HttpResponseMessage response = App.client.PostAsync(apiPath, content).Result;
             response.EnsureSuccessStatusCode();
             return await Task.FromResult(response.IsSuccessStatusCode);
         }
@@ -46,7 +49,7 @@ namespace BertScout2019.Services
         public async Task<IEnumerable<EventTeam>> GetItemsAsync(bool forceRefresh = false)
         {
             List<EventTeam> items = new List<EventTeam>();
-            HttpResponseMessage response = await App.client.GetAsync("api/EventTeams");
+            HttpResponseMessage response = await App.client.GetAsync(apiPath);
             if (response.IsSuccessStatusCode)
             {
                 string tempResult = await response.Content.ReadAsStringAsync();
@@ -61,8 +64,8 @@ namespace BertScout2019.Services
 
         public async Task<bool> UpdateItemAsync(EventTeam item)
         {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PutAsync($"api/EventTeams?uuid={item.Uuid}", content).Result;
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
+            HttpResponseMessage response = App.client.PutAsync($"{apiPath}?uuid={item.Uuid}", content).Result;
             response.EnsureSuccessStatusCode();
             return await Task.FromResult(response.IsSuccessStatusCode);
         }

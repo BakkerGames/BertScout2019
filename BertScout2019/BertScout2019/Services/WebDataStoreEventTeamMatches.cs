@@ -10,10 +10,13 @@ namespace BertScout2019.Services
 {
     public class WebDataStoreEventTeamMatches : IDataStore<EventTeamMatch>
     {
+        private readonly string apiPath = "api/EventTeamMatches";
+        private readonly string mediaType = "application/json";
+
         public async Task<bool> AddItemAsync(EventTeamMatch item)
         {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PostAsync("api/EventTeamMatches", content).Result;
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
+            HttpResponseMessage response = App.client.PostAsync(apiPath, content).Result;
             response.EnsureSuccessStatusCode();
             return await Task.FromResult(response.IsSuccessStatusCode);
         }
@@ -46,7 +49,7 @@ namespace BertScout2019.Services
         public async Task<IEnumerable<EventTeamMatch>> GetItemsAsync(bool forceRefresh = false)
         {
             List<EventTeamMatch> items = new List<EventTeamMatch>();
-            HttpResponseMessage response = await App.client.GetAsync("api/EventTeamMatches");
+            HttpResponseMessage response = await App.client.GetAsync(apiPath);
             if (response.IsSuccessStatusCode)
             {
                 string tempResult = await response.Content.ReadAsStringAsync();
@@ -61,8 +64,8 @@ namespace BertScout2019.Services
 
         public async Task<bool> UpdateItemAsync(EventTeamMatch item)
         {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PutAsync($"api/EventTeamMatches?uuid={item.Uuid}", content).Result;
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
+            HttpResponseMessage response = App.client.PutAsync($"{apiPath}?uuid={item.Uuid}", content).Result;
             response.EnsureSuccessStatusCode();
             return await Task.FromResult(response.IsSuccessStatusCode);
         }

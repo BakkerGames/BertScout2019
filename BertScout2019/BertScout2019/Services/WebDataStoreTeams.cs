@@ -10,10 +10,13 @@ namespace BertScout2019.Services
 {
     public class WebDataStoreTeams : IDataStore<Team>
     {
+        private readonly string apiPath = "api/Teams";
+        private readonly string mediaType = "application/json";
+
         public async Task<bool> AddItemAsync(Team item)
         {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PostAsync("api/Teams", content).Result;
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
+            HttpResponseMessage response = App.client.PostAsync(apiPath, content).Result;
             response.EnsureSuccessStatusCode();
             return await Task.FromResult(response.IsSuccessStatusCode);
         }
@@ -46,7 +49,7 @@ namespace BertScout2019.Services
         public async Task<IEnumerable<Team>> GetItemsAsync(bool forceRefresh = false)
         {
             List<Team> items = new List<Team>();
-            HttpResponseMessage response = await App.client.GetAsync("api/Teams");
+            HttpResponseMessage response = await App.client.GetAsync(apiPath);
             if (response.IsSuccessStatusCode)
             {
                 string tempResult = await response.Content.ReadAsStringAsync();
@@ -61,8 +64,8 @@ namespace BertScout2019.Services
 
         public async Task<bool> UpdateItemAsync(Team item)
         {
-            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = App.client.PutAsync($"api/Teams?uuid={item.Uuid}", content).Result;
+            StringContent content = new StringContent(item.ToString(), Encoding.UTF8, mediaType);
+            HttpResponseMessage response = App.client.PutAsync($"{apiPath}?uuid={item.Uuid}", content).Result;
             response.EnsureSuccessStatusCode();
             return await Task.FromResult(response.IsSuccessStatusCode);
         }

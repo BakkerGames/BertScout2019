@@ -53,11 +53,26 @@
                                            FontAttributes="Bold"
                                            FontSize="24"
                                            />
-                                    <Label Text="- RP:"
+                                    <Label Text="-"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
                                            FontSize="24"
+                                           />
+                                    <Label Text="{Binding Name}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="RP:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           Margin="10,0,0,0"
                                            />
                                     <Label Text="{Binding TotalRP}"
                                            LineBreakMode="NoWrap"

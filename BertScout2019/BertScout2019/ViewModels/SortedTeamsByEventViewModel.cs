@@ -40,6 +40,7 @@ namespace BertScout2019.ViewModels
                     TeamDetailViewModel matchViewModel= new TeamDetailViewModel(team);
                     TeamResult teamResult = new TeamResult();
                     teamResult.TeamNumber = team.TeamNumber;
+                    teamResult.Name = team.Name;
                     teamResult.TotalRP = matchViewModel.TotalRP;
                     teamResult.AverageScore = matchViewModel.AverageScore;
                     Teams.Add(teamResult);

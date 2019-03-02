@@ -9,8 +9,8 @@ namespace BertScout2019.ViewModels
 {
     public class TeamDetailViewModel : BaseViewModel
     {
-
-        public Team item;
+        public string savedEventKey;
+        public Team savedTeam;
 
         public int TotalRP = 0;
         public int TotalScore = 0;
@@ -21,12 +21,13 @@ namespace BertScout2019.ViewModels
 
         public ObservableCollection<MatchResult> MatchResults { get; set; }
 
-        public TeamDetailViewModel(Team item)
+        public TeamDetailViewModel(string eventKey, Team item)
         {
-            this.item = item;
+            savedEventKey = eventKey;
+            savedTeam = item;
             Title = $"Team {App.currTeamNumber} Details";
             MatchResults = new ObservableCollection<MatchResult>();
-            DataStoreMatch = new SqlDataStoreEventTeamMatches(App.currFRCEventKey, item.TeamNumber);
+            DataStoreMatch = new SqlDataStoreEventTeamMatches(eventKey, item.TeamNumber);
             ExecuteLoadEventTeamMatchesCommand();
         }
 
@@ -44,9 +45,12 @@ namespace BertScout2019.ViewModels
                 foreach (var match in matches)
                 {
                     MatchResult obj = new MatchResult();
+                    obj.EventKey = match.EventKey;
+                    obj.TeamNumber = match.TeamNumber;
+                    obj.MatchNumber = match.MatchNumber;
                     // todo fill in text with useful match results
-                    obj.Text1 = $"Match {match.MatchNumber}";
-                    obj.Text2 = $"Score = {CalculateMatchResult(match)} RP = {CalculateMatchRP(match)}";
+                    obj.Text1 = $"Match {match.MatchNumber} - Score = {CalculateMatchResult(match)} - RP = {CalculateMatchRP(match)}";
+                    obj.Text2 = match.Comments;
                     int rp = CalculateMatchRP(match);
                     int matchScore = CalculateMatchResult(match);
                     if (rp > 0 || matchScore > 0 || match.Broken > 0)

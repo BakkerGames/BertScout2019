@@ -8,6 +8,7 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditMatchCommentPage : ContentPage
     {
+        bool _loadingFlag = false;
         EditEventTeamMatchViewModel viewModel;
 
         public EditMatchCommentPage(EventTeamMatch item)
@@ -25,8 +26,18 @@ namespace BertScout2019.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Editor_MatchScouterName.Text = viewModel.item.ScouterName;
-            Editor_MatchComment.Text = viewModel.item.Comments;
+            _loadingFlag = true;
+            Editor_MatchScouterName.Text = viewModel.item.ScouterName ?? "";
+            Editor_MatchComment.Text = viewModel.item.Comments ?? "";
+            if (string.IsNullOrEmpty(Editor_MatchScouterName.Text?.Trim()))
+            {
+                ErrorMessage.Text = "Please enter your name";
+            }
+            else
+            {
+                ErrorMessage.Text = "";
+            }
+            _loadingFlag = false;
             if (string.IsNullOrEmpty(Editor_MatchScouterName.Text))
             {
                 Editor_MatchScouterName.Focus();
@@ -40,35 +51,33 @@ namespace BertScout2019.Views
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            try
-            {
-                if (viewModel.item.ScouterName != Editor_MatchScouterName.Text
-                    || viewModel.item.Comments != Editor_MatchComment.Text)
-                {
-                    viewModel.item.ScouterName = Editor_MatchScouterName.Text.Trim();
-                    viewModel.item.Comments = Editor_MatchComment.Text;
-                    App.database.SaveEventTeamMatchAsync(viewModel.item);
-                }
-                ErrorMessage.Text = "Saved!";
-            }
-            catch (System.Exception ex)
-            {
-                ErrorMessage.Text = ex.Message;
-            }
+            SaveComments();
         }
 
         private void ToolbarItem_Save_Clicked(object sender, System.EventArgs e)
+        {
+            SaveComments();
+        }
+
+        private void SaveComments()
         {
             try
             {
                 if (viewModel.item.ScouterName != Editor_MatchScouterName.Text
                     || viewModel.item.Comments != Editor_MatchComment.Text)
                 {
-                    viewModel.item.ScouterName = Editor_MatchScouterName.Text.Trim();
-                    viewModel.item.Comments = Editor_MatchComment.Text;
+                    viewModel.item.ScouterName = Editor_MatchScouterName.Text?.Trim();
+                    viewModel.item.Comments = Editor_MatchComment.Text?.Trim();
                     App.database.SaveEventTeamMatchAsync(viewModel.item);
                 }
-                ErrorMessage.Text = "Saved!";
+                if (string.IsNullOrEmpty(Editor_MatchScouterName.Text?.Trim()))
+                {
+                    ErrorMessage.Text = "Please enter your name";
+                }
+                else
+                {
+                    ErrorMessage.Text = "";
+                }
             }
             catch (System.Exception ex)
             {
@@ -78,12 +87,18 @@ namespace BertScout2019.Views
 
         private void Editor_MatchComment_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ErrorMessage.Text = "";
+            if (!_loadingFlag && string.IsNullOrEmpty(ErrorMessage.Text))
+            {
+                ErrorMessage.Text = "(Not Saved)";
+            }
         }
 
         private void Editor_MatchScouterName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ErrorMessage.Text = "";
+            if (!_loadingFlag && string.IsNullOrEmpty(ErrorMessage.Text))
+            {
+                ErrorMessage.Text = "(Not Saved)";
+            }
         }
     }
 }

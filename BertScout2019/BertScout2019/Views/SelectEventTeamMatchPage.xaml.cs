@@ -83,7 +83,7 @@ namespace BertScout2019.Views
         }
 
         private void doAddNewMatch()
-        { 
+        {
             int value = int.Parse(MatchNumberLabelValue.Text);
             foreach (EventTeamMatch oldMatch in viewModel.Matches)
             {
@@ -121,7 +121,7 @@ namespace BertScout2019.Views
 
         private async void TeamDetails_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new TeamDetailsPage(currTeam));
+            await Navigation.PushAsync(new TeamDetailsPage(App.currFRCEventKey, currTeam));
         }
     }
 }

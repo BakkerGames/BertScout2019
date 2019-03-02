@@ -44,12 +44,14 @@ namespace BertScout2019.Views
         {
             RP.BackgroundColor = App.SelectedButtonColor;
             AvgScore.BackgroundColor = App.UnselectedButtonColor;
+            viewModel.SortByRankingPoints();
         }
 
         private void AvgScore_Clicked(object sender, EventArgs e)
         {
             AvgScore.BackgroundColor = App.SelectedButtonColor;
             RP.BackgroundColor = App.UnselectedButtonColor;
+            viewModel.SortByAverageScore();
         }
     }
 }

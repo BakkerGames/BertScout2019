@@ -34,7 +34,7 @@
             </StackLayout>
             <ListView 
                     x:Name="EventTeamsListView"
-                    ItemsSource="{Binding Teams}"
+                    ItemsSource="{Binding TeamResults}"
                     VerticalOptions="FillAndExpand"
                     HasUnevenRows="true"
                     RefreshCommand="{Binding LoadEventTeamsCommand}"

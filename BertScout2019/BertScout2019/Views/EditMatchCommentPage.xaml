@@ -40,9 +40,9 @@
             </StackLayout>
             <Editor
                 x:Name="Editor_MatchComment"
-                VerticalOptions="FillAndExpand"
                 FontSize="24"
                 IsSpellCheckEnabled="False"
+                VerticalOptions="FillAndExpand"
                 Text=""
                 MaxLength="500"
                 TextChanged="Editor_MatchComment_TextChanged"
@@ -51,6 +51,9 @@
                 x:Name="ErrorMessage"
                 Text=""
                 HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Start"
+                HeightRequest="400"
                 FontSize="24"
                 />
         </StackLayout>

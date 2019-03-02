@@ -29,14 +29,14 @@ namespace BertScout2019.ViewModels
                 return;
 
             IsBusy = true;
-            
+
             try
             {
                 TeamResults.Clear();
                 var teams = DataStoreTeam.GetItemsAsync(true).Result;
                 foreach (var team in teams)
                 {
-                    TeamDetailViewModel matchViewModel= new TeamDetailViewModel(team);
+                    TeamDetailViewModel matchViewModel = new TeamDetailViewModel(App.currFRCEventKey, team);
                     TeamResult teamResult = new TeamResult();
                     teamResult.TeamNumber = team.TeamNumber;
                     teamResult.Name = team.Name;

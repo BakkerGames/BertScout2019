@@ -1,10 +1,9 @@
 ﻿// For dropdown menu-use picker, info at https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/picker/
 
-using System;
 using BertScout2019.Models;
-using BertScout2019.Services;
 using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -40,7 +39,7 @@ namespace BertScout2019.Views
             App.currTeamNumber = item.TeamNumber;
             App.currTeamName = item.Name;
             Team itemTeam = viewModel.DataStoreTeam.GetItemByKeyAsync(item.TeamNumber.ToString()).Result;
-            await Navigation.PushAsync(new SelectEventTeamMatchPage(App.currFRCEventKey, itemTeam));
+            await Navigation.PushAsync(new TeamDetailsPage(App.currFRCEventKey, itemTeam));
         }
 
         private void RP_Clicked(object sender, EventArgs e)

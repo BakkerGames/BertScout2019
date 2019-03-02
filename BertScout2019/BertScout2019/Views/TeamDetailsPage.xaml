@@ -101,7 +101,7 @@
                                         LineBreakMode="NoWrap"
                                         Style="{DynamicResource ListItemTextStyle}"
                                         FontSize="24"
-                                        FontAttributes="None"
+                                        FontAttributes="Bold"
                                         />
                                     <Label
                                         Text="{Binding Text2}"

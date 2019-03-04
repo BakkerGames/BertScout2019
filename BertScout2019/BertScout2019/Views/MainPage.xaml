@@ -70,6 +70,14 @@
                 FontSize="24"
                 HorizontalOptions="CenterAndExpand"
                 HeightRequest="100"
+                HorizontalTextAlignment="Center"
+                />
+            <Label
+                x:Name="LabelVersionMessage2"
+                Text=""
+                FontSize="24"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
                 />
         </StackLayout>
     </ContentPage.Content>

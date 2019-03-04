@@ -22,6 +22,7 @@ namespace BertScout2019.Views
             if (string.IsNullOrEmpty(App.currFRCEventName))
             {
                 LabelVersionMessage.Text = "Please select an event";
+                LabelVersionMessage2.Text = "";
             }
             Button_Match_Scouting.IsEnabled = (!string.IsNullOrEmpty(App.currFRCEventName));
         }
@@ -93,11 +94,13 @@ namespace BertScout2019.Views
             _syncFlag = true;
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))
             {
-                LabelVersionMessage.Text = $"This app was coded by:\nScott, Chloe, & Nate\n{App.AppVersionDate}";
+                LabelVersionMessage.Text = "This app was coded by:\nScott, Chloe, & Nate";
+                LabelVersionMessage2.Text = App.AppVersionDate;
             }
             else
             {
                 LabelVersionMessage.Text = "";
+                LabelVersionMessage2.Text = "";
             }
             _syncFlag = false;
         }

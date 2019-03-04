@@ -22,6 +22,7 @@
                     IsPassword="False"
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
+                    TextChanged="Entry_IpAddress_TextChanged"
                     />
             </StackLayout>
             <StackLayout>

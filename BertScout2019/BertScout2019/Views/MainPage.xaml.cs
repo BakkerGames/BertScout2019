@@ -7,7 +7,6 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        private string _versionDate = "03/03/2019";
         private bool _syncFlag = false;
 
         public MainPage()
@@ -23,6 +22,7 @@ namespace BertScout2019.Views
             if (string.IsNullOrEmpty(App.currFRCEventName))
             {
                 LabelVersionMessage.Text = "Please select an event";
+                LabelVersionMessage2.Text = "";
             }
             Button_Match_Scouting.IsEnabled = (!string.IsNullOrEmpty(App.currFRCEventName));
         }
@@ -94,11 +94,13 @@ namespace BertScout2019.Views
             _syncFlag = true;
             if (string.IsNullOrEmpty(LabelVersionMessage.Text))
             {
-                LabelVersionMessage.Text = $"This app was coded by:\nScott, Chloe, & Nate\n{_versionDate}";
+                LabelVersionMessage.Text = "This app was coded by:\nScott, Chloe, & Nate";
+                LabelVersionMessage2.Text = App.AppVersionDate;
             }
             else
             {
                 LabelVersionMessage.Text = "";
+                LabelVersionMessage2.Text = "";
             }
             _syncFlag = false;
         }

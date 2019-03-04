@@ -80,7 +80,14 @@ namespace BertScout2019.Views
 
             List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
 
+            // make and use a copy of the list because it will crash otherwise
+            List<EventTeamMatch> copyOfMatches = new List<EventTeamMatch>();
             foreach (EventTeamMatch item in matches)
+            {
+                copyOfMatches.Add(item);
+            }
+
+            foreach (EventTeamMatch item in copyOfMatches)
             {
                 if (item.Changed % 2 == 1)
                 {
@@ -96,6 +103,7 @@ namespace BertScout2019.Views
                         updatedCount++;
                     }
                     // save it so .Changed is updated
+                    // this modifies the original list "matches", which is why a copy is needed
                     SqlDataEventTeamMatches.UpdateItemAsync(item);
                 }
             }
@@ -154,6 +162,15 @@ namespace BertScout2019.Views
             Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
 
             _isBusy = false;
+        }
+
+        private void Entry_IpAddress_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Entry_IpAddress.Text))
+            {
+                // save ip address
+                App.syncIpAddress = Entry_IpAddress.Text;
+            }
         }
     }
 }

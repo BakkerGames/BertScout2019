@@ -17,6 +17,7 @@ namespace BertScout2019
         static public Color UnselectedButtonColor = Color.LightGray;
         static public double dbVersion = 1.3;
         static public string OptionPassword = "letmein";
+        static public string AppVersionDate = "2019.03.04.1800";
 
         // app properties for easy page communication
         static public string currFRCEventKey { get; set; }
@@ -101,16 +102,21 @@ namespace BertScout2019
         protected override void OnSleep()
         {
             // Handle when your app sleeps
-            Properties[propNameVersionNumber] = dbVersion;
-            Properties[propNameFRCEventKey] = currFRCEventKey;
-            Properties[propNameFRCEventName] = currFRCEventName;
-            Properties[propNameHighestMatchNumber] = highestMatchNumber;
-            Properties[propNameIpAddress] = syncIpAddress;
+            SaveProperties();
         }
 
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        private void SaveProperties()
+        {
+            Properties[propNameVersionNumber] = dbVersion;
+            Properties[propNameFRCEventKey] = currFRCEventKey;
+            Properties[propNameFRCEventName] = currFRCEventName;
+            Properties[propNameHighestMatchNumber] = highestMatchNumber;
+            Properties[propNameIpAddress] = syncIpAddress;
         }
     }
 }

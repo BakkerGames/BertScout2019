@@ -19,10 +19,10 @@ namespace BertScout2019.Views
             MainPage_Version_Label.Text = $"Version {App.dbVersion}";
             CurrentFRCEventLabel.Text = App.currFRCEventName;
             LabelVersionMessage.Text = "";
+            LabelVersionMessage2.Text = "";
             if (string.IsNullOrEmpty(App.currFRCEventName))
             {
                 LabelVersionMessage.Text = "Please select an event";
-                LabelVersionMessage2.Text = "";
             }
             Button_Match_Scouting.IsEnabled = (!string.IsNullOrEmpty(App.currFRCEventName));
         }

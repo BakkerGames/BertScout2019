@@ -53,7 +53,6 @@ namespace BertScout2019.Views
                 MatchNumberLabelValue.Text = (value - 1).ToString();
                 App.highestMatchNumber = value;
             }
-            AddNewMatch.IsEnabled = true;
         }
 
         private void AddMatch_Plus_Clicked(object sender, System.EventArgs e)
@@ -68,7 +67,6 @@ namespace BertScout2019.Views
                 MatchNumberLabelValue.Text = (value + 1).ToString();
                 App.highestMatchNumber = value;
             }
-            AddNewMatch.IsEnabled = true;
         }
 
         private bool _addNewMatchBusy = false;

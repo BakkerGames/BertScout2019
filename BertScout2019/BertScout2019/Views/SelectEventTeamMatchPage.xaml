@@ -60,7 +60,6 @@
                     Clicked="AddNewMatch_Clicked"
                     BackgroundColor="LightGray"
                     WidthRequest="90"
-                    IsEnabled="False"
                     />
             </StackLayout>
             <ListView

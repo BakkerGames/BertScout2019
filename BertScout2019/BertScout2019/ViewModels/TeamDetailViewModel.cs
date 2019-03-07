@@ -50,6 +50,14 @@ namespace BertScout2019.ViewModels
                     obj.MatchNumber = match.MatchNumber;
                     // todo fill in text with useful match results
                     obj.Text1 = $"Match {match.MatchNumber} - Score = {CalculateMatchResult(match)} - RP = {CalculateMatchRP(match)}";
+                    if (match.Broken == 1)
+                    {
+                        obj.Text1 += " - Broken Some";
+                    }
+                    else if (match.Broken == 2)
+                    {
+                        obj.Text1 += " - Broken Lots";
+                    }
                     obj.Text2 = match.Comments;
                     int rp = CalculateMatchRP(match);
                     int matchScore = CalculateMatchResult(match);

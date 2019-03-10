@@ -247,7 +247,7 @@
 6246	Union Knight Robotics	La Porte City, Iowa, USA
 6248	Millbrook High School	Raleigh, North Carolina, USA
 6300	Northwood School Robotics	Lake Placid, New York, USA
-6301	Nerointellect-sim Engineering & Robot Design Soiree N.E.R.D.S.	Taunton, Massachusetts, USA
+6301	Nerointellect-sim Engineering &amp; Robot Design Soiree N.E.R.D.S.	Taunton, Massachusetts, USA
 6302	Greene Devils	Greeneville, Tennessee, USA
 6303	Citadel	Istanbul, Istanbul, Turkey
 6304	EAGLE	zhenjiang, Jiangsu, China
@@ -326,7 +326,7 @@
 6380	Orion Robotics	Istanbul, Istanbul, Turkey
 6381	Red Raider Robotics	Sheboygan, Wisconsin, USA
 6382	RoboHornz	Vista, California, USA
-6383	PLUG&PLAY	Shenzhen, Guangdong, China
+6383	PLUG&amp;PLAY	Shenzhen, Guangdong, China
 6384	Hisar Ravens	Gokturk ISTANBUL, Istanbul, Turkey
 6385	TrueMoe	Jinhua, Zhejiang, China
 6386	Guangzhou research robot club	GUANGZHOU, Guangdong, China
@@ -338,7 +338,7 @@
 6392	Dimension Creator	Chengdu, Sichuan, China
 6393	Pioneer	Zhengzhou, Henan, China
 6394	MITO	Suzhou, Jiangsu, China
-6395	Xindu No.2 High School	Chengdu , Sichuan, China
+6395	Xindu No.2 High School	Chengdu, Sichuan, China
 6396	Steel Tempest	Pensacola, Florida, USA
 6397	Romero Robotics	York, Ontario, Canada
 6398	Kilo-bots	Santa Paula, California, USA
@@ -393,7 +393,7 @@
 6447	Bad 2 the Bone - Bingara Central School	Bingara, New South Wales, Australia
 6448	LBJ Early College High School	Austin, Texas, USA
 6449	DigiBots	Warnbro, Western Australia, Australia
-6450	The Reaper	Jinhua , Zhejiang, China
+6450	The Reaper	Jinhua, Zhejiang, China
 6451	Wired Warriors	Whiteland, Indiana, USA
 6452	GPrep Thumpin Pup	Spokane, Washington, USA
 6453	Bog Bots!	Kelliher, Minnesota, USA
@@ -630,7 +630,7 @@
 6686	Bionic Broncos	West Palm Beach, Florida, USA
 6687	Owltronics	Garland, Texas, USA
 6688	West Valley Middle College Robotics Team	San Jose, California, USA
-6689	Robit	Mexico City , Distrito Federal, Mexico
+6689	Robit	Mexico City, Distrito Federal, Mexico
 6690	MV roboPride	Concord, New Hampshire, USA
 6691	Torque	Wolfeboro, New Hampshire, USA
 6692	Robofalcons	San Bernardino, California, USA
@@ -679,7 +679,7 @@
 6737	H.R.T	HAIFA, Haifa, Israel
 6738	Excalibur	Modi'in, HaMerkaz, Israel
 6739	Tel Shevaa	tel sheva, HaDarom, Israel
-6740	G3 - Glue Gun & Glitter	Pardes Hana, Haifa, Israel
+6740	G3 - Glue Gun &amp; Glitter	Pardes Hana, Haifa, Israel
 6741	Space monkeys	rishon le tzion, Tel-Aviv, Israel
 6742	Blue Jays	Westland, Michigan, USA
 6743	Tiger Engineering	Fort Myers, Florida, USA
@@ -761,7 +761,7 @@
 6850	Cell-Ticks	Ocala, Florida, USA
 6851	Empereurs	Laval, Québec, Canada
 6852	Bedford Express	Temperance, Michigan, USA
-6853	JaegersTec	Tuxtla Gutierrez , Chiapas, Mexico
+6853	JaegersTec	Tuxtla Gutierrez, Chiapas, Mexico
 6854	AB Lucas VIKING Robotics	London, Ontario, Canada
 6855	Badger Robotics	Arkadelphia, Arkansas, USA
 6856	RoboRaptors	London, Ontario, Canada
@@ -837,7 +837,7 @@
 6926	RobotiCats	Clovis, California, USA
 6927	The Franklinton Firebirds	Columbus, Ohio, USA
 6928	Mad Llama Robotics	Greeneville, Tennessee, USA
-6929	Cuivre & Or	Rouyn-Noranda, Québec, Canada
+6929	Cuivre &amp; Or	Rouyn-Noranda, Québec, Canada
 6930	Hill Robotics	Staten Island, New York, USA
 6931	The Red Company	Tucson, Arizona, USA
 6932	S.M.A.R.T. (Smoky Mountain Academic Robotics Team)	Sylva, North Carolina, USA
@@ -854,7 +854,7 @@
 6943	Blue Bears	Newark, New Jersey, USA
 6944	Wolverines	Cumming, Georgia, USA
 6945	Children of the Corn	Blairstown, New Jersey, USA
-6946	F & E	Kunming, Yunnan, China
+6946	F &amp; E	Kunming, Yunnan, China
 6947	Savage Tumaz	Taipei, Taipei, Chinese Taipei
 6948	EAGLES	Kartal, Istanbul, Turkey
 6949	The Smurfs	Nanjing, Jiangsu, China
@@ -901,7 +901,7 @@
 6990	Ambition	Shanghai, Shanghai, China
 6991	Crosbotics	Shanghai, Shanghai, China
 6992	FrancoBots	Sarnia, Ontario, Canada
-6993	Dragons	Lubbock , Texas, USA
+6993	Dragons	Lubbock, Texas, USA
 6994	Citadel	Istanbul, Istanbul, Turkey
 6995	NOMAD	Escondido, California, USA
 6996	Koalafied	Adelaide, South Australia, Australia

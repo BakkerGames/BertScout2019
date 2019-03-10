@@ -36,7 +36,7 @@
 5035	eNimkii	North Bay, Ontario, Canada
 5036	The Robo Devils	Scarborough, Ontario, Canada
 5037	Panther BOTS	Greenbrier, AR, USA
-5038	MEGIDDO LIONS	Megiddo Regional Council , HaZafon, Israel
+5038	MEGIDDO LIONS	Megiddo Regional Council, HaZafon, Israel
 5039	Irish Iron	Sarnia, Ontario, Canada
 5040	BoltBot	Arlington, Tennessee, USA
 5041	CyBears	West Branch, Iowa, USA
@@ -228,7 +228,7 @@
 5227	Eagle Elite	Schoolcraft, Michigan, USA
 5228	Astros	Calgary, AB, Canada
 5229	Heritage Hawkbots	Saginaw, Michigan, USA
-5230	The Resistance	Alpena , Michigan, USA
+5230	The Resistance	Alpena, Michigan, USA
 5231	Radical Jays	Shepherd, Michigan, USA
 5232	Talons	Hermantown, Minnesota, USA
 5233	Golden Eagles	Brooklyn, Michigan, USA
@@ -448,11 +448,11 @@
 5497	Foxes	Silverton, OR, USA
 5498	The Wired Devils	Grosse Ile, Michigan, USA
 5499	The Bay Orangutans	Berkeley, California, USA
-5500	Jaguars Robotics & ROVs	Long Beach, California, USA
+5500	Jaguars Robotics &amp; ROVs	Long Beach, California, USA
 5501	Bobcats	Burr Oak, Michigan, USA
 5502	Cobrots	Jonesville, Michigan, USA
 5503	Smithville Tiger Trons	Smithville, Texas, USA
-5504	The Loose Connections	Pinconning , Michigan, USA
+5504	The Loose Connections	Pinconning, Michigan, USA
 5505	V2 Robotics	Alpena, Michigan, USA
 5506	Midcoast MAINEiacs Robotics Team	Searsport, Maine, USA
 5507	Robotic Eagles	San Francisco, California, USA
@@ -470,7 +470,7 @@
 5519	LASS Robotics	Brampton, Ontario, Canada
 5520	Duck and Cover	Henrico, Virginia, USA
 5521	WOLF TEAM ROBOTICS	SOPO, Cundinamarca, Colombia
-5522	Stargazer	Shenzhen , Guangdong, China
+5522	Stargazer	Shenzhen, Guangdong, China
 5523	RoboWarriors	Grass Lake, Michigan, USA
 5524	MacroProcessors	Birch Run, Michigan, USA
 5525	Alcona Tool Cats	Lincoln, Michigan, USA
@@ -514,7 +514,7 @@
 5563	Phalanx	Lynn, Massachusetts, USA
 5564	GBHS Robotics	Granville, New South Wales, Australia
 5565	Auburn Girls	Auburn, New South Wales, Australia
-5566	Sugar Rush	Sugar Land , Texas, USA
+5566	Sugar Rush	Sugar Land, Texas, USA
 5567	Code Red Robotics	Milan, Michigan, USA
 5568	Solid Rock	Bentonville, Arkansas, USA
 5569	Tech Titans	Washington, District of Columbia, USA
@@ -533,7 +533,7 @@
 5582	Rex Machina	Sharpsburg, Georgia, USA
 5583	SistamatiK	Saint Louis, Missouri, USA
 5584	ICRobotics	Boronia, Victoria, Australia
-5585	Blood, Sweat & Gears	Edmeston, New York, USA
+5585	Blood, Sweat &amp; Gears	Edmeston, New York, USA
 5586	Bond Brigade	Kiel, Wisconsin, USA
 5587	Titan Robotics	Alexandria, Virginia, USA
 5588	Reign Robotics	Seattle, Washington, USA
@@ -720,7 +720,7 @@
 5769	Radio Rangers R^2	Santa Fe, Texas, USA
 5770	ReMIT	Inglewood, California, USA
 5771	Marfa Robohorns	Marfa, Texas, USA
-5772	The Mighty Morphin Power Bots	Los Angeles , California, USA
+5772	The Mighty Morphin Power Bots	Los Angeles, California, USA
 5773	YAFL Mechatronics	Istanbul, Istanbul, Turkey
 5774	Maximum Overload	Flint, Michigan, USA
 5775	CRHS RoboCats	Malakoff, Texas, USA
@@ -774,7 +774,7 @@
 5835	Sage Robotics	Newport Coast, California, USA
 5836	Mechanic Mutts	Saint Louis, Missouri, USA
 5837	Unity4Tech	Waterloo, Iowa, USA
-5838	Mitochondria	Kunming , Yunnan, China
+5838	Mitochondria	Kunming, Yunnan, China
 5839	Blue Whales	Nanjing, Jiangsu, China
 5840	Shock Wave	Dawson, Georgia, USA
 5841	The Patriots	Frederick, Maryland, USA

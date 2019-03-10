@@ -11,7 +11,7 @@
 3010	The Red Plague	Centerburg, Ohio, USA
 3011	RoboWarriors	APO, Hessen, Germany
 3012	Spartans	Houston, TX, USA
-3013	Zombots	Vallejo , California, USA
+3013	Zombots	Vallejo, California, USA
 3014	Tech Heads	Albuquerque, NM, USA
 3015	Ranger Robotics	Spencerport, New York, USA
 3016	CyCreek Crusaders	Houston, Texas, USA
@@ -42,7 +42,7 @@
 3044	Team 0xBE4	Ballston Spa, New York, USA
 3045	The Gear Gremlins	San Mateo, California, USA
 3046	GWHS RoboFanatics	Charmco, WV, USA
-3048	Cutthroat Robotics	Mesa , Arizona, USA
+3048	Cutthroat Robotics	Mesa, Arizona, USA
 3049	BremerTron	Bremerton, Washington, USA
 3052	Makif Yud	Rishon Lezion, M, Israel
 3053	VB Stingers	Queens Village, New York, USA
@@ -185,7 +185,7 @@
 3203	The Unlikely Mix	Columbus, OH, USA
 3204	Steampunk Penguins	Jamaica Estates, New York, USA
 3205	Patriots	Concord, Massachusetts, USA
-3206	Royal T-Wrecks	Woodbury , Minnesota, USA
+3206	Royal T-Wrecks	Woodbury, Minnesota, USA
 3207	Fighting Scots	Ogden, UT, USA
 3208	WildBots	Clifton, VA, USA
 3209	NHS Robotics	Niles, OH, USA
@@ -196,7 +196,7 @@
 3214	High Tech Hounds	Memphis, TN, USA
 3215	Apollo	Greensboro, North Carolina, USA
 3216	Missoula Robotics Team (MRT)	Missoula, Montana, USA
-3217	L&M	Edcouch, TX, USA
+3217	L&amp;M	Edcouch, TX, USA
 3218	Panther Robotics	Bonney Lake, Washington, USA
 3219	TREAD	Auburn, Washington, USA
 3220	Mechanics of Mayhem	Spangle, Washington, USA
@@ -288,10 +288,10 @@
 3314	Mechanical Mustangs	Clifton, New Jersey, USA
 3315	Mountaineers	Spirit Lake, ID, USA
 3316	D-Bug	Tel Aviv, Tel-Aviv, Israel
-3317	Q & E Robotics	Hollandale, MS, USA
+3317	Q &amp; E Robotics	Hollandale, MS, USA
 3318	RoboDragons	Lawrenceville, Georgia, USA
 3319	Grissom Robotics	Huntsville, Alabama, USA
-3320	Miracles & Machines (M&Ms)	Austin, Texas, USA
+3320	Miracles &amp; Machines (M&amp;Ms)	Austin, Texas, USA
 3321	Superior Robotics	Superior, Arizona, USA
 3322	Eagle Imperium	Ann Arbor, Michigan, USA
 3323	Potential Energy	Litchfield, New Hampshire, USA
@@ -355,7 +355,7 @@
 3389	TEC Tigers	Salisbury, Maryland, USA
 3390	ANATOLIAN EAGLEBOTS	Ankara, Ankara, Turkey
 3392	T-Robots	Grand Prairie, TX, USA
-3393	Horns of Havoc	Puyallup , Washington, USA
+3393	Horns of Havoc	Puyallup, Washington, USA
 3394	Knight Riders	Hudson, NC, USA
 3396	Imperium Machinamentum	Richmond Hill, ON, Canada
 3397	Robolions	Saint Louis, Missouri, USA
@@ -421,7 +421,7 @@
 3483	Cold Smoke	Bozeman, MT, USA
 3484	Short Circuit	Marysville, Ohio, USA
 3485	Cyclone Robotics	Kansas City, Kansas, USA
-3486	STEM&m's	San Diego, California, USA
+3486	STEM&amp;m's	San Diego, California, USA
 3487	Red Pride Robotics	Plainfield, Indiana, USA
 3488	Eagle Army	Orland Park, Illinois, USA
 3489	Category 5	North Charleston, South Carolina, USA
@@ -437,7 +437,7 @@
 3499	River's Edge Robotics	Durham, New Hampshire, USA
 3500	Roboteenz	Perris, CA, USA
 3501	Firebots	Sunnyvale, California, USA
-3502	Octo(PI)Rates	Tallahassee , Florida, USA
+3502	Octo(PI)Rates	Tallahassee, Florida, USA
 3503	WRX	Fair Oaks, CA, USA
 3504	Girls of Steel	Pittsburgh, Pennsylvania, USA
 3505	Fighting Z-Bots	Lincoln, CA, USA
@@ -459,7 +459,7 @@
 3521	Noble Nuts	Indio, CA, USA
 3522	CBoT´S4	Toluca, Mexico, Mexico
 3524	The Blizzard	Minneapolis, MN, USA
-3525	The Nuts & Bolts of Fury	Waterbury, Connecticut, USA
+3525	The Nuts &amp; Bolts of Fury	Waterbury, Connecticut, USA
 3526	PrepaTec - Blue Ignition	Saltillo, Coahuila, Mexico
 3527	PrepaTec - Balam Esmeralda	Atizapan de Zaragoza, Mexico, Mexico
 3528	Up Next	Kansas City, Missouri, USA
@@ -534,7 +534,7 @@
 3600	Clockwork	Madison, Georgia, USA
 3601	Spartan Sprockets	Webberville, MI, USA
 3602	RoboMos	Escanaba, Michigan, USA
-3603	Cyber Coyotes	Reed City , Michigan, USA
+3603	Cyber Coyotes	Reed City, Michigan, USA
 3604	Goon Squad	Brownstown, Michigan, USA
 3605	black storm	dearborn, MI, USA
 3606	BearMetal	Baton Rouge, Louisiana, USA
@@ -646,7 +646,7 @@
 3716	WARP (Wasatch Academy Robotics Program)	Mount Pleasant, UT, USA
 3717	Hitchhikers	San Pablo, CA, USA
 3718	Junkyard Battalion	New Britain, Connecticut, USA
-3719	STEM Whalers	New London , Connecticut, USA
+3719	STEM Whalers	New London, Connecticut, USA
 3720	Cougears	Miami, FL, USA
 3721	Charger Robotics	Pearl CIty, Hawaii, USA
 3722	Green Wave Robotics	East Grand Forks, MN, USA
@@ -738,7 +738,7 @@
 3809	AcRT	Columbia, KY, USA
 3810	Pirates	Magna, UT, USA
 3811	Chargerbots	Weldon, NC, USA
-3812	Bits & Bots	Longview, Washington, USA
+3812	Bits &amp; Bots	Longview, Washington, USA
 3813	The Three Ring Circuits	Puyallup, WA, USA
 3814	PiBotics	Florence, Kentucky, USA
 3815	NF Raiders	Cumming, Georgia, USA
@@ -801,7 +801,7 @@
 3875	Red Storm Robotics	Kentwood, Michigan, USA
 3876	Mabton LugNutz	Mabton, Washington, USA
 3877	DABOT	Madrid, MD, Spain
-3878	Wildcats	Kealakekua , Hawaii, USA
+3878	Wildcats	Kealakekua, Hawaii, USA
 3879	Charter Bots	Kihei, HI, USA
 3880	Tiki Techs	Kailua Kona, Hawaii, USA
 3881	WHEA Sharkbots	Kailua Kona, Hawaii, USA
@@ -847,12 +847,12 @@
 3958	Schrodinger's Cat	Boston, Massachusetts, USA
 3959	Mech Tech	Somerville, Alabama, USA
 3960	BEast Robotics	Salt Lake City, UT, USA
-3961	MBA Execs	Memphis , Tennessee, USA
+3961	MBA Execs	Memphis, Tennessee, USA
 3962	Incognito Robotics	Kittanning, PA, USA
 3963	Urban Robots	Milwaukee, WI, USA
 3964	Dolphins	Sanibel, FL, USA
 3965	Sultans	Santee, California, USA
-3966	L&N STEMpunks	Knoxville, Tennessee, USA
+3966	L&amp;N STEMpunks	Knoxville, Tennessee, USA
 3967	Trojans Robotics	Chula Vista, California, USA
 3968	Higher Voltage	Renton, WA, USA
 3969	Phoenix	Montreal, Québec, Canada

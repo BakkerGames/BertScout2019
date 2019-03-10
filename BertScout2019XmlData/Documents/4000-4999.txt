@@ -108,7 +108,7 @@
 4109	Reynolds Robo Raiders	Troutdale, OR, USA
 4110	DEEP SPACE NINERS	Brookings, Oregon, USA
 4111	Some Assembly Required	Mesa, Arizona, USA
-4112	EagleBots	Cumming , Georgia, USA
+4112	EagleBots	Cumming, Georgia, USA
 4113	IHS Robotics	New Orleans, LA, USA
 4114	Pallindrones	Hemet, California, USA
 4115	Team Breaking Lights	Clarksville, Ohio, USA
@@ -238,7 +238,7 @@
 4245	Robo Dragons	1304 Ashe Street, NC, USA
 4246	Resurrected Robotics	Troy, Illinois, USA
 4247	CougarBots	Milwaukee, Wisconsin, USA
-4248	Bits & Pieces	Whitby, Ontario, Canada
+4248	Bits &amp; Pieces	Whitby, Ontario, Canada
 4249	Tektronix	Brampton, ON, Canada
 4250	Comet-tron	Cobourg, ON, Canada
 4251	The Gallup GearHeads	Gallup, NM, USA
@@ -299,7 +299,7 @@
 4309	4-H Botsmiths	Snohomish, Washington, USA
 4310	NUKES	American Fork, Utah, USA
 4311	Swampscott Currents	Swampscott, Massachusetts, USA
-4314	SUL Abe-Ro-Bots	Springfield , Illinois, USA
+4314	SUL Abe-Ro-Bots	Springfield, Illinois, USA
 4315	Falcons	Dallas, TX, USA
 4316	Trobotics	Raceland, Louisiana, USA
 4317	Tech Busters	Denton, TX, USA
@@ -386,7 +386,7 @@
 4401	CETMOV	Laguna del Rey Coahuila, Coahuila, Mexico
 4402	Connectors	West Plains, MO, USA
 4403	PrepaTec - ROULT	Torreon, Coahuila, Mexico
-4404	Nuts & Colts	Chesterfield, Missouri, USA
+4404	Nuts &amp; Colts	Chesterfield, Missouri, USA
 4405	The Atoms Family	Canton, Michigan, USA
 4406	Robotic Legends	Tel Aviv, Tel-Aviv, Israel
 4407	Virtualosity	Jackson, MI, USA
@@ -473,7 +473,7 @@
 4520	Misfit Toys	Rathdrum, ID, USA
 4521	Harrison Robotics	Harrison, Ohio, USA
 4522	Team SCREAM	Sedalia, Missouri, USA
-4523	MCROBO	Mayes County , Oklahoma, USA
+4523	MCROBO	Mayes County, Oklahoma, USA
 4524	The Memphis MechWarriors	Memphis, Tennessee, USA
 4525	Renaissance Robotics	St. Thomas, Ontario, Canada
 4526	Léoméga	Terrebonne, Québec, Canada
@@ -500,7 +500,7 @@
 4547	WestyTek	Johnstown, Pennsylvania, USA
 4548	Omak FFA Wonders	Omak, WA, USA
 4549	Iron Bulls	South Saint Paul, Minnesota, USA
-4550	Something's Bruin	Greenwood Village , Colorado, USA
+4550	Something's Bruin	Greenwood Village, Colorado, USA
 4551	Robotic Rangers	Chicago, IL, USA
 4552	Robotic Tigers	Slaton, TX, USA
 4553	Patriobots	Columbus, Mississippi, USA
@@ -553,7 +553,7 @@
 4600	Tech Titans	Saint Louis, Missouri, USA
 4601	Circuit Birds	Canfield, Ohio, USA
 4602	Calgary First Nation team	Calgary, AB, Canada
-4603	Leones Francés	Gomez Palacio , Durango, Mexico
+4603	Leones Francés	Gomez Palacio, Durango, Mexico
 4604	Intimitrons from Area 51	Calgary, Alberta, Canada
 4605	Calgary Ismaili Team	Calgary, AB, Canada
 4606	Team 4606, "Larry"	Calgary, AB, Canada
@@ -633,7 +633,7 @@
 4680	AzTech Eagles	Detroit, Michigan, USA
 4681	Murphy's law	Everett, Washington, USA
 4682	BraveBots	Seattle, Washington, USA
-4683	Full Metal Robotics	Marysville , Washington, USA
+4683	Full Metal Robotics	Marysville, Washington, USA
 4684	eSharks	Yonkers, New York, USA
 4685	Aztlavolt	Azcapotzalco, Distrito Federal, Mexico
 4686	Nay Ah Shing	Onamia, MN, USA

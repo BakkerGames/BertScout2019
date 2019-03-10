@@ -226,6 +226,11 @@
     <TeamNumber>173</TeamNumber>
   </EventTeam>
   <EventTeam>
+    <Uuid>936d4330-35a7-4309-b627-3a4b2a9ed168</Uuid>
+    <EventKey>NEDIST_RHODEISLAND</EventKey>
+    <TeamNumber>190</TeamNumber>
+  </EventTeam>
+  <EventTeam>
     <Uuid>ad51f57d-cc3a-4a40-acd5-39cc363806aa</Uuid>
     <EventKey>NEDIST_RHODEISLAND</EventKey>
     <TeamNumber>716</TeamNumber>
@@ -261,6 +266,11 @@
     <TeamNumber>2712</TeamNumber>
   </EventTeam>
   <EventTeam>
+    <Uuid>98725ea8-c34e-408e-ae31-12a51bc47183</Uuid>
+    <EventKey>NEDIST_RHODEISLAND</EventKey>
+    <TeamNumber>2713</TeamNumber>
+  </EventTeam>
+  <EventTeam>
     <Uuid>ee5cc075-ebf4-4a38-9135-bbaded9ad145</Uuid>
     <EventKey>NEDIST_RHODEISLAND</EventKey>
     <TeamNumber>3146</TeamNumber>
@@ -276,9 +286,9 @@
     <TeamNumber>3719</TeamNumber>
   </EventTeam>
   <EventTeam>
-    <Uuid>a6fcec60-f2c0-4b65-878e-7ad9bda916bf</Uuid>
+    <Uuid>a749a39d-ef7b-4a1f-8372-0429319ef4e2</Uuid>
     <EventKey>NEDIST_RHODEISLAND</EventKey>
-    <TeamNumber>4042</TeamNumber>
+    <TeamNumber>4048</TeamNumber>
   </EventTeam>
   <EventTeam>
     <Uuid>91a05af0-29ae-47da-9234-0dbecc0c577c</Uuid>
@@ -381,6 +391,11 @@
     <TeamNumber>3451</TeamNumber>
   </EventTeam>
   <EventTeam>
+    <Uuid>7743eadd-a356-4e27-b48f-00a39a82fa0c</Uuid>
+    <EventKey>NEDIST_PINETREE</EventKey>
+    <TeamNumber>3467</TeamNumber>
+  </EventTeam>
+  <EventTeam>
     <Uuid>ba7155d6-fd4d-46e9-9de1-7a05c276d354</Uuid>
     <EventKey>NEDIST_PINETREE</EventKey>
     <TeamNumber>3525</TeamNumber>
@@ -399,11 +414,6 @@
     <Uuid>48cfe9cb-6653-401c-a748-49e986a997fc</Uuid>
     <EventKey>NEDIST_PINETREE</EventKey>
     <TeamNumber>4041</TeamNumber>
-  </EventTeam>
-  <EventTeam>
-    <Uuid>2b2248f1-64dd-47ee-a890-816730742297</Uuid>
-    <EventKey>NEDIST_PINETREE</EventKey>
-    <TeamNumber>4042</TeamNumber>
   </EventTeam>
   <EventTeam>
     <Uuid>4439f765-7183-4fe9-84be-beb3002bf793</Uuid>
@@ -444,11 +454,6 @@
     <Uuid>c0f9df8e-ecee-408d-b7d7-80e3ff8a5e31</Uuid>
     <EventKey>NEDIST_PINETREE</EventKey>
     <TeamNumber>5494</TeamNumber>
-  </EventTeam>
-  <EventTeam>
-    <Uuid>1c4a3017-243a-460c-b43a-911a7cde2970</Uuid>
-    <EventKey>NEDIST_PINETREE</EventKey>
-    <TeamNumber>5506</TeamNumber>
   </EventTeam>
   <EventTeam>
     <Uuid>4ece31ee-dc44-4deb-96e1-49ba7f7fb006</Uuid>

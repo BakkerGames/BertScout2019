@@ -412,7 +412,7 @@
 2505	The Electric Sheep	Toronto, ON, Canada
 2506	Saber Robotics	Franklin, Wisconsin, USA
 2508	Armada	Stillwater, Minnesota, USA
-2509	Tigerbots	Hutchinson , Minnesota, USA
+2509	Tigerbots	Hutchinson, Minnesota, USA
 2510	anishinaabe	Cloquet, MN, USA
 2511	Cougars	Lakeville, Minnesota, USA
 2512	Duluth East Daredevils	Duluth, Minnesota, USA
@@ -434,7 +434,7 @@
 2531	RoboHawks	Chaska, Minnesota, USA
 2532	FLASH Power	Forest Lake, Minnesota, USA
 2533	Juarez Aztec Eagles	Chicago, IL, USA
-2534	Lumberjack Robotics	Baltimore , Maryland, USA
+2534	Lumberjack Robotics	Baltimore, Maryland, USA
 2535	TIGEARS	Minneapolis, MN, USA
 2536	Carver Bears	Baltimore, MD, USA
 2537	Space RAIDers	Columbia, Maryland, USA
@@ -503,7 +503,7 @@
 2604	Metal and Soul	Capac, Michigan, USA
 2605	Seamonsters	Bellingham, Washington, USA
 2606	Irish Robotics	Rosemount, Minnesota, USA
-2607	The Fighting RoboVikings	Warminster , Pennsylvania, USA
+2607	The Fighting RoboVikings	Warminster, Pennsylvania, USA
 2608	MiGHT	Farmington Hills, MI, USA
 2609	BeaverworX	Guelph, Ontario, Canada
 2611	Jacktown Vectors	Jackson, Michigan, USA
@@ -619,7 +619,7 @@
 2791	Shaker Robotics	Latham, New York, USA
 2793	Sabercats	Moore, OK, USA
 2795	Ohm's Claw	Broken Arrow, Oklahoma, USA
-2797	Knight & Nerdy	Clermont, Florida, USA
+2797	Knight &amp; Nerdy	Clermont, Florida, USA
 2799	The Teslas	Kansas City, MO, USA
 2803	Firebirds	Chicago, IL, USA
 2805	Ghost in the Machine	Waxahachie, Texas, USA

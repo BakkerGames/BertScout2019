@@ -183,7 +183,7 @@
   <Team>
     <Uuid>1b9ce661-6ac7-4939-ade9-4bf216eda98e</Uuid>
     <TeamNumber>48</TeamNumber>
-    <Name>Delphi E.L.I.T.E.</Name>
+    <Name>Team E.L.I.T.E.</Name>
     <Location>Warren, Ohio, USA</Location>
   </Team>
   <Team>
@@ -363,7 +363,7 @@
   <Team>
     <Uuid>abaf797b-6588-437b-a38e-1b4190ef38ec</Uuid>
     <TeamNumber>88</TeamNumber>
-    <Name>TJ(Squared)</Name>
+    <Name>TJ²</Name>
     <Location>Bridgewater, Massachusetts, USA</Location>
   </Team>
   <Team>
@@ -381,7 +381,7 @@
   <Team>
     <Uuid>0907ff6e-b6e1-47d0-8ee6-326632cba8d6</Uuid>
     <TeamNumber>94</TeamNumber>
-    <Name>The  Ninetyfouriors</Name>
+    <Name>The Ninetyfouriors</Name>
     <Location>Southfield, Michigan, USA</Location>
   </Team>
   <Team>
@@ -952,7 +952,7 @@
     <Uuid>a7fcad77-dfd5-41ce-8e4b-cf8899c9dedb</Uuid>
     <TeamNumber>245</TeamNumber>
     <Name>Adambots</Name>
-    <Location>Rochester, Michigan, USA</Location>
+    <Location>Rochester Hills, Michigan, USA</Location>
   </Team>
   <Team>
     <Uuid>464afec2-5e77-4187-af17-6f7b2670296a</Uuid>
@@ -1011,7 +1011,7 @@
   <Team>
     <Uuid>193370dc-1ef3-4d30-b312-fbe54bc177e0</Uuid>
     <TeamNumber>263</TeamNumber>
-    <Name>Sachem Aftershock</Name>
+    <Name>Aftershock</Name>
     <Location>Ronkonkoma, New York, USA</Location>
   </Team>
   <Team>
@@ -1191,7 +1191,7 @@
   <Team>
     <Uuid>bea04e0f-ae42-4549-87b0-df96fe8ae987</Uuid>
     <TeamNumber>308</TeamNumber>
-    <Name>The Monsters</Name>
+    <Name>Monsters</Name>
     <Location>Walled Lake, Michigan, USA</Location>
   </Team>
   <Team>
@@ -1467,7 +1467,7 @@
   <Team>
     <Uuid>02e0493b-bc95-45da-9b03-a2cf553d4e8d</Uuid>
     <TeamNumber>379</TeamNumber>
-    <Name>RoboCats</Name>
+    <Name>The RoboCats</Name>
     <Location>Girard, Ohio, USA</Location>
   </Team>
   <Team>
@@ -1959,7 +1959,7 @@
   <Team>
     <Uuid>a12b8e78-b684-49f2-9317-b826328ad920</Uuid>
     <TeamNumber>514</TeamNumber>
-    <Name>Miller Place Robotics</Name>
+    <Name>Entropy</Name>
     <Location>Miller Place, New York, USA</Location>
   </Team>
   <Team>
@@ -2175,7 +2175,7 @@
   <Team>
     <Uuid>ad5c28f6-49af-4bbb-b3e8-50527d50f43d</Uuid>
     <TeamNumber>578</TeamNumber>
-    <Name>R-cubed  - Red Raider Robotics</Name>
+    <Name>R-cubed - Red Raider Robotics</Name>
     <Location>Fairport, New York, USA</Location>
   </Team>
   <Team>
@@ -2427,7 +2427,7 @@
   <Team>
     <Uuid>def25de0-ce22-4cbd-b03d-66306072057a</Uuid>
     <TeamNumber>647</TeamNumber>
-    <Name>Cyberwolves</Name>
+    <Name>CYBERWOLVES</Name>
     <Location>Killeen, Texas, USA</Location>
   </Team>
   <Team>
@@ -2979,7 +2979,7 @@
   <Team>
     <Uuid>306a4f3d-17a6-4039-9c21-99dc20fe04cd</Uuid>
     <TeamNumber>840</TeamNumber>
-    <Name>ART</Name>
+    <Name>Aragon Robotics Team</Name>
     <Location>San Mateo, California, USA</Location>
   </Team>
   <Team>
@@ -3111,7 +3111,7 @@
   <Team>
     <Uuid>5d038c75-5e2f-4bbe-8444-7c09b5fa14bb</Uuid>
     <TeamNumber>870</TeamNumber>
-    <Name>TEAM  R. I. C. E.</Name>
+    <Name>TEAM R. I. C. E.</Name>
     <Location>Southold, New York, USA</Location>
   </Team>
   <Team>
@@ -3142,7 +3142,7 @@
     <Uuid>8435a904-0204-4cb4-b841-4506ee49cafa</Uuid>
     <TeamNumber>876</TeamNumber>
     <Name>Thunder Robotics</Name>
-    <Location>Northwood, North Dakota, USA</Location>
+    <Location>Hatton-Northwood, North Dakota, USA</Location>
   </Team>
   <Team>
     <Uuid>3f612566-90e6-45ea-937c-b0dd8b624a98</Uuid>
@@ -3177,7 +3177,7 @@
   <Team>
     <Uuid>6ce16e8a-721e-42d6-ae06-f9946678dc52</Uuid>
     <TeamNumber>885</TeamNumber>
-    <Name>Robovines</Name>
+    <Name>GREEN TEAM</Name>
     <Location>Randolph Center, Vermont, USA</Location>
   </Team>
   <Team>
@@ -4365,7 +4365,7 @@
   <Team>
     <Uuid>957aa8ba-70c7-4174-a352-a51df96a94c8</Uuid>
     <TeamNumber>1153</TeamNumber>
-    <Name>The Walpole Revolution</Name>
+    <Name>Walpole Robotics Revolution</Name>
     <Location>Walpole, Massachusetts, USA</Location>
   </Team>
   <Team>
@@ -4467,7 +4467,7 @@
   <Team>
     <Uuid>e500979f-48fe-4fc3-8626-516a7d2b2b57</Uuid>
     <TeamNumber>1178</TeamNumber>
-    <Name>DURT  (De Smet Ultimate Robotics Team)</Name>
+    <Name>DURT (De Smet Ultimate Robotics Team)</Name>
     <Location>Saint Louis, Missouri, USA</Location>
   </Team>
   <Team>
@@ -4839,7 +4839,7 @@
   <Team>
     <Uuid>0bf4c4fb-6c1e-4768-a255-75778b43cb00</Uuid>
     <TeamNumber>1261</TeamNumber>
-    <Name>Robo  Lions</Name>
+    <Name>Robo Lions</Name>
     <Location>Suwanee, Georgia, USA</Location>
   </Team>
   <Team>
@@ -5277,7 +5277,7 @@
   <Team>
     <Uuid>2416309c-6a98-4924-95a5-9b3c76198cf4</Uuid>
     <TeamNumber>1351</TeamNumber>
-    <Name>Mitty Robotics "TKO"</Name>
+    <Name>TKO</Name>
     <Location>San Jose, California, USA</Location>
   </Team>
   <Team>
@@ -6093,7 +6093,7 @@
   <Team>
     <Uuid>4b71e5a2-a196-4cbe-b8e6-b9287538bca5</Uuid>
     <TeamNumber>1515</TeamNumber>
-    <Name>MorTorq 1515</Name>
+    <Name>MorTorq</Name>
     <Location>Beverly Hills, California, USA</Location>
   </Team>
   <Team>
@@ -6129,7 +6129,7 @@
   <Team>
     <Uuid>6956585f-df3f-4755-bfc1-4b85a937e711</Uuid>
     <TeamNumber>1522</TeamNumber>
-    <Name>DOTM - Defenders of the Multiverse  : Hanover High School</Name>
+    <Name>DOTM - Defenders of the Multiverse: Hanover High School</Name>
     <Location>Mechanicsville, Virginia, USA</Location>
   </Team>
   <Team>
@@ -6549,7 +6549,7 @@
   <Team>
     <Uuid>a40a6791-1ad6-47df-8214-ce6bc389fe3f</Uuid>
     <TeamNumber>1598</TeamNumber>
-    <Name>TeamTalon</Name>
+    <Name>TeamTalon 1598</Name>
     <Location>Danville, Virginia, USA</Location>
   </Team>
   <Team>
@@ -6801,7 +6801,7 @@
   <Team>
     <Uuid>3e669bb1-d865-40ed-b2e2-9eb7da618442</Uuid>
     <TeamNumber>1649</TeamNumber>
-    <Name>Lakerbotics (The Lakers)</Name>
+    <Name>Lakerbotics (Lakers)</Name>
     <Location>Windermere, Florida, USA</Location>
   </Team>
   <Team>
@@ -7174,7 +7174,7 @@
     <Uuid>2391efe7-2623-4811-b0b6-052e5721e68d</Uuid>
     <TeamNumber>1719</TeamNumber>
     <Name>The Umbrella Corporation</Name>
-    <Location>Brooklandville, Maryland, USA</Location>
+    <Location>Pikesville, Maryland, USA</Location>
   </Team>
   <Team>
     <Uuid>7b5825eb-522e-4e86-8f47-25c1f389ebcc</Uuid>
@@ -7246,7 +7246,7 @@
     <Uuid>07295ea5-d355-4cea-98b6-52778f677acf</Uuid>
     <TeamNumber>1731</TeamNumber>
     <Name>Fresta Valley Robotics Club</Name>
-    <Location>Marshall, Virginia, USA</Location>
+    <Location>Warrenton, Virginia, USA</Location>
   </Team>
   <Team>
     <Uuid>378eca12-6448-4fe3-9981-9b88e158dc7f</Uuid>
@@ -7941,7 +7941,7 @@
   <Team>
     <Uuid>529c762e-afa2-48c4-af80-d26b7b51c85f</Uuid>
     <TeamNumber>1860</TeamNumber>
-    <Name>AlphaBots</Name>
+    <Name>Alphabots</Name>
     <Location>Sao Jose dos Campos, São Paulo, Brazil</Location>
   </Team>
   <Team>
@@ -8523,7 +8523,7 @@
   <Team>
     <Uuid>2085b2de-83b9-46ab-a93d-4967ef321ee7</Uuid>
     <TeamNumber>1973</TeamNumber>
-    <Name>Burning Tiger   #1973</Name>
+    <Name>Burning Tiger #1973</Name>
     <Location>Boston, Massachusetts, USA</Location>
   </Team>
   <Team>
@@ -9015,7 +9015,7 @@
   <Team>
     <Uuid>e6ba1ab9-271c-44fa-bc9f-30a82b5b402a</Uuid>
     <TeamNumber>2062</TeamNumber>
-    <Name>C.O.R.E  2062</Name>
+    <Name>C.O.R.E 2062</Name>
     <Location>Waukesha, Wisconsin, USA</Location>
   </Team>
   <Team>
@@ -11565,7 +11565,7 @@
   <Team>
     <Uuid>e927d45d-1900-408d-8562-9072cb0f8ef2</Uuid>
     <TeamNumber>2584</TeamNumber>
-    <Name>Viewpoint School</Name>
+    <Name>Flame of The West</Name>
     <Location>Calabasas, California, USA</Location>
   </Team>
   <Team>
@@ -12135,7 +12135,7 @@
   <Team>
     <Uuid>136caf4a-8c6b-49e5-a941-841830b85c6a</Uuid>
     <TeamNumber>2707</TeamNumber>
-    <Name>Team PCD</Name>
+    <Name>Real Steel Vikes</Name>
     <Location>Saint Louis, Missouri, USA</Location>
   </Team>
   <Team>
@@ -12165,7 +12165,7 @@
   <Team>
     <Uuid>507d7f88-1f81-4e96-999a-402dc4fd09e7</Uuid>
     <TeamNumber>2712</TeamNumber>
-    <Name>Power Surge</Name>
+    <Name>Power Surge 4-H Robotics</Name>
     <Location>Woodbury, Connecticut, USA</Location>
   </Team>
   <Team>
@@ -12507,7 +12507,7 @@
   <Team>
     <Uuid>c0da2160-431e-4757-bb99-a8d8a0986116</Uuid>
     <TeamNumber>2832</TeamNumber>
-    <Name>The Livonia  Warriors</Name>
+    <Name>The Livonia Warriors</Name>
     <Location>Livonia, Michigan, USA</Location>
   </Team>
   <Team>
@@ -12771,7 +12771,7 @@
   <Team>
     <Uuid>97ffb69b-430c-4281-b95a-e3a6d1215183</Uuid>
     <TeamNumber>2882</TeamNumber>
-    <Name>Nuts n Boltz</Name>
+    <Name>Nuts n' Boltz</Name>
     <Location>Katy, Texas, USA</Location>
   </Team>
   <Team>
@@ -13539,7 +13539,7 @@
   <Team>
     <Uuid>270b50fd-a5e0-40eb-b369-fb04a0c58dd7</Uuid>
     <TeamNumber>3021</TeamNumber>
-    <Name>The  Agency</Name>
+    <Name>The Agency</Name>
     <Location>Escondido, California, USA</Location>
   </Team>
   <Team>
@@ -13617,7 +13617,7 @@
   <Team>
     <Uuid>73265627-0f24-4832-ad77-59301c2e2251</Uuid>
     <TeamNumber>3037</TeamNumber>
-    <Name>GLOBOTS</Name>
+    <Name>LOBOTS</Name>
     <Location>Longview, Texas, USA</Location>
   </Team>
   <Team>
@@ -14265,13 +14265,13 @@
   <Team>
     <Uuid>fd91679f-03f8-4aab-acc8-95c6a3aa9d23</Uuid>
     <TeamNumber>3158</TeamNumber>
-    <Name>TECBOT</Name>
+    <Name>PrepaTec - TECBOT</Name>
     <Location>Toluca, Mexico, Mexico</Location>
   </Team>
   <Team>
     <Uuid>614cbbd2-bd40-4bbe-b7fe-8b4498fb367d</Uuid>
     <TeamNumber>3160</TeamNumber>
-    <Name>F. R. O. G.</Name>
+    <Name>F. R. O. G. - FIRST Robotics Organization of Grove</Name>
     <Location>Grove, Oklahoma, USA</Location>
   </Team>
   <Team>
@@ -15339,7 +15339,7 @@
   <Team>
     <Uuid>e8dcd8c8-f9df-4665-8ce2-7e7b2bf951b6</Uuid>
     <TeamNumber>3354</TeamNumber>
-    <Name>TecDroid</Name>
+    <Name>PrepaTec-TecDroid</Name>
     <Location>Queretaro, Querétaro, Mexico</Location>
   </Team>
   <Team>
@@ -15861,7 +15861,7 @@
   <Team>
     <Uuid>8f7a508b-2eab-4e50-acb6-7e8a8496ea6e</Uuid>
     <TeamNumber>3472</TeamNumber>
-    <Name>Buluk</Name>
+    <Name>PrepaTec - Buluk</Name>
     <Location>Atizapan de Zaragoza, Mexico, Mexico</Location>
   </Team>
   <Team>
@@ -15909,7 +15909,7 @@
   <Team>
     <Uuid>ef75f8bb-a315-4a91-82b9-8c76b52a4248</Uuid>
     <TeamNumber>3480</TeamNumber>
-    <Name>ABTOMAT</Name>
+    <Name>PrepaTec - ABTOMAT</Name>
     <Location>León, Guanajuato, Mexico</Location>
   </Team>
   <Team>
@@ -15957,7 +15957,7 @@
   <Team>
     <Uuid>dd5efbe9-98ee-4cfd-919e-802834ad338d</Uuid>
     <TeamNumber>3488</TeamNumber>
-    <Name>RoboEAGLES</Name>
+    <Name>Eagle Army</Name>
     <Location>Orland Park, Illinois, USA</Location>
   </Team>
   <Team>
@@ -16089,7 +16089,7 @@
   <Team>
     <Uuid>33e67f72-51dd-42f6-bd55-4ad27ca1de4c</Uuid>
     <TeamNumber>3510</TeamNumber>
-    <Name>Tectronic</Name>
+    <Name>PrepaTec - Tectronic</Name>
     <Location>Celaya, Guanajuato, Mexico</Location>
   </Team>
   <Team>
@@ -16179,13 +16179,13 @@
   <Team>
     <Uuid>bd44282a-f993-4b5d-9d3e-ded6cbcc6cda</Uuid>
     <TeamNumber>3526</TeamNumber>
-    <Name>Blue Ignition</Name>
+    <Name>PrepaTec - Blue Ignition</Name>
     <Location>Saltillo, Coahuila, Mexico</Location>
   </Team>
   <Team>
     <Uuid>27223102-9c94-4b77-9e1f-f4eef32eb18c</Uuid>
     <TeamNumber>3527</TeamNumber>
-    <Name>Tec Balam Esmeralda</Name>
+    <Name>PrepaTec - Balam Esmeralda</Name>
     <Location>Atizapan de Zaragoza, Mexico, Mexico</Location>
   </Team>
   <Team>
@@ -16497,7 +16497,7 @@
   <Team>
     <Uuid>82d0c5a8-a0e1-4bbe-b0c8-4fc3bf3fcbc6</Uuid>
     <TeamNumber>3581</TeamNumber>
-    <Name>THINC. ROBOTICS</Name>
+    <Name>THINC Robotics Alliance</Name>
     <Location>Lagrange, Georgia, USA</Location>
   </Team>
   <Team>
@@ -16906,7 +16906,7 @@
     <Uuid>54d01605-6a98-4f4b-ae26-caa8344a48df</Uuid>
     <TeamNumber>3650</TeamNumber>
     <Name>RoboRaptors</Name>
-    <Location>Pomfret, Maryland, USA</Location>
+    <Location>La Plata, Maryland, USA</Location>
   </Team>
   <Team>
     <Uuid>1ffce7a1-428a-4b8e-adf1-4765baf28aba</Uuid>
@@ -17739,7 +17739,7 @@
   <Team>
     <Uuid>99b61ee2-20dd-4329-9e59-9c8d707f4c78</Uuid>
     <TeamNumber>3794</TeamNumber>
-    <Name>WinT</Name>
+    <Name>Tecmilenio WinT</Name>
     <Location>Metepec, Mexico, Mexico</Location>
   </Team>
   <Team>
@@ -18051,7 +18051,7 @@
   <Team>
     <Uuid>792ddd49-a4fb-4f55-923b-6aeb973db47e</Uuid>
     <TeamNumber>3847</TeamNumber>
-    <Name>Spectrum   -??</Name>
+    <Name>Spectrum -??</Name>
     <Location>Houston, Texas, USA</Location>
   </Team>
   <Team>
@@ -18321,7 +18321,7 @@
   <Team>
     <Uuid>dd357701-0738-487f-89bd-8262a5250307</Uuid>
     <TeamNumber>3930</TeamNumber>
-    <Name>SMART  Spruce Mountain Area Robotics Team</Name>
+    <Name>SMART Spruce Mountain Area Robotics Team</Name>
     <Location>Jay, Maine, USA</Location>
   </Team>
   <Team>
@@ -18795,7 +18795,7 @@
   <Team>
     <Uuid>d1cae531-d707-4164-8224-95468392dfad</Uuid>
     <TeamNumber>4011</TeamNumber>
-    <Name>p?b?tic   (pi robotics)</Name>
+    <Name>p?b?tic (pi robotics)</Name>
     <Location>La Crosse, Wisconsin, USA</Location>
   </Team>
   <Team>
@@ -19443,7 +19443,7 @@
   <Team>
     <Uuid>2e75d81f-225a-4b04-af9b-4ccc8def6969</Uuid>
     <TeamNumber>4121</TeamNumber>
-    <Name>Viking  Robotics</Name>
+    <Name>Viking Robotics</Name>
     <Location>North Canton, Ohio, USA</Location>
   </Team>
   <Team>
@@ -20985,7 +20985,7 @@
   <Team>
     <Uuid>034a38ce-9513-477b-809c-258377535146</Uuid>
     <TeamNumber>4390</TeamNumber>
-    <Name>ATA  Coregears</Name>
+    <Name>ATA Coregears</Name>
     <Location>Dearborn, Michigan, USA</Location>
   </Team>
   <Team>
@@ -23409,7 +23409,7 @@
   <Team>
     <Uuid>584b09ee-b91f-4f57-ac99-e032fa6a5952</Uuid>
     <TeamNumber>4830</TeamNumber>
-    <Name>ROBOT  2E</Name>
+    <Name>ROBOT 2E</Name>
     <Location>Shenzhen, 44, China</Location>
   </Team>
   <Team>
@@ -26415,7 +26415,7 @@
   <Team>
     <Uuid>65088f14-5867-4e70-8ca2-13419f6bab03</Uuid>
     <TeamNumber>5423</TeamNumber>
-    <Name>HopCo  Robo</Name>
+    <Name>HopCo Robo</Name>
     <Location>Madisonville, Kentucky, USA</Location>
   </Team>
   <Team>
@@ -28905,7 +28905,7 @@
   <Team>
     <Uuid>25cbb8ea-327e-425e-acd4-4322af959dcb</Uuid>
     <TeamNumber>5850</TeamNumber>
-    <Name>Guangzhou  lego xueyuan</Name>
+    <Name>Guangzhou lego xueyuan</Name>
     <Location>Guangzhou, 44, China</Location>
   </Team>
   <Team>
@@ -29697,7 +29697,7 @@
   <Team>
     <Uuid>30eff6c7-56a0-4b30-b9cc-bd3284b5ca80</Uuid>
     <TeamNumber>5982</TeamNumber>
-    <Name>Circuits  of Destruction</Name>
+    <Name>Circuits of Destruction</Name>
     <Location>Merrill, Michigan, USA</Location>
   </Team>
   <Team>
@@ -31299,7 +31299,7 @@
   <Team>
     <Uuid>bb0fcae0-2ecf-4671-8592-59f894c5da90</Uuid>
     <TeamNumber>6301</TeamNumber>
-    <Name>Nerointellect-sim Engineering &amp; Robot Design Soiree   N.E.R.D.S.</Name>
+    <Name>Nerointellect-sim Engineering &amp; Robot Design Soiree N.E.R.D.S.</Name>
     <Location>Taunton, Massachusetts, USA</Location>
   </Team>
   <Team>
@@ -31401,7 +31401,7 @@
   <Team>
     <Uuid>8ef419a3-cb96-4289-bea4-b0882bfe7916</Uuid>
     <TeamNumber>6321</TeamNumber>
-    <Name>¦ R-Cubed  Rouse Raider Robotics ¦</Name>
+    <Name>¦ R-Cubed Rouse Raider Robotics ¦</Name>
     <Location>Leander, Texas, USA</Location>
   </Team>
   <Team>
@@ -32511,7 +32511,7 @@
   <Team>
     <Uuid>144b685f-6051-45aa-922f-56bf69b01cb6</Uuid>
     <TeamNumber>6507</TeamNumber>
-    <Name>Tecmilenio    ELEKTRON  6507</Name>
+    <Name>Tecmilenio ELEKTRON 6507</Name>
     <Location>Reynosa, Tamaulipas, Mexico</Location>
   </Team>
   <Team>
@@ -33243,7 +33243,7 @@
   <Team>
     <Uuid>232bea82-b5b9-4763-b8f9-4464ac24092f</Uuid>
     <TeamNumber>6630</TeamNumber>
-    <Name>F.U.N.  (Fiercely Uknighted Nation)</Name>
+    <Name>F.U.N. (Fiercely Uknighted Nation)</Name>
     <Location>La Porte City, Iowa, USA</Location>
   </Team>
   <Team>
@@ -33699,7 +33699,7 @@
   <Team>
     <Uuid>51a1b22f-6ea1-4cf5-a604-76251b80fbfc</Uuid>
     <TeamNumber>6707</TeamNumber>
-    <Name>RCW   Jaguar Robosapiens</Name>
+    <Name>RCW Jaguar Robosapiens</Name>
     <Location>Renville, Minnesota, USA</Location>
   </Team>
   <Team>
@@ -34515,7 +34515,7 @@
   <Team>
     <Uuid>295019fb-7638-4672-950c-694a0201dc03</Uuid>
     <TeamNumber>6875</TeamNumber>
-    <Name>Amazon Warriors  -  Build A Dream Robotics</Name>
+    <Name>Amazon Warriors - Build A Dream Robotics</Name>
     <Location>Windsor, Ontario, Canada</Location>
   </Team>
   <Team>
@@ -35379,7 +35379,7 @@
   <Team>
     <Uuid>5229a76d-563e-4dea-9f40-0d7c89613785</Uuid>
     <TeamNumber>7019</TeamNumber>
-    <Name>Tech NoLogic:  Powered by NASA</Name>
+    <Name>Tech NoLogic: Powered by NASA</Name>
     <Location>Minneapolis, Minnesota, USA</Location>
   </Team>
   <Team>
@@ -36795,7 +36795,7 @@
   <Team>
     <Uuid>b20addea-6572-4b93-9696-e13a3f88e218</Uuid>
     <TeamNumber>7260</TeamNumber>
-    <Name>Diamondback Turtles  (Heritage High School)</Name>
+    <Name>Diamondback Turtles (Heritage High School)</Name>
     <Location>Rogers, Arkansas, USA</Location>
   </Team>
   <Team>
@@ -37179,7 +37179,7 @@
   <Team>
     <Uuid>a90e8a41-9cd1-47fd-a2ca-26f461df20e4</Uuid>
     <TeamNumber>7325</TeamNumber>
-    <Name>ASU  Brave Guide Right</Name>
+    <Name>ASU Brave Guide Right</Name>
     <Location>Natchez, Mississippi, USA</Location>
   </Team>
   <Team>

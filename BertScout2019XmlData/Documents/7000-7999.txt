@@ -1,5 +1,5 @@
 7000	Newton's 4th Law	Chengdu, Sichuan, China
-7001	Buning Power	Zhengzhou , Henan, China
+7001	Buning Power	Zhengzhou, Henan, China
 7002	????	Taiyuan, Shanxi, China
 7003	Robots A-Gogo	Changhua, Changhua, Chinese Taipei
 7004	Ossining Orbiters	Ossining, New York, USA
@@ -7,7 +7,7 @@
 7006	IMC	Shenzhen, Guangdong, China
 7007	RROOTT	Beijing, Beijing, China
 7008	YakRob	Istanbul, Istanbul, Turkey
-7009	Carp & Donkey	ZhengZhou, Henan, China
+7009	Carp &amp; Donkey	ZhengZhou, Henan, China
 7010	SINFEN ROBOTICS	MERKEZ, Sinop, Turkey
 7011	ROBOFEN	ISPARTA, Isparta, Turkey
 7012	Rainerum Robotics	Bolzano, Bolzano, Italy
@@ -37,7 +37,7 @@
 7036	Beta Gamma Robotica	Brooklyn, New York, USA
 7037	Jeunes d'argent	Fresnillo, Zacatecas, Mexico
 7038	TG Eagles (Pizza Pi's)	Minneapolis, Minnesota, USA
-7039	??	Kfar hanoar Neurim , HaMerkaz, Israel
+7039	??	Kfar hanoar Neurim, HaMerkaz, Israel
 7040	POTROBOTS	TURUACHI, Chihuahua, Mexico
 7041	Doomsday Dogs	Carlton, Minnesota, USA
 7042	Poly Rabbotics	Long Beach, California, USA
@@ -45,7 +45,7 @@
 7044	FeneRobotics	Atasehir, Istanbul, Turkey
 7045	MCCrusaders	Denville, New Jersey, USA
 7046	UNIMATE	San Luis Potosí, San Luis Potosí, Mexico
-7047	Magic Frog	zhengzhou , Henan, China
+7047	Magic Frog	zhengzhou, Henan, China
 7048	Red River Rage	Fargo, North Dakota, USA
 7049	Marine Machines	Shreveport, Louisiana, USA
 7050	SARNIC	ISTANBUL, Istanbul, Turkey
@@ -278,7 +278,7 @@
 7282	Semia United 1	Shanghai, Shanghai, China
 7283	Semia United 2	Shanghai, Shanghai, China
 7284	Semia United 3	Shanghai, Shanghai, China
-7286	Enigma	daliat el carmel , Haifa, Israel
+7286	Enigma	daliat el carmel, Haifa, Israel
 7287	Esquimalt Atom Smashers	Victoria, British Columbia, Canada
 7288	NOMMA D3V1LB0TS	New Orleans, Louisiana, USA
 7289	Blue Eagles	Fowler, Michigan, USA
@@ -317,7 +317,7 @@
 7322	YVHS Robotics	Yucca Valley, California, USA
 7323	Pacifica High School	Oxnard, California, USA
 7324	The RoboRaiders	Oxnard, California, USA
-7325	ASU Brave Guide Right	Natchez , Mississippi, USA
+7325	ASU Brave Guide Right	Natchez, Mississippi, USA
 7326	Hueneme Autonomous Robo Droidz	Oxnard, California, USA
 7327	Metal Jackets	Oxnard, California, USA
 7328	Frontier High School	Camarillo, California, USA
@@ -412,7 +412,7 @@
 7487	Palm Beach County Sheriff PAL WestGate	West Palm Beach, Florida, USA
 7488	Delray Achievement Center	Delray Beach, Florida, USA
 7489	Milagro Center	Delray Beach, Florida, USA
-7490	Boys & Girls Club of Riviera Beach	West Palm Beach, Florida, USA
+7490	Boys &amp; Girls Club of Riviera Beach	West Palm Beach, Florida, USA
 7491	Cyber Soldiers	Burton, Michigan, USA
 7492	Cavalier Robotics	Conroe, Texas, USA
 7493	Phoenix Force Robotics	Tukwila, Washington, USA
@@ -420,7 +420,7 @@
 7495	SHAbotics	Mount Pleasant, Michigan, USA
 7496	Mascoutah High School	Mascoutah, Illinois, USA
 7497	MARAHO	Taipei, Taipei, Chinese Taipei
-7498	Wingus & Dingus	Auckland, Auckland, New Zealand
+7498	Wingus &amp; Dingus	Auckland, Auckland, New Zealand
 7499	ABAC Robotics	Tifton, Georgia, USA
 7500	MARAUDERS	Fort Lauderdale, Florida, USA
 7501	Golden Gears	Brooklyn, Michigan, USA
@@ -449,9 +449,9 @@
 7524	Regen	zhengzhou, Henan, China
 7525	Pioneers^2	Nashville, Tennessee, USA
 7526	Welcome to team	kaohsiung, Kaohsiung, Chinese Taipei
-7527	Kaohsiung power	Kaohsiung , Kaohsiung, Chinese Taipei
+7527	Kaohsiung power	Kaohsiung, Kaohsiung, Chinese Taipei
 7528	Nuts and Bolts	Morgan Hill, California, USA
-7529	Mulan	Shenzhen , Guangdong, China
+7529	Mulan	Shenzhen, Guangdong, China
 7530	Watertown-Mayer High School Robotics	Watertown, Minnesota, USA
 7531	Servos Strike Back	Dubuque, Iowa, USA
 7532	Gophertronics	Winnipeg, Manitoba, Canada
@@ -505,7 +505,7 @@
 7580	SESI/DN #3	Brasília, Distrito Federal, Brazil
 7581	SESI/DN #4	Brasília, Distrito Federal, Brazil
 7582	SESI/DN #5	Brasília, Distrito Federal, Brazil
-7583	Elonera Embers	Mount Ousley , New South Wales, Australia
+7583	Elonera Embers	Mount Ousley, New South Wales, Australia
 7584	RoverBots	Easton, Pennsylvania, USA
 7585	The Thunder	Büyükçekmece, Istanbul, Turkey
 7586	ShenHao_The Salted Fishballs	Hangzhou, Zhejiang, China
@@ -517,7 +517,7 @@
 7592	Sugar Nerds	Basseterre, Saint George Basseterre, Saint Kitts and Nevis
 7593	SymbiOHSis	Auckland, Auckland, New Zealand
 7594	Nautilus	Shenzhen, Guangdong, China
-7595	Crosspoint at Shanghai & Suzhou United	Suzhou, Jiangsu, China
+7595	Crosspoint at Shanghai &amp; Suzhou United	Suzhou, Jiangsu, China
 7596	Trojan Horses	Rushford, Minnesota, USA
 7597	Team HorsePowered	Fraser, Michigan, USA
 7598	SCA Constellations	Wixom, Michigan, USA
@@ -632,7 +632,7 @@
 7710	Mowat Mustangs	Scarborough, Ontario, Canada
 7711	Applewood Axemen	Mississauga, Ontario, Canada
 7712	ACCN UMOJA	Scarborough, Ontario, Canada
-7713	The Sons & Daughters of Ivaldi, Norse-code	Felch, Michigan, USA
+7713	The Sons &amp; Daughters of Ivaldi, Norse-code	Felch, Michigan, USA
 7714	RedRoad	Washington, District of Columbia, USA
 7715	Robo-Banditos	Elizabeth City, North Carolina, USA
 7716	JLW Formula 01 Robotic's Team	Detroit, Michigan, USA
@@ -644,7 +644,7 @@
 7722	Resurrection Fire Birds	Kitchener, Ontario, Canada
 7723	Tiger Robotics	Thunder Bay, Ontario, Canada
 7724	Molokai Robotics	Hoolehua, Hawaii, USA
-7725	PrepaTec - NUTS & VOLTS	Monterrey, Nuevo León, Mexico
+7725	PrepaTec - NUTS &amp; VOLTS	Monterrey, Nuevo León, Mexico
 7726	ShanDong Experimental High School	Jinan, Shandong, China
 7727	Iteration Beaker	Jinan, Shandong, China
 7728	CAAFE	Windermere, Florida, USA
@@ -818,7 +818,7 @@
 7897	WHS Auto Barks	Winslow, Arizona, USA
 7898	Cool Geeks	Honolulu, Hawaii, USA
 7899	Gibsland-Coleman STEM Club	Gibsland, Louisiana, USA
-7900	Trial & Terror	Racine, Wisconsin, USA
+7900	Trial &amp; Terror	Racine, Wisconsin, USA
 7901	Snow Hill Robotics	Snow Hill, Maryland, USA
 7902	Markham FireBirds	Markham, Ontario, Canada
 7903	Rochester Prep	Rochester, New York, USA

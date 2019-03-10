@@ -64,7 +64,7 @@
 75	RoboRaiders	Hillsborough, New Jersey, USA
 77	--	--
 78	AIR STRIKE	Newport, Rhode Island, USA
-79	Team Krunch	Tarpon Springs , Florida, USA
+79	Team Krunch	Tarpon Springs, Florida, USA
 80	Robocolt	Phoenix, AZ, USA
 81	MetalHeads	Freeport, Illinois, USA
 84	Chuck 84	Towanda, PA, USA

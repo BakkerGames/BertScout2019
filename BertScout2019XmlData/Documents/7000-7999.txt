@@ -1,0 +1,836 @@
+7000	Newton's 4th Law	Chengdu, Sichuan, China
+7001	Buning Power	Zhengzhou , Henan, China
+7002	????	Taiyuan, Shanxi, China
+7003	Robots A-Gogo	Changhua, Changhua, Chinese Taipei
+7004	Ossining Orbiters	Ossining, New York, USA
+7005	RAHS Phoenix	Seattle, Washington, USA
+7006	IMC	Shenzhen, Guangdong, China
+7007	RROOTT	Beijing, Beijing, China
+7008	YakRob	Istanbul, Istanbul, Turkey
+7009	Carp & Donkey	ZhengZhou, Henan, China
+7010	SINFEN ROBOTICS	MERKEZ, Sinop, Turkey
+7011	ROBOFEN	ISPARTA, Isparta, Turkey
+7012	Rainerum Robotics	Bolzano, Bolzano, Italy
+7013	ACCN Techtronix	Scarborough, Ontario, Canada
+7014	YIWU TEAM	yiwu, Zhejiang, China
+7015	RoboCulture	Istanbul, Istanbul, Turkey
+7016	PV Shock Bots	Putnam Valley, New York, USA
+7017	Fellowship of the Gear	Mesa, Arizona, USA
+7018	EOLOTICS	El Espinal, Oaxaca, Mexico
+7019	Tech NoLogic: Powered by NASA	Minneapolis, Minnesota, USA
+7020	IM ROBOT	Iron Mountain, Michigan, USA
+7021	TC Robotics	Arcadia, Wisconsin, USA
+7022	ACE Robotics	Cambridge, Ontario, Canada
+7023	Oxley High School Robotics Team	Tamworth, New South Wales, Australia
+7024	ENFORCERS	Egg Harbor Township, New Jersey, USA
+7025	RoboBarons	Fountain Valley, California, USA
+7026	Team Vinity	Fort Lauderdale, Florida, USA
+7027	Radioactive Rebels Robotics	Parish, New York, USA
+7028	Binary Battalion	Saint Michael, Minnesota, USA
+7029	Scotbotics	Laurinburg, North Carolina, USA
+7030	Lake Placid Robotics - The Olympians	Lake Placid, New York, USA
+7031	Duanesburg Jr./Sr. High School	Delanson, New York, USA
+7032	Raptors	La Pine, Oregon, USA
+7033	Roosters	Medianeira, Paraná, Brazil
+7034	2B Determined	West Linn, Oregon, USA
+7035	MEF Thunders	Istanbul/Besiktas, Istanbul, Turkey
+7036	Beta Gamma Robotica	Brooklyn, New York, USA
+7037	Jeunes d'argent	Fresnillo, Zacatecas, Mexico
+7038	TG Eagles (Pizza Pi's)	Minneapolis, Minnesota, USA
+7039	??	Kfar hanoar Neurim , HaMerkaz, Israel
+7040	POTROBOTS	TURUACHI, Chihuahua, Mexico
+7041	Doomsday Dogs	Carlton, Minnesota, USA
+7042	Poly Rabbotics	Long Beach, California, USA
+7043	RoboPirates	Rocky River, Ohio, USA
+7044	FeneRobotics	Atasehir, Istanbul, Turkey
+7045	MCCrusaders	Denville, New Jersey, USA
+7046	UNIMATE	San Luis Potosí, San Luis Potosí, Mexico
+7047	Magic Frog	zhengzhou , Henan, China
+7048	Red River Rage	Fargo, North Dakota, USA
+7049	Marine Machines	Shreveport, Louisiana, USA
+7050	SARNIC	ISTANBUL, Istanbul, Turkey
+7051	RoboDons	Baldwin Park, California, USA
+7052	Falcotronix	Thunder Bay, Ontario, Canada
+7053	Robo Huskies	St-Hubert, Québec, Canada
+7054	SC Sailors	Grand Rapids, Michigan, USA
+7055	Quantum Steam	Bay Village, Ohio, USA
+7056	The F.A.S.T. Team - Fowlerville Area Scientific Technicians	Fowlerville, Michigan, USA
+7057	Titanators	Orange Cove, California, USA
+7058	StrathDroids	Strathroy, Ontario, Canada
+7059	Bot-E Builders	Prescott, Arizona, USA
+7060	Riverside Military Academy Eagle Bots	Gainesville, Georgia, USA
+7063	Wagner TSTEM FRC 1	San Antonio, Texas, USA
+7064	Voltron Robotics	Lansing, Kansas, USA
+7065	Wolverine 1	Montgomery, Alabama, USA
+7066	Faulkner County Library Gadget Droids	Conway, Arkansas, USA
+7067	Team Streak	jerusalem, Yerushalayim, Israel
+7068	Mechanical Masterminds	Saint Francis, Minnesota, USA
+7069	Taipei 101	Taipei, Taipei, Chinese Taipei
+7070	SRT	Istanbul, Istanbul, Turkey
+7071	ITU-Robee	ISTANBUL, Istanbul, Turkey
+7072	O.G.R.E. (Opelika's Greatest Robotics Engineers)	Opelika, Alabama, USA
+7073	Ottawa Hills High School	Grand Rapids, Michigan, USA
+7074	Reapers	North Sydney, New South Wales, Australia
+7075	Gearbreakers	Pleasant Plains, Arkansas, USA
+7076	WestTech Sentinels	Augusta, Georgia, USA
+7077	Sundevils' Fire	Las Vegas, Nevada, USA
+7078	BENG DOU	TAIYUAN, Shanxi, China
+7079	Co-Bot	Haifa, HaZafon, Israel
+7080	Vision	Beijing, Beijing, China
+7081	NEYC	Shenyang, Liaoning, China
+7082	Rogozin	Kiryat Gat, Yerushalayim, Israel
+7083	Green Hekma	Nazareth, HaZafon, Israel
+7084	Hillman Pyrobots	Hillman, Michigan, USA
+7085	Waccamaw High School	Pawleys Island, South Carolina, USA
+7086	IOROBOT	ISTANBUL, Istanbul, Turkey
+7087	BCS	Balcarres, Saskatchewan, Canada
+7088	Robodogs	Somerset, Texas, USA
+7091	Atlas Orbis	Dallas, Texas, USA
+7092	Bionic Bulldogs	Lyford, Texas, USA
+7093	Veritas Valiants	Austin, Texas, USA
+7094	Alpha Omega	Bay Saint Louis, Mississippi, USA
+7095	HiMach	Beijing, Beijing, China
+7096	Educated Business	Los Gatos, California, USA
+7097	The Archers	Myrtle Beach, South Carolina, USA
+7098	Seoul High School	APO, Armed Forces - Americas, USA
+7099	Osan Middle/High School	APO, Armed Forces - Pacific, USA
+7100	Noble Mechanical Knights	North Berwick, Maine, USA
+7101	Genesee Robotic Wolves	Genesee, Michigan, USA
+7102	PrepaTec - Daedalus	Zapopan, Jalisco, Mexico
+7103	Robo Remedy @ MLHS	Manitowoc, Wisconsin, USA
+7104	Benedictine Military School Bot Brothers	Savannah, Georgia, USA
+7105	PBG AREA ROBOTICS	Palm Beach Gardens, Florida, USA
+7106	MPV StingerBots	Mulberry, Arkansas, USA
+7107	Blazer Robotics	Boca Raton, Florida, USA
+7108	volTRan	Fatih, Istanbul, Turkey
+7109	Clare Chaos Theory	Clare, Michigan, USA
+7110	Heights Bytes	Haddon Heights, New Jersey, USA
+7111	RAD Robotics	Madison, Alabama, USA
+7112	EverGreen	Kadima-Zoran, HaMerkaz, Israel
+7113	Control Rising	Perth, Western Australia, Australia
+7114	Robo-Raiders	High Point, North Carolina, USA
+7115	Red Lion Bots	Houston, Texas, USA
+7116	Électriks	Shawinigan, Québec, Canada
+7117	Robotic Dragons	De Soto, Missouri, USA
+7118	ScotBots	Shoreline, Washington, USA
+7119	Sunset RoboBison	Dallas, Texas, USA
+7120	ThunderChicas	Dallas, Texas, USA
+7121	Keller Fusion Robotics	Keller, Texas, USA
+7122	WYSIWYG	Des Moines, Iowa, USA
+7123	MVE Tin Men	Mount Vernon, Arkansas, USA
+7124	8-bit Destroyers - Cranebrook HS	Sydney, New South Wales, Australia
+7125	Tigerbotics	Glen Rose, Texas, USA
+7126	Cutting Edgelords	Newmarket, New Hampshire, USA
+7127	LongMetal	Longmeadow, Massachusetts, USA
+7128	XLR8	Wantirna, Victoria, Australia
+7129	Pilbara Protons	South Hedland, Western Australia, Australia
+7130	FABLAB MDHS	Wuri Dist., Taichung, Chinese Taipei
+7131	Mavericks	Caledon, Ontario, Canada
+7132	Axeman	Mississauga, Ontario, Canada
+7133	STEAM Makers	Farmington, New Hampshire, USA
+7134	rOctopus	Aydin, Aydin, Turkey
+7135	System Reset	Surrey, British Columbia, Canada
+7136	Thistletown Scot Bots	Etobicoke, Ontario, Canada
+7137	Project 212	Concord, California, USA
+7138	Wing It	Fischer, Texas, USA
+7139	AERO	MANIZALES, Caldas, Colombia
+7140	OKSEF ROBOTICS	IZMIR, Izmir, Turkey
+7141	Cyberhounds	Fort Madison, Iowa, USA
+7142	Saydel High School Robotics Team---Vulcan Eagles	Des Moines, Iowa, USA
+7143	The Cyber-Eagles	Detroit, Michigan, USA
+7144	NexTech Hydra	Okemos, Michigan, USA
+7145	Hurricanes	Detroit, Michigan, USA
+7146	Infinity Robotics	Shenzhen, Guangdong, China
+7147	Falcons Senior Robo Team	Ann Arbor, Michigan, USA
+7148	Faster Than Light	Zhengzhou, Henan, China
+7149	WuKong	Beijing, Beijing, China
+7150	Ogemaw Overdrive	West Branch, Michigan, USA
+7151	Real Robotics	Herriman, Utah, USA
+7152	Owltonomous	Boca Raton, Florida, USA
+7153	Aetos Dios	Manchester, Connecticut, USA
+7154	TheROK	Kingsford, Michigan, USA
+7155	The Robotic Rangers	Manton, Michigan, USA
+7156	NVASRoboKnights	Norway, Michigan, USA
+7157	µBotics	Brea, California, USA
+7158	The Conspirators	Langley, British Columbia, Canada
+7159	Burnaby Central Secondary	Burnaby, British Columbia, Canada
+7160	Ludington O-Bots	Ludington, Michigan, USA
+7161	LeopardBots	Zacazonapan, Mexico, Mexico
+7162	Maraudeurs	Laval, Québec, Canada
+7163	A.I. Metal Pies	Merrylands, New South Wales, Australia
+7164	RHODE HAZARD	Providence, Rhode Island, USA
+7165	Perkins Pirates	Sandusky, Ohio, USA
+7166	Red Thunder Robotics	Laingsburg, Michigan, USA
+7167	Spectrum ThunderBots	Victoria, British Columbia, Canada
+7168	Infinity	Detroit, Michigan, USA
+7169	Belmont Bytes	Victoria, British Columbia, Canada
+7170	Spooky Action Robotics	Comox, British Columbia, Canada
+7171	Wolverine Wildcats	Wolverine, Michigan, USA
+7172	AEA Robolution	Oscoda, Michigan, USA
+7173	Iris Robotics	Maple Ridge, British Columbia, Canada
+7174	ProtoBots	Dearborn Heights, Michigan, USA
+7175	Team Red Line	Clinton, Michigan, USA
+7176	ROC	Unionville, Ontario, Canada
+7177	Amal Taybe	taybe, HaMerkaz, Israel
+7178	Yeti	Walled Lake, Michigan, USA
+7179	Crossfire	Garland, Texas, USA
+7180	Wellstone Lions	Minneapolis, Minnesota, USA
+7181	Lions	Florence, Alabama, USA
+7182	Robotic Indians	Leighton, Alabama, USA
+7183	WAR Club	Las Vegas, Nevada, USA
+7184	BIT CHALLENGE	Foushan, Guangdong, China
+7185	Glendora High School Robotics	Glendora, California, USA
+7187	Gear Cats	Delton, Michigan, USA
+7188	SaddleBots	Warren, Michigan, USA
+7189	EX NIHILO	Kelowna, British Columbia, Canada
+7190	Vancouver Rainstorms	Vancouver, British Columbia, Canada
+7191	ABT Gators	Melvindale, Michigan, USA
+7192	Blue Thunderneers	Croswell, Michigan, USA
+7193	Invictus	Fort Myers, Florida, USA
+7194	iRam	New Port Richey, Florida, USA
+7195	Portland Raiders	Portland, Michigan, USA
+7196	Tech Tigers	Detroit, Michigan, USA
+7197	Mountie MegaBots	Jackson, Michigan, USA
+7198	TL Fearsome Gears	Monticello, Indiana, USA
+7199	Thunder	Maple Ridge, British Columbia, Canada
+7200	Banting Memorial high school	Alliston, Ontario, Canada
+7201	Crobotics	Rijeka, Primorsko-goranska županija, Croatia
+7202	Cyber Orioles	Morrice, Michigan, USA
+7203	BCPS 21st Century Bearcats	Battle Creek, Michigan, USA
+7204	Freedom Gliders	Prospect, Oregon, USA
+7205	Lakers	La Loche, Saskatchewan, Canada
+7206	Titanium Rex	Center Line, Michigan, USA
+7207	Angry Birds	Delta, British Columbia, Canada
+7208	CMA Navigators	Charlevoix, Michigan, USA
+7209	Titanium Trojans (Homer Robotics Club)	Homer, Michigan, USA
+7210	RoboJackets	Greenville, Michigan, USA
+7211	Hollywood	Holly, Michigan, USA
+7212	LCS Warriors	Lebanon, New Hampshire, USA
+7213	GladWINites	Gladwin, Michigan, USA
+7214	Tiger-Ops Robotics	Marana, Arizona, USA
+7215	Patriots	Hollywood, Florida, USA
+7216	CHARGERS ROBOTICS	North Miami Beach, Florida, USA
+7217	SallaBots / Universidad La Salle Laguna	TORREON, Coahuila, Mexico
+7218	Bradford Botdogs	Southfield, Michigan, USA
+7219	Olivet Eagles	Olivet, Michigan, USA
+7220	Steel Falcons	Brighton, Michigan, USA
+7221	JHS Viking Robotics	Jackson, Michigan, USA
+7222	The Fighting Anomalocari	Parma, Michigan, USA
+7223	MVHS Robotics	Vermontville, Michigan, USA
+7224	RoboDrakens	Hazel Park, Michigan, USA
+7225	Mechatronic Mustangs	Milford, Michigan, USA
+7226	Error 404	Lansing, Michigan, USA
+7227	Tornado	Kayseri, Kayseri, Turkey
+7228	Tigers	Istanbul, Istanbul, Turkey
+7229	Electronic Eagles	Sacramento, California, USA
+7230	Mythic Mechanix	Irvine, California, USA
+7231	Team Freedom	Santo Domingo, Distrito Nacional, Dominican Republic
+7232	Pharaohs	Detroit, Michigan, USA
+7233	Hope Of Detroit Warriors	Detroit, Michigan, USA
+7234	Rebel Robotics	Wyoming, Michigan, USA
+7235	Red Lake Ogichidaag	Redlake, Minnesota, USA
+7236	ROBOGEDIK	Pendik, Istanbul, Turkey
+7237	UniBots	Bridgeview, Illinois, USA
+7238	coolker	zhengzhou, Henan, China
+7239	Hell Robotics	Hell, Trøndelag, Norway
+7240	Nitro Knights	Cambridge, Massachusetts, USA
+7241	NexTech Knights Robotics	Grand Rapids, Michigan, USA
+7242	Prism	Hong Kong, Hong Kong, China
+7243	High Tech Early College	Denver, Colorado, USA
+7244	Huskies Robotics	Atlanta, Michigan, USA
+7245	Lion Bots	San Lorenzo, California, USA
+7246	Thom Collegiate Trojans	Regina, Saskatchewan, Canada
+7247	Error 404	Fair Haven, Michigan, USA
+7248	Tactical Hams	Wyoming, Michigan, USA
+7249	CVH SPARTANS	Chula Vista, California, USA
+7250	OsCODEa 0w|5	Oscoda, Michigan, USA
+7251	Warrior Robotics	Salamanca, New York, USA
+7252	Ionia Bulldogs	Ionia, Michigan, USA
+7253	Timber Wolf	Portland, Oregon, USA
+7254	Knowmads	Potterville, Michigan, USA
+7255	Mechanical Mettle	Charleston, Missouri, USA
+7256	Irish Robotics	Kalamazoo, Michigan, USA
+7257	Sauk Centre STREET RATS	Sauk Centre, Minnesota, USA
+7258	Hiawatha Collegiate	Minneapolis, Minnesota, USA
+7259	Mechanical Mustangs	Granby, Massachusetts, USA
+7260	Diamondback Turtles (Heritage High School)	Rogers, Arkansas, USA
+7261	Esquimalt Robotics	Victoria, British Columbia, Canada
+7262	QBOT	Quesnel, British Columbia, Canada
+7263	TOPPS TECH	Pine Bluff, Arkansas, USA
+7264	Cougar Robotics	New Braunfels, Texas, USA
+7265	Skeleton Crew	Hampstead, North Carolina, USA
+7266	NBHS Steampunks	North Brookfield, Massachusetts, USA
+7267	Lisgar Robotics Club	Ottawa, Ontario, Canada
+7268	BCNY Gerry Robotic Lions (East Harlem)	New York, New York, USA
+7269	ISB VoltBots	Cambridge, Massachusetts, USA
+7270	Penco Bots	Burgaw, North Carolina, USA
+7271	Hanger 84 Robotics	Roswell, New Mexico, USA
+7272	EnviroBots	New York, New York, USA
+7273	ZooM Robotics	Zumbrota, Minnesota, USA
+7274	Brashear Bulls Robotics	Pittsburgh, Pennsylvania, USA
+7275	PRIDE Robotics	New Orleans, Louisiana, USA
+7276	Success Initiative Robotics	Spartanburg, South Carolina, USA
+7277	Mandela United Squadron	Calgary, Alberta, Canada
+7278	Toormina High School	Toormina, New South Wales, Australia
+7279	Xishan Senior High School Team	Wuxi, Jiangsu, China
+7280	MITO Octopus	Suzhou, Jiangsu, China
+7281	F.G.	Shanghai, Shanghai, China
+7282	Semia United 1	Shanghai, Shanghai, China
+7283	Semia United 2	Shanghai, Shanghai, China
+7284	Semia United 3	Shanghai, Shanghai, China
+7286	Enigma	daliat el carmel , Haifa, Israel
+7287	Esquimalt Atom Smashers	Victoria, British Columbia, Canada
+7288	NOMMA D3V1LB0TS	New Orleans, Louisiana, USA
+7289	Blue Eagles	Fowler, Michigan, USA
+7290	TARHUNDA	ADANA, Adana, Turkey
+7291	TYANA - NIGDE GAZOZU	NIGDE, Nigde, Turkey
+7292	HITIT ANGELS	Çorum, Çorum, Turkey
+7293	COTANAK ROBOTICS	Piraziz, Giresun, Turkey
+7294	RoboCirak	Istanbul, Istanbul, Turkey
+7295	SPECTRUM	SAMSUN, Samsun, Turkey
+7296	TeRoBoT	Levent, Istanbul, Turkey
+7297	KAFKAS KARTALLARI	KARS, Kars, Turkey
+7298	TOROS	Istanbul, Istanbul, Turkey
+7299	Robotic Eagles	Santa Catarina, Nuevo León, Mexico
+7300	Dectro	Edirne, Edirne, Turkey
+7301	Jackbots	Saint Maries, Idaho, USA
+7302	afaq school team	kfar manda, HaZafon, Israel
+7303	Reach Robotics	Haslet, Texas, USA
+7304	CAPA MEE6	ISTANBUL, Istanbul, Turkey
+7305	Rambo Robotics	Snow Hill, North Carolina, USA
+7306	Epping High School	Epping, New Hampshire, USA
+7307	Team Muskwa	Rancho Palos Verdes, California, USA
+7308	DeepVision	Los Altos, California, USA
+7309	Green Lightning	Storm Lake, Iowa, USA
+7310	Lightning Gears	Culiacan, Sinaloa, Mexico
+7311	Boring Robots	Virginia, Minnesota, USA
+7312	T3	Tomball, Texas, USA
+7313	SBA Eaglebots	Cordova, Tennessee, USA
+7314	Tornados	Franklin, New Hampshire, USA
+7315	Giga-Knights	Albany, Georgia, USA
+7316	Ursuline Academy High School	New Orleans, Louisiana, USA
+7317	Crusader Crew	San Francisco, California, USA
+7318	Nanuet Knightronz	Nanuet, New York, USA
+7319	1UP	Garland, Texas, USA
+7320	Astralis	Diyarbakir, Diyarbakir, Turkey
+7321	Aguila Robotica	Irving, Texas, USA
+7322	YVHS Robotics	Yucca Valley, California, USA
+7323	Pacifica High School	Oxnard, California, USA
+7324	The RoboRaiders	Oxnard, California, USA
+7325	ASU Brave Guide Right	Natchez , Mississippi, USA
+7326	Hueneme Autonomous Robo Droidz	Oxnard, California, USA
+7327	Metal Jackets	Oxnard, California, USA
+7328	Frontier High School	Camarillo, California, USA
+7329	The Afghan Dreamers	Jadeh Mahbas, Herat, Afghanistan
+7330	C.O.U.G.A.R.S (Cybernetic Operational Unit Generated For Artificial Robotic Syst	Dendron, Virginia, USA
+7331	McKinley High School Robotics	Baton Rouge, Louisiana, USA
+7400	ThunderMiners	Melville, New York, USA
+7401	ACME Academy	Concord, California, USA
+7403	Lightning Blue Lizards	Envigado, Antioquia, Colombia
+7405	IcyNights	Zhangjiagang, Jiangsu, China
+7406	Ministry of Mechanics	Cleveland, Tennessee, USA
+7407	Wired Boars	Wallingford, Connecticut, USA
+7408	Pearl City Cats	Boca Raton, Florida, USA
+7409	GLOW	Boca Raton, Florida, USA
+7410	Texas Toast	Clute, Texas, USA
+7411	CrossThreaded	Cedar Falls, Iowa, USA
+7412	KDHS Robotic Owls	Metairie, Louisiana, USA
+7413	Plus Ultra	Pacific Grove, California, USA
+7414	PV Robotics	Collegeville, Pennsylvania, USA
+7415	Jaguar Robotics	West Hills, California, USA
+7416	Northern Horizons	Bethlehem, New Hampshire, USA
+7417	Bionic Bombers	Williamsfield, Illinois, USA
+7418	Channelview TechnoFalcons	Channelview, Texas, USA
+7419	Tech Support	Dublin, California, USA
+7420	Napa County Robotics - OtterBots	Napa, California, USA
+7421	PrepaTec - OVERTURE	Monterrey, Nuevo León, Mexico
+7422	WildBots	Las Vegas, Nevada, USA
+7423	GrizzBot	Las Vegas, Nevada, USA
+7424	Sin City Robotics	Las Vegas, Nevada, USA
+7425	Green Valley Robotics	Henderson, Nevada, USA
+7426	PAIR OF DICE ROBOTICS	Las Vegas, Nevada, USA
+7427	Protocol X Robotics	Alpharetta, Georgia, USA
+7428	Gigawatts	Fort Payne, Alabama, USA
+7429	Convergence	Midlothian, Virginia, USA
+7430	Marion High School Robotics	Marion, Arkansas, USA
+7431	Wingspan	Melbourne, Florida, USA
+7432	NOS	Loretto, Minnesota, USA
+7433	Iona Fusion	Port Macquarie, New South Wales, Australia
+7434	Beyond The Stars	Dayton, Ohio, USA
+7435	CYBERTRONICS	Saint Charles, Missouri, USA
+7436	8-Bit Miners	South Jordan, Utah, USA
+7437	Lionautics	Lancaster, California, USA
+7438	Brain Busters	Sherborn, Massachusetts, USA
+7439	QUBIT	Istanbul, Istanbul, Turkey
+7440	Robo Lions (FRC)	Livingston, Texas, USA
+7441	Lancer EVO	Chula Vista, California, USA
+7442	Jaggernaut	Port Saint Lucie, Florida, USA
+7443	Overhills Jag-Wires	Spring Lake, North Carolina, USA
+7444	Moon Star Robotics	istanbul, Istanbul, Turkey
+7445	Garage Robotics	Palo Alto, California, USA
+7446	S.E.A. (Sparkman Engineering Academy)	Harvest, Alabama, USA
+7447	Ronin Robotics	Irvine, California, USA
+7448	S.C. Robotics	Adair Village, Oregon, USA
+7449	Lithium Robotics	Acworth, Georgia, USA
+7450	oTECH Aimbots	Kissimmee, Florida, USA
+7451	Avenger Robotics	Cumming, Georgia, USA
+7452	Dupo Tigers	Dupo, Illinois, USA
+7453	Lobo Robotics	Littlerock, California, USA
+7454	North High School	Evansville, Indiana, USA
+7455	Narbots	Harbor City, California, USA
+7456	Aurobots	Aurora, Ontario, Canada
+7457	suPURDUEper Robotics	Indianapolis, Indiana, USA
+7458	Senior Robotics Team	Atatürk Mah., Istanbul, Turkey
+7459	TAUBATEXAS	Taubaté, São Paulo, Brazil
+7460	Avi and Friends	Sylvania, Ohio, USA
+7461	Binary Circles	Redmond, Washington, USA
+7462	Disruptive Technologies	Danbury, Connecticut, USA
+7463	Incandescent Mice	Apex, North Carolina, USA
+7464	ORION	Norman, Oklahoma, USA
+7465	MAGNETECH	Atakum, Samsun, Turkey
+7466	Cymurghs	Istanbul, Istanbul, Turkey
+7467	Devils Burn-In	West Memphis, Arkansas, USA
+7468	FireBolts	San Francisco, California, USA
+7469	Bannerlords	Istanbul, Istanbul, Turkey
+7470	iRAMBOTs with NASA	Sylvester, Georgia, USA
+7471	Robo Montagnards	Mont-Saint-Hilaire, Québec, Canada
+7472	R2 Jesu Robotics	Saint Louis, Missouri, USA
+7473	Mechanic! at the Disco	Tecumseh, Oklahoma, USA
+7474	JXN UNITED	Jackson, Mississippi, USA
+7475	WIRED	Woodstock, Ontario, Canada
+7476	EOM Lions	Kanata, Ontario, Canada
+7477	Giddy GOATS	Mishawaka, Indiana, USA
+7478	ISTECH	Istanbul, Istanbul, Turkey
+7479	Cardinal Robotics Team	Elizabeth, Colorado, USA
+7480	Machine Mavericks	Kingston, Ontario, Canada
+7481	istiklal	Kastamonu, Kastamonu, Turkey
+7482	Lincoln Panther Robotics	Riverside, California, USA
+7483	Mechanically Challenged	Viola, Arkansas, USA
+7484	Wings of Steel	Fort Campbell, Kentucky, USA
+7485	Mo Co Robo	Craig, Colorado, USA
+7486	Hudson Hybrids	Hudson, Ohio, USA
+7487	Palm Beach County Sheriff PAL WestGate	West Palm Beach, Florida, USA
+7488	Delray Achievement Center	Delray Beach, Florida, USA
+7489	Milagro Center	Delray Beach, Florida, USA
+7490	Boys & Girls Club of Riviera Beach	West Palm Beach, Florida, USA
+7491	Cyber Soldiers	Burton, Michigan, USA
+7492	Cavalier Robotics	Conroe, Texas, USA
+7493	Phoenix Force Robotics	Tukwila, Washington, USA
+7494	Circuit Bizurkers	Missouri City, Texas, USA
+7495	SHAbotics	Mount Pleasant, Michigan, USA
+7496	Mascoutah High School	Mascoutah, Illinois, USA
+7497	MARAHO	Taipei, Taipei, Chinese Taipei
+7498	Wingus & Dingus	Auckland, Auckland, New Zealand
+7499	ABAC Robotics	Tifton, Georgia, USA
+7500	MARAUDERS	Fort Lauderdale, Florida, USA
+7501	Golden Gears	Brooklyn, Michigan, USA
+7502	CyberBuggies Northridge High School	Middlebury, Indiana, USA
+7503	Radicubs	Frisco, Texas, USA
+7504	Brewster Cybear Bots	Brewster, New York, USA
+7505	PTU	SHANGHAI, Shanghai, China
+7506	CTC Fighting Ferrets	Arlington, Texas, USA
+7507	Terminators Educational Robotics Team	Karditsa, Thessalia, Greece
+7508	STartEM	Temple, Texas, USA
+7509	STEAMTeam Robotics	Brantford, Ontario, Canada
+7510	Tiger Prowl	Houston, Texas, USA
+7511	GWAMA FRC Robotics	Waco, Texas, USA
+7512	Lions Bots	Mobile, Alabama, USA
+7513	Muskrat	Shenzhen, Guangdong, China
+7514	EVE Robotics	Atlanta, Georgia, USA
+7515	Dark Side Robotics	Parkersburg, West Virginia, USA
+7516	Louisville Centrons	Louisville, Kentucky, USA
+7517	Massis Robotics	Encino, California, USA
+7518	Generals FRC	Houston, Texas, USA
+7519	Silver Warriors	Clewiston, Florida, USA
+7520	Team MineKee	North York, Ontario, Canada
+7521	Ultimate Robotics	Laredo, Texas, USA
+7522	Make 1 Robot	Shanghai, Shanghai, China
+7523	SpringBots	Centurion, Gauteng, South Africa
+7524	Regen	zhengzhou, Henan, China
+7525	Pioneers^2	Nashville, Tennessee, USA
+7526	Welcome to team	kaohsiung, Kaohsiung, Chinese Taipei
+7527	Kaohsiung power	Kaohsiung , Kaohsiung, Chinese Taipei
+7528	Nuts and Bolts	Morgan Hill, California, USA
+7529	Mulan	Shenzhen , Guangdong, China
+7530	Watertown-Mayer High School Robotics	Watertown, Minnesota, USA
+7531	Servos Strike Back	Dubuque, Iowa, USA
+7532	Gophertronics	Winnipeg, Manitoba, Canada
+7533	OSO-TECH	El Paso, Texas, USA
+7534	Dragonflies	Fort Worth, Texas, USA
+7535	Purple Poison	Arlington, Texas, USA
+7536	ANKA ROBOTICS	Basaksehir, Istanbul, Turkey
+7537	Thunderbots	Henderson, Colorado, USA
+7538	Mountain View HS Robotics	Lawrenceville, Georgia, USA
+7539	Elev8	Mumbai, Maharashtra, India
+7540	The Sandia Singularities	Sandia Park, New Mexico, USA
+7541	Maple River Robotics	Mapleton, Minnesota, USA
+7542	Entel Foreign language school	Hangzhou, Zhejiang, China
+7543	Graphene	Hangzhou, Zhejiang, China
+7544	IZMIR ROBOTIK	Gaziemir, Izmir, Turkey
+7545	Leptechons	Yuma, Arizona, USA
+7546	Prepa Tec - MinerZ	Zacatecas, Zacatecas, Mexico
+7547	Hawkinators	Glendale, Arizona, USA
+7548	Le Jardin Academy	Kailua, Hawaii, USA
+7549	LYBOTICS YOUTH TEAM	Tripoli, Tarabulus, Libya
+7550	DieForTonga	Nukualofa, Tongatapu, Tonga
+7551	Extreme Mechanism	Zhuqi, Chiayi, Chinese Taipei
+7552	PERSEUS	HATAY, Hatay, Turkey
+7553	OSTC-Southwest	Wixom, Michigan, USA
+7554	Green Rockets	Jaffa of Nazareth, HaZafon, Israel
+7555	Maestro	Lachine, Québec, Canada
+7556	PRISER	Istanbul, Istanbul, Turkey
+7557	dasheng	Hangzhou, Zhejiang, China
+7558	ALT+F4	North York, Ontario, Canada
+7559	Sweet Springs Robotics Team	Sweet Springs, Missouri, USA
+7560	Doodle Bots	Chicago, Illinois, USA
+7561	Blue Flamingos	Wollongong, New South Wales, Australia
+7562	NSU Demons Robotics	Natchitoches, Louisiana, USA
+7563	SESI SENAI MEGAZORD	Jundiaí, São Paulo, Brazil
+7564	Lakers	Oshawa, Ontario, Canada
+7565	SESI SENAI São Paulo ROBONÁTICOS	São Paulo, São Paulo, Brazil
+7566	SESI SENAI SÃO PAULO NIÓBIO	Campinas, São Paulo, Brazil
+7567	SESI SENAI SÃO PAULO OCTOPUS	Bauru, São Paulo, Brazil
+7568	Tro-Bots	Marianna, Arkansas, USA
+7569	Optimus Robotics	Atasehir, Istanbul, Turkey
+7570	New Tech	Zamosc, Lubelskie, Poland
+7571	SESI/DN #1	Brasília, Distrito Federal, Brazil
+7572	Uplift Robotics	Lake Forest, California, USA
+7573	MULEBOTICS	Muleshoe, Texas, USA
+7574	Les Sentinelles	Montreal, Québec, Canada
+7575	Stark Robotics	Büyükçekmece, Istanbul, Turkey
+7576	FMWill	Istanbul, Istanbul, Turkey
+7577	VELABOTS	Velardeña, Durango, Mexico
+7578	Jamestown Juggernauts	Jamestown, North Dakota, USA
+7579	SESI/DN #2	Brasília, Distrito Federal, Brazil
+7580	SESI/DN #3	Brasília, Distrito Federal, Brazil
+7581	SESI/DN #4	Brasília, Distrito Federal, Brazil
+7582	SESI/DN #5	Brasília, Distrito Federal, Brazil
+7583	Elonera Embers	Mount Ousley , New South Wales, Australia
+7584	RoverBots	Easton, Pennsylvania, USA
+7585	The Thunder	Büyükçekmece, Istanbul, Turkey
+7586	ShenHao_The Salted Fishballs	Hangzhou, Zhejiang, China
+7587	Metuchen Momentum	Metuchen, New Jersey, USA
+7588	H.I.I Robot	HANGZHOU, Zhejiang, China
+7589	Lishan Blue Magpie	Taipei, Taipei Special Municipality, Chinese Taipei
+7590	BotRaiders	Trois-Rivieres, Québec, Canada
+7591	Aurora	Beijing, Beijing, China
+7592	Sugar Nerds	Basseterre, Saint George Basseterre, Saint Kitts and Nevis
+7593	SymbiOHSis	Auckland, Auckland, New Zealand
+7594	Nautilus	Shenzhen, Guangdong, China
+7595	Crosspoint at Shanghai & Suzhou United	Suzhou, Jiangsu, China
+7596	Trojan Horses	Rushford, Minnesota, USA
+7597	Team HorsePowered	Fraser, Michigan, USA
+7598	SCA Constellations	Wixom, Michigan, USA
+7599	Blue Pride	Philadelphia, Pennsylvania, USA
+7600	S.M.C.	Istanbul, Istanbul, Turkey
+7601	Iron Phoenix	shenzhen, Guangdong, China
+7602	Spartronics	Scottville, Michigan, USA
+7603	Bill Hogarth Secondary School	Markham, Ontario, Canada
+7604	Sickle and Hammer	hangzhou, Zhejiang, China
+7605	ASTRO	Sainte-Therese, Québec, Canada
+7606	Liberty Robotics	Parma Hts., Ohio, USA
+7607	Pass the Wrench	Palmdale, California, USA
+7608	Owlenators	Chicago, Illinois, USA
+7609	Half Bananas	Bridgeview, Illinois, USA
+7610	HZYulan	hangzhou, Zhejiang, China
+7611	AMAL HAWKS	ISTANBUL, Istanbul, Turkey
+7612	HIS	Hangzhou, Zhejiang, China
+7613	Revoltage	silivri, Istanbul, Turkey
+7614	NHS Raiders	Newmarket, Ontario, Canada
+7615	PatBots	Saint-Laurent, Québec, Canada
+7616	Sweeny Bulldog Robotics	Sweeny, Texas, USA
+7617	RoboBlazers	Carmel, Indiana, USA
+7618	WHS Vikings	Williams, Arizona, USA
+7619	illumiBOTi	Manitowoc, Wisconsin, USA
+7620	Anthem Bolts	Anthem, Arizona, USA
+7621	Iron Rangers	Spring Branch, Texas, USA
+7622	Ten More Tons	West Vancouver, British Columbia, Canada
+7623	Morebotics	Hamilton, Ontario, Canada
+7624	YOUNG	Shanghai, Shanghai, China
+7625	STORMING	Changsha, Hunan, China
+7626	NLHS	Taoyuan, Taoyuan, Chinese Taipei
+7627	Descendants of G.O.R.T.	Monroe, Washington, USA
+7628	LISA	Altdorf, Uri, Switzerland
+7629	14 Rohan	Hangzhou, Zhejiang, China
+7630	SCIE FIRST	Shenzhen, Guangdong, China
+7631	Cool Guy	Toyota, Aichi, Japan
+7632	An Kang Robotics Maker	New Taipei City, Taipei, Chinese Taipei
+7633	GRYPHUS ROBOTICS	NEIVA, Huila, Colombia
+7634	New Hawks	Sandy, Utah, USA
+7635	SWIS ROBOTICS	Shenzhen, Guangdong, China
+7636	Robomania	Taichung, Taichung, Chinese Taipei
+7637	Asimov Effect	Sinop, Sinop, Turkey
+7638	Northern Exposure Robotics Division (Gogebic Range Robotics)	Bessemer, Michigan, USA
+7639	ENJOY VARIETY	SHENZHEN, Anhui, China
+7640	CK Steam UNION	hangzhou, Zhejiang, China
+7641	Normal Force	Tainan, Tainan, Chinese Taipei
+7642	BozlakS	kirsehir, Kirsehir, Turkey
+7643	UWCDR	Dilijan, Tavuš, Armenia
+7644	CCHS	Changhua City, Changhua, Chinese Taipei
+7645	NK MTC	Taipei City, Taipei, Chinese Taipei
+7646	Cadets	Cresco, Iowa, USA
+7647	Juventics	Guadalupe, Nuevo León, Mexico
+7648	McMainFrame	New Orleans, Louisiana, USA
+7649	Feles Numine	Santa Fe, New Mexico, USA
+7650	Monte Pacis Robotics	Gossau, Sankt Gallen, Switzerland
+7651	Bethlehem Eagles	Bethlehem, New York, USA
+7652	MiamiBeachBots	Miami Beach, Florida, USA
+7653	Minebots	Santiago Papasquiaro, Durango, Mexico
+7654	Robot In Box	Henderson, Nevada, USA
+7655	Hamburg Robotics Team	Hamburg, Arkansas, USA
+7656	MC Hammers	Michigan Center, Michigan, USA
+7657	ThunderBots	Evansville, Indiana, USA
+7658	MagiTech	Kalamazoo, Michigan, USA
+7659	HNMCS Robotics	Mississauga, Ontario, Canada
+7660	The Byting Irish	Ann Arbor, Michigan, USA
+7661	SciHigh Nautili	New Orleans, Louisiana, USA
+7662	BuzzBot	Lebanon, Missouri, USA
+7663	Sleuth Robotics	Fresno, California, USA
+7664	Big Celtic 6	Guelph, Ontario, Canada
+7665	GL Gadgets	Grand Ledge, Michigan, USA
+7667	OtterBots	Napa, California, USA
+7668	GatorBots	New York, New York, USA
+7669	TECHNO R4V7NS	Gomez Palacio, Durango, Mexico
+7670	Highlanders	Claysville, Pennsylvania, USA
+7671	Fire Hazard	Creedmoor, North Carolina, USA
+7672	SCORPIONS	ANTALYA, Antalya, Turkey
+7673	FORMOSAN SIKA	New Taipei City, Taipei, Chinese Taipei
+7674	RaiderBots	Rochester, New Hampshire, USA
+7675	Spark Guardians	Gatesville, North Carolina, USA
+7676	THS RoboDogs	Thomson, Georgia, USA
+7677	Swanville Bulldogs Robotics Team	Swanville, Minnesota, USA
+7678	DONKERRY	Ciudad de Mexico, Distrito Federal, Mexico
+7679	ROBOVAN	Ipekyolu, Van, Turkey
+7680	DFORCE	ANKARA, Ankara, Turkey
+7681	haxhax	Afyonkarahisar, Afyonkarahisar, Turkey
+7682	FUSION ROBOTICS	Bahçelievler, Istanbul, Turkey
+7683	Harmonia	istanbul, Istanbul, Turkey
+7684	first nilufer team	BURSA, Bursa, Turkey
+7685	SZALTech	Istanbul, Istanbul, Turkey
+7686	Acalanes High School	Lafayette, California, USA
+7687	Corcebots 5.0	BERMEJILLO, Durango, Mexico
+7688	Creekside Voyagers	Burnaby, British Columbia, Canada
+7689	WMC Robotics	Muskegon, Michigan, USA
+7690	Iron Works Robotics	Richmond Hill, Ontario, Canada
+7691	Oakley	Tomball, Texas, USA
+7692	AGBU Manoogian Robotics	Southfield, Michigan, USA
+7693	Craft Robotics	Morehead, Kentucky, USA
+7694	NORTHWEST CATHOLIC	West Hartford, Connecticut, USA
+7695	Trojan Thunder	Highland, Indiana, USA
+7696	Gear Hounds	Grandview, Washington, USA
+7699	VeneBot Robotics	Maracaibo, Zulia, Venezuela
+7700	West Tech Paladins	Westmount, Québec, Canada
+7701	Aérobot	Montreal, Québec, Canada
+7702	Lions.exe	Clarendon, Arkansas, USA
+7703	RoboBears	Cave Creek, Arizona, USA
+7704	Kimball E-TECH @ Mountain View College	Dallas, Texas, USA
+7705	Mustangs Robotics	Sugar Land, Texas, USA
+7706	Rottweilers Robotics	Torreón, Coahuila, Mexico
+7707	Cutting Edge Robotics	Shanghai, Shanghai, China
+7708	Tiger Nation	Terrell, Texas, USA
+7709	Formosa Pangolin	Ban Qiao District, Taipei Special Municipality, Chinese Taipei
+7710	Mowat Mustangs	Scarborough, Ontario, Canada
+7711	Applewood Axemen	Mississauga, Ontario, Canada
+7712	ACCN UMOJA	Scarborough, Ontario, Canada
+7713	The Sons & Daughters of Ivaldi, Norse-code	Felch, Michigan, USA
+7714	RedRoad	Washington, District of Columbia, USA
+7715	Robo-Banditos	Elizabeth City, North Carolina, USA
+7716	JLW Formula 01 Robotic's Team	Detroit, Michigan, USA
+7717	Team Steam Punks	Santo Domingo, Distrito Nacional, Dominican Republic
+7718	Space Bees	Ulster Park, New York, USA
+7719	Java Knights	Depok, Jawa Barat, Indonesia
+7720	?? Dallas Area Robotics Experience ??	Carrollton, Texas, USA
+7721	UHS Wolfpack	Markham, Ontario, Canada
+7722	Resurrection Fire Birds	Kitchener, Ontario, Canada
+7723	Tiger Robotics	Thunder Bay, Ontario, Canada
+7724	Molokai Robotics	Hoolehua, Hawaii, USA
+7725	PrepaTec - NUTS & VOLTS	Monterrey, Nuevo León, Mexico
+7726	ShanDong Experimental High School	Jinan, Shandong, China
+7727	Iteration Beaker	Jinan, Shandong, China
+7728	CAAFE	Windermere, Florida, USA
+7729	RAMs	Istanbul, Istanbul, Turkey
+7730	Aperture Robotics	Thiells, New York, USA
+7731	CTB Robotics Team	Thai Binh, Thai Binh, Vietnam
+7732	Artificial Intelligence	Wuxi, Jiangsu, China
+7733	GreenHSGS Robotics Team	Ha Noi, Ha Noi, Vietnam
+7734	High School of Education Sciences	Hanoi, Ha Noi, Vietnam
+7735	Milliken Mills Knights	Markham, Ontario, Canada
+7736	DRAMA KINGS	Qingdao, Shandong, China
+7737	GVR Raptors	Denver, Colorado, USA
+7738	Helion	Beijing, Beijing, China
+7739	Royal Tech Warriors	Tarboro, North Carolina, USA
+7740	Iron Donkeys	San Agustin Tlaxiaca, Hidalgo, Mexico
+7741	South Taiwan AI Robot	Kaohsiung, Kaohsiung, Chinese Taipei
+7742	Cosmos Robot Works	Üsküdar, Istanbul, Turkey
+7743	ShanDong Experimental High School	Jinan, Shandong, China
+7744	Wild Cards	Collinsville, Oklahoma, USA
+7745	College Heights	Guelph, Ontario, Canada
+7746	Culture	Saint Louis, Missouri, USA
+7747	Hancock High Tech	Saint Louis, Missouri, USA
+7748	TECHTOLIA ROBOTIC	Istanbul, Istanbul, Turkey
+7749	Level UP	Dallas, Texas, USA
+7750	Alpine robo bucks	Alpine, Texas, USA
+7751	The A.E.A.-ALTimate Electric Androids	West Branch, Michigan, USA
+7752	ROBYBAM	Tijuana, Baja California, Mexico
+7753	Tj Robotics	Tijuana, Baja California, Mexico
+7754	STAR	Saint Augustine, Florida, USA
+7755	Phantom Circuits	Casa Grande, Arizona, USA
+7756	Bionic Blue Devils	Hopewell, Virginia, USA
+7757	Atomic Dishwashers	Owen Sound, Ontario, Canada
+7758	MEVOLUTION	ISTANBUL, Istanbul, Turkey
+7759	Irvington Robotics	Irvington, New York, USA
+7760	PomTech	Pomfret, Connecticut, USA
+7761	Eagle Tech	Kartal, Istanbul, Turkey
+7762	AutoPilots	Warren, Michigan, USA
+7763	CARRBOROBOTICS	Carrboro, North Carolina, USA
+7764	Voltech	Santiago, Región Metropolitana de Santiago, Chile
+7765	STEM SOPÓ	SOPÓ, Cundinamarca, Colombia
+7766	Panthers	Heber Springs, Arkansas, USA
+7767	Rock City Robots	Little Rock, Arkansas, USA
+7768	West Iron County Wykons	Iron River, Michigan, USA
+7769	OS CREW	Royal Oak, Michigan, USA
+7770	Infinite Voltage	Bel Air, Maryland, USA
+7771	Lakewood Robotics	Lakewood, New Jersey, USA
+7772	The Lucky 7's	Montrose, Michigan, USA
+7773	UB Ignite	Park Hills, Missouri, USA
+7774	Duval Techs	Jacksonville, Florida, USA
+7775	Dunedin Talons	Dunedin, Florida, USA
+7776	MVR	Okanogan, Washington, USA
+7777	GHS Bruins Robotics	Greenfield, California, USA
+7778	South High Rebels	Bakersfield, California, USA
+7779	Team Murdoch	Perth, Western Australia, Australia
+7780	Colyton High School	Colyton, New South Wales, Australia
+7781	Port Moody Robotics	Port Moody, British Columbia, Canada
+7782	Wolverine Circuit Breakers	Rock, Michigan, USA
+7783	St. Mary's Preparatory	Orchard Lake, Michigan, USA
+7784	Vassar Voltage	Bay City, Michigan, USA
+7785	Mechanical Mustangs	Shenandoah, Iowa, USA
+7786	Power Surge	Woodbury, Connecticut, USA
+7787	Reynolds Reybots	Victoria, British Columbia, Canada
+7788	Robotic Eagles	Inkster, Michigan, USA
+7789	Oakland Panthers	Detroit, Michigan, USA
+7790	Baywatch Robotics	Harbor Springs, Michigan, USA
+7791	Lincoln Abes	Clinton Township, Michigan, USA
+7792	ROBOTAYFA	Reyhanli, Hatay, Turkey
+7793	Team Zimbabwe	Harare, Harare, Zimbabwe
+7794	Marion Eagle Engineers	Marion, Michigan, USA
+7795	Norse Code	Winthrop, Massachusetts, USA
+7796	Burnett Robotics	Richmond, British Columbia, Canada
+7797	Cloquet's RipSaw Robotics	Cloquet, Minnesota, USA
+7798	Cougar Coders	Helena, Arkansas, USA
+7799	Phat Cache	Calgary, Alberta, Canada
+7800	Electric Comets	Windsor, Ontario, Canada
+7801	Frisch CouGears	Paramus, New Jersey, USA
+7802	Dust Devils	Dayton, Nevada, USA
+7803	Pioneer Robotics	Omak, Washington, USA
+7804	Team Sabotage	Cabot, Arkansas, USA
+7805	Walnut Grove Gators	Langley, British Columbia, Canada
+7806	KDHS Kolts	Kapuskasing, Ontario, Canada
+7807	Cambridge Panthers	Garden City, Michigan, USA
+7808	Dragoneers	Kalkaska, Michigan, USA
+7809	Valhalla Nation	Bangor, Michigan, USA
+7810	Oakridge Eagles	Muskegon, Michigan, USA
+7811	StP Tigers	Battle Creek, Michigan, USA
+7812	Robot Warriors	Ionia, Michigan, USA
+7813	New Haven Rockets Robotics	New Haven, Michigan, USA
+7814	River Valley Mustang Gearheads	Three Oaks, Michigan, USA
+7815	CavBots	Spencer, North Carolina, USA
+7816	Hematite Robotics	Ishpeming, Michigan, USA
+7817	Lansing Catholic Cougars	Lansing, Michigan, USA
+7818	Williamston High School	Williamston, Michigan, USA
+7819	Automataardvarks	Portland, Oregon, USA
+7820	SRT UNIT (Superior Robotics Team)	Detroit, Michigan, USA
+7821	Ravenna Bulldogs Robotics	Ravenna, Michigan, USA
+7822	Generals Robotics	South Hamilton, Massachusetts, USA
+7823	HuronBots	Rogers City, Michigan, USA
+7824	165th Airlift Wing Air National Guard Eagles	Savannah, Georgia, USA
+7825	DAMBAZE	IZMIT, Kocaeli, Turkey
+7826	King's Logic	Iron Mountain, Michigan, USA
+7827	Yooper Robotics	Crystal Falls, Michigan, USA
+7828	KALROBOTICS	Kadikoy, Istanbul, Turkey
+7829	test team turkey	test, Kahramanmaras, Turkey
+7830	Ultimate Robotics	Üsküdar, Istanbul, Turkey
+7831	BALISTA BILSEM	ISTANBUL, Istanbul, Turkey
+7832	Hayata Destek	Istanbul, Istanbul, Turkey
+7833	FALCONS	West Palm Beach, Florida, USA
+7834	Neville High School	Monroe, Louisiana, USA
+7835	APRIKOD	KULUNCAK/MALATYA, Malatya, Turkey
+7836	NEC@ Co-Lin	Natchez, Mississippi, USA
+7837	Beast of Prey	San Antonio, Texas, USA
+7838	Crobotics	Crows Nest, New South Wales, Australia
+7839	BAAL ROBOTICS	Besiktas, Istanbul, Turkey
+7840	emoner	istanbul, Istanbul, Turkey
+7841	TECHNO-ROB	ÇAYIROVA, Kocaeli, Turkey
+7842	LVGalaxy	Lake Village, Arkansas, USA
+7843	The Galactic Wranglers	Bentley, Alberta, Canada
+7844	Yirara Colleg	Alice Springs, Northern Territory, Australia
+7845	8BIT	Jerusalem, Yerushalayim, Israel
+7846	Zombie Squad	Barton, Arkansas, USA
+7847	Abraham Lincoln Robotics Team	San Francisco, California, USA
+7848	WI-FIghterz	Pontiac, Illinois, USA
+7849	The 7849ers	Saint Paul, Minnesota, USA
+7850	C.A.R.D.S	Coon Rapids, Minnesota, USA
+7851	NeuraBlink	Kyiv, Kyïv, Ukraine
+7852	DENIZYILDIZLARI_MTAL	DARICA, Kocaeli, Turkey
+7853	Kronecker Delta	Elizabeth, New Jersey, USA
+7854	MTCPS Bathers	Mount Clemens, Michigan, USA
+7855	Bone Yard	Mesick, Michigan, USA
+7856	Henry Ford Academy: School for Creative Studies	Detroit, Michigan, USA
+7857	OPFI Robo Knights	Oak Park, Michigan, USA
+7858	Warriors	Olivia, Minnesota, USA
+7859	Summit Electro-Dragons	Romulus, Michigan, USA
+7860	Falcon	Sterling Heights, Michigan, USA
+7861	The Wildkatz	Alba, Michigan, USA
+7862	Mott Bears	Flint, Michigan, USA
+7863	ATA	DETROIT, Michigan, USA
+7864	North Woods Robotics	Cook, Minnesota, USA
+7865	Hope of Detroit Robotics	Detroit, Michigan, USA
+7866	Balista	Istanbul, Istanbul, Turkey
+7867	NEBULA	TEPEBASI, Eskisehir, Turkey
+7868	FC Mustangs	Forrest City, Arkansas, USA
+7869	The Fun Gang	New Haven, Connecticut, USA
+7870	The RoboHawks	Reno, Nevada, USA
+7871	South Gate High School Robotics	South Gate, California, USA
+7872	Wimberley Wavelengths	Wimberley, Texas, USA
+7873	AURORA	Istanbul, Istanbul, Turkey
+7874	Wossman High School	Monroe, Louisiana, USA
+7875	MNIC Robotics	Saint Paul, Minnesota, USA
+7876	AC JONES ROBOTICS	--
+7877	Mastery High School of Camden	Camden, New Jersey, USA
+7878	PBHS Robotics Team	Pine Bluff, Arkansas, USA
+7879	TigerBots	Hanover, Maryland, USA
+7880	Rancho R.A.T.S.	Las Vegas, Nevada, USA
+7881	Cuyahoga Heights High School	Cleveland, Ohio, USA
+7882	SKYFIRST	TEL AVIV, Tel-Aviv, Israel
+7883	CCHS Robotics Razorbacks	Augusta, Georgia, USA
+7884	Parramatta High School	Parramatta, New South Wales, Australia
+7885	EC.exe	Elyria, Ohio, USA
+7886	Cadet Robotics	Frederick, Maryland, USA
+7887	Final FRONTIER	Camarillo, California, USA
+7889	OSAT	Edmonton, Alberta, Canada
+7890	SeQuEnCe	Raleigh, North Carolina, USA
+7891	St. Vrain Valley Innovation Center	Longmont, Colorado, USA
+7892	Medford RoboTigers	Medford, Minnesota, USA
+7893	Maple Lake High School	Maple Lake, Minnesota, USA
+7894	The Hawk Nation	Flint, Michigan, USA
+7895	Trobots	Homedale, Idaho, USA
+7896	CyberNoles	Osceola, Arkansas, USA
+7897	WHS Auto Barks	Winslow, Arizona, USA
+7898	Cool Geeks	Honolulu, Hawaii, USA
+7899	Gibsland-Coleman STEM Club	Gibsland, Louisiana, USA
+7900	Trial & Terror	Racine, Wisconsin, USA
+7901	Snow Hill Robotics	Snow Hill, Maryland, USA
+7902	Markham FireBirds	Markham, Ontario, Canada
+7903	Rochester Prep	Rochester, New York, USA
+7904	Mountaineers	Highwood, Montana, USA
+7905	Robo Falcons	Clearfield, Utah, USA
+7906	Underdogs	Salt Lake City, Utah, USA
+7907	Spartan Robotics	Whitefield, New Hampshire, USA
+7908	MARVELL MAKERS	Marvell, Arkansas, USA
+7909	GTI WingNuts	Salt Lake City, Utah, USA
+7910	Crossett Eagles	Crossett, Arkansas, USA
+7911	Belding RoboKnights	Belding, Michigan, USA
+7912	Flex Tech Robotics	Novi, Michigan, USA
+7913	Newfound Bears	Bristol, New Hampshire, USA
+7914	Bulldog Robotics	Monroe, Louisiana, USA
+7915	First Alliance	Ripon, Wisconsin, USA

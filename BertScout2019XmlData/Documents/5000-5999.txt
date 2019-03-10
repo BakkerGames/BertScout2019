@@ -1,0 +1,938 @@
+5000	Hammerheads	Hingham, Massachusetts, USA
+5001	Fast and Serious	Tulsa, Oklahoma, USA
+5002	Dragon Robotics	Collierville, Tennessee, USA
+5003	Topperbotics	Onalaska, Wisconsin, USA
+5004	Gravity Loop	Roswell, Georgia, USA
+5005	RoboBucs	Chattanooga, Tennessee, USA
+5006	Apophis	Fayetteville, Arkansas, USA
+5007	Phantomechanics	Miami, FL, USA
+5008	(robo)LIONS	Detroit, Michigan, USA
+5009	Techno Inventors of Puerto Rico	Guaynabo, PR, USA
+5010	Tiger Dynasty	Fishers, Indiana, USA
+5011	Desert star	Ksifa, D, Israel
+5012	Gryffingear	Palmdale, California, USA
+5013	Trobots	Kansas City, Missouri, USA
+5014	Wildcats	Detroit, Michigan, USA
+5015	SWAT Bots Robotics	Airdrie, Alberta, Canada
+5016	Huntington Robotics	Huntington, New York, USA
+5017	Pirates	Harbor Beach, Michigan, USA
+5018	The Droids You're Looking For	Winter Garden, FL, USA
+5019	Gearbox Heroes	West Salem, Wisconsin, USA
+5020	CavBOTS	Roebuck, South Carolina, USA
+5021	Bright Shiny Things	Grand Forks, ND, USA
+5022	Rat Rod Robotics	Jonesborough, Tennessee, USA
+5023	Furious Disco Ninjas	San Bruno, California, USA
+5024	Raider Robotics	London, Ontario, Canada
+5025	Pacific Steel	San Diego, California, USA
+5026	Iron Panthers	Burlingame, California, USA
+5027	Event Horizon	San Jose, California, USA
+5028	Seacoast Robotics	Santa Rosa Beach, FL, USA
+5029	Batchelor Institute	Batchelor, Northern Territory, Australia
+5030	The Second Mouse	Utica, New York, USA
+5031	Full Metal Mustangs	North York, Ontario, Canada
+5032	Falcons	Mississauga, Ontario, Canada
+5033	Beavertronics	Dorchester, Ontario, Canada
+5034	River City Robotics	Chattanooga, Tennessee, USA
+5035	eNimkii	North Bay, Ontario, Canada
+5036	The Robo Devils	Scarborough, Ontario, Canada
+5037	Panther BOTS	Greenbrier, AR, USA
+5038	MEGIDDO LIONS	Megiddo Regional Council , HaZafon, Israel
+5039	Irish Iron	Sarnia, Ontario, Canada
+5040	BoltBot	Arlington, Tennessee, USA
+5041	CyBears	West Branch, Iowa, USA
+5042	Native Bots	Scottsdale, AZ, USA
+5043	Challenger	Peoria, AZ, USA
+5044	MBA Big Red Robots	Nashville, TN, USA
+5045	SpartaBot	Memphis, Tennessee, USA
+5046	Jacked Up Jackets	Memphis, Michigan, USA
+5047	DV CONQUISTABOTS	El Paso, Texas, USA
+5048	Spartronics	Imlay City, Michigan, USA
+5049	Techtonics	Las Vegas, Nevada, USA
+5050	Cow Town Robotics	Carleton, Michigan, USA
+5051	Fast Eddie Community Robotics	Port Perry, Ontario, Canada
+5052	The RoboLobos	Cedar Park, Texas, USA
+5053	Lakers	Waterford, Michigan, USA
+5054	Noobum Roboticum	Chicago, IL, USA
+5055	robodogs	New Orleans, LA, USA
+5056	MegaHurtz Robotics	Buchanan, Michigan, USA
+5057	RoboBusters	Dallas, Texas, USA
+5058	CGLA Mustang Innovators	Chattanooga, Tennessee, USA
+5059	The Midnight Cicadas	Globe, Arizona, USA
+5060	KnighTech	Farmington, Missouri, USA
+5061	1	Woodstock Academy, CT, USA
+5062	Warriors	Tuba City, AZ, USA
+5063	BuzzBots	Aynor, South Carolina, USA
+5064	OpCom	Edmonton, Alberta, Canada
+5065	Knights	Detroit, Michigan, USA
+5066	Singularity	Saline, Michigan, USA
+5067	Steiner Steel Storm	Ann Arbor, Michigan, USA
+5068	The Outsiders	Detroit, Michigan, USA
+5069	The Iron Giants	Edwardsburg, Michigan, USA
+5070	Gearnotics	Houston, Texas, USA
+5071	Chargers	Draper, Utah, USA
+5072	Raider Robotics	De Tour Village, Michigan, USA
+5073	Sparks	Detroit, MI, USA
+5074	RoboMustangs	Norcross, Georgia, USA
+5075	RoboJackets	Tombstone, Arizona, USA
+5076	Richardson Stormbots	Ajax, Ontario, Canada
+5077	RoboCards	Youngstown, Ohio, USA
+5078	ROBO-KAOS	Calgary, Alberta, Canada
+5079	LGS	Lahore, PB, Pakistan
+5080	Robot Alchemy Manipulators	Wilmington, DE, USA
+5081	Lumbernators	Bay City, MI, USA
+5082	Northmen Robotics	Kansas City, Missouri, USA
+5083	PUMAS	Edmonton, AB, Canada
+5084	Team FridgeBot	Corunna, Michigan, USA
+5085	LakerBots	Blachly, Oregon, USA
+5086	Cadillac Connectors	Cadillac, Michigan, USA
+5087	Marsden High School	West Ryde, New South Wales, Australia
+5088	Engadine Robots	Engadine, MI, USA
+5089	Robo-Nerds	Los Angeles, California, USA
+5090	Torque-Nados	Trenton, Michigan, USA
+5091	Squirrels	Toronto, ON, Canada
+5092	Titanium Tigers	North York, Ontario, Canada
+5093	Tech-Sets	Culiacan, Sinaloa, Mexico
+5094	Blizzard	Brampton, Ontario, Canada
+5095	RoBeauce	Saint-Georges, Québec, Canada
+5096	The Teutonic Force	Germantown, Wisconsin, USA
+5097	Phantom	Folsom, CA, USA
+5098	STING - R	Kansas City, Missouri, USA
+5099	Northport High School Robotics	Northport, New York, USA
+5100	Romanoid	Los Angeles, California, USA
+5101	Braves	San Carlos, Arizona, USA
+5102	The Underbots	Santa Maria, California, USA
+5103	Jaegernauts	New Braunfels, Texas, USA
+5104	BreakerBots	Pacific Grove, California, USA
+5105	PioTech	Wayne, NJ, USA
+5106	High Impact Technologies	Sunderland, Maryland, USA
+5107	The Neurotoxins	Upland, California, USA
+5108	Can-O-Bolts	Jacksonville, FL, USA
+5109	Gladiator Robotics	Johns Creek, Georgia, USA
+5110	Robo Herd	Elk Rapids, Michigan, USA
+5111	SaxonBots	Spokane, Washington, USA
+5112	The Gongoliers	North Scituate, Rhode Island, USA
+5113	Combustible Lemons	Moorestown, New Jersey, USA
+5114	Titanium Tigers	Fenton, Michigan, USA
+5115	Knight Riders	Silver Spring, Maryland, USA
+5116	Silicon Claymore	Calgary, Alberta, Canada
+5117	Community	Calgary, Alberta, Canada
+5118	K-BOTS	Standoff, Alberta, Canada
+5119	Team STEAM	Lawrence, Kansas, USA
+5120	Robo-Jags	Little Rock, AR, USA
+5121	Trobots	Riverside, CA, USA
+5122	robOTies	Old Town, Maine, USA
+5123	Mechadogs	Yonkers, New York, USA
+5124	West Torrance Robotics	Torrance, California, USA
+5125	Hawks on the Horizon	Chicago, Illinois, USA
+5126	Electromagnetic Panthers (E.M.P.)	Riverside, Missouri, USA
+5127	Red Hurricane	Shenyang, Liaoning, China
+5128	Shenzhen Middle School Team	shenzhen, Guangdong, China
+5129	Digital Devils	Plainville, Connecticut, USA
+5130	Undercogs	LIttle River, South Carolina, USA
+5131	Rockets Robots2014	Auburn, MA, USA
+5132	RoboClovers	Winder, Georgia, USA
+5133	PrepaTec - Blue Steel	Aguascalientes, Aguascalientes, Mexico
+5134	RoboWolves	Clovis, California, USA
+5135	Black Unicorns	Yehud, HaMerkaz, Israel
+5136	Mechapirates	Santa Ynez, California, USA
+5137	Iron Kodiaks	San Marcos, California, USA
+5138	Maine East FIRST	Park Ridge, IL, USA
+5139	Nellis Eagles	Las Vegas, NV, USA
+5140	Systematic Targeting Of Robotic Mayhem (S.T.O.R.M.)	Edmonton, Alberta, Canada
+5141	GRIFFINITE	Kansas City, Missouri, USA
+5142	Robo Dominators	West Haven, Connecticut, USA
+5143	GRG Raw Steel	Grand Rapids, Minnesota, USA
+5144	LISD TECHnicians	Adrian, Michigan, USA
+5145	WolfBotics	Gainesville, Florida, USA
+5146	Rusty Knights	Hebron, Ohio, USA
+5147	Hornets	Fulton, Missouri, USA
+5148	New Berlin Blitz	New Berlin, Wisconsin, USA
+5149	TroyBotics	Troy, New York, USA
+5150	Hybrid Hornets	Flint, Michigan, USA
+5151	RoboTitans	bronx, New York, USA
+5152	Alotobots	Otsego, Michigan, USA
+5153	EAST at HHS	Huntsville, Arkansas, USA
+5154	Dolphins	Gulf Shores, AL, USA
+5155	Bearcats	Ubly, Michigan, USA
+5156	Laker Robots	Pigeon, Michigan, USA
+5157	Roboprime Cardinals	Sudbury, Ontario, Canada
+5158	Richmond Hill	Richmond Hill, Ontario, Canada
+5159	Bengal Robotics	Salt Lake City, Utah, USA
+5160	Chargers	Cary, North Carolina, USA
+5161	Trojan Technicians	Plainwell, Michigan, USA
+5162	The Big Red Theory	Big Rapids, Michigan, USA
+5163	The Aluminum Warriors	Hopkinton, Massachusetts, USA
+5164	Robusters	Sudbury, Ontario, Canada
+5165	--	--
+5166	Fabricators	Freeland, Michigan, USA
+5167	Vi-Bots	Marysville, Michigan, USA
+5168	Guardian Angels	New Orleans, Louisiana, USA
+5169	The Armadillos	Senatobia, MS, USA
+5170	Bobcats	Gainesville, FL, USA
+5171	Deus Ex Machina	Monterey, California, USA
+5172	Gators	Greenbush, Minnesota, USA
+5173	Fennville RoboHawks	Fennville, Michigan, USA
+5174	Enterprise	Naura, Z, Israel
+5175	Purple People Eaters	Pickford, Michigan, USA
+5176	RoboBills	Saint Louis, Missouri, USA
+5177	Hatchets	200 North Barrie Rd, MI, USA
+5178	The Nerdy Birds	Farmington, Arkansas, USA
+5179	Les Sénateurs	Drummondville, Québec, Canada
+5180	Metal Heads	Blythewood, South Carolina, USA
+5181	Explorer	Glenside, Pennsylvania, USA
+5182	Chieftainators	Dowagiac, Michigan, USA
+5183	Devil Bots	Gaylord, Michigan, USA
+5184	TITANICS	Edmonton, Alberta, Canada
+5185	Dial-Up Grizzlies	Airdrie, Alberta, Canada
+5186	Cybears	Antioch, Tennessee, USA
+5187	TEAM ON IT	Miami, FL, USA
+5188	Area 5188 : Classified Robotics	Terre Haute, Indiana, USA
+5189	SABRES	Kansas City, Kansas, USA
+5190	Green Hope Falcons	Cary, North Carolina, USA
+5191	LANCERobotics	Sudbury, Ontario, Canada
+5192	Toros	Benton Harbor, MI, USA
+5193	Pantheon	Saginaw, Michigan, USA
+5194	Gobles Voltage	Gobles, Michigan, USA
+5195	The Renegade	Wynne, Arkansas, USA
+5196	Breaking Bot	Pompano Beach, Florida, USA
+5197	DCP @ NW	Detroit, Michigan, USA
+5198	Knight Tech	Grants Pass, Oregon, USA
+5199	Robot Dolphins From Outer Space	San Juan Capistrano, California, USA
+5200	Alchesay Falcon	Whiteriver, Arizona, USA
+5201	North Branch Bad News Broncos	North Branch, Michigan, USA
+5202	NewRo Bots	New Rochelle, New York, USA
+5203	Volatile Chaos Inhibitors	Sanford, Michigan, USA
+5204	Robocats	Three Rivers, Michigan, USA
+5205	FullMetal-Jackets	Concord, Michigan, USA
+5206	A's Gurias	Gravatai, RS, Brazil
+5207	Bearcepticons	Coolidge, Arizona, USA
+5208	TALON Robotics	Turlock, CA, USA
+5209	Rectify	San Diego, California, USA
+5210	Milpitas Xtreme Robotics	Milpitas, CA, USA
+5211	Tuiuteam	Gravatai, RS, Brazil
+5212	TAMSformers Robotics	Denton, Texas, USA
+5213	St. Ignace SHIELD	Saint Ignace, Michigan, USA
+5214	The Mighty CavBots	Saint Clair Shores, Michigan, USA
+5215	Steagles	Frankenmuth, Michigan, USA
+5216	E-Ville Empire	Essexville, Michigan, USA
+5217	Robocats	Dearborn, Michigan, USA
+5218	System Overload	Yuma, Arizona, USA
+5219	TeknoSquad	East Point, Georgia, USA
+5220	Rockets	Westland, MI, USA
+5221	Project Freelance	Windsor, ON, Canada
+5222	JackBotics	Saginaw, Michigan, USA
+5223	Hillman Gearheads	Hillman, MI, USA
+5224	Panther Power	Standish, Michigan, USA
+5225	The Shambotz	Eastpointe, Michigan, USA
+5226	Syn. Surgers	Flint, Michigan, USA
+5227	Eagle Elite	Schoolcraft, Michigan, USA
+5228	Astros	Calgary, AB, Canada
+5229	Heritage Hawkbots	Saginaw, Michigan, USA
+5230	The Resistance	Alpena , Michigan, USA
+5231	Radical Jays	Shepherd, Michigan, USA
+5232	Talons	Hermantown, Minnesota, USA
+5233	Golden Eagles	Brooklyn, Michigan, USA
+5234	MarauderBots	Elsie, Michigan, USA
+5235	Gears of Fortune	Chesaning, Michigan, USA
+5236	Man O' War Robotics	Cambridge, New York, USA
+5237	Bears	Wyandotte, MI, USA
+5238	Falconators	Otisville, Michigan, USA
+5239	Harper Woods Pioneers	Harper Woods, Michigan, USA
+5240	Udder Chaos	Potsdam, New York, USA
+5241	Tribe Tech FRC	San Antonio, Texas, USA
+5242	?? RoboCats ??	Dallas, Texas, USA
+5243	Aegis Robotics	Clifton, Virginia, USA
+5244	LNHS	Kalamazoo, MI, USA
+5245	Warriors	Grass Lake, MI, USA
+5246	Tech Tribe	Hartford, Michigan, USA
+5247	Red Devil Robotics	East Jordan, Michigan, USA
+5248	Robo-Saxons	Hastings, Michigan, USA
+5249	Revere Robotics	Richfield, Ohio, USA
+5250	Kinetic	Sacramento, California, USA
+5251	C3 WAYbots	Flint, Michigan, USA
+5252	Cyber Tigers	Detroit, MI, USA
+5253	Bigfork Backwoods Bots	Bigfork, Minnesota, USA
+5254	HYPE	Trumansburg, New York, USA
+5255	Robotic Tigers	Muskegon, Michigan, USA
+5256	The Atomics	Lake Odessa, Michigan, USA
+5257	CometKaze	Coleman, Michigan, USA
+5258	Flyers	Romeoville, IL, USA
+5259	Magic Smoke	Jacksonville, Arkansas, USA
+5260	Owosso Operating System	Owosso, Michigan, USA
+5261	Cyber Shock	Humble, Texas, USA
+5262	Robotum Manus	Cullman, AL, USA
+5263	Robo-Bucs	Riverview, Michigan, USA
+5264	The Integers	Jamaica, NY, USA
+5265	Radical Impact	Portland, Maine, USA
+5267	Cougar	Toronto, ON, Canada
+5268	The BioMech Falcons	Olathe, Kansas, USA
+5269	Sonic Sci-borgs	Silver Spring, MD, USA
+5270	KULTUR LISESI	ISTANBUL, 34, Turkey
+5271	Open Circuits	Saint Paul, Minnesota, USA
+5272	Argobots	Van, TX, USA
+5273	desert robot	Kuseyfe, HaDarom (Southern), Israel
+5274	Wolverines	Sacramento, California, USA
+5275	T.I.M.E.-Bots	New Prague, Minnesota, USA
+5276	Edgar Allan Ohms	Land O Lakes, Florida, USA
+5277	Rowville SC	Rowville, VIC, Australia
+5278	Los Clasicos	Minneapolis, Minnesota, USA
+5279	Bionic Eagles	Altavista, Virginia, USA
+5280	Shockers	Calgary, AB, Canada
+5281	PyroNinjas	Fort Walton Beach, FL, USA
+5282	Railroaders	Durand, Michigan, USA
+5283	Torque	Tampa, Florida, USA
+5284	The Monarchs	Wilmington, CA, USA
+5285	Sea Kings Robotics	Palos Verdes Estates, California, USA
+5286	Trojonix	Saco, Maine, USA
+5287	FLARE	Orange, TX, USA
+5288	Spartan Robotics	London, Ontario, Canada
+5289	Medabots	New York City, New York, USA
+5290	Mechanical Howl	Forest Lake, Minnesota, USA
+5291	Emperius	Eilat, HaDarom, Israel
+5292	Cougar-Tron Squad	Grassland, Alberta, Canada
+5293	Metal Crusaders	Duluth, Georgia, USA
+5294	Industrial Revolution	Providence/Pawtucket, RI, USA
+5295	Aldernating Current	Shelton, Washington, USA
+5296	Falcons	Calgary, Alberta, Canada
+5297	BOLTZAP	Guangzhou, Guangdong, China
+5298	E-TECH CHARGERS	Astoria, New York, USA
+5299	Winger Tech	Red Wing, Minnesota, USA
+5300	Mustangs	Clio, MI, USA
+5301	RBT	CHUANGCHUN, 22, China
+5302	Transformers	DALIAN, 21, China
+5303	Power Train	ZhengZhou, 46, China
+5304	Stone	CHUANGCHUN, 22, China
+5305	Screw	Wuhan, 13, China
+5306	R2	CHONGQING, Chongqing, China
+5307	Mechanical Dragon	SHEN ZHEN, Guangdong, China
+5308	Wuhan Yangtze	Wuhan, Hubei, China
+5309	Robbery	chuangchun, 22, China
+5310	Eagles Apex	East Orange, New Jersey, USA
+5311	Colombian Space Stars	Bogota, Distrito Capital de Bogotá, Colombia
+5312	Lobotics	Torreon, Coahuila, Mexico
+5313	CIBERBOTS	Toluca, MEX, Mexico
+5314	Ice Bots	Pellston, Michigan, USA
+5315	Panther Robot	Peyton, CO, USA
+5316	The Architects	Saranac, Michigan, USA
+5317	@RedhawkRobotics	Blythewood, South Carolina, USA
+5318	DigiDigger	Lead, South Dakota, USA
+5320	Cyber Hornets	Lorenzo, Texas, USA
+5321	Medicengineers	Buyukcekmece, 34, Turkey
+5322	Southern River	Gosnels, WA, Australia
+5323	Mechanized Mayhem	Chesapeake, Virginia, USA
+5324	Hawks	Haliburton, Ontario, Canada
+5325	Hurricanes	Marrero, Louisiana, USA
+5326	Optimus PRIN	St. Louis, Missouri, USA
+5327	Griffin Robotics	Winnsboro, South Carolina, USA
+5328	APCR	Astana, AST, Kazakhstan
+5329	Agents of S(A^3)S	Miami, Florida, USA
+5330	CBTIS 001 FRESNILLO	FRESNILLO, ZAC, Mexico
+5331	Lightning Bots	Sydney, New South Wales, Australia
+5332	Toaster Tech	Decatur, Georgia, USA
+5333	Can't C#	Perth, Western Australia, Australia
+5334	BUHOS77	LEÓN, GUA, Mexico
+5335	Falcons	Pembroke Pines, FL, USA
+5336	Longhorn	Suwanee, Georgia, USA
+5337	Real Steel	Conway, SC, USA
+5338	RoboLoCo	Leesburg, Virginia, USA
+5339	Hurricanes	Houston, Minnesota, USA
+5340	FAIR Robtics	Minneapolis, Minnesota, USA
+5341	The Cardinals	Faribault, MN, USA
+5342	The Greyhounds	TAFT, TX, USA
+5343	Environmental Charter High School	Lawndale, CA, USA
+5344	Rhinos	Mexico, Distrito Federal, Mexico
+5345	BOLTS	West Valley City, UT, USA
+5346	Atlas Engineering	Perry, Utah, USA
+5347	Gryphons	Weston, Massachusetts, USA
+5348	Charger Robotics	Cokato, Minnesota, USA
+5349	RoboEagles	Central Square, New York, USA
+5350	Hope Robotics	Chicago, Illinois, USA
+5351	T-STEM Robotics	El Paso, TX, USA
+5400	WARP	Worcester, Massachusetts, USA
+5401	Fightin' Robotic Owls	Bensalem, Pennsylvania, USA
+5402	Iron Kings	Walton, Indiana, USA
+5403	Aluminosity	Bedford, Indiana, USA
+5404	Gearaffes	Lansdale, Pennsylvania, USA
+5405	Red Bank High School	Chattanooga, Tennessee, USA
+5406	Celt-X	Hamilton, Ontario, Canada
+5407	Wolfpack Robotics	Conshohocken, Pennsylvania, USA
+5408	KENNEDYcache	Windsor, Ontario, Canada
+5409	Chargers	Oakville, Ontario, Canada
+5410	Eaglebotics	Pompano Beach, Florida, USA
+5411	PowerEagle	Prosper, Texas, USA
+5412	Impossible Robotics	Groningen, Groningen, Netherlands
+5413	Stellar Robotics	Shelby, Ohio, USA
+5414	Pearadox	Pearland, Texas, USA
+5415	Bears	Mexico City, Distrito Federal, Mexico
+5416	TaRDIS	Katy, Texas, USA
+5417	Eagle Robotics	Allen, Texas, USA
+5418	The Sonic Screwdrivers	Hubbard, Ohio, USA
+5419	Natural Disasters	Berkeley, California, USA
+5420	Velocity	Bridgeton, New Jersey, USA
+5421	Birch Bots	New York, New York, USA
+5422	Stormgears FRC	Westford, Massachusetts, USA
+5423	HopCo Robo	Madisonville, Kentucky, USA
+5424	Rogue Robots	Midland, Michigan, USA
+5425	RVA Coder Collective	Richmond, Virginia, USA
+5426	E.J. Lajeunesse	Windsor, Ontario, Canada
+5427	Steel Talons	Katy, Texas, USA
+5428	Breaking Bots	Markham, Ontario, Canada
+5429	Black Knights	Las Vegas, Nevada, USA
+5430	Pirate Robolution	Pittsburg, California, USA
+5431	Titan Robotics in memory of Jordan Grant	Plano, Texas, USA
+5432	AutoPilots	Wilmington, California, USA
+5433	Blinding Light	Webster, New York, USA
+5434	Falcon Robotics	Faribault, Minnesota, USA
+5435	RoboMomoTrufflez	Hamilton, NJ, USA
+5436	Cyber Cats	Rochester, Michigan, USA
+5437	Rocky Balboabots	Booneville, Arkansas, USA
+5438	Technological Terrors	Jersey City, New Jersey, USA
+5439	Huskies	Québec, Québec, Canada
+5440	Les Chevaliers	Quebec, Québec, Canada
+5441	Arsenal	Mascouche, Québec, Canada
+5442	Mechanical Monarchy	Washington, Illinois, USA
+5443	Les PATenteux	Montréal, Québec, Canada
+5444	VObotik	Trois-Rivières, Québec, Canada
+5445	Rushing Peacock	Kunming, Yunnan, China
+5446	Pink Detectives	Apex, North Carolina, USA
+5447	Team Robotica	Sebewaing, Michigan, USA
+5448	CCA RoboCougars	Big Rapids, Michigan, USA
+5449	Prototype	Beijing, Beijing, China
+5450	SHREC - St. Helens Robotics and Engineering Club	Saint Helens, Oregon, USA
+5451	Supernova	Beijing, Beijing, China
+5452	Aurora Robot	quanzhou, Fujian, China
+5453	RED COMET	Shenzhen, Guangdong, China
+5454	Wild Fire	Rogers, Arkansas, USA
+5455	shenzhen pingshan high school	shenzhen, Guangdong, China
+5456	hua nan shi fan da xue fushu zhong xue	guangzhou, 52, China
+5457	Falcobots	Burlington, New Jersey, USA
+5458	Digital Minds	Woodland, California, USA
+5459	Ipswich TIGERS	Ipswich, Massachusetts, USA
+5460	Strike Zone	Lapeer, Michigan, USA
+5461	V.E.R.N.	Boise, Idaho, USA
+5462	2PawR (2 Paw Robotics)	Paw Paw, Michigan, USA
+5463	Iron Eagles	Las Vegas, Nevada, USA
+5464	Bluejacket Robotics	Cambridge, Minnesota, USA
+5465	Binary Bots	Chandler, Arizona, USA
+5466	Shanghai Xiang Ming High School Of China	Shanghai, Shanghai, China
+5467	RoboTractors	Dearborn, Michigan, USA
+5468	Chaos Theory	Bend, Oregon, USA
+5469	FLARE	Orange, Texas, USA
+5470	The Cowpunchers	Coopersville, Michigan, USA
+5471	W.Hi.R.R.	Winthrop, Maine, USA
+5472	Stallion Robotics	Delray Beach, Florida, USA
+5473	Team Spitfire.	Grand Rapids, Michigan, USA
+5474	Clairemonster	San Diego, California, USA
+5475	Thunder	Phoenix, Arizona, USA
+5476	Y Bridge 4H	Galena, Missouri, USA
+5477	NuBotX - National University Robotics Experience	Vista, California, USA
+5478	Pershing Doughbots	Detroit, Michigan, USA
+5479	Cafe Bot	St. Louis, Missouri, USA
+5480	FYRE (FIRST Young Robotics Engineers)	Reno, Nevada, USA
+5481	Bristol Bots	Bristolville, OH, USA
+5482	Roarbotics	Atlanta, Georgia, USA
+5483	GD-Bots	London, Ontario, Canada
+5484	Career Academy Robotics - Wolf Pack	South Bend, Indiana, USA
+5485	Manual T-Bots	Denver, Colorado, USA
+5486	Robotic Turmoil	Lake Linden, Michigan, USA
+5487	Tiger Robotics	Caro, Michigan, USA
+5488	Baronbotix	Chula Vista, CA, USA
+5489	CSI Golden Eagle Robotics	Twin Falls, Idaho, USA
+5490	The Dark Byte	Bethlehem, Pennsylvania, USA
+5491	Cognitive Hazard	Winchendon, Massachusetts, USA
+5492	Winner's Circle Robo Jockey's	Louisville, Kentucky, USA
+5493	SMAbotics AG	Englewood, Colorado, USA
+5494	Bizarbots Robotics	Holbrook, Massachusetts, USA
+5495	Aluminati	Snohomish, Washington, USA
+5496	Robo Knights	Vacaville, California, USA
+5497	Foxes	Silverton, OR, USA
+5498	The Wired Devils	Grosse Ile, Michigan, USA
+5499	The Bay Orangutans	Berkeley, California, USA
+5500	Jaguars Robotics & ROVs	Long Beach, California, USA
+5501	Bobcats	Burr Oak, Michigan, USA
+5502	Cobrots	Jonesville, Michigan, USA
+5503	Smithville Tiger Trons	Smithville, Texas, USA
+5504	The Loose Connections	Pinconning , Michigan, USA
+5505	V2 Robotics	Alpena, Michigan, USA
+5506	Midcoast MAINEiacs Robotics Team	Searsport, Maine, USA
+5507	Robotic Eagles	San Francisco, California, USA
+5508	Wolfbots	Knoxville, Tennessee, USA
+5509	Like a Boss	Midland, Michigan, USA
+5510	The Da Vinci Coders	Los Angeles, California, USA
+5511	Cortechs Robotics	Cary, North Carolina, USA
+5512	Pizza Mecánica	Recoleta, Región Metropolitana de Santiago, Chile
+5513	Monroe Robotics	North Hills, CA, USA
+5514	MavBots	Carlsbad, California, USA
+5515	Blue Power Robotics	Shanghai, Shanghai, China
+5516	Iron Maple	Shenzhen, Guangdong, China
+5517	The Engineers on Fire	Burton, Michigan, USA
+5518	Techno Wolves	Apex, North Carolina, USA
+5519	LASS Robotics	Brampton, Ontario, Canada
+5520	Duck and Cover	Henrico, Virginia, USA
+5521	WOLF TEAM ROBOTICS	SOPO, Cundinamarca, Colombia
+5522	Stargazer	Shenzhen , Guangdong, China
+5523	RoboWarriors	Grass Lake, Michigan, USA
+5524	MacroProcessors	Birch Run, Michigan, USA
+5525	Alcona Tool Cats	Lincoln, Michigan, USA
+5526	tCATs	Torreon, Coahuila, Mexico
+5527	Cyber Phoenix	Flint, Michigan, USA
+5528	Ultime	Trois-Rivieres, Québec, Canada
+5529	Visalia Vanquishers	Visalia, CA, USA
+5530	The Greenhills Lawnmowers	Ann Arbor, Michigan, USA
+5531	Orange Crush	Dearborn, Michigan, USA
+5532	The G.O.A.T.S	Detroit, Michigan, USA
+5533	Electric Horse Power	Clio, Michigan, USA
+5534	Onaway Onabots	Onaway, Michigan, USA
+5535	Bionic Bison	New Buffalo, Michigan, USA
+5536	Titan Alliance	Albany, Georgia, USA
+5537	Dia and the Brobots feat. J-Kwelin	Fairfield, Iowa, USA
+5538	Vikingbots	Saginaw, Michigan, USA
+5539	DVHS Cyborgs	Tucson, Arizona, USA
+5540	Lincoln High School Tigers	Los Angeles, California, USA
+5541	Shakopee Robotics	Shakopee, Minnesota, USA
+5542	RoboHerd	Buffalo, Minnesota, USA
+5543	M.I.N.T.T.Z - Mechanically Insane Nerdy Tech Teenz	Greensboro, North Carolina, USA
+5544	SWIFT Robotics	Vass, North Carolina, USA
+5545	PiedmontSTEM	concord, VA, USA
+5546	?? A.R.T. ??	Petersburg, Virginia, USA
+5547	The Talons	Hale, Michigan, USA
+5548	Psi Factor	Yukon, Oklahoma, USA
+5549	Gryphon Robotics	Falls Church, Virginia, USA
+5550	BRONChO BOTS	Bethany, Oklahoma, USA
+5551	Harding Revolution	Memphis, Tennessee, USA
+5552	SENSORED	Green Bay, Wisconsin, USA
+5553	Robo'Lyon	Neuville-sur-Saône, Rhône, France
+5554	The Poros	Netanya, HaMerkaz, Israel
+5555	Spartans	Warren, Michigan, USA
+5556	Carriagetown Robotics	Amesbury, Massachusetts, USA
+5557	BB-R8ERS	Miami, Florida, USA
+5558	Ad Astra	Bursa, Bursa, Turkey
+5559	Gear Grinders	Camden, Michigan, USA
+5560	Central Lake Trobotics	Central Lake, Michigan, USA
+5561	Raider Robotics	Flushing, Michigan, USA
+5562	Laker Logistics	Maple City, Michigan, USA
+5563	Phalanx	Lynn, Massachusetts, USA
+5564	GBHS Robotics	Granville, New South Wales, Australia
+5565	Auburn Girls	Auburn, New South Wales, Australia
+5566	Sugar Rush	Sugar Land , Texas, USA
+5567	Code Red Robotics	Milan, Michigan, USA
+5568	Solid Rock	Bentonville, Arkansas, USA
+5569	Tech Titans	Washington, District of Columbia, USA
+5570	Ookpik	Montréal, Québec, Canada
+5571	RATCHET	Knoxville, Tennessee, USA
+5572	ROSBOTS	San Antonio, Texas, USA
+5573	Ivanhoe	Ivanhoe, New South Wales, Australia
+5574	P.A.N.T.H.E.R.S.	Grand Rapids, Michigan, USA
+5575	SHOCK	Boyne Falls, Michigan, USA
+5576	Team Terminator	Spirit Lake, Iowa, USA
+5577	Kinematic Wolves	Detroit, Michigan, USA
+5578	Metro Mechanical Monsters	Oklahoma City, Oklahoma, USA
+5579	Trojanbots	Albany, GA, USA
+5580	BRAEZEN KNIGHTS	Toronto, Ontario, Canada
+5581	Hornets	Brampton, Ontario, Canada
+5582	Rex Machina	Sharpsburg, Georgia, USA
+5583	SistamatiK	Saint Louis, Missouri, USA
+5584	ICRobotics	Boronia, Victoria, Australia
+5585	Blood, Sweat & Gears	Edmeston, New York, USA
+5586	Bond Brigade	Kiel, Wisconsin, USA
+5587	Titan Robotics	Alexandria, Virginia, USA
+5588	Reign Robotics	Seattle, Washington, USA
+5589	Red Devils	Woodstock, Ontario, Canada
+5590	Alumiboti	Buffalo, New York, USA
+5591	Manta Mechanics	Miami, Florida, USA
+5592	Far North Robotics	Cairns, Queensland, Australia
+5593	Devil Robotics	Hobart, Tasmania, Australia
+5594	GI Joz	Toccoa, Georgia, USA
+5595	NRHS TigerBytes	New Richmond, Wisconsin, USA
+5596	Wolverines	Toronto, Ontario, Canada
+5597	RoboMaidens	Fort Mcmurray, Alberta, Canada
+5598	sjmp	toronto, Ontario, Canada
+5599	The Sentinels	Bayside, New York, USA
+5600	Taiyuan Beijing Team	Beijing, Beijing, China
+5601	Semia Team 1	Shanghai, Shanghai, China
+5602	XJTLU Team	Suzhou, Jiangsu, China
+5603	Rise of the Warrior Bots	Auburn, Michigan, USA
+5604	Feixueqingzang	Xi'ning, Qinghai, China
+5605	Team DaoZu	Qingdao, Shandong, China
+5606	Blue Hurricane	Shenyang, Liaoning, China
+5607	Team Firewall	Raleigh, North Carolina, USA
+5608	Lassiter Robotics	Marietta, Georgia, USA
+5609	COOL School	Gladwin, MI, USA
+5610	Turbulence	Saugatuck, Michigan, USA
+5611	Neon Tigers	Verden, Oklahoma, USA
+5612	RoboRaptors	Burton, Michigan, USA
+5613	ThunderDogs	Alamogordo, New Mexico, USA
+5614	Team Sycamore	Holon, Tel-Aviv, Israel
+5615	Miners RC	Fort McMurray, Alberta, Canada
+5616	Green Machine	Fort Walton Beach, Florida, USA
+5617	Northern Lights	Fort McMurray, AB, Canada
+5618	PLS	Plessisville, Québec, Canada
+5619	RoboJags	Detroit, Michigan, USA
+5620	Community Team 1	Calgary, Alberta, Canada
+5621	Cyberian Huskies	Edmond, Oklahoma, USA
+5622	Green Hornets	Stanton, Michigan, USA
+5623	Robotic Rams	Galesburg, Michigan, USA
+5624	TIGER TECH Robotics	South Plainfield, New Jersey, USA
+5625	TrojanBots	Wailuku, Hawaii, USA
+5626	Nu-matic Ninjas	Norwood Young America, Minnesota, USA
+5627	prtz (Pi-rates)	San Diego, California, USA
+5628	cyborg chakra	Jacksonville, Florida, USA
+5629	Community Team 2	Calgary, Alberta, Canada
+5630	The Nomads	Calgary, Alberta, Canada
+5631	SpartanDroids	Guelph, Ontario, Canada
+5632	The Asimovians	Appling, Georgia, USA
+5633	Hyde Mecha Wolves	Bath, Maine, USA
+5634	Jesterminators	Lakewood, California, USA
+5635	Demacia	nes ziona, HaMerkaz, Israel
+5636	Moona	Majd el Kurum, HaZafon, Israel
+5637	North Minneapolis Robotics	Minneapolis, Minnesota, USA
+5638	LQPV Robotics	Madison, Minnesota, USA
+5639	Loose Wires	Pharr, Texas, USA
+5640	Pegasus Robotics	Philadelphia, PA, USA
+5641	Byron Robotics	Byron, Michigan, USA
+5642	Mumford Mustangs	Detroit, Michigan, USA
+5643	TBD	Richmond, IN, USA
+5644	FHS	Fairfield, Ohio, USA
+5645	Community Team 4	Calgary, Alberta, Canada
+5646	Spider-Bots	Tampa, Florida, USA
+5647	BadgerBots	Los Angeles, California, USA
+5648	Melbourne RoboCats	Hawthorn, Victoria, Australia
+5649	The Pithons	London, CMD, Kingdom
+5650	Carbonite Crusaders	Macomb, Michigan, USA
+5651	Maynard Jackson Jungle C.A.Ts	Atlanta, Georgia, USA
+5652	Eagles	Ottawa, Ontario, Canada
+5653	Iron Mosquitos	Babbitt, Minnesota, USA
+5654	Phoenix	Arad, HaDarom, Israel
+5655	KelRot	Istanbul, Istanbul, Turkey
+5656	Panther-bots	Cabot, AR, USA
+5657	Rawhide Robotics	Lusk, Wyoming, USA
+5658	STORMBOTICS	Stephen, Minnesota, USA
+5659	Team Supreme	Bridgehampton, New York, USA
+5660	Symmetrical Chaos	Burton, Michigan, USA
+5661	RoboCards	Whittemore, Michigan, USA
+5662	A Flock of Nerds	Dryden, Michigan, USA
+5663	Ground Control	Perth, Western Australia, Australia
+5664	Big Red Robotics	Muskegon, Michigan, USA
+5665	SPARC	Beyoglu, Istanbul, Turkey
+5666	Purple Lightning	Trenton, New Jersey, USA
+5667	The Digital Eagles	New Albany, Ohio, USA
+5668	NHHS1	Bancroft, ON, Canada
+5669	Techmen	Rosemead, California, USA
+5670	Al-Hayah	Jerusalem, Yerushalayim, Israel
+5671	ROBIN, Robótica Inemita	Medellín, ANT, Colombia
+5672	First Nations-STEM	Wikwemikong, Ontario, Canada
+5673	CougBorgs	Detroit, MI, USA
+5674	The Gearhounds	Eaton Rapids, Michigan, USA
+5675	WiredCats	Mattawan, Michigan, USA
+5676	The H.E.R.O.E.S	Hillsdale, Michigan, USA
+5677	The Subatomic Smarticles	San Jose, California, USA
+5678	Knightrise	Valley Glen, California, USA
+5679	Girls on Fire	Winston Salem, North Carolina, USA
+5680	KYS Robotics	Toronto, Ontario, Canada
+5681	Dragonbots	San Antonio, Texas, USA
+5682	Equus Engineering	Mesquite, Texas, USA
+5683	Hello World	Auburn, Washington, USA
+5684	Iron Mechs	Trenton, New Jersey, USA
+5685	Robo Terriers	Litchfield, Michigan, USA
+5686	Wirecats	Simsbury, Connecticut, USA
+5687	The Outliers	Portland, Maine, USA
+5688	Robo Cats	Pittsford, Michigan, USA
+5689	CK Cyber Pack	Chatham, Ontario, Canada
+5690	SubZero Robotics	Esko, Minnesota, USA
+5691	Team Tiger	Memphis, Tennessee, USA
+5692	ChiefBots	Cheboygan, Michigan, USA
+5693	Springport High School	Springport, MI, USA
+5694	Hamady Hawks	Flint, Michigan, USA
+5695	Heavy Duty Eagles	Redford, Michigan, USA
+5696	Tecmilenio Faraday 5696	Villahermosa, Tabasco, Mexico
+5697	Bearcats	Bridgeport, Michigan, USA
+5698	Raider Robotics	Decatur, MI, USA
+5699	Robo Sapiens	Toronto, Ontario, Canada
+5700	SOTA Cyberdragons	San Francisco, California, USA
+5701	RAIJINbotics	Machida, Tôkyô, Japan
+5702	Robotawatomi	Wilson, Michigan, USA
+5703	Eagles Crew	Midland, Michigan, USA
+5704	Blended Learning Academies	Lansing, Michigan, USA
+5705	DESERT EAGLES	Torreon, Coahuila, Mexico
+5706	Tahquamenon Phenomenon	Newberry, Michigan, USA
+5707	Roseville High School Robotics	Roseville, MI, USA
+5708	Zebrotics	Ann Arbor, Michigan, USA
+5709	Rudyard Nerf Herders	Rudyard, Michigan, USA
+5710	The O-Bots	Charlotte, Michigan, USA
+5711	Battling Bathers	Mt. Clemens, Michigan, USA
+5712	Hemlock's Gray Matter	Hemlock, Michigan, USA
+5713	Beecher Cyber Bucs	Mount Morris, Michigan, USA
+5714	Accidental Success	Brimley, Michigan, USA
+5715	DRC	Dabburiya, HaZafon, Israel
+5716	PrepaTec - Keybot	pachuca, Hidalgo, Mexico
+5717	Sasquach	Soddy Daisy, Tennessee, USA
+5718	Campion Bears	Brampton, ON, Canada
+5719	Pink Titans	Toronto, Ontario, Canada
+5720	Jagobotics	Hinckley, Minnesota, USA
+5721	Wolf Pack	Newark, Arkansas, USA
+5722	Seahawks	Santa Rosa Beach, Florida, USA
+5723	Robert Land Academy	Wellandport, ON, Canada
+5724	Spartan Robotics	Salem, Virginia, USA
+5725	Cerberus	Lethbridge, Alberta, Canada
+5726	RHUMBOTZ	San Antonio, Texas, USA
+5727	REaCH Omegabytes	Spindale, North Carolina, USA
+5728	MC²	Santa Rosa, California, USA
+5729	MAD Dragons	De Witt, Arkansas, USA
+5730	The Professionals	Monett, Missouri, USA
+5731	Tiny Giants	Yanco, New South Wales, Australia
+5732	ROBOTIGERS	Bloomfield, New Jersey, USA
+5733	NGeek	Philadelphia, Pennsylvania, USA
+5734	RoboReign	Augusta, Georgia, USA
+5735	Control Freaks	Wayland, Massachusetts, USA
+5736	Kingsmen	Kings Park, New York, USA
+5737	Mars Style	Beijing, Beijing, China
+5738	warriors	Central Falls, Rhode Island, USA
+5739	Crestbots	Dallas, Texas, USA
+5740	Trojanators	Cranberry Township, Pennsylvania, USA
+5741	Coyotes	Alice, TX, USA
+5742	Gators	Langley, British Columbia, Canada
+5743	Robo-Wolves	Jacksonville, Arkansas, USA
+5744	RoboRunners	Knoxville, Tennessee, USA
+5745	Gearheads	Three Oaks, Michigan, USA
+5746	Human Error	Deep River, Connecticut, USA
+5747	Athena	Beer Sheva, HaDarom, Israel
+5748	Adna Pirate Robotics	Adna, Washington, USA
+5749	Tokyo Technical Samurai	Aoki,Kawaguchi-shi, Saitama, Japan
+5750	Martian Mechanics	Naucalpan, Mexico, Mexico
+5751	Myerbott	Deep River, CT, USA
+5752	Bevbotics	Beverly, Massachusetts, USA
+5753	St. Joseph Academy Flashes	St. Augustine, Florida, USA
+5754	Brooks Academy Robotics	San Antonio, Texas, USA
+5755	Central Catholic Robotics	San Antonio, TX, USA
+5756	R.E.C'in Crew	Detroit, Michigan, USA
+5757	Eagletrons	Orchard Lake, MI, USA
+5758	C-Bots	Saint Louis, Missouri, USA
+5759	TroBotics	Brampton, Ontario, Canada
+5760	The Marinators	Marina, California, USA
+5761	Illawarra	Cordeaux Heights, New South Wales, Australia
+5762	FranklinBots - TEAM HYDRA	Louisburg, North Carolina, USA
+5763	Lightning Robotics	Broomfield, Colorado, USA
+5764	Grasshopper Bots	Loch Sheldrake, NY, USA
+5765	ToroBots	Los Angeles, California, USA
+5766	ET Robotics	Hawthorn, Massachusetts, USA
+5767	VPE and Veritas Robotics	Duluth, GA, USA
+5768	Leuzinger Resistors	Lawndale, California, USA
+5769	Radio Rangers R^2	Santa Fe, Texas, USA
+5770	ReMIT	Inglewood, California, USA
+5771	Marfa Robohorns	Marfa, Texas, USA
+5772	The Mighty Morphin Power Bots	Los Angeles , California, USA
+5773	YAFL Mechatronics	Istanbul, Istanbul, Turkey
+5774	Maximum Overload	Flint, Michigan, USA
+5775	CRHS RoboCats	Malakoff, Texas, USA
+5776	Phoenix	Toronto, Ontario, Canada
+5777	Static Storm	Sumter, South Carolina, USA
+5778	The Power-Struck Girls	Marrero, LA, USA
+5779	CB Tech	Moses Lake, Washington, USA
+5780	Harvesters	Pampa, Texas, USA
+5781	Petchey Robotics Team	London, England, United Kingdom
+5782	Sullivan 4H-Newport	Newport, New Hampshire, USA
+5783	RoboDucks	Eunice, New Mexico, USA
+5784	Vassar Voltage	Vassar, Michigan, USA
+5785	The Shield	Baton Rouge, Louisiana, USA
+5786	Pro-Botics	Irving, Texas, USA
+5787	NEXUS Robotics	Calgary, Alberta, Canada
+5800	Magic Island Robotics	FLORIANOPOLIS, Santa Catarina, Brazil
+5801	CTC Inspire	Independence, Missouri, USA
+5802	Los STEMateros	Los Angeles, California, USA
+5803	Apex Robotics	Seattle, Washington, USA
+5804	TORCH	Henrico, Virginia, USA
+5805	SMbly Required	Rancho Santa Margarita, California, USA
+5806	Basement Lions	Bronx, New York, USA
+5807	CANbotics	North Bay, Ontario, Canada
+5808	Revive Robotics	Lodi, California, USA
+5809	The Jesubots	Kansas City, Missouri, USA
+5810	X-Bots Robotics	Santa Fe Springs, California, USA
+5811	BONDS	Dayton, Ohio, USA
+5812	Drewbotics	Riverdale, Georgia, USA
+5813	Morpheus	Concord, New Hampshire, USA
+5814	ROBOTA	Guayaquil, Guayas, Ecuador
+5815	Bond Science Engineer	SHENZHEN, Guangdong, China
+5816	Gra-V Robotics	Orlando, Florida, USA
+5817	Uni-Rex	Sanger, California, USA
+5818	Riviera Robotics	Santa Barbara, California, USA
+5819	Mecha Makos	Key Biscayne, Florida, USA
+5820	PathFinder	YuLin, Shanxi, China
+5821	The Saunders Robotics Club	London, Ontario, Canada
+5822	WolfByte	Chicago, Illinois, USA
+5823	ACE	Shenzhen, Guangdong, China
+5824	Orion	SHANGHAI, Shanghai, China
+5825	Amherst Robotics	Amherstburg, ON, Canada
+5826	Avis Automata	Chippewa Falls, Wisconsin, USA
+5827	Code Purple	Kirkland, Washington, USA
+5828	The Robot Masters	Albany, Georgia, USA
+5829	AwtyBots	Houston, Texas, USA
+5830	LIFE Engineering	Gambrills, Maryland, USA
+5831	Revolution Maker	Macau, Macau, China
+5832	FULL OF AMBITION	zhongshan, Guangdong, China
+5833	Team-5833	Shenzhen, Guangdong, China
+5834	R3P2	Toronto, Ontario, Canada
+5835	Sage Robotics	Newport Coast, California, USA
+5836	Mechanic Mutts	Saint Louis, Missouri, USA
+5837	Unity4Tech	Waterloo, Iowa, USA
+5838	Mitochondria	Kunming , Yunnan, China
+5839	Blue Whales	Nanjing, Jiangsu, China
+5840	Shock Wave	Dawson, Georgia, USA
+5841	The Patriots	Frederick, Maryland, USA
+5842	Royal Robotics	New Port Richey, Florida, USA
+5843	Flurb	East China, Michigan, USA
+5844	Phoenix Tech	Boston, Massachusetts, USA
+5845	Twisted Gears	Athens, Alabama, USA
+5846	SouthCoast Corsairs	North Dartmouth, Massachusetts, USA
+5847	Ironclad	Bradley, Illinois, USA
+5848	ROBO C3	Edison, Georgia, USA
+5849	Joker	Qingdao, Shandong, China
+5850	Guangzhou lego xueyuan	Guangzhou, 44, China
+5851	Striking Vikings	Downey, California, USA
+5852	Illusion Robotics	Merced, California, USA
+5853	FEAR The Termigators	Ypsilanti, Michigan, USA
+5854	GLITCH	Asheville, North Carolina, USA
+5855	Blue Collar Bruisers	Milwaukee, Wisconsin, USA
+5856	Bullbots	Waterbury, Connecticut, USA
+5857	Walnut Valley Robotics	Walnut, California, USA
+5858	Golden Hurricane	Huntsville, Alabama, USA
+5859	i	Canton de Hatley, Québec, Canada
+5860	Full Metal Muskrats	Algonac, Michigan, USA
+5861	ManGeKyo	guangzhou, 44, China
+5862	Atomic Disco Robotic Engineers	concord, VA, USA
+5863	Hypercubed	Brusly, Louisiana, USA
+5864	Robo-Pelicans	Port Allen, Louisiana, USA
+5865	Droide	Terrebonne, Québec, Canada
+5866	Fe [Iron] Tigers	Wolfforth, Texas, USA
+5867	fighters science	Los Mochis, Sinaloa, Mexico
+5868	UTM Veracruz	Veracruz, VER, Mexico
+5869	Radical Robotics	Lancaster, California, USA
+5870	League of Logic	London, Ontario, Canada
+5871	Chickadees	Boise, Idaho, USA
+5872	WiredCats	Fort Lauderdale, Florida, USA
+5873	Farmersville Robotics	Farmersville, Texas, USA
+5874	Tecmilenio BorderBots 5874	Nuevo Laredo, Tamaulipas, Mexico
+5875	ICE Cubed	Fernley, Nevada, USA
+5876	ARTEMIS	Wahroonga, New South Wales, Australia
+5877	Mechalodons	Corona, California, USA
+5878	The Great Lakers	Mackinac Island, Michigan, USA
+5879	Shadow of Orion	Beijing, Beijing, China
+5880	AF North HS	Brunssum, Limburg, Netherlands
+5881	TVHS Dragons	Albany, New York, USA
+5882	Titan Robotics	Twin Valley, Minnesota, USA
+5883	Spice Gears	Krasnik, Lubelskie, Poland
+5884	Gray Storm	San Diego, California, USA
+5885	Villanova WiredCats	LaSalle, Ontario, Canada
+5886	LAAE	Hacienda Heights, California, USA
+5887	PrepaTec-IMPERATOR	Puebla, Puebla, Mexico
+5888	M.E.T.A. Robotics	Lubbock, Texas, USA
+5889	Commandobots	Tulsa, Oklahoma, USA
+5890	Tec Milenio Durango	Durango, Durango, Mexico
+5891	UASGC Robosquad	New York, New York, USA
+5892	Energy HEROs	Houston, Texas, USA
+5893	International Grammar School	Ultimo, New South Wales, Australia
+5894	J.E.H.S. CyberJags	Edinburg, Texas, USA
+5895	Peddie School Robotics	Hightstown, New Jersey, USA
+5896	Fire 6	Beijing, Beijing, China
+5897	APEX Robotics	Calgary, Alberta, Canada
+5898	RoboFalcons	Darlington, South Carolina, USA
+5899	FROST	Littleton, Colorado, USA
+5900	Career Blazer Robotics Team - The Fighting Mongooses	Dalton, Georgia, USA
+5901	Cougar Pack	Detroit, Michigan, USA
+5902	The Wire Clippers	Portsmouth, New Hampshire, USA
+5903	ThorBots	Westby, Wisconsin, USA
+5904	Iron 101	Beijing, Beijing, China
+5905	RoboCorps	San Jose, California, USA
+5906	Titanium Badgers	Bennington, Nebraska, USA
+5907	CC Shambots	Novi, Michigan, USA
+5908	Spartans	Stafford, Texas, USA
+5909	Cardinal Gibbons Cyber Chiefs	Fort Lauderdale, Florida, USA
+5910	Supertronix	Matane, Québec, Canada
+5911	PARAGON	Scarborough, Ontario, Canada
+5912	Heritage Robotics	Jordan, Ontario, Canada
+5913	Patriotics	Pequot Lakes, Minnesota, USA
+5914	Robotic Warriors	Caledonia, Minnesota, USA
+5915	Mercy Midnight Storm	Detroit, Michigan, USA
+5916	ELEKTRON	Reynosa, Tamaulipas, Mexico
+5917	Supernova	Mooresville, NC, USA
+5918	Pumatron	Kansas City, Missouri, USA
+5919	JoCo RoBos	Smithfield, North Carolina, USA
+5920	VIKotics	Palouse, Washington, USA
+5921	Binary Power	Mississauga, Ontario, Canada
+5922	scots	Toronto, ON, Canada
+5923	WildC.A.T.S.	Angleton, Texas, USA
+5924	The Cat Machine	San Francisco, California, USA
+5925	Holden High Robotics	Holden, Missouri, USA
+5926	Da MOOse	Port Huron, Michigan, USA
+5927	Globetrotters	Zeeland, Michigan, USA
+5928	MetalBoost	Petah Tiqua, HaMerkaz, Israel
+5929	The Marauders	Lake Park, Minnesota, USA
+5930	Lunar Kitties	Newcastle, Oklahoma, USA
+5931	Bots of Prey	Caldwell, Idaho, USA
+5932	Tecmilenio Quetzales 5932	Mérida, Yucatán, Mexico
+5933	JudgeMent Call	Salt lake City, Utah, USA
+5934	Crowbotics	DeKalb, Illinois, USA
+5935	Tech Tigers	Grinnell, Iowa, USA
+5936	TigerBots	Hanover, Maryland, USA
+5937	MI-Robotics	Mercer Island, Washington, USA
+5938	Razor Steel Robotics	Dover, Delaware, USA
+5939	Lakes Lancers	Lakewood, Washington, USA
+5940	B.R.E.A.D.	Redwood City, California, USA
+5941	SPQL	Everett, Washington, USA
+5942	Warriors	Walla Walla, Washington, USA
+5943	The Bad News Gears	Carmel, New York, USA
+5944	Robotic Pioneers	Mooresville, Indiana, USA
+5945	|CTRL| (Absolute Control)	Fulton, Maryland, USA
+5946	The SPartans	Istanbul, Istanbul, Turkey
+5947	Robojags	Belmont, New York, USA
+5948	PrepaTec-Lebotics	Xochitepec, Morelos, Mexico
+5949	TechGarage	Delray Beach, Florida, USA
+5950	Trojans	Dry Fork, Virginia, USA
+5951	Makers Assemble	Tel Aviv, Tel-Aviv, Israel
+5952	RoBuck	Verdun, Québec, Canada
+5953	NOLABOTS	New Orleans, Louisiana, USA
+5954	Portable Chargers	Victoria, Virginia, USA
+5955	Trailblazers	Bellport, New York, USA
+5956	Falcons	Milwaukie, Oregon, USA
+5957	CAT 5 CyberCanes	Newport News, Virginia, USA
+5958	Blue Wave Robotics	Providence, Rhode Island, USA
+5959	PrepaTec - Titanium Rams	Tampico, Tamaulipas, Mexico
+5960	Mighty ROBO-RANGERS	Mission, Texas, USA
+5961	the pythons	rehovot, HaMerkaz (Central), Israel
+5962	perSEVERE	Lowell, Massachusetts, USA
+5963	CA Frost High School	Grand Rapids, Michigan, USA
+5964	The Praetorians	Voorheesville, New York, USA
+5965	Power Struck Girls	Marrero, Louisiana, USA
+5966	HB Oiler Robotics	Huntington Beach, California, USA
+5967	Freedom FORCE	Orlando, Florida, USA
+5968	Cyborg Indians	Manhattan, Kansas, USA
+5969	English Skunkworks	Jamaica Plain, Massachusetts, USA
+5970	BeaverTronics	Beaverton, Oregon, USA
+5971	Raider Robotics Team	Metairie, Louisiana, USA
+5972	Juarezbots	juarez, Chihuahua, Mexico
+5973	Moonshots	Gates Mills, Ohio, USA
+5974	Mechanical Dragons	Salt Lake City, Utah, USA
+5975	Beta Blues	Portland, Oregon, USA
+5976	CyberSaders	Waukesha, Wisconsin, USA
+5977	Rosemary Rebels	Portland, Oregon, USA
+5978	Roboplugs	Speedway, Indiana, USA
+5979	Apex	Columbia, Maryland, USA
+5980	East Grand Rapids Robotics	Grand Rapids, Michigan, USA
+5981	Thunderbotz	San Antonio, Texas, USA
+5982	Circuits of Destruction	Merrill, Michigan, USA
+5983	Blast Furnace Bots	Lithgow, New South Wales, Australia
+5984	Salina Robocats	Salina, Oklahoma, USA
+5985	Project Bucephalus	Wollongong, New South Wales, Australia
+5986	+ Iron Fangs +	San Antonio, Texas, USA
+5987	Galaxia in memory of David Zohar	Haifa, Haifa, Israel
+5988	Narooma Robo Rebels	Narooma, New South Wales, Australia
+5989	Panthers	Ewen, Michigan, USA
+5990	TRIGON	Modiin, HaMerkaz, Israel
+5991	Chargers	Westbrook, Minnesota, USA
+5992	Pirates	West Orange, New Jersey, USA
+5993	Istech Robotic Society	Florya, Istanbul, Turkey
+5994	Captain Retros	Montreal, Québec, Canada
+5995	Servo Serpents	Rancho Mirage, CA, USA
+5996	R.U.R.	Prague, Praha 8, Czech Republic
+5997	Knightling Boltz	St. Gabriel, Louisiana, USA
+5998	The Chillbots	International Falls, Minnesota, USA
+5999	Byte Force	Milaca, Minnesota, USA

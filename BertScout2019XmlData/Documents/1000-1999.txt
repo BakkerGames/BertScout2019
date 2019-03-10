@@ -1,0 +1,874 @@
+1000	Cybearcats	Valparaiso, IN, USA
+1001	Hacksaw	Lyndhurst, OH, USA
+1002	The CircuitRunners	Marietta, Georgia, USA
+1005	Chaminade Robotics	St. Louis, MO, USA
+1006	Fast Eddie Robotics	Port Perry, ON, Canada
+1007	The Tyrants	Snellville, GA, USA
+1008	Team Lugnut	Columbus, OH, USA
+1009	Bolt Action	North York, ON, Canada
+1010	B.C. Hawks	Ortonville, MI, USA
+1011	CRUSH	Tucson, Arizona, USA
+1013	The Phoenix	Queen Creek, AZ, USA
+1014	Bad Robots	Dublin, Ohio, USA
+1015	Pi Hi Samurai	Ann Arbor, MI, USA
+1016	Evolution	Darlington, SC, USA
+1017	Home Advantage	Flint, MI, USA
+1018	Pike RoboDevils	Indianapolis, Indiana, USA
+1019	Sons Of The Beach	Westhampton Beach, NY, USA
+1020	The Prank Monkeys	Muncie, IN, USA
+1022	Archer GEeks	Fort Wayne, IN, USA
+1023	Bedford Express	Temperance, Michigan, USA
+1024	Kil-A-Bytes	Indianapolis, Indiana, USA
+1025	IMPI Robotics	Ferndale, Michigan, USA
+1026	Cougars	York, SC, USA
+1027	Project Jabberwocky	West Springfield, Massachusetts, USA
+1028	UBERGEEKS	Huntsville, AL, USA
+1029	Wolverine Robotics	Miami, FL, USA
+1030	Combined Minds	Groveport, OH, USA
+1031	The Boilermakers	San Francisco, CA, USA
+1033	Team CLUTCH	Richmond, Virginia, USA
+1034	Eclipse	Chicago, IL, USA
+1035	T12	Chicago, IL, USA
+1036	Central Tech Robotics	Toronto, ON, Canada
+1037	The SCREAM Team	Rochester Hills, MI, USA
+1038	Lakota Robotics	Liberty Township, Ohio, USA
+1039	Chief Sealth Robotics	Seattle, WA, USA
+1040	Pythons	Atlanta, GA, USA
+1041	--	Austell, GA, USA
+1042	--	Chicago, IL, USA
+1043	Batteries Not Included	San Jose, CA, USA
+1045	MSJ Robotics	Fremont, CA, USA
+1046	Aztechs	Palm Desert, CA, USA
+1047	Team Echoes	Irvine, CA, USA
+1048	Mustang Robotics	Manville, NJ, USA
+1049	Archangel Robotics	Toronto, ON, Canada
+1051	Technical Terminators	Mullins, South Carolina, USA
+1052	--	Pinole, CA, USA
+1053	Gears of Glebe	Ottawa, ON, Canada
+1054	Knightmares	Buckingham, VA, USA
+1055	Frank's Garage	Chicago, IL, USA
+1056	Hot Rocks	Hilo, Hawaii, USA
+1057	The Blue Knights	Sandersville, GA, USA
+1058	PVC Pirates	Londonderry, New Hampshire, USA
+1059	--	Simsbury, CT, USA
+1060	Dust Devils	Mohave Valley, AZ, USA
+1062	Storm Troopers	Celebration, FL, USA
+1063	Team MG	Toronto, ON, Canada
+1064	Wild Beast	South Milwaukee, WI, USA
+1065	The Moose	Kissimmee, Florida, USA
+1067	Junior Billikens	Saint Louis, MO, USA
+1068	The Ninjaneers	Orlando, FL, USA
+1069	Technobots	Greer, SC, USA
+1070	Royal Robotrons	Woodland Hills, California, USA
+1071	MAX	Wolcott, Connecticut, USA
+1072	Harker Robotics	San Jose, California, USA
+1073	The Force Team	Hollis, New Hampshire, USA
+1074	--	--
+1075	Sprockets	Whitby, Ontario, Canada
+1076	Pi Hi Samurai	Ann Arbor, Michigan, USA
+1077	--	Miami, FL, USA
+1079	Chaparral Robotic Eng And Tech Explorers Murrieta Amazing Grace Inventors Coalit	Temecula, CA, USA
+1080	Resurgence Robotics	Henrico, Virginia, USA
+1081	Tech Warriors	Atlanta, GA, USA
+1082	Railroaders	Sparks, NV, USA
+1083	Team Emoticons	Orlando, FL, USA
+1084	IronColts	Sarnia, ON, Canada
+1085	Aquatic Robotics	Avon, Connecticut, USA
+1086	Blue Cheese	Glen Allen, Virginia, USA
+1087	Titronics Digerati	Salem, OR, USA
+1088	Scarborough Warriors At The Top	West Hill / Toronto, ON, Canada
+1089	Team Mercury	Hightstown, New Jersey, USA
+1090	--	St Louis, MO, USA
+1091	Oriole Assault	Hartford, Wisconsin, USA
+1092	The Rabid Rabbits	Smyrna, GA, USA
+1093	Cougars	Richmond, VA, USA
+1094	Channel Cats	O Fallon, Missouri, USA
+1095	Metal Minds	Chatham, Virginia, USA
+1096	ZULU	Radford, VA, USA
+1097	Site 3 Engineering	Carmichael, CA, USA
+1098	Rockwood Robotics "Rock-Bots"	Wildwood, MO, USA
+1099	DiscoTechs	Brookfield, Connecticut, USA
+1100	The T-Hawks	Northboro, Massachusetts, USA
+1101	Mustangs	Surrey, ND, USA
+1102	M'Aiken Magic	Augusta, Georgia, USA
+1103	Frankenbots	Delavan, WI, USA
+1104	TechnoEagles	Axtell, KS, USA
+1105	The Prep	Los Angeles, CA, USA
+1106	patriots	Mayville, ND, USA
+1108	Panther Robotics	Paola, Kansas, USA
+1109	The RoboHawks	Lively, ON, Canada
+1110	Binary Bulldogs	Palmdale, CA, USA
+1111	Power Hawks Robotics	Edgewater, Maryland, USA
+1112	Huskies	Toronto, ON, Canada
+1113	Urban Assault	Philadelphia, PA, USA
+1114	Simbotics	St Catharines, Ontario, Canada
+1115	Deus Ex Machina	Santa Monica, CA, USA
+1116	--	La Puente, CA, USA
+1118	NERDS INC.	Knoxville, TN, USA
+1120	Milpitas Xtreme Robotics	Milpitas, CA, USA
+1122	Railbots	Cleveland, OH, USA
+1123	AIM Robotics	Fairfax, Virginia, USA
+1124	UberBots	Avon, Connecticut, USA
+1125	Broncos	San Diego, CA, USA
+1126	SPARX	Webster, New York, USA
+1127	Lotus Robotics	Milton, Georgia, USA
+1129	--	Montreal, QC, Canada
+1130	Phantoms	Albany, OR, USA
+1131	Robo-Techs	Hagerstown, MD, USA
+1132	R.A.P.T.A.R. (Robotics Adventure Professionals of Tidewater and Richmond)	Ashland, VA, USA
+1133	The Hug A Bots	Reno, NV, USA
+1135	WHS Schmoebotics	Cerritos, CA, USA
+1136	Nutty Genius's	Spring Valley, CA, USA
+1137	Rocket Sauce	Mathews, Virginia, USA
+1138	Eagle Engineering	West Hills, California, USA
+1139	The Chamblee Gear Grinders	Chamblee, GA, USA
+1140	MAGNADON	Holly, MI, USA
+1141	TAS Megawatts	Peterborough, ON, Canada
+1142	--	Daytona Beach, FL, USA
+1143	Cruzin' Comets	Clarks Summit, Pennsylvania, USA
+1144	COQUITRON	San Lorenzo, Puerto Rico, USA
+1146	Magic	Labrador City, NL, Canada
+1147	The Herdinators	Elk Grove, CA, USA
+1148	Wafflebots	Studio City, California, USA
+1149	--	Thousand Oaks, CA, USA
+1150	--	Camp Verde, AZ, USA
+1151	The Hitchhikers	San Pablo, CA, USA
+1152	Blue Stars	Hyde Park, MA, USA
+1153	Walpole Robotics Revolution	Walpole, Massachusetts, USA
+1154	Harrisonburg High School Blue Streaks	Harrisonburburg, VA, USA
+1155	SciBorgs	Bronx, New York, USA
+1156	Under Control	Novo Hamburgo, Rio Grande do Sul, Brazil
+1157	Landsharks	Boulder, Colorado, USA
+1158	The Corps	Collbran, CO, USA
+1159	Ramona Rampage	Alhambra, California, USA
+1160	Titanium	San Marino, California, USA
+1161	--	Brighton, MA, USA
+1162	--	Canutillo, TX, USA
+1163	Trojan Horses	Faulkton, SD, USA
+1164	Project NEO	Las Cruces, New Mexico, USA
+1165	Team Paradise	Phoenix, Arizona, USA
+1166	Highlander Robotics	Garden City, GA, USA
+1167	Knightmares	Savannah, GA, USA
+1168	Malvern Robotics	Malvern, Pennsylvania, USA
+1169	Fairbanks Robarctics	Fairbanks, AK, USA
+1172	We Tek Too	Richmond, VA, USA
+1177	MECHA-JAGS	Stone Mountain, GA, USA
+1178	DURT (De Smet Ultimate Robotics Team)	Saint Louis, Missouri, USA
+1180	Atomsmashers	Thunderbolt, GA, USA
+1181	--	Gilbert, AZ, USA
+1182	Patriots	Manchester, MO, USA
+1183	Team Ascari	Suwanee, GA, USA
+1184	Cobra Robotics	Bel Air, MD, USA
+1185	The X-Bots	Pittsburgh, PA, USA
+1187	Brick City Flame	Newark, NJ, USA
+1188	RoboRavens	Royal Oak, Michigan, USA
+1189	The Gearheads	Grosse Pointe, Michigan, USA
+1190	ANONOBOTS	Aurora, CO, USA
+1191	Eagles	Pittsburgh, PA, USA
+1192	--	Land O Lakes, WI, USA
+1195	S.O.A.R. (Students of Applied Robotics)	Springdale, Maryland, USA
+1197	TorBots	Torrance, California, USA
+1199	--	Pittsburgh, PA, USA
+1200	--	New Stanton, PA, USA
+1201	CSI:Monroe	Aberdeen, MS, USA
+1202	--	Sidman, PA, USA
+1203	PANDEMONIUM	West Babylon, NY, USA
+1204	Eagles	Lakewood, OH, USA
+1205	Badgerbots	Bruni, TX, USA
+1206	Wrench Warriors	Fairview Park, OH, USA
+1208	Metool Brigade	O Fallon, Illinois, USA
+1209	Robo Hornets	Tulsa, Oklahoma, USA
+1210	Nyack	St Louis, MO, USA
+1211	Robotnics	Brooklyn, NY, USA
+1212	Sentinels	Chandler, Arizona, USA
+1213	GROVES	Beverly Hills, MI, USA
+1214	The Grizzlies	Houston, TX, USA
+1215	Machine Tool	Washington, MO, USA
+1216	Knights	Oak Park, MI, USA
+1218	SCH Vulcan Robotics	Philadelphia, Pennsylvania, USA
+1219	Iron Eagles	Toronto, ON, Canada
+1220	--	Milwaukee, WI, USA
+1221	Nerdbotics	Mississauga, ON, Canada
+1222	Falcons	Richmond, VA, USA
+1223	Twisted Dimension	Mesa, AZ, USA
+1224	Team 1224 - The Pius Princesses	Bronx, NY, USA
+1225	The Gorillas	Hendersonville, North Carolina, USA
+1226	--	Farmingdale, NY, USA
+1227	Techno-Gremlins	Grand Rapids, MI, USA
+1228	RoboTribe	Rahway, New Jersey, USA
+1229	MASA	Windsor, ON, Canada
+1230	The Lehman Lionics	Bronx, New York, USA
+1232	RAMS ROBOTICS	Stratford, ON, Canada
+1235	Maximum Strength	Columbus, MS, USA
+1236	Phoenix Rising	Danville, VA, USA
+1237	Cybernetic Panthers	New York, NY, USA
+1238	--	New York, NY, USA
+1239	Vita Dogs	Olmsted Falls, OH, USA
+1240	Sappers	Manitowoc, WI, USA
+1241	THEORY6	Mississauga, Ontario, Canada
+1242	Team S.M.I.L.E.Y	Plantation, FL, USA
+1243	Dragons	Swartz Creek, Michigan, USA
+1244	Viking Robotics	Goderich, ON, Canada
+1245	Monarch Robotics	Louisville, Colorado, USA
+1246	Agincourt Skunkworks	Scarborough, Ontario, Canada
+1247	Blood, Sweat, and Gears	North Sutton, New Hampshire, USA
+1248	TITANium Allies	Berea, Ohio, USA
+1249	Robo Rats	Delbarton, West Virginia, USA
+1250	Gator-Bots	Dearborn, Michigan, USA
+1251	Tech-Tiger Robotics, 4-H	Tamarac, Florida, USA
+1254	Tech Force	Lawrence, Michigan, USA
+1255	Blarglefish	Baytown, Texas, USA
+1256	Highlanders	Howell, MI, USA
+1257	Parallel Universe	Scotch Plains, New Jersey, USA
+1258	SeaBot	Seattle, Washington, USA
+1259	Paradigm Shift	Pewaukee, Wisconsin, USA
+1260	Panthers	Mississauga, ON, Canada
+1261	Robo Lions	Suwanee, Georgia, USA
+1262	the STAGS	Martinsville, Virginia, USA
+1263	Austin High School/Marshall Space Flight Center	Decatur, AL, USA
+1266	The Devil Duckies	San Diego, California, USA
+1268	Purgolder Robotics	Milwaukee, WI, USA
+1270	Red Dragons	Cleveland, OH, USA
+1272	Tyrannikal Mechanikal	Bloomington, IN, USA
+1274	Wolf Bytes	Berea, OH, USA
+1275	Pi-Robots	Toronto, ON, Canada
+1276	Kaizen Blitz	Rockland, ME, USA
+1277	The Robotomies	Groton, Massachusetts, USA
+1278	B.E.A.R.S	North Royalton, OH, USA
+1279	Cold Fusion	Somerville, New Jersey, USA
+1280	Ragin' C- Biscuits	Danville, California, USA
+1281	Mustang Robotics	Richmond Hill, ON, Canada
+1284	DART	Guntersville, AL, USA
+1285	The Big Bang	Mississauga, Ontario, Canada
+1286	Kevlar Cranes	Royal Oak, MI, USA
+1287	Aluminum Assault	Myrtle Beach, South Carolina, USA
+1288	RAVEN Robotics	Saint Charles, Missouri, USA
+1289	Gearheadz	Lawrence, Massachusetts, USA
+1290	Robowolves	Chandler, Arizona, USA
+1291	Circuit Breakers	Toronto, ON, Canada
+1292	RNS Joysticks	Rothesay, NB, Canada
+1293	Pandamaniacs	Columbia, South Carolina, USA
+1294	Top Gun	Sammamish, Washington, USA
+1295	The Golems	Toronto, ON, Canada
+1296	Full Metal Jackets	Rockwall, Texas, USA
+1297	--	Sylacauga, AL, USA
+1298	205 Terminators	Birmingham, AL, USA
+1299	Dominators	Jasper, GA, USA
+1300	EVO	Oakville, ON, Canada
+1301	The Robotic Raiders	Seattle, WA, USA
+1302	Team Lionheart	Sparta, NJ, USA
+1303	WYOHAZARD	Casper, Wyoming, USA
+1304	N.O. Botics	New Orleans, LA, USA
+1305	Ice Cubed	North Bay, Ontario, Canada
+1306	BadgerBOTS	Madison, Wisconsin, USA
+1307	Robosaints	Dover, New Hampshire, USA
+1308	Wildcats	Cleveland, Ohio, USA
+1309	Diamond Eagles	Toronto, ON, Canada
+1310	Runnymede Robotics	Toronto, Ontario, Canada
+1311	Kell Robotics	Kennesaw, Georgia, USA
+1312	Syntax Error	Walkerton, ON, Canada
+1315	Robo-Knights	Pacific, MO, USA
+1317	Digital Fusion	Westerville, Ohio, USA
+1318	Issaquah Robotics Society	Issaquah, Washington, USA
+1319	Flash	Mauldin, South Carolina, USA
+1320	"Beltway: The Learning Machine"	St. Stephen, SC, USA
+1322	Genesee Robotics Area Youth Team (GRAYT)	Fenton, Michigan, USA
+1323	MadTown Robotics	Madera, California, USA
+1324	Sporks	Sedona, AZ, USA
+1325	Inverse Paradox	Mississauga, Ontario, Canada
+1326	Cy-Ridge Robotics	Houston, TX, USA
+1327	SBOTZ	South Bend, IN, USA
+1329	ROBOREBELS	St. Louis, Missouri, USA
+1330	Quiet Riot	Toronto, ON, Canada
+1331	Broot Force	Bloomington, IN, USA
+1332	Swift	Collbran, Colorado, USA
+1334	Red Devils	Oakville, Ontario, Canada
+1335	Cognitive Hazard	Raymond, NH, USA
+1336	The Untouchables	Lexington, SC, USA
+1337	--	--
+1338	Birds of Prey	Aurora, CO, USA
+1339	AngelBotics	Denver, Colorado, USA
+1340	Spartan Robotics	Queens, NY, USA
+1341	The Renegades	Sarasota, FL, USA
+1342	Lord of the Bots	Seattle, WA, USA
+1343	DV ROBOTICS	Phoenix, AZ, USA
+1345	Platinum Dragons	Ft. Lauderdale, FL, USA
+1346	Trobotics	Vancouver, BC, Canada
+1347	E-Robotics	Ottawa, ON, Canada
+1348	Electric Anarchy	Denver, CO, USA
+1349	Inter-tribal Robotics Group	Flandreau, SD, USA
+1350	The Rambots	Providence, Rhode Island, USA
+1351	TKO	San Jose, California, USA
+1352	Huskie Robotics	Stratford, ON, Canada
+1353	The Spartans	Mississauga, ON, Canada
+1355	Stallions	Wingham, ON, Canada
+1356	Écoles secondaires l'Essor et Lajeunesse	Tecumseh, ON, Canada
+1357	High Voltage	Loveland, CO, USA
+1358	The Generals	Levittown, NY, USA
+1359	Scalawags	Lebanon, Oregon, USA
+1360	Orbit Robotics	Oakville, Ontario, Canada
+1361	Nightmare Robotics	Colorado Springs, Colorado, USA
+1364	--	Kennesaw, GA, USA
+1365	The Bot Docs	Chicago, IL, USA
+1366	Roughriders	Newark, NJ, USA
+1367	Blue Bears	Newark, NJ, USA
+1368	Perpetual Motion	Clearwater, FL, USA
+1369	Minotaur	Tampa, Florida, USA
+1370	Thermogenesis	Middletown, Delaware, USA
+1371	Cosmic Gold	Atlanta, GA, USA
+1372	Lambda^3	San Diego, CA, USA
+1373	Spontaneous Combustion	Storrs, CT, USA
+1374	Amped Up	Oakville, Ontario, Canada
+1375	The Drifters	Aurora, CO, USA
+1376	The Spaceballs	Snellville, GA, USA
+1377	Adams 12 Aliens	Thornton, CO, USA
+1378	Hilo Viking Robotics	Hilo, Hawaii, USA
+1379	Gear Devils	Norcross, GA, USA
+1380	--	Lilburn, GA, USA
+1382	ETEP Team	Sao Jose dos Campos, São Paulo, Brazil
+1384	Vineland High School Fighting Clan	Vineland, NJ, USA
+1385	The Brainstormers	Waterloo, ON, Canada
+1386	The Trobots	Canton, OH, USA
+1387	Rudy's Rangers	Fair Oaks, CA, USA
+1388	Eagle Robotics	Arroyo Grande, California, USA
+1389	The Body Electric	Bethesda, Maryland, USA
+1390	MEKHEADS	St. Cloud & Harmony, FL, USA
+1391	The Metal Moose	West Chester, Pennsylvania, USA
+1392	KINEMATRIX	Ajax, ON, Canada
+1393	Nordic Legions	Albuquerque, NM, USA
+1394	The Juggernaut	Philadelphia, PA, USA
+1395	Los Picachos	Commerce City, CO, USA
+1396	Pyrobots	Staten Island, New York, USA
+1397	Oh! know	Ajax, ON, Canada
+1398	Robo-Raiders	Columbia, South Carolina, USA
+1401	Mekanicats	Naucalpan, MEX, Mexico
+1402	Freedom FORCE	Orlando, FL, USA
+1403	Cougar Robotics	Skillman, New Jersey, USA
+1404	Shocks	Toronto, ON, Canada
+1405	Finney Falcons	Penfield, New York, USA
+1406	Team Robius	Roswell, GA, USA
+1407	The ElectroCats	Winder, GA, USA
+1408	The Saintinators	Edgewater, CO, USA
+1409	--	Great Barrington, MA, USA
+1410	The Kraken	Denver, Colorado, USA
+1411	Trojens	Brampton, ON, Canada
+1412	The Comet Warriors	Hackensack, NJ, USA
+1413	Skrappy 1413	Skipwith, Virginia, USA
+1414	IHOT	Atlanta, Georgia, USA
+1415	The Flying Pumpkins	Columbus, GA, USA
+1416	Overlake Robotics Branch	Redmond, WA, USA
+1417	Titans	Roanoke, VA, USA
+1418	Vae Victis	Falls Church, Virginia, USA
+1419	Rustic Roboteers	Courtice, ON, Canada
+1420	Dept. of Exceptional Robots	Baltimore, MD, USA
+1421	Team Chaos	Picayune, Mississippi, USA
+1422	The Neon Knights	Fresno, California, USA
+1425	Error Code Xero	Wilsonville, Oregon, USA
+1426	Cougartronics	Las Cruces, NM, USA
+1427	--	Reno, NV, USA
+1428	T-Birds	Zuni, NM, USA
+1429	TEAM KAOS	Galena Park, TX, USA
+1430	WRONG Doers	Anchorage, AK, USA
+1432	Metal Beavers	Portland, Oregon, USA
+1433	Tiger Techies	Newberg, OR, USA
+1435	The pi-Rats	Maryland Heights, MO, USA
+1436	Jackets	Fort Mill, SC, USA
+1437	Robot Rams	St. Louis, MO, USA
+1438	The A Team	Anaheim, California, USA
+1439	Mays RBOT	Atlanta, GA, USA
+1440	Warriors	Savannah, GA, USA
+1441	RAVENS	Bellevue, WA, USA
+1442	Ehecatl	Juarez, CHH, Mexico
+1444	Lightning 1444	Saint Louis, Missouri, USA
+1446	Robo Knights	Washington, District of Columbia, USA
+1447	Panther Robotics	Center Line, MI, USA
+1448	Parsons Vikings	Parsons, Kansas, USA
+1449	Robocats	Williamsport, MD, USA
+1450	XQ Robotix	Rochester, New York, USA
+1451	RoboKnights	Troy, IL, USA
+1452	Omnicats	Los Angeles, California, USA
+1453	RoboCubs	Los Angeles, CA, USA
+1455	NEC	Wyncote, PA, USA
+1456	GrizzlyBots	Chandler, AZ, USA
+1457	TRONN	Reno, NV, USA
+1458	Red Tie Robotics	Danville, California, USA
+1459	BearCats	Pilot Point, TX, USA
+1460	Robolution	Houston, TX, USA
+1461	Golden Hawks	Miami Springs, FL, USA
+1462	Tekeez	New York, NY, USA
+1463	Transformers	Burke, VA, USA
+1464	Wolves	Westminster, MD, USA
+1465	Code Breakers	Bronx, NY, USA
+1466	Webb Robotics	Knoxville, Tennessee, USA
+1467	HSRO	Midlothian, VA, USA
+1468	Hicksville J-Birds	Hicksville, New York, USA
+1469	The Labcoats	Greensboro, NC, USA
+1470	DA Bears	Pittsburgh, PA, USA
+1472	GENESIS	Baton Rouge, LA, USA
+1474	Titans	Tewksbury, Massachusetts, USA
+1475	LOOSE CONNECTIONS	Leo, IN, USA
+1476	Der Eisenflug	Detroit, MI, USA
+1477	Texas Torque	Conroe, Texas, USA
+1478	The OZ Men	Seneca, KS, USA
+1479	SWAT Team	Houston, TX, USA
+1480	Robatos Locos	Houston, TX, USA
+1481	The Riveters	Farmington, Michigan, USA
+1482	Ghosts	Calgary, Alberta, Canada
+1484	Hoggzilla	Houston, TX, USA
+1485	--	Houston, TX, USA
+1486	Knight Robotics	Calgary, AB, Canada
+1489	Blood Sweat Gears	Birmingham, MI, USA
+1490	Sparta's Rockets	Houston, TX, USA
+1492	Team CAUTION	Tempe, Arizona, USA
+1493	Falcons	Albany, New York, USA
+1495	Red Devils	West Grove, Pennsylvania, USA
+1496	IGUANA #1496	Quito, P, Ecuador
+1497	Ram Robotics	Jacksonville, FL, USA
+1500	Metal-Morphose	Hudsonville, MI, USA
+1501	Team THRUST	Huntington, Indiana, USA
+1502	Technical Difficulties	Chelsea, Michigan, USA
+1503	Spartonics	Niagara Falls, ON, Canada
+1504	Desperate Penguins	Okemos, Michigan, USA
+1505	Roybotics	Roy, UT, USA
+1506	Metal Muscle	Flint, Michigan, USA
+1507	Warlocks	Lockport, New York, USA
+1508	RoboWizards	Detroit, MI, USA
+1509	Screamin Eagles	Ferndale, MI, USA
+1510	Wildcats	Beaverton, Oregon, USA
+1511	Rolling Thunder	Penfield, New York, USA
+1512	The Big Red	Concord, New Hampshire, USA
+1513	Cyclones	Spring, TX, USA
+1514	The Vikes	Toronto, ON, Canada
+1515	MorTorq	Beverly Hills, California, USA
+1516	Grizzlies	San Ramon, California, USA
+1517	The Lumberjacks	Concord, New Hampshire, USA
+1518	Raider Robotics	Palmyra, New York, USA
+1519	Mechanical Mayhem	Milford, New Hampshire, USA
+1520	Omega - 13	New York, NY, USA
+1522	DOTM - Defenders of the Multiverse : Hanover High School	Mechanicsville, Virginia, USA
+1523	MARS (Mega Awesome Robotic Systems)	Palm Beach Gardens, Florida, USA
+1524	Gladiators	New Britain, CT, USA
+1525	Deerfield High School Warriors	Deerfield, IL, USA
+1527	Bionic Battalion	El Cajon, CA, USA
+1528	MTR (Monroe Trojan Robotics)	Monroe, Michigan, USA
+1529	CyberCards	Indianapolis, Indiana, USA
+1530	Vikings	Richmond, VA, USA
+1531	Team Lake Effect	Mexico, NY, USA
+1532	Tech Ops	Cleveland, OH, USA
+1533	Triple Strange	Greensboro, North Carolina, USA
+1534	Abramson Robotic Soldiers	New Orleans, LA, USA
+1535	Knights of Alloy	Sault Ste Marie, ON, Canada
+1537	Robotic Knights	Uniondale, New York, USA
+1538	The Holy Cows	San Diego, California, USA
+1539	Clover Robotics	Clover, South Carolina, USA
+1540	Flaming Chickens	Portland, Oregon, USA
+1541	MidloCanics	Midlothian, Virginia, USA
+1542	Heart of London	London, ENG, Kingdom
+1543	The Riddler Revolution	Kissimmee, FL, USA
+1544	Arctic Ice Bears	Anchorage, Alaska, USA
+1545	DSF Robotics	Richmond, VA, USA
+1546	Chaos, Inc.	Baldwin, New York, USA
+1547	"Where's Waldo?"	Whitby, Ontario, Canada
+1548	Highlanders	Anchorage, AK, USA
+1549	Fire TraXX	Ann Arbor, MI, USA
+1550	The Botics Squad	New Orleans, LA, USA
+1551	The Grapes of Wrath	Naples, New York, USA
+1552	CougarBots	Niwot, CO, USA
+1553	KC Robotics Team	Lugoff, South Carolina, USA
+1554	Oceanside Robotics	Oceanside, New York, USA
+1555	Cryonics	Elkhart, Indiana, USA
+1556	Robo Raiders	North Hills, CA, USA
+1557	12 Volt Bolt	Eustis, Florida, USA
+1558	ACCIdent	Toronto, ON, Canada
+1559	Devil Tech	Victor, New York, USA
+1560	RoboPanthers	Los Altos Hills, California, USA
+1561	ROBODUCKS	Oklahoma City, Oklahoma, USA
+1562	RMSEL Robotics	Denver, CO, USA
+1563	ROBO-CATS	Newark, NJ, USA
+1564	J.A.G.S.	Toronto, ON, Canada
+1565	Think Tank Technologies (T3)	Cambridge, ON, Canada
+1566	AMMOKNIGHTS	Idaho Falls, Idaho, USA
+1567	Shock-a-Bots	Rochester, NY, USA
+1568	Mechanicatz	Pawtucket, RI, USA
+1569	Haywire Robotics	Pocatello, Idaho, USA
+1570	Demons	Vancouver, British Columbia, Canada
+1571	CALibrate Robotics	Gresham, Oregon, USA
+1572	The Hammer Heads	San Diego, California, USA
+1573	Kfar Galim	Kfar Galim, HaZafon, Israel
+1574	MisCar	Misgav, HaZafon, Israel
+1575	--	--
+1576	Voltrix	Tel Aviv, Tel-Aviv, Israel
+1577	Steampunk	Ra'anana, HaMerkaz, Israel
+1578	The Purple RoboSnails	Tel Aviv, TA, Israel
+1579	Shevach-Mofet	Tel Aviv, TA, Israel
+1580	The Blue Monkeys	Ashkelon, HaDarom, Israel
+1581	--	--
+1582	Dantziger	Kiryat Shmona, Z, Israel
+1583	Ridge View Academy Rambotics	Watkins, Colorado, USA
+1584	Pirates	Nederland, Colorado, USA
+1585	Scitobor Robotics	Shortsville, New York, USA
+1588	The Crunken Masters	Atlanta, GA, USA
+1589	DYNAMIC (Desgin Young New Advance Minds In Competition) BOTICS	New Orleans, LA, USA
+1590	Titaniums	Lorain, Ohio, USA
+1591	Greece Gladiators	Rochester, New York, USA
+1592	Bionic Tigers	Cocoa, Florida, USA
+1593	2 Hot 2 Trot	New York, NY, USA
+1594	Double X	New York, NY, USA
+1595	The Dragons	Spokane, Washington, USA
+1596	The Instigators	Sault Sainte Marie, Michigan, USA
+1597	BxAero	Bronx, NY, USA
+1598	TeamTalon 1598	Danville, Virginia, USA
+1599	CircuiTree	Mechanicsville, Virginia, USA
+1600	ROBO KINGS AND QUEENS	Brooklyn, New York, USA
+1601	Quantum Samurai	Long Island City, New York, USA
+1602	CougarBots	Detroit, MI, USA
+1603	Libas	Novo Hamburgo, RS, Brazil
+1604	Mekheads	Harmony, FL, USA
+1605	RoboHawks	Toronto, ON, Canada
+1606	Division Dragons	Levittown, NY, USA
+1607	Rough Riders	Roosevelt, NY, USA
+1609	West Allied Robotics -W.A.R.	Ballwin, MO, USA
+1610	? Blackwater Robotics ?	Franklin, Virginia, USA
+1611	NOS	Guyton, GA, USA
+1612	Robo-Sharks	Brooksville, FL, USA
+1613	StARC	San Diego, CA, USA
+1616	weequahic indians	Newark, NJ, USA
+1617	The Mighty Bulldogs	Newark, NJ, USA
+1618	Capital Robotics	Columbia, SC, USA
+1619	Up-A-Creek Robotics	Longmont, Colorado, USA
+1620	Robolution	Pickering, ON, Canada
+1621	Eniac	Guarulhos, SP, Brazil
+1622	Team Spyder	Poway, California, USA
+1623	Banner Bots	Faribault, MN, USA
+1624	The Green Grinches	Vancouver, WA, USA
+1625	Winnovation	Winnebago, Illinois, USA
+1626	Falcon Robotics	Metuchen, New Jersey, USA
+1628	SENAI Mechatronics	Caxias Do Sul, RS, Brazil
+1629	Garrett Coalition (GaCo)	Accident, Maryland, USA
+1631	Rockin Robots	Henderson, NV, USA
+1633	RoboBuffs	Tempe, Arizona, USA
+1634	Wreckers	Weatherly, PA, USA
+1635	TECHNOTICS	Elmhurst, New York, USA
+1636	Reds Robotics	Arvada, CO, USA
+1640	Sab-BOT-age	Downingtown, Pennsylvania, USA
+1641	Where's Waldo?	Mojave, CA, USA
+1642	Techno-Cats	Ft. Worth, Texas, USA
+1643	Bob's Builders in Black	Tallmadge, OH, USA
+1644	The Robo-Skunks	Los Angeles, California, USA
+1645	Butte Bot Builders	Butte, MT, USA
+1646	Precision Guessworks	Lafayette, Indiana, USA
+1647	Iron Devils	Vincentown, New Jersey, USA
+1648	G3 Robotics	Atlanta, Georgia, USA
+1649	Lakerbotics (Lakers)	Windermere, Florida, USA
+1650	Prodigies of Technology	Columbia, SC, USA
+1651	TBA	Palm Beach County, FL, USA
+1652	LakeView Legends	Pleasant Prairie, WI, USA
+1653	Washington High School RoboKatz	Kansas City, KS, USA
+1654	The Non Conformants	Holland, MI, USA
+1655	Screaming Eagles	Marion, VA, USA
+1656	Angry Scotsmen	Haverford, PA, USA
+1657	Hamosad	Kibutz E'in Shemer, HaZafon, Israel
+1658	Tech Heads	St. Louis, Missouri, USA
+1660	Harlem Knights	New York, New York, USA
+1661	Griffitrons	Sherman Oaks, California, USA
+1662	Raptor Force Engineering	Lodi, California, USA
+1665	Weapons of Mass Construction	Hudson, New York, USA
+1666	REDSKINS	Liberal, KS, USA
+1667	Broncobotix	Spring Hill, KS, USA
+1669	NASALong Beach Unified Schools Cabrillo High Jaguars Robotics	Long Beach, CA, USA
+1670	FHJCC Eagles	Manhattan, KS, USA
+1671	Buchanan Bird Brains	Clovis, California, USA
+1672	Robo-T-Birds	Mahwah, New Jersey, USA
+1674	Lake Effect	Onekama, MI, USA
+1675	UPS (Ultimate Protection Squad)	Milwaukee, Wisconsin, USA
+1676	The Pascack PI-oneers	Montvale, New Jersey, USA
+1677	Qunatum Ninjas	Kalamazoo, Michigan, USA
+1678	Citrus Circuits	Davis, California, USA
+1680	Fort Erie Secondary School	Fort Erie, ON, Canada
+1682	Eye Bots	Riverside, CA, USA
+1683	Techno Titans	Johns Creek, Georgia, USA
+1684	The Chimeras	Lapeer, Michigan, USA
+1685	Tech-Know Commandos	Worcester, MA, USA
+1686	Team Navigator	Worcester, MA, USA
+1687	Highlander Robotics	Worcester, MA, USA
+1688	Team Stick Shift	Staten Island, NY, USA
+1689	Blazing Bengals	Bloomfield, NJ, USA
+1690	Orbit	Binyamina, HaZafon, Israel
+1691	EaglesBots	Sidney, MT, USA
+1692	CougarBots	Los Angeles, CA, USA
+1693	Robo Lobos	San Jose, California, USA
+1694	Walt Disney Robo Warriors	Orlando, FL, USA
+1695	Bearly Robotics- "Your Best Alloy"	Helena, Montana, USA
+1696	RoboRevolution	Sun River, MT, USA
+1697	Gyros	Long Beach, CA, USA
+1698	Metal Cougars (MC^2)	New York, NY, USA
+1699	Robocats	Colchester, Connecticut, USA
+1700	Gatorbotics	Palo Alto, California, USA
+1701	RoboCubs	Detroit, Michigan, USA
+1702	None	Ingelwood, CA, USA
+1703	RAT's	Las Vegas, NV, USA
+1704	Steelers	Fontana, CA, USA
+1705	Vikings	Denver, CO, USA
+1706	Ratchet Rockers	Wentzville, Missouri, USA
+1707	NH Indians	Pghp, PA, USA
+1708	AMP'D Robotics	McKeesport, Pennsylvania, USA
+1710	The Ravonics Revolution	Olathe, Kansas, USA
+1711	RAPTORS	Traverse City, Michigan, USA
+1712	Dawgma	Ardmore, Pennsylvania, USA
+1713	Gears	Cape Vincent / Clayton, NY, USA
+1714	MORE Robotics	Milwaukee, Wisconsin, USA
+1715	RDA	Moore, SC, USA
+1716	Redbird Robotics	De Pere, Wisconsin, USA
+1717	D'Penguineers	Goleta, California, USA
+1718	The Fighting Pi	Armada, Michigan, USA
+1719	The Umbrella Corporation	Pikesville, Maryland, USA
+1720	PhyXTGears	Muncie, Indiana, USA
+1721	Tidal Force	Concord, New Hampshire, USA
+1722	Rebel Innovators	La Canada, CA, USA
+1723	The FBI - FIRST Bots of Independence	Independence, Missouri, USA
+1724	Weber Fever	Pleasant View, UT, USA
+1725	Worcester Public School Girls All Star	Worcester, MA, USA
+1726	N.E.R.D.S. (Nifty Engineering Robotics Design Squad)	Sierra Vista, Arizona, USA
+1727	REX	Lutherville Timonium, Maryland, USA
+1728	B.L.I.N.G. (Bausch & Lomb Inspires & Nurtures Growth)	Rochester, NY, USA
+1729	Team Inconceivable!	Peterborough, New Hampshire, USA
+1730	Team Driven	Lees Summit, Missouri, USA
+1731	Fresta Valley Robotics Club	Warrenton, Virginia, USA
+1732	Hilltoppers	Milwaukee, Wisconsin, USA
+1733	PolarBots	Worcester, MA, USA
+1734	1734 Sesame Street	Fort Walton Beach, FL, USA
+1735	Green Reapers	Worcester, Massachusetts, USA
+1736	Robot Casserole	Peoria, Illinois, USA
+1737	Project X	Excelsior Springs, Missouri, USA
+1738	--	--
+1739	Chicago Knights	Chicago, Illinois, USA
+1740	Ledyard Cyber Colonels	Ledyard, Connecticut, USA
+1741	Red Alert	Greenwood, Indiana, USA
+1742	Shockwave	Norman, Oklahoma, USA
+1743	Short Circuits	Pittsburgh, Pennsylvania, USA
+1744	Robo Rays	Naples, Florida, USA
+1745	The P-51 Mustangs	Richardson, Texas, USA
+1746	OTTO	Cumming, Georgia, USA
+1747	Harrison Boiler Robotics	West Lafayette, Indiana, USA
+1748	Lab Rats	Baltimore, MD, USA
+1749	Wapack Renaissance Robotics	Peterborough, NH, USA
+1750	ThunderStorm Robotics	Stillwater, Oklahoma, USA
+1751	The Warriors	Port Jefferson Station, New York, USA
+1752	Tonka	Kansas City, MO, USA
+1753	Goz-Bot	Watertown, WI, USA
+1754	Nitro Knights	Boston, MA, USA
+1755	Jaguarbotics	Chicago, IL, USA
+1756	Argos	Peoria, Illinois, USA
+1757	Wolverines	Westwood, Massachusetts, USA
+1758	Technomancers	Florence, South Carolina, USA
+1759	Potatoes	El Segundo, California, USA
+1760	Robo-Titans	Kokomo, IN, USA
+1761	STEAMpunk Tigers	Lynn, Massachusetts, USA
+1763	Paseliens	Kansas City, Missouri, USA
+1764	Liberty Robotics	Liberty, Missouri, USA
+1765	E1Bots	Buffalo, New York, USA
+1766	TM	Columbus, IN, USA
+1767	Widget Warriors	Howell, MI, USA
+1768	RoboChiefs	Bolton, Massachusetts, USA
+1769	Digital Hawks	Kansas City, Kansas, USA
+1770	Alpha Woverines	Chicago, IL, USA
+1771	Electric Phoenixes	Suwanee, Georgia, USA
+1772	The Brazilian Trail Blazers	Gravatai, Rio Grande do Sul, Brazil
+1774	Athena's Engineers	Pittsburg, TX, USA
+1775	Tigerbytes	Kansas City, Missouri, USA
+1776	Declaration	Kansas City, MO, USA
+1777	Viking Robotics	Overland Park, Kansas, USA
+1778	Chill Out	Mountlake Terrace, Washington, USA
+1779	G. St. Techies	South Boston, MA, USA
+1780	Wolves Robotics	Henderson, NV, USA
+1781	Lindblom Electric Eagles	Chicago, Illinois, USA
+1782	RADICAL RAYTOWN ROBOTICS	RAYTOWN, MO, USA
+1783	Falcon Firebots	West Branch, MI, USA
+1784	Litchbots	Litchfield, CT, USA
+1785	Blue Springs Robocats	Blue Springs, Missouri, USA
+1786	The Robotics Team	Dublin, New Hampshire, USA
+1787	Flying Circuits	Cleveland, Ohio, USA
+1788	Ravage	Atlanta, GA, USA
+1789	Cliffhangers	Kremmling, CO, USA
+1790	Team 1881	Paterson, NJ, USA
+1791	Voyagers	Clayton, New Jersey, USA
+1792	Round Table Robotics	Oak Creek, Wisconsin, USA
+1793	The Aviators	Norfolk, Virginia, USA
+1794	N.I.R.D.	St. Louis, MO, USA
+1795	Team Clutch	Atlanta, Georgia, USA
+1796	RoboTigers	Queens, New York, USA
+1797	Phoenix	London, England, United Kingdom
+1798	RoboKnights	Tucson, AZ, USA
+1799	Wired Up!	Littleton, Colorado, USA
+1800	Bravebotics	Bonner Springs, KS, USA
+1801	The Dapper Dans	Kountze, TX, USA
+1802	Team Stealth	Kansas City, Kansas, USA
+1803	Vikings	Port Washington, New York, USA
+1804	Northmen	Kansas City, MO, USA
+1805	HOT BOTS	Kansas City, MO, USA
+1806	S.W.A.T.	Smithville, Missouri, USA
+1807	Redbird Robotics	Allentown, New Jersey, USA
+1808	Red Devil Robotics	Freeport, NY, USA
+1810	Jaguar Robotics	Shawnee, Kansas, USA
+1811	FRESH	Newark, New Jersey, USA
+1813	Roboegal	Newark, NJ, USA
+1814	Phoenix In Fight	Toronto, ON, Canada
+1815	Black Scots	Toronto, Ontario, Canada
+1816	"The Green Machine"	Edina, Minnesota, USA
+1817	Llano Estacado RoboRaiders	Lubbock, Texas, USA
+1818	Team Talos	Shreveport, Louisiana, USA
+1820	Havoc	Rockville, MD, USA
+1823	The New Victorians	portland, OR, USA
+1824	1824	Peterborough, NH, USA
+1825	The Cyborgs	Kansas City, Missouri, USA
+1826	Team 1826, The Fuse	Golden, CO, USA
+1827	THE HIVE	Kansas City, Missouri, USA
+1828	BoxerBots	Vail, Arizona, USA
+1829	Carbonauts	Accomack County, Virginia, USA
+1830	Mighty Bookers	Norfolk, VA, USA
+1831	Screaming Eagles	Gilford, New Hampshire, USA
+1834	Evolution	San Jose, California, USA
+1835	Wreckless Creation	Toronto, ON, Canada
+1836	The MilkenKnights	Los Angeles, California, USA
+1837	Madi	Tallulah, LA, USA
+1838	Bobcats	Rexburg, ID, USA
+1839	Techattack	Saint Anthony, ID, USA
+1840	Diggers	Sugar City, ID, USA
+1841	Crazy Bred......Yeeeeaah!!	plantation, FL, USA
+1842	Twisted E.G.O.	Fort Pierce, FL, USA
+1843	Trobots	Rigby, ID, USA
+1845	Cyber Panthers	Atlanta, GA, USA
+1846	Le Vortex	Sarnia, Ontario, Canada
+1847	W.R.A.T.H (Wyandotte Robotics and Technology Hackers)	Kansas City, Kansas, USA
+1848	SOUP	Atlanta, GA, USA
+1849	Griffins	Washington, DC, USA
+1850	Mechanicats	Chicago, Illinois, USA
+1851	Manic Mechanics	Sun Valley, CA, USA
+1852	Team Amore	Scottsdale, AZ, USA
+1853	Ruskin Eagles	Kansas City, MO, USA
+1855	MagnoBots	Reseda, CA, USA
+1856	Gear Heads	Redford, MI, USA
+1858	Spartans	Slidell, LA, USA
+1859	RoboJacks	Bogalusa, LA, USA
+1860	Alphabots	Sao Jose dos Campos, São Paulo, Brazil
+1861	SHARC	Aurora, CO, USA
+1862	Red Raiders	Cliffside Park, NJ, USA
+1863	Titan it up!	Tulsa, OK, USA
+1864	Automata	Milwaukee, WI, USA
+1865	RoboBuffs	Missouri City, TX, USA
+1866	The Cardinals	Swansea, MA, USA
+1867	The Prowlers	Houston, TX, USA
+1868	Space Cookies	Mountain View, California, USA
+1870	The Lightning Arx	Red Deer, AB, Canada
+1871	Panter Machine	CHarles City, VA, USA
+1872	Steel Lions	San Juan, Puerto Rico, USA
+1873	CRT	Columbia, MO, USA
+1875	Purple Haze	Cocoa, FL, USA
+1876	Beachbotics	Hilton Head Island, South Carolina, USA
+1877	Mechanical Mafia	Dahlonega, GA, USA
+1879	Minor High School	Adamsville, AL, USA
+1880	Warriors of East Harlem	New York, New York, USA
+1881	Gamma Elite	Paterson, NJ, USA
+1882	Rebel Robotics	Farmingdale, NJ, USA
+1883	Dragons	Las Vegas, NV, USA
+1884	Griffins	London, England, United Kingdom
+1885	ILITE Robotics	Haymarket, Virginia, USA
+1886	Hawks	Ijamsville, MD, USA
+1887	Russet Robotix	Shelley, ID, USA
+1888	West Robotics	plano, TX, USA
+1889	Haze	Wellington, FL, USA
+1890	EOT	Nashville, TN, USA
+1891	Bullbots	Boise, Idaho, USA
+1893	High Tech Parrots	Baltimore, MD, USA
+1894	The Elite	Baltimore, MD, USA
+1895	Lambda Corps	Manassas, Virginia, USA
+1896	Concussive Engineers	Traverse City, Michigan, USA
+1897	Red Hot Chile Dragons	Albuquerque, NM, USA
+1898	Westside Wolves	Houston, TX, USA
+1899	Saints Robotics	Bellevue, Washington, USA
+1900	Rough Riders	Washington, DC, USA
+1901	Ramrod	St. Marys, ON, Canada
+1902	Exploding Bacon	Orlando, Florida, USA
+1904	Warbots	Baltimore, MD, USA
+1905	KCbotics	Kansas City, MO, USA
+1906	WeBeRoyBotics	Roy, UT, USA
+1907	Birds of Prey	Farmville, VA, USA
+1908	ShoreBots	Eastville, Virginia, USA
+1909	G-Tech	Boston, MA, USA
+1910	Hawlets	Kansas City, MO, USA
+1911	Techno-Horns	Fort Benton, MT, USA
+1912	Team Combustion	Slidell, Louisiana, USA
+1913	Livewire	Covington, LA, USA
+1915	MTHS Firebird Robotics	Washington, District of Columbia, USA
+1916	MP Robotics	Roxbury, MA, USA
+1917	T.O.M. (Teckies Operating Machinery)	Prescott, AZ, USA
+1918	NC GEARS	Fremont, Michigan, USA
+1919	Knights of the Heights	South Boston, MA, USA
+1920	McMain Hurricanes	New Orleans, Louisiana, USA
+1922	Oz-Ram	Contoocook, New Hampshire, USA
+1923	The MidKnight Inventors	Plainsboro, New Jersey, USA
+1925	Jags	West Hills, CA, USA
+1926	Team 8-Bit	Mesa, AZ, USA
+1927	Tempest	Biloxi, Mississippi, USA
+1929	FoxyBots	Montclair, NJ, USA
+1930	Comets	Henrietta, NY, USA
+1931	Hornets	Little Falls, NJ, USA
+1932	RoboRustlers	Great Falls, MT, USA
+1933	Doncaster Destroyers	Doncaster, ENG, Kingdom
+1934	AI	London, ENG, Kingdom
+1935	Team Happycat	Toronto, ON, Canada
+1937	Elysium	Modi'in-Maccabim Reu't, HaMerkaz, Israel
+1938	Manhattan High School	Manhattan, MT, USA
+1939	THE KUHNIGITS	Kansas City, Missouri, USA
+1940	The Tech Tigers	Benton Harbor, Michigan, USA
+1941	Detroit Rocks Robotics	Detroit, MI, USA
+1942	Cinderella Tel-Nof	Gadera, HaMerkaz, Israel
+1943	Neat Team	Rosh Hayin, HaMerkaz, Israel
+1944	Airforce High School	Haifa, Haifa, Israel
+1945	Most Wanted Robotics	Nazareth, Z, Israel
+1946	FG	Tamra GLIL, HaZafon (Northern), Israel
+1947	BlacKnight Robotics	Hadera, M, Israel
+1948	GreenGang	Kfar Saba, M, Israel
+1949	shapira	Natanya, M, Israel
+1950	Emek Hefer	Emek Hefer, Z, Israel
+1951	Ort Singolovsky	Tel Aviv, TA, Israel
+1952	Arming High School	tzrifin, HaMerkaz (Central), Israel
+1954	ElectroBunny	Beer Sheva, HaDarom, Israel
+1955	Beit Yerah	Emek Hayarden, Z, Israel
+1956	UA	Umm Alfahem, Z, Israel
+1957	LighTeam	Katzrin, Z, Israel
+1959	Bengal Bots	Blythewood, SC, USA
+1960	GO DARBY!	Darby, MT, USA
+1961	GreenvilleSeniorHigh	Greenville, SC, USA
+1962	Zilch	Boston, MA, USA
+1963	PSC Robotics	Winchester, ENG, Kingdom
+1965	Firebirds	Allston, Massachusetts, USA
+1966	Knights	Missoula, MT, USA
+1967	The Janksters	San Jose, California, USA
+1970	Bulldogs	Menlo Park, California, USA
+1972	Searing Engineering	El Centro, California, USA
+1973	Burning Tiger #1973	Boston, Massachusetts, USA
+1974	Weber Tech	Stockton, CA, USA
+1975	Team QUEEN	Millton, MA, USA
+1976	The Missing Lynx	Eden, TX, USA
+1977	The PowerSquids	Loveland, Colorado, USA
+1978	Bulldogs	Phoenix, AZ, USA
+1980	The Brigade	Aberdeen, MD, USA
+1981	The Gearheads	Independence, MO, USA
+1982	Cougar Robotics	Shawnee, Kansas, USA
+1983	Skunk Works Robotics	Seattle, Washington, USA
+1984	Jawas	Overland Park, Kansas, USA
+1985	Robohawks	Florissant, Missouri, USA
+1986	Team Titanium	Lees Summit, Missouri, USA
+1987	Broncobots	Lees Summit, Missouri, USA
+1988	The Sweetie Pies	Wales, WI, USA
+1989	Viking Robotics	Vernon, New Jersey, USA
+1990	Colts	Lodi, OH, USA
+1991	Dragons	Hartford, Connecticut, USA
+1992	Raytown South Robocards	Raytown, MO, USA
+1994	Quixote	Kansas City, Kansas, USA
+1995	Fatal Error	Bangor, ME, USA
+1996	Wildcat Robotics	Blue Springs, MO, USA
+1997	Stag Robotics	Roeland Park, Kansas, USA
+1998	Robodogz	Dearborn Heights, MI, USA
+1999	O.U.T.E.R L.I.M.I.T.	Fort Walton Beach, FL, USA

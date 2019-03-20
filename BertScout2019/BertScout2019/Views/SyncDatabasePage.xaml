@@ -50,12 +50,30 @@
                     WidthRequest="300"
                     IsEnabled="True"
                     />
-                <Label
-                    x:Name="Label_Results"
-                    Text=""
+                <Button
+                    x:Name="Button_Reset_Upload"
+                    Text="Reset Upload"
+                    Clicked="Button_Reset_Upload_Clicked"
+                    BackgroundColor="#B19CD9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Margin="20"
+                    WidthRequest="300"
+                    IsEnabled="True"
+                    />
+                <ScrollView
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
-                    />
+                    >
+                    <Label
+                        x:Name="Label_Results"
+                        Text=""
+                        FontSize="20"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        />
+                </ScrollView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

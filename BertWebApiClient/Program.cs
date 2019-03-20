@@ -15,7 +15,7 @@ namespace BertWebApiClient
 
         static void Main()
         {
-            //baseWebAddress = "http://localhost:61490/";
+            //baseWebAddress = "http://localhost:64190";
             baseWebAddress = "http://192.168.1.4/bertscout2019/";
             RunAsync().GetAwaiter().GetResult();
         }
@@ -52,10 +52,10 @@ namespace BertWebApiClient
                 //var url = await CreateFRCEventAsync(item);
                 //Console.WriteLine($"Created at {url}");
 
-                // show all matches
+                // show first 10 matches
                 List<EventTeamMatch> itemsETM;
-                Console.WriteLine("All EventTeamMatches:");
-                itemsETM = await GetEventTeamMatchesAsync();
+                Console.WriteLine("First 10 EventTeamMatches:");
+                itemsETM = await GetNextBatchEventTeamMatchesAsync("NEDIST_SOUTHERNNH|0|10");
                 foreach (EventTeamMatch showItemETM in itemsETM)
                 {
                     ShowEventTeamMatch(showItemETM);

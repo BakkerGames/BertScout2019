@@ -9,6 +9,7 @@ namespace BertWebApi2019.Models
         T GetByKey(string key);
         T GetByUuid(string uuid);
         IEnumerable<T> GetAllByKey(string key);
+        IEnumerable<T> GetNextBatchByKey(string key);
         T Add(T item);
         void Remove(int id);
         void RemoveByUuid(string uuid);

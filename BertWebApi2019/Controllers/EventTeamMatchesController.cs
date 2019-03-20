@@ -31,9 +31,18 @@ namespace EventTeamMatchestore.Controllers
             return item;
         }
 
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public EventTeamMatch GetEventTeamMatchByEventTeamMatchNumber(int key)
         {
             return repository.GetByKey(key.ToString());
+        }
+
+        [AcceptVerbs("GET")]
+        [HttpGet]
+        public IEnumerable<EventTeamMatch> GetNextBatchEventTeamMatches(string batchInfo)
+        {
+            return repository.GetNextBatchByKey(batchInfo);
         }
 
         [AcceptVerbs("POST")]

@@ -20,6 +20,9 @@
         <div>
             <a href="./api/EventTeamMatches">Show matches for teams by event</a>
         </div>
+        <div>
+            <a href="./api/EventTeamMatches?batchInfo=NEDIST_SOUTHERNNH|0|10">Show first 10 matches for NEDIST_SOUTHERNNH</a>
+        </div>
     </form>
 </body>
 </html>

@@ -106,5 +106,11 @@ namespace BertWebApi2019.Models
             items.Add(item);
             return true;
         }
+
+        public IEnumerable<EventTeam> GetNextBatchByKey(string key)
+        {
+            // key = "EventKey|LastId|Count"
+            throw new NotImplementedException();
+        }
     }
 }

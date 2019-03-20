@@ -51,10 +51,21 @@ namespace BertWebApiClient
             return items;
         }
 
+        static async Task<List<EventTeamMatch>> GetNextBatchEventTeamMatchesAsync(string batchInfo)
+        {
+            List<EventTeamMatch> items = null;
+            HttpResponseMessage response = await client.GetAsync($"api/EventTeamMatches?batchInfo={batchInfo}");
+            if (response.IsSuccessStatusCode)
+            {
+                items = await response.Content.ReadAsAsync<List<EventTeamMatch>>();
+            }
+            return items;
+        }
+
         static async Task<EventTeamMatch> UpdateEventTeamMatchAsync(EventTeamMatch item)
         {
             HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/EventTeamMatchs?uuid={item.Uuid}", item);
+                $"api/EventTeamMatches?uuid={item.Uuid}", item);
             response.EnsureSuccessStatusCode();
 
             // Deserialize the updated EventTeamMatch from the response body.
@@ -65,7 +76,7 @@ namespace BertWebApiClient
         static async Task<HttpStatusCode> DeleteEventTeamMatchAsync(int? id)
         {
             HttpResponseMessage response = await client.DeleteAsync(
-                $"api/EventTeamMatchs/{id}");
+                $"api/EventTeamMatches/{id}");
             return response.StatusCode;
         }
     }

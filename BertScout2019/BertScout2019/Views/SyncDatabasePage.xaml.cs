@@ -3,7 +3,6 @@ using BertScout2019Data.Models;
 using Common.JSON;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Xamarin.Forms;
@@ -73,6 +72,7 @@ namespace BertScout2019.Views
                 return;
             }
             _isBusy = true;
+
             PrepareSync();
 
             int addedCount = 0;
@@ -93,6 +93,11 @@ namespace BertScout2019.Views
 
                 foreach (EventTeamMatch item in copyOfMatches)
                 {
+                    if (item.EventKey != App.currFRCEventKey)
+                    {
+                        continue;
+                    }
+
                     if (item.Changed % 2 == 1)
                     {
                         item.Changed++; // change odd to even = no upload next time
@@ -110,6 +115,11 @@ namespace BertScout2019.Views
                         // this modifies the original list "matches", which is why a copy is needed
                         SqlDataEventTeamMatches.UpdateItemAsync(item);
                     }
+
+                    if (addedCount + updatedCount >= 10)
+                    {
+                        break;
+                    }
                 }
             }
             catch (Exception ex)
@@ -120,6 +130,11 @@ namespace BertScout2019.Views
             }
 
             Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount}";
+
+            if (addedCount + updatedCount > 0)
+            {
+                Label_Results.Text += $"\n\nUpload again to send next batch";
+            }
 
             _isBusy = false;
         }
@@ -137,77 +152,68 @@ namespace BertScout2019.Views
             int addedCount = 0;
             int updatedCount = 0;
             int notChangedCount = 0;
-            List<string> downloadedUuids = new List<string>();
+            int lastId = 0;
 
             Label_Results.Text = "Downloading data...";
 
             try
             {
-                HttpResponseMessage response = App.client.GetAsync("api/EventTeamMatches").Result;
-                response.EnsureSuccessStatusCode();
-                if (response.IsSuccessStatusCode)
+                do
                 {
-                    string result = response.Content.ReadAsStringAsync().Result;
-                    JArray results = JArray.Parse(result);
-                    foreach (JObject obj in results)
+                    addedCount = 0;
+                    updatedCount = 0;
+                    notChangedCount = 0;
+                    string batchInfo = $"{App.currFRCEventKey}|{lastId}|10";
+                    HttpResponseMessage response = App.client.GetAsync($"api/EventTeamMatches?batchInfo={batchInfo}").Result;
+                    response.EnsureSuccessStatusCode();
+                    if (response.IsSuccessStatusCode)
                     {
-                        EventTeamMatch oldItem = null;
-                        EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
-                        downloadedUuids.Add(item.Uuid);
+                        string result = response.Content.ReadAsStringAsync().Result;
+                        JArray results = JArray.Parse(result);
+                        foreach (JObject obj in results)
+                        {
+                            EventTeamMatch oldItem = null;
+                            EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
 
-                        oldItem = SqlDataEventTeamMatches.GetItemAsync(item.Uuid).Result;
+                            if (lastId < item.Id.Value)
+                            {
+                                lastId = item.Id.Value;
+                            }
 
-                        if (oldItem == null)
-                        {
-                            SqlDataEventTeamMatches.AddItemAsync(item);
-                            addedCount++;
-                        }
-                        else if (oldItem.Changed < item.Changed)
-                        {
-                            SqlDataEventTeamMatches.UpdateItemAsync(item);
-                            updatedCount++;
-                        }
-                        else
-                        {
-                            notChangedCount++;
+                            oldItem = SqlDataEventTeamMatches.GetItemAsync(item.Uuid).Result;
+
+                            if (oldItem == null)
+                            {
+                                SqlDataEventTeamMatches.AddItemAsync(item);
+                                addedCount++;
+                            }
+                            else if (oldItem.Changed < item.Changed)
+                            {
+                                SqlDataEventTeamMatches.UpdateItemAsync(item);
+                                updatedCount++;
+                            }
+                            else
+                            {
+                                notChangedCount++;
+                            }
                         }
                     }
+
+                    if (addedCount + updatedCount + notChangedCount > 0)
+                    {
+                        Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
+                    }
                 }
+                while (addedCount + updatedCount + notChangedCount > 0);
+
+                Label_Results.Text += "\n\nDownload complete";
+
             }
             catch (Exception ex)
             {
                 Label_Results.Text += $"\n\nError during transmission\n\n{ex.Message}\n\n{ex.InnerException}";
                 _isBusy = false;
                 return;
-            }
-
-            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
-
-            bool needResend = false;
-
-            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
-            
-            // make and use a copy of the list because it will crash otherwise
-            List<EventTeamMatch> copyOfMatches = new List<EventTeamMatch>();
-            foreach (EventTeamMatch item in matches)
-            {
-                copyOfMatches.Add(item);
-            }
-
-            foreach (EventTeamMatch item in copyOfMatches)
-            {
-                var oldItem = downloadedUuids.Where((string arg) => arg == item.Uuid).FirstOrDefault();
-                if (oldItem == null)
-                {
-                    item.Changed = 1; // trigger initial send
-                    SqlDataEventTeamMatches.UpdateItemAsync(item);
-                    needResend = true;
-                }
-            }
-
-            if (needResend)
-            {
-                Label_Results.Text += $"\n\nPlease upload data again";
             }
 
             _isBusy = false;
@@ -220,6 +226,35 @@ namespace BertScout2019.Views
                 // save ip address
                 App.syncIpAddress = Entry_IpAddress.Text;
             }
+        }
+
+        private void Button_Reset_Upload_Clicked(object sender, EventArgs e)
+        {
+            if (_isBusy)
+            {
+                return;
+            }
+            _isBusy = true;
+
+            List<string> downloadedUuids = new List<string>();
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+
+            // make and use a copy of the list because it will crash otherwise
+            List<EventTeamMatch> copyOfMatches = new List<EventTeamMatch>();
+            foreach (EventTeamMatch item in matches)
+            {
+                copyOfMatches.Add(item);
+            }
+
+            foreach (EventTeamMatch item in copyOfMatches)
+            {
+                item.Changed = 1; // trigger initial send
+                SqlDataEventTeamMatches.UpdateItemAsync(item);
+            }
+
+            Label_Results.Text += $"\n\nPlease upload data again";
+
+            _isBusy = false;
         }
     }
 }

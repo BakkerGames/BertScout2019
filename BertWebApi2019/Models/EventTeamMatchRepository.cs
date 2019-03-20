@@ -76,6 +76,28 @@ namespace BertWebApi2019.Models
                                    && p.MatchNumber == int.Parse(keys[2]));
         }
 
+        public IEnumerable<EventTeamMatch> GetNextBatchByKey(string key)
+        {
+            // key = "EventKey|LastId|Count"
+            string[] keys = key.Split('|');
+            string eventKey = keys[0];
+            int lastId = int.Parse(keys[1]);
+            int count = int.Parse(keys[2]);
+            List<EventTeamMatch> result = new List<EventTeamMatch>();
+            List<EventTeamMatch> subset = items.FindAll(p => p.EventKey == keys[0]
+                                                             && p.Id > lastId);
+            subset.Sort(); // by Id
+            foreach (EventTeamMatch item in subset)
+            {
+                if (result.Count() >= count)
+                {
+                    break;
+                }
+                result.Add(item);
+            }
+            return result;
+        }
+
         public void Remove(int id)
         {
             _database.DeleteEventTeamMatchAsync(id);

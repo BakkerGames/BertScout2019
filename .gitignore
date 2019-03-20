@@ -267,4 +267,6 @@ __pycache__/
 
 # local rules
 !*.pubxml.user
+*.db3-shm
+*.db3-wal
 

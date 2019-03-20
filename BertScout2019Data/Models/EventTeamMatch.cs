@@ -1,10 +1,11 @@
 ﻿using SQLite;
+using System;
 
 // remember to increment the dbVersion in App.xaml.cs when changing this model
 
 namespace BertScout2019Data.Models
 {
-    public partial class EventTeamMatch
+    public partial class EventTeamMatch : IEquatable<EventTeamMatch>, IComparable<EventTeamMatch>
     {
         [PrimaryKey, AutoIncrement]
         public int? Id { get; set; }
@@ -38,5 +39,26 @@ namespace BertScout2019Data.Models
         public int HabRankingPoint { get; set; }
         public string ScouterName { get; set; }
         public string Comments { get; set; }
+
+        public int CompareTo(EventTeamMatch other)
+        {
+            if (other == null) return 1; // this is greater
+            if (ReferenceEquals(this, other)) return 0; // same object
+            if (Id == null)
+            {
+                if (other.Id == null) return 0; // equal
+                return -1; // other is greater
+            }
+            if (other.Id == null) return 1; // this is greater
+            return Id.Value.CompareTo(other.Id.Value);
+        }
+
+        public bool Equals(EventTeamMatch other)
+        {
+            if (other == null) return false;
+            if (ReferenceEquals(this, other)) return true; // same object
+            if (!Id.HasValue || !other.Id.HasValue) return false; // one or both is null
+            return Id.Value.Equals(other.Id.Value);
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace BertScout2019.ViewModels
         public int TotalScore = 0;
         public int MatchCount = 0;
         public int AverageScore = 0;
+        public int TotalHatches = 0;
+        public int TotalCargo = 0;
 
         public IDataStore<EventTeamMatch> DataStoreMatch;
 
@@ -48,23 +50,30 @@ namespace BertScout2019.ViewModels
                     obj.EventKey = match.EventKey;
                     obj.TeamNumber = match.TeamNumber;
                     obj.MatchNumber = match.MatchNumber;
-                    // todo fill in text with useful match results
-                    obj.Text1 = $"Match {match.MatchNumber} - Score = {CalculateMatchResult(match)} - RP = {CalculateMatchRP(match)}";
+                    int matchRP = CalculateMatchRP(match);
+                    int matchScore = CalculateMatchResult(match);
+                    int hatchCount = CalculateHatchCount(match);
+                    int cargoCount = CalculateCargoCount(match);
+                    // show match results
+                    obj.Text1 = $"Match {match.MatchNumber} -" +
+                        $" Score: {matchScore} RP: {matchRP}" +
+                        $" Hatch: {hatchCount} Cargo: {cargoCount}";
+                    string broken = "";
                     if (match.Broken == 1)
                     {
-                        obj.Text1 += " - Broken Some";
+                        broken= "Broken: Some ";
                     }
                     else if (match.Broken == 2)
                     {
-                        obj.Text1 += " - Broken Lots";
+                        broken= "Broken: Lots ";
                     }
-                    obj.Text2 = match.Comments;
-                    int rp = CalculateMatchRP(match);
-                    int matchScore = CalculateMatchResult(match);
-                    if (rp > 0 || matchScore > 0 || match.Broken > 0)
+                    obj.Text2 = broken + match.Comments;
+                    if (matchRP > 0 || matchScore > 0 || match.Broken > 0 || hatchCount > 0 || cargoCount > 0)
                     {
-                        TotalRP += rp;
+                        TotalRP += matchRP;
                         TotalScore += matchScore;
+                        TotalHatches += hatchCount;
+                        TotalCargo += cargoCount;
                         MatchCount++;
                         MatchResults.Add(obj);
                     }
@@ -81,13 +90,30 @@ namespace BertScout2019.ViewModels
             }
         }
 
+        private int CalculateCargoCount(EventTeamMatch match)
+        {
+            int result = 0;
+            result += match.SandstormCargo;
+            result += match.CargoShipCargo;
+            result += match.RocketCargo;
+            return result;
+        }
+
+        private int CalculateHatchCount(EventTeamMatch match)
+        {
+            int result = 0;
+            result += match.SandstormHatches;
+            result += match.CargoShipHatches;
+            result += match.RocketHatches;
+            return result;
+        }
+
         private int CalculateMatchRP(EventTeamMatch match)
         {
             int rp = 0;
             rp += match.AllianceResult;
             rp += match.RocketRankingPoint;
             rp += match.HabRankingPoint;
-
             return rp;
         }
 

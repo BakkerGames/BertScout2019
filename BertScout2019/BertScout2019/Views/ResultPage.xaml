@@ -17,7 +17,6 @@
                     HorizontalOptions="Start"
                     VerticalOptions="Start"
                     FontSize="24"
-                    WidthRequest="200"
                     Clicked="RP_Clicked"
                     BackgroundColor="LightGray"
                 />
@@ -27,8 +26,25 @@
                     HorizontalOptions="Start"
                     VerticalOptions="Start"
                     FontSize="24"
-                    WidthRequest="200"
                     Clicked="AvgScore_Clicked"
+                    BackgroundColor="LightGray"
+                />
+                <Button
+                    x:Name="HatchCount"
+                    Text="Hatches"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="24"
+                    Clicked="HatchCount_Clicked"
+                    BackgroundColor="LightGray"
+                />
+                <Button
+                    x:Name="CargoCount"
+                    Text="Cargo"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="24"
+                    Clicked="CargoCount_Clicked"
                     BackgroundColor="LightGray"
                 />
             </StackLayout>
@@ -88,6 +104,30 @@
                                            FontSize="24"
                                            />
                                     <Label Text="{Binding AverageScore}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="- Hatches:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="{Binding TotalHatches}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="- Cargo:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="{Binding TotalCargo}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"

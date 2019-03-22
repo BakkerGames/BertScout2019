@@ -46,19 +46,36 @@ namespace BertScout2019.Views
         {
             RP.BackgroundColor = App.SelectedButtonColor;
             AvgScore.BackgroundColor = App.UnselectedButtonColor;
+            HatchCount.BackgroundColor = App.UnselectedButtonColor;
+            CargoCount.BackgroundColor = App.UnselectedButtonColor;
             viewModel.SortByRankingPoints();
         }
 
         private void AvgScore_Clicked(object sender, EventArgs e)
         {
-            AvgScore.BackgroundColor = App.SelectedButtonColor;
             RP.BackgroundColor = App.UnselectedButtonColor;
+            AvgScore.BackgroundColor = App.SelectedButtonColor;
+            HatchCount.BackgroundColor = App.UnselectedButtonColor;
+            CargoCount.BackgroundColor = App.UnselectedButtonColor;
             viewModel.SortByAverageScore();
         }
 
-        private void EventTeamsListView_ItemSelected_1(object sender, SelectedItemChangedEventArgs e)
+        private void HatchCount_Clicked(object sender, EventArgs e)
         {
+            RP.BackgroundColor = App.UnselectedButtonColor;
+            AvgScore.BackgroundColor = App.UnselectedButtonColor;
+            HatchCount.BackgroundColor = App.SelectedButtonColor;
+            CargoCount.BackgroundColor = App.UnselectedButtonColor;
+            viewModel.SortByHatchCount();
+        }
 
+        private void CargoCount_Clicked(object sender, EventArgs e)
+        {
+            RP.BackgroundColor = App.UnselectedButtonColor;
+            AvgScore.BackgroundColor = App.UnselectedButtonColor;
+            HatchCount.BackgroundColor = App.UnselectedButtonColor;
+            CargoCount.BackgroundColor = App.SelectedButtonColor;
+            viewModel.SortByCargoCount();
         }
     }
 }

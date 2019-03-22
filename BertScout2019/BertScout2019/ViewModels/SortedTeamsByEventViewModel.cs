@@ -42,6 +42,8 @@ namespace BertScout2019.ViewModels
                     teamResult.Name = team.Name;
                     teamResult.TotalRP = matchViewModel.TotalRP;
                     teamResult.AverageScore = matchViewModel.AverageScore;
+                    teamResult.TotalHatches = matchViewModel.TotalHatches;
+                    teamResult.TotalCargo = matchViewModel.TotalCargo;
                     TeamResults.Add(teamResult);
                 }
             }
@@ -68,6 +70,26 @@ namespace BertScout2019.ViewModels
         public void SortByRankingPoints()
         {
             List<TeamResult> ordered = TeamResults.OrderByDescending(o => o.TotalRP).ToList();
+            TeamResults.Clear();
+            foreach (TeamResult item in ordered)
+            {
+                TeamResults.Add(item);
+            }
+        }
+
+        public void SortByHatchCount()
+        {
+            List<TeamResult> ordered = TeamResults.OrderByDescending(o => o.TotalHatches).ToList();
+            TeamResults.Clear();
+            foreach (TeamResult item in ordered)
+            {
+                TeamResults.Add(item);
+            }
+        }
+
+        public void SortByCargoCount()
+        {
+            List<TeamResult> ordered = TeamResults.OrderByDescending(o => o.TotalCargo).ToList();
             TeamResults.Clear();
             foreach (TeamResult item in ordered)
             {

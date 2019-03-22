@@ -17,7 +17,7 @@ namespace BertScout2019
         static public Color UnselectedButtonColor = Color.LightGray;
         static public double dbVersion = 1.3;
         static public string OptionPassword = "letmein";
-        static public string AppVersionDate = "2019.03.06.1956";
+        static public string AppVersionDate = "2019.03.21.2316";
 
         // app properties for easy page communication
         static public string currFRCEventKey { get; set; }
@@ -27,6 +27,7 @@ namespace BertScout2019
         static public int currMatchNumber { get; set; }
         static public int highestMatchNumber { get; set; } = 0;
         static public string syncIpAddress { get; set; } = "";
+        static public string kindleName { get; set; } = "kindle0";
 
         // app database
         private const string dbFilename = "bertscout2019.db3";
@@ -41,6 +42,7 @@ namespace BertScout2019
         private const string propNameFRCEventName = "currentFRCEventName";
         private const string propNameHighestMatchNumber = "highestMatchNumber";
         private const string propNameIpAddress = "syncIpAddress";
+        private const string propNameKindleName = "currKindleName";
 
         public App()
         {
@@ -65,6 +67,10 @@ namespace BertScout2019
                     {
                         syncIpAddress = (string)Properties[propNameIpAddress];
                     }
+                    if (Properties.ContainsKey(propNameKindleName))
+                    {
+                        kindleName = (string)Properties[propNameKindleName];
+                    }
                 }
             }
             catch (Exception)
@@ -74,6 +80,7 @@ namespace BertScout2019
                 Properties[propNameFRCEventName] = "";
                 Properties[propNameHighestMatchNumber] = 0;
                 Properties[propNameIpAddress] = "";
+                Properties[propNameKindleName] = "";
             }
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage())
@@ -117,6 +124,7 @@ namespace BertScout2019
             Properties[propNameFRCEventName] = currFRCEventName;
             Properties[propNameHighestMatchNumber] = highestMatchNumber;
             Properties[propNameIpAddress] = syncIpAddress;
+            Properties[propNameKindleName] = kindleName;
         }
     }
 }

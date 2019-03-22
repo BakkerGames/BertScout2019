@@ -25,6 +25,24 @@
                     TextChanged="Entry_IpAddress_TextChanged"
                     />
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Text="KindleName:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    FontSize="24"
+                    />
+                <Entry
+                    x:Name="Entry_KindleName"
+                    Text=""
+                    FontSize="24"
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="False"
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    TextChanged="Entry_KindleName_TextChanged"
+                    />
+            </StackLayout>
             <StackLayout>
                 <Button
                     x:Name="Button_Upload"
@@ -34,7 +52,7 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     FontSize="24"
-                    Margin="20"
+                    Margin="10"
                     WidthRequest="300"
                     IsEnabled="True"
                     />
@@ -46,7 +64,7 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     FontSize="24"
-                    Margin="20"
+                    Margin="10"
                     WidthRequest="300"
                     IsEnabled="True"
                     />
@@ -58,7 +76,31 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     FontSize="24"
-                    Margin="20"
+                    Margin="10"
+                    WidthRequest="300"
+                    IsEnabled="True"
+                    />
+                <Button
+                    x:Name="Button_Export"
+                    Text="Export Data"
+                    Clicked="Button_Export_Clicked"
+                    BackgroundColor="#B19CD9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Margin="10"
+                    WidthRequest="300"
+                    IsEnabled="True"
+                    />
+                <Button
+                    x:Name="Button_Import"
+                    Text="Import Data"
+                    Clicked="Button_Import_Clicked"
+                    BackgroundColor="#B19CD9"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Margin="10"
                     WidthRequest="300"
                     IsEnabled="True"
                     />

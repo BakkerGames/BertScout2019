@@ -3,8 +3,11 @@ using BertScout2019Data.Models;
 using Common.JSON;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,11 +24,15 @@ namespace BertScout2019.Views
         private static bool _initialSetup = false;
         private static bool _isBusy = false;
 
+        private int totalUploaded = 0;
+        private int toBeUploaded = 0;
+
         public SyncDatabasePage()
         {
             InitializeComponent();
             Title = "Sync local data with website";
             Entry_IpAddress.Text = App.syncIpAddress;
+            Entry_KindleName.Text = App.kindleName;
             SqlDataEventTeamMatches = new SqlDataStoreEventTeamMatches(App.currFRCEventKey);
             WebDataEventTeamMatches = new WebDataStoreEventTeamMatches();
         }
@@ -39,6 +46,8 @@ namespace BertScout2019.Views
                 // save ip address
                 App.syncIpAddress = Entry_IpAddress.Text;
                 Entry_IpAddress.IsEnabled = false;
+                App.kindleName = Entry_KindleName.Text;
+                Entry_KindleName.IsEnabled = false;
 
                 string uri = App.syncIpAddress;
                 if (!uri.EndsWith("/"))
@@ -80,9 +89,10 @@ namespace BertScout2019.Views
 
             Label_Results.Text = "Uploading data...";
 
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+
             try
             {
-                List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
 
                 // make and use a copy of the list because it will crash otherwise
                 List<EventTeamMatch> copyOfMatches = new List<EventTeamMatch>();
@@ -105,11 +115,13 @@ namespace BertScout2019.Views
                         {
                             WebDataEventTeamMatches.AddItemAsync(item);
                             addedCount++;
+                            totalUploaded++;
                         }
                         else
                         {
                             WebDataEventTeamMatches.UpdateItemAsync(item);
                             updatedCount++;
+                            totalUploaded++;
                         }
                         // save it so .Changed is updated
                         // this modifies the original list "matches", which is why a copy is needed
@@ -129,7 +141,7 @@ namespace BertScout2019.Views
                 return;
             }
 
-            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount}";
+            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Total: {totalUploaded} of {matches.Count}";
 
             if (addedCount + updatedCount > 0)
             {
@@ -156,6 +168,8 @@ namespace BertScout2019.Views
 
             Label_Results.Text = "Downloading data...";
 
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+
             try
             {
                 do
@@ -172,7 +186,6 @@ namespace BertScout2019.Views
                         JArray results = JArray.Parse(result);
                         foreach (JObject obj in results)
                         {
-                            EventTeamMatch oldItem = null;
                             EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
 
                             if (lastId < item.Id.Value)
@@ -180,7 +193,7 @@ namespace BertScout2019.Views
                                 lastId = item.Id.Value;
                             }
 
-                            oldItem = SqlDataEventTeamMatches.GetItemAsync(item.Uuid).Result;
+                            EventTeamMatch oldItem = matches.FirstOrDefault(p => p.Uuid == item.Uuid);
 
                             if (oldItem == null)
                             {
@@ -252,9 +265,71 @@ namespace BertScout2019.Views
                 SqlDataEventTeamMatches.UpdateItemAsync(item);
             }
 
-            Label_Results.Text += $"\n\nPlease upload data again";
+            Label_Results.Text = $"Reset complete";
+            Label_Results.Text += "\n\nPlease upload data again";
 
             _isBusy = false;
+        }
+
+        private void Button_Export_Clicked(object sender, EventArgs e)
+        {
+            if (_isBusy)
+            {
+                return;
+            }
+            _isBusy = true;
+
+            Label_Results.Text = "Exporting data...";
+
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+
+            JArray exportJarray = new JArray();
+            StringBuilder exportData = new StringBuilder();
+            exportData.AppendLine("[");
+
+            int exportCount = 0;
+            foreach (EventTeamMatch item in matches)
+            {
+                exportData.Append(item.ToString());
+                exportData.AppendLine(",");
+                exportCount++;
+            }
+            exportData.AppendLine("]");
+
+            string myDocumentsPath = "";
+
+            myDocumentsPath = "/storage/sdcard0/Documents"; // android
+            if (!Directory.Exists(myDocumentsPath))
+            {
+                myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
+            }
+            string path = Path.Combine(myDocumentsPath, $"{Entry_KindleName.Text}_{App.currFRCEventKey}.json");
+
+            File.WriteAllText(path, exportData.ToString());
+
+            Label_Results.Text += $"\n\nCount: {exportCount}";
+            Label_Results.Text += $"\n\nExport complete";
+
+            _isBusy = false;
+        }
+
+        private void Button_Import_Clicked(object sender, EventArgs e)
+        {
+            if (_isBusy)
+            {
+                return;
+            }
+            _isBusy = true;
+
+            _isBusy = false;
+        }
+
+        private void Entry_KindleName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Entry_KindleName.Text))
+            {
+                App.kindleName = Entry_KindleName.Text;
+            }
         }
     }
 }

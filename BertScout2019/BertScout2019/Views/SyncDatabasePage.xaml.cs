@@ -25,7 +25,7 @@ namespace BertScout2019.Views
         private static bool _isBusy = false;
 
         private int totalUploaded = 0;
-        private int toBeUploaded = 0;
+        //private int toBeUploaded = 0;
 
         public SyncDatabasePage()
         {
@@ -146,6 +146,10 @@ namespace BertScout2019.Views
             if (addedCount + updatedCount > 0)
             {
                 Label_Results.Text += $"\n\nUpload again to send next batch";
+            }
+            else
+            {
+                Label_Results.Text += $"\n\nUpload complete";
             }
 
             _isBusy = false;
@@ -294,13 +298,11 @@ namespace BertScout2019.Views
             int exportCount = 0;
             foreach (EventTeamMatch item in matches)
             {
-                if (item.Changed > 0) // downloaded records are excluded from sending
-                {
-                    item.Id = null; // don't preserve id
-                    exportData.Append(item.ToString());
-                    exportData.AppendLine(",");
-                    exportCount++;
-                }
+                item.Id = null; // don't preserve id
+                item.Changed = 0;
+                exportData.Append(item.ToString());
+                exportData.AppendLine(",");
+                exportCount++;
             }
             exportData.AppendLine("]");
 

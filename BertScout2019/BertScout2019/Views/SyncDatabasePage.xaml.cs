@@ -249,7 +249,7 @@ namespace BertScout2019.Views
             }
             _isBusy = true;
 
-            List<string> downloadedUuids = new List<string>();
+            //List<string> downloadedUuids = new List<string>();
             List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
 
             // make and use a copy of the list because it will crash otherwise
@@ -261,8 +261,11 @@ namespace BertScout2019.Views
 
             foreach (EventTeamMatch item in copyOfMatches)
             {
-                item.Changed = 1; // trigger initial send
-                SqlDataEventTeamMatches.UpdateItemAsync(item);
+                if (item.Changed % 2 == 1)
+                {
+                    item.Changed++; // trigger send
+                    SqlDataEventTeamMatches.UpdateItemAsync(item);
+                }
             }
 
             Label_Results.Text = $"Reset complete";
@@ -320,6 +323,54 @@ namespace BertScout2019.Views
                 return;
             }
             _isBusy = true;
+
+            Label_Results.Text = "Importing data...";
+
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+
+            string myDocumentsPath = "";
+
+            myDocumentsPath = "/storage/sdcard0/Documents"; // android
+            if (!Directory.Exists(myDocumentsPath))
+            {
+                myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
+            }
+            string path = Path.Combine(myDocumentsPath, $"All_{App.currFRCEventKey}.json");
+
+            string allMatchData = File.ReadAllText(path);
+
+            JArray matchJsonData = JArray.Parse(allMatchData);
+
+            Label_Results.Text += $"\n\nMatches found: {matchJsonData.Count}";
+
+            int addedCount = 0;
+            int updatedCount = 0;
+            int notChangedCount = 0;
+
+            foreach (JObject obj in matchJsonData)
+            {
+                EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
+                EventTeamMatch oldItem = matches.FirstOrDefault(p => p.Uuid == item.Uuid);
+
+                if (oldItem == null)
+                {
+                    SqlDataEventTeamMatches.AddItemAsync(item);
+                    addedCount++;
+                }
+                else if (oldItem.Changed < item.Changed)
+                {
+                    SqlDataEventTeamMatches.UpdateItemAsync(item);
+                    updatedCount++;
+                }
+                else
+                {
+                    notChangedCount++;
+                }
+            }
+
+            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
+
+            Label_Results.Text += "\n\nImport complete";
 
             _isBusy = false;
         }

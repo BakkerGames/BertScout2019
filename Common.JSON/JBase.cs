@@ -1,4 +1,4 @@
-﻿// JBase.cs - 11/14/2018
+﻿// JBase.cs - 03/22/2019
 
 using System;
 using System.Globalization;
@@ -134,6 +134,7 @@ namespace Common.JSON
                     if (c == ',')
                     {
                         reader.Read(); // gobble comma char
+                        _SkipWhitespace(reader);
                     }
                 }
                 reader.Read(); // gobble end bracket char
@@ -536,7 +537,5 @@ namespace Common.JSON
             }
             return result;
         }
-
-
     }
 }

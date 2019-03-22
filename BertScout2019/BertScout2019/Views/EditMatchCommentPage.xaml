@@ -38,6 +38,10 @@
                     TextChanged="Editor_MatchScouterName_TextChanged"
                     />
             </StackLayout>
+            <Label 
+                Text="Comment:"
+                FontSize="24"
+                />
             <Editor
                 x:Name="Editor_MatchComment"
                 FontSize="24"

@@ -108,7 +108,7 @@ namespace BertScout2019.Views
                         continue;
                     }
 
-                    if (item.Changed % 2 == 1)
+                    if (item.Changed > 0 && item.Changed % 2 == 1)
                     {
                         item.Changed++; // change odd to even = no upload next time
                         if (item.Changed <= 2) // first time sending
@@ -197,10 +197,11 @@ namespace BertScout2019.Views
 
                             if (oldItem == null)
                             {
+                                item.Changed = 0; // downloaded records are excluded from sending
                                 SqlDataEventTeamMatches.AddItemAsync(item);
                                 addedCount++;
                             }
-                            else if (oldItem.Changed < item.Changed)
+                            else if (oldItem.Changed > 0 && oldItem.Changed < item.Changed)
                             {
                                 SqlDataEventTeamMatches.UpdateItemAsync(item);
                                 updatedCount++;
@@ -261,9 +262,9 @@ namespace BertScout2019.Views
 
             foreach (EventTeamMatch item in copyOfMatches)
             {
-                if (item.Changed % 2 == 1)
+                if (item.Changed > 0 && item.Changed % 2 == 0)
                 {
-                    item.Changed++; // trigger send
+                    item.Changed--; // trigger resend
                     SqlDataEventTeamMatches.UpdateItemAsync(item);
                 }
             }
@@ -293,9 +294,13 @@ namespace BertScout2019.Views
             int exportCount = 0;
             foreach (EventTeamMatch item in matches)
             {
-                exportData.Append(item.ToString());
-                exportData.AppendLine(",");
-                exportCount++;
+                if (item.Changed > 0) // downloaded records are excluded from sending
+                {
+                    item.Id = null; // don't preserve id
+                    exportData.Append(item.ToString());
+                    exportData.AppendLine(",");
+                    exportCount++;
+                }
             }
             exportData.AppendLine("]");
 
@@ -337,6 +342,13 @@ namespace BertScout2019.Views
             }
             string path = Path.Combine(myDocumentsPath, $"All_{App.currFRCEventKey}.json");
 
+            if (!File.Exists(path))
+            {
+                Label_Results.Text += $"\n\nFile not found: {path}";
+                _isBusy = false;
+                return;
+            }
+
             string allMatchData = File.ReadAllText(path);
 
             JArray matchJsonData = JArray.Parse(allMatchData);
@@ -354,10 +366,11 @@ namespace BertScout2019.Views
 
                 if (oldItem == null)
                 {
+                    item.Changed = 0; // downloaded records are excluded from sending
                     SqlDataEventTeamMatches.AddItemAsync(item);
                     addedCount++;
                 }
-                else if (oldItem.Changed < item.Changed)
+                else if (oldItem.Changed > 0 && oldItem.Changed < item.Changed)
                 {
                     SqlDataEventTeamMatches.UpdateItemAsync(item);
                     updatedCount++;

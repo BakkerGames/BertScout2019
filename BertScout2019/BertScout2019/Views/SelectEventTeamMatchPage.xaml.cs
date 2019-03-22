@@ -1,5 +1,7 @@
-﻿using BertScout2019.ViewModels;
+﻿using BertScout2019.Services;
+using BertScout2019.ViewModels;
 using BertScout2019Data.Models;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,6 +10,7 @@ namespace BertScout2019.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectEventTeamMatchPage : ContentPage
     {
+        public IDataStore<EventTeamMatch> SqlDataEventTeamMatches;
         SelectMatchesByEventTeamViewModel viewModel;
         Team currTeam;
 
@@ -16,11 +19,21 @@ namespace BertScout2019.Views
             InitializeComponent();
             currTeam = team;
             BindingContext = viewModel = new SelectMatchesByEventTeamViewModel(eventKey, team);
+            SqlDataEventTeamMatches = new SqlDataStoreEventTeamMatches(App.currFRCEventKey);
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
+            App.highestMatchNumber = 0;
+            foreach (EventTeamMatch item in matches)
+            {
+                if (App.highestMatchNumber < item.MatchNumber)
+                {
+                    App.highestMatchNumber = item.MatchNumber;
+                }
+            }
             EventTeamMatchesListView.SelectedItem = null;
             int tempHighest = App.highestMatchNumber + 1;
             if (tempHighest > 999)

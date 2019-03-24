@@ -52,7 +52,7 @@ namespace BertScout2019Data.Models
             JObject item = JObject.Parse(value);
             EventTeamMatch result = new EventTeamMatch()
             {
-                Id = (int)item.GetValue("Id"),
+                Id = (int?)item.GetValueOrNull("Id"),
                 Uuid = (string)item.GetValue("Uuid"),
                 Changed = (int)item.GetValue("Changed"),
                 EventKey = (string)item.GetValue("EventKey"),

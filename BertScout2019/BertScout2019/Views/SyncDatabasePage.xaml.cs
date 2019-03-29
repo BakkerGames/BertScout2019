@@ -299,7 +299,7 @@ namespace BertScout2019.Views
             foreach (EventTeamMatch item in matches)
             {
                 item.Id = null; // don't preserve id
-                item.Changed = 0;
+                item.Changed = 0; // changed = 0 so downloaded data is not uploaded
                 exportData.Append(item.ToString());
                 exportData.AppendLine(",");
                 exportCount++;
@@ -313,7 +313,9 @@ namespace BertScout2019.Views
             {
                 myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
             }
-            string path = Path.Combine(myDocumentsPath, $"{Entry_KindleName.Text}_{App.currFRCEventKey}.json");
+            Label_Results.Text += $"\n\n{myDocumentsPath}";
+
+            string path = Path.Combine(myDocumentsPath, $"{App.AppYear}_{App.currFRCEventKey}_{Entry_KindleName.Text}.json");
 
             File.WriteAllText(path, exportData.ToString());
 
@@ -342,48 +344,47 @@ namespace BertScout2019.Views
             {
                 myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
             }
-            string path = Path.Combine(myDocumentsPath, $"All_{App.currFRCEventKey}.json");
 
-            if (!File.Exists(path))
+            string[] filenames = Directory.GetFiles(myDocumentsPath, $"{App.AppYear}_{App.currFRCEventKey}*.json");
+
+            foreach (string path in filenames)
             {
-                Label_Results.Text += $"\n\nFile not found: {path}";
-                _isBusy = false;
-                return;
+                Label_Results.Text += $"\n\n{path}";
+
+                string allMatchData = File.ReadAllText(path);
+
+                JArray matchJsonData = JArray.Parse(allMatchData);
+
+                Label_Results.Text += $"\n\nMatches found: {matchJsonData.Count}";
+
+                int addedCount = 0;
+                int updatedCount = 0;
+                int notChangedCount = 0;
+
+                foreach (JObject obj in matchJsonData)
+                {
+                    EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
+                    EventTeamMatch oldItem = matches.FirstOrDefault(p => p.Uuid == item.Uuid);
+
+                    if (oldItem == null)
+                    {
+                        item.Changed = 0; // downloaded records are excluded from uploading
+                        SqlDataEventTeamMatches.AddItemAsync(item);
+                        addedCount++;
+                    }
+                    else if (oldItem.Changed > 0 && oldItem.Changed < item.Changed)
+                    {
+                        SqlDataEventTeamMatches.UpdateItemAsync(item);
+                        updatedCount++;
+                    }
+                    else
+                    {
+                        notChangedCount++;
+                    }
+                }
+
+                Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
             }
-
-            string allMatchData = File.ReadAllText(path);
-
-            JArray matchJsonData = JArray.Parse(allMatchData);
-
-            Label_Results.Text += $"\n\nMatches found: {matchJsonData.Count}";
-
-            int addedCount = 0;
-            int updatedCount = 0;
-            int notChangedCount = 0;
-
-            foreach (JObject obj in matchJsonData)
-            {
-                EventTeamMatch item = EventTeamMatch.Parse(obj.ToString());
-                EventTeamMatch oldItem = matches.FirstOrDefault(p => p.Uuid == item.Uuid);
-
-                if (oldItem == null)
-                {
-                    item.Changed = 0; // downloaded records are excluded from sending
-                    SqlDataEventTeamMatches.AddItemAsync(item);
-                    addedCount++;
-                }
-                else if (oldItem.Changed > 0 && oldItem.Changed < item.Changed)
-                {
-                    SqlDataEventTeamMatches.UpdateItemAsync(item);
-                    updatedCount++;
-                }
-                else
-                {
-                    notChangedCount++;
-                }
-            }
-
-            Label_Results.Text += $"\n\nAdded: {addedCount} - Updated: {updatedCount} - Not Changed: {notChangedCount}";
 
             Label_Results.Text += "\n\nImport complete";
 

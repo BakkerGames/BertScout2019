@@ -17,7 +17,8 @@ namespace BertScout2019
         static public Color UnselectedButtonColor = Color.LightGray;
         static public double dbVersion = 1.3;
         static public string OptionPassword = "letmein";
-        static public string AppVersionDate = "2019.03.23.2129";
+        static public string AppVersionDate = "2019.03.29.1645";
+        static public string AppYear = "2019";
 
         // app properties for easy page communication
         static public string currFRCEventKey { get; set; }
@@ -27,7 +28,7 @@ namespace BertScout2019
         static public int currMatchNumber { get; set; }
         static public int highestMatchNumber { get; set; } = 0;
         static public string syncIpAddress { get; set; } = "";
-        static public string kindleName { get; set; } = "kindle0";
+        static public string kindleName { get; set; } = "00";
 
         // app database
         private const string dbFilename = "bertscout2019.db3";

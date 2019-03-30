@@ -306,13 +306,7 @@ namespace BertScout2019.Views
             }
             exportData.AppendLine("]");
 
-            string myDocumentsPath = "";
-
-            myDocumentsPath = "/storage/sdcard0/Documents"; // android
-            if (!Directory.Exists(myDocumentsPath))
-            {
-                myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
-            }
+            string myDocumentsPath = App.GetMyDocumentsPath();
             Label_Results.Text += $"\n\n{myDocumentsPath}";
 
             string path = Path.Combine(myDocumentsPath, $"{App.AppYear}_{App.currFRCEventKey}_{Entry_KindleName.Text}.json");
@@ -337,13 +331,7 @@ namespace BertScout2019.Views
 
             List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
 
-            string myDocumentsPath = "";
-
-            myDocumentsPath = "/storage/sdcard0/Documents"; // android
-            if (!Directory.Exists(myDocumentsPath))
-            {
-                myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
-            }
+            string myDocumentsPath = App.GetMyDocumentsPath();
 
             string[] filenames = Directory.GetFiles(myDocumentsPath, $"{App.AppYear}_{App.currFRCEventKey}*.json");
 

@@ -44,6 +44,8 @@ namespace BertScout2019.ViewModels
                     teamResult.AverageScore = matchViewModel.AverageScore;
                     teamResult.TotalHatches = matchViewModel.TotalHatches;
                     teamResult.TotalCargo = matchViewModel.TotalCargo;
+                    teamResult.AverageHatches = matchViewModel.AverageHatches;
+                    teamResult.AverageCargo = matchViewModel.AverageCargo;
                     TeamResults.Add(teamResult);
                 }
             }
@@ -54,6 +56,16 @@ namespace BertScout2019.ViewModels
             finally
             {
                 IsBusy = false;
+            }
+        }
+
+        internal void SortByTeamNumber()
+        {
+            List<TeamResult> ordered = TeamResults.OrderBy(o => o.TeamNumber).ToList();
+            TeamResults.Clear();
+            foreach (TeamResult item in ordered)
+            {
+                TeamResults.Add(item);
             }
         }
 
@@ -80,6 +92,26 @@ namespace BertScout2019.ViewModels
         public void SortByHatchCount()
         {
             List<TeamResult> ordered = TeamResults.OrderByDescending(o => o.TotalHatches).ToList();
+            TeamResults.Clear();
+            foreach (TeamResult item in ordered)
+            {
+                TeamResults.Add(item);
+            }
+        }
+
+        internal void SortByAverageHatches()
+        {
+            List<TeamResult> ordered = TeamResults.OrderByDescending(o => o.AverageHatches).ToList();
+            TeamResults.Clear();
+            foreach (TeamResult item in ordered)
+            {
+                TeamResults.Add(item);
+            }
+        }
+
+        internal void SortByAverageCargo()
+        {
+            List<TeamResult> ordered = TeamResults.OrderByDescending(o => o.AverageCargo).ToList();
             TeamResults.Clear();
             foreach (TeamResult item in ordered)
             {

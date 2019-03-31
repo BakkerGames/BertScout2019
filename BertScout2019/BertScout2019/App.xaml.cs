@@ -17,7 +17,7 @@ namespace BertScout2019
         static public Color UnselectedButtonColor = Color.LightGray;
         static public double dbVersion = 1.3;
         static public string OptionPassword = "letmein";
-        static public string AppVersionDate = "2019.03.29.1645";
+        static public string AppVersionDate = "2019.03.31.1823";
         static public string AppYear = "2019";
 
         // app properties for easy page communication
@@ -31,7 +31,6 @@ namespace BertScout2019
         static public string kindleName { get; set; } = "00";
 
         // app database
-        private const string dbFilename = "bertscout2019.db3";
         static public BertScout2019Database database;
 
         // http client for syncing
@@ -96,7 +95,10 @@ namespace BertScout2019
             {
                 if (database == null)
                 {
-                    database = new BertScout2019Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), dbFilename));
+                    string myDocumentsPath = GetMyDocumentsPath();
+                    database = new BertScout2019Database(
+                        Path.Combine(myDocumentsPath, BertScout2019Database.dbFilename)
+                        );
                 }
                 return database;
             }
@@ -126,6 +128,38 @@ namespace BertScout2019
             Properties[propNameHighestMatchNumber] = highestMatchNumber;
             Properties[propNameIpAddress] = syncIpAddress;
             Properties[propNameKindleName] = kindleName;
+        }
+
+        public static string GetMyDocumentsPath()
+        {
+            string baseDocumentsPath = "";
+            string myDocumentsPath = "";
+
+            baseDocumentsPath = "/storage/sdcard0"; // android kindle
+            if (!Directory.Exists(baseDocumentsPath))
+            {
+                baseDocumentsPath = "/storage/sdcard"; // android emulator
+            }
+            if (Directory.Exists(baseDocumentsPath))
+            {
+                myDocumentsPath = $"{baseDocumentsPath}/Documents";
+                if (!Directory.Exists(myDocumentsPath))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(myDocumentsPath);
+                    }
+                    catch
+                    {
+                        //ignore
+                    }
+                }
+            }
+            if (!Directory.Exists(myDocumentsPath))
+            {
+                myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
+            }
+            return myDocumentsPath;
         }
     }
 }

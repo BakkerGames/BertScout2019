@@ -19,8 +19,8 @@ namespace BertScout2019.Views
         public ResultPage()
         {
             InitializeComponent();
-
             BindingContext = viewModel = new SortedTeamsByEventViewModel();
+            TeamNumber.BackgroundColor = App.SelectedButtonColor;
         }
 
         protected override void OnAppearing()
@@ -42,40 +42,64 @@ namespace BertScout2019.Views
             await Navigation.PushAsync(new TeamDetailsPage(App.currFRCEventKey, itemTeam));
         }
 
+        private void TeamNumber_Clicked(object sender, EventArgs e)
+        {
+            ClearAllSortButtons();
+            TeamNumber.BackgroundColor = App.SelectedButtonColor;
+            viewModel.SortByTeamNumber();
+        }
+
         private void RP_Clicked(object sender, EventArgs e)
         {
+            ClearAllSortButtons();
             RP.BackgroundColor = App.SelectedButtonColor;
-            AvgScore.BackgroundColor = App.UnselectedButtonColor;
-            HatchCount.BackgroundColor = App.UnselectedButtonColor;
-            CargoCount.BackgroundColor = App.UnselectedButtonColor;
             viewModel.SortByRankingPoints();
         }
 
         private void AvgScore_Clicked(object sender, EventArgs e)
         {
-            RP.BackgroundColor = App.UnselectedButtonColor;
+            ClearAllSortButtons();
             AvgScore.BackgroundColor = App.SelectedButtonColor;
-            HatchCount.BackgroundColor = App.UnselectedButtonColor;
-            CargoCount.BackgroundColor = App.UnselectedButtonColor;
             viewModel.SortByAverageScore();
         }
 
         private void HatchCount_Clicked(object sender, EventArgs e)
         {
-            RP.BackgroundColor = App.UnselectedButtonColor;
-            AvgScore.BackgroundColor = App.UnselectedButtonColor;
+            ClearAllSortButtons();
             HatchCount.BackgroundColor = App.SelectedButtonColor;
-            CargoCount.BackgroundColor = App.UnselectedButtonColor;
             viewModel.SortByHatchCount();
         }
 
         private void CargoCount_Clicked(object sender, EventArgs e)
         {
+            ClearAllSortButtons();
+            CargoCount.BackgroundColor = App.SelectedButtonColor;
+            viewModel.SortByCargoCount();
+        }
+
+        private void AverageHatches_Clicked(object sender, EventArgs e)
+        {
+            ClearAllSortButtons();
+            AverageHatches.BackgroundColor = App.SelectedButtonColor;
+            viewModel.SortByAverageHatches();
+        }
+
+        private void AverageCargo_Clicked(object sender, EventArgs e)
+        {
+            ClearAllSortButtons();
+            AverageCargo.BackgroundColor = App.SelectedButtonColor;
+            viewModel.SortByAverageCargo();
+        }
+
+        private void ClearAllSortButtons()
+        {
+            TeamNumber.BackgroundColor = App.UnselectedButtonColor;
             RP.BackgroundColor = App.UnselectedButtonColor;
             AvgScore.BackgroundColor = App.UnselectedButtonColor;
             HatchCount.BackgroundColor = App.UnselectedButtonColor;
-            CargoCount.BackgroundColor = App.SelectedButtonColor;
-            viewModel.SortByCargoCount();
+            CargoCount.BackgroundColor = App.UnselectedButtonColor;
+            AverageHatches.BackgroundColor = App.UnselectedButtonColor;
+            AverageCargo.BackgroundColor = App.UnselectedButtonColor;
         }
     }
 }

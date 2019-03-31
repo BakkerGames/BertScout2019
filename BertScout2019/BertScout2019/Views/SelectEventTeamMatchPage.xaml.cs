@@ -25,22 +25,11 @@ namespace BertScout2019.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            List<EventTeamMatch> matches = (List<EventTeamMatch>)SqlDataEventTeamMatches.GetItemsAsync().Result;
-            App.highestMatchNumber = 0;
-            foreach (EventTeamMatch item in matches)
+            if (App.highestMatchNumber < 0)
             {
-                if (App.highestMatchNumber < item.MatchNumber)
-                {
-                    App.highestMatchNumber = item.MatchNumber;
-                }
+                App.highestMatchNumber = 0;
             }
-            EventTeamMatchesListView.SelectedItem = null;
-            int tempHighest = App.highestMatchNumber + 1;
-            if (tempHighest > 999)
-            {
-                tempHighest = 999;
-            }
-            MatchNumberLabelValue.Text = tempHighest.ToString();
+            MatchNumberLabelValue.Text = (App.highestMatchNumber + 1).ToString();
         }
 
         private async void EventTeamsListMatchView_ItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -56,48 +45,39 @@ namespace BertScout2019.Views
 
         private void AddMatch_Minus_Clicked(object sender, System.EventArgs e)
         {
-            int value = 0;
-            if (!int.TryParse(MatchNumberLabelValue.Text, out value))
+            App.highestMatchNumber--;
+            if (App.highestMatchNumber < 0)
             {
-                MatchNumberLabelValue.Text = (1).ToString();
+                App.highestMatchNumber = 0;
             }
-            if (value > 1)
-            {
-                MatchNumberLabelValue.Text = (value - 1).ToString();
-                App.highestMatchNumber = value;
-            }
+            MatchNumberLabelValue.Text = (App.highestMatchNumber + 1).ToString();
         }
 
         private void AddMatch_Plus_Clicked(object sender, System.EventArgs e)
         {
-            int value = 0;
-            if (!int.TryParse(MatchNumberLabelValue.Text, out value))
+            App.highestMatchNumber++;
+            if (App.highestMatchNumber > 998)
             {
-                MatchNumberLabelValue.Text = (1).ToString();
+                App.highestMatchNumber = 998;
             }
-            if (value < 999)
-            {
-                MatchNumberLabelValue.Text = (value + 1).ToString();
-                App.highestMatchNumber = value;
-            }
+            MatchNumberLabelValue.Text = (App.highestMatchNumber + 1).ToString();
         }
 
         private bool _addNewMatchBusy = false;
         private void AddNewMatch_Clicked(object sender, System.EventArgs e)
         {
-            // prevent multiple clicks at once
             if (_addNewMatchBusy)
             {
                 return;
             }
             _addNewMatchBusy = true;
-            doAddNewMatch();
+            doAddNewMatch(App.highestMatchNumber + 1);
+            App.highestMatchNumber++;
             _addNewMatchBusy = false;
         }
 
-        private void doAddNewMatch()
+        private async void doAddNewMatch(int value)
         {
-            int value = int.Parse(MatchNumberLabelValue.Text);
             foreach (EventTeamMatch oldMatch in viewModel.Matches)
             {
                 if (oldMatch.MatchNumber == value)
@@ -110,11 +90,7 @@ namespace BertScout2019.Views
             newMatch.TeamNumber = App.currTeamNumber;
             newMatch.MatchNumber = value;
             newMatch.Changed = 1; // odd = must upload
-            App.database.SaveEventTeamMatchAsync(newMatch);
-            if (App.highestMatchNumber < value)
-            {
-                App.highestMatchNumber = value;
-            }
+            await App.database.SaveEventTeamMatchAsync(newMatch);
             // add new match into list in proper order
             bool found = false;
             for (int i = 0; i < viewModel.Matches.Count; i++)
@@ -130,6 +106,8 @@ namespace BertScout2019.Views
             {
                 viewModel.Matches.Add(newMatch);
             }
+            App.currMatchNumber = newMatch.MatchNumber;
+            await Navigation.PushAsync(new EditEventTeamMatchPage(newMatch));
         }
 
         private async void TeamDetails_Clicked(object sender, System.EventArgs e)

@@ -18,6 +18,8 @@ namespace BertScout2019.ViewModels
         public int AverageScore = 0;
         public int TotalHatches = 0;
         public int TotalCargo = 0;
+        public int AverageHatches = 0;
+        public int AverageCargo = 0;
 
         public IDataStore<EventTeamMatch> DataStoreMatch;
 
@@ -79,6 +81,8 @@ namespace BertScout2019.ViewModels
                     }
                 }
                 AverageScore = TotalScore / MatchCount;
+                AverageHatches = TotalHatches / MatchCount;
+                AverageCargo = TotalCargo / MatchCount;
             }
             catch (Exception ex)
             {

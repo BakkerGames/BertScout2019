@@ -5,11 +5,15 @@
              Title="Event Results">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
-                <Label
-                    Text="Sort By:"
+            <StackLayout Orientation="Horizontal" Margin="10,10,10,0">
+                <Button
+                    x:Name="TeamNumber"
+                    Text="Team"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
                     FontSize="24"
-                    Margin="0,5,0,10"
+                    Clicked="TeamNumber_Clicked"
+                    BackgroundColor="LightGray"
                 />
                 <Button
                     x:Name="RP"
@@ -38,6 +42,8 @@
                     Clicked="HatchCount_Clicked"
                     BackgroundColor="LightGray"
                 />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10,0,10,0">
                 <Button
                     x:Name="CargoCount"
                     Text="Cargo"
@@ -47,18 +53,36 @@
                     Clicked="CargoCount_Clicked"
                     BackgroundColor="LightGray"
                 />
+                <Button
+                    x:Name="AverageHatches"
+                    Text="Avg. Hatches"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="24"
+                    Clicked="AverageHatches_Clicked"
+                    BackgroundColor="LightGray"
+                />
+                <Button
+                    x:Name="AverageCargo"
+                    Text="Avg. Cargo"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    FontSize="24"
+                    Clicked="AverageCargo_Clicked"
+                    BackgroundColor="LightGray"
+                />
             </StackLayout>
             <ListView 
-                    x:Name="EventTeamsListView"
-                    ItemsSource="{Binding TeamResults}"
-                    VerticalOptions="FillAndExpand"
-                    HasUnevenRows="true"
-                    RefreshCommand="{Binding LoadEventTeamsCommand}"
-                    IsPullToRefreshEnabled="true"
-                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                    CachingStrategy="RecycleElement"
-                    ItemSelected="EventTeamsListView_ItemSelected"
-                    >
+                x:Name="EventTeamsListView"
+                ItemsSource="{Binding TeamResults}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadEventTeamsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="EventTeamsListView_ItemSelected"
+                >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -89,7 +113,7 @@
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"
                                            FontSize="24"
-                                           Margin="10,0,0,0"
+                                           Margin="20,0,0,0"
                                            />
                                     <Label Text="{Binding TotalRP}"
                                            LineBreakMode="NoWrap"
@@ -128,6 +152,33 @@
                                            FontSize="24"
                                            />
                                     <Label Text="{Binding TotalCargo}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Avg Hatches:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           Margin="20,0,0,0"
+                                           />
+                                    <Label Text="{Binding AverageHatches}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="- Avg Cargo:"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontAttributes="Bold"
+                                           FontSize="24"
+                                           />
+                                    <Label Text="{Binding AverageCargo}"
                                            LineBreakMode="NoWrap"
                                            Style="{DynamicResource ListItemTextStyle}"
                                            FontAttributes="Bold"

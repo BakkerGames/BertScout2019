@@ -1,4 +1,4 @@
-﻿// JBase.cs - 03/29/2019
+﻿// JBase.cs - 04/01/2019
 
 using System;
 using System.Globalization;
@@ -90,6 +90,7 @@ namespace Common.JSON
                     if (c == ',')
                     {
                         reader.Read(); // gobble comma char
+                        _SkipWhitespace(reader);
                     }
                 }
                 reader.Read(); // gobble } char

@@ -17,7 +17,7 @@ namespace BertScout2019
         static public Color UnselectedButtonColor = Color.LightGray;
         static public double dbVersion = 1.3;
         static public string OptionPassword = "letmein";
-        static public string AppVersionDate = "2019.03.31.1823";
+        static public string AppVersionDate = "2019.04.09.1707";
         static public string AppYear = "2019";
 
         // app properties for easy page communication
@@ -158,6 +158,10 @@ namespace BertScout2019
             if (!Directory.Exists(myDocumentsPath))
             {
                 myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // windows
+            }
+            if (!Directory.Exists(myDocumentsPath))
+            {
+                myDocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData); // local data
             }
             return myDocumentsPath;
         }

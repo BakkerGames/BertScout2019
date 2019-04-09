@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace AddXmlGuids
@@ -21,7 +17,7 @@ namespace AddXmlGuids
                     string[] lines = File.ReadAllLines(filename);
                     for (int i = 0; i < lines.GetLength(0); i++)
                     {
-                        if (lines[i] == "    <Id>0</Id>")
+                        if (lines[i] == "    <Id>0</Id>" || lines[i] == "    <Uuid></Uuid>")
                         {
                             lines[i] = $"    <Uuid>{Guid.NewGuid()}</Uuid>";
                             Console.WriteLine(lines[i]);
@@ -30,6 +26,10 @@ namespace AddXmlGuids
                     }
                     if (fixFlag)
                     {
+                        if (File.Exists(filename + ".old"))
+                        {
+                            File.Delete(filename + ".old");
+                        }
                         File.Move(filename, filename + ".old");
                         File.WriteAllLines(filename, lines);
                     }

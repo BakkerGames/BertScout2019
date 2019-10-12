@@ -1,0 +1,29 @@
+{
+	"VVPath": "D:\\VersionVault\\BERT\\BertScout2019",
+	"IgnoreDir": [
+		"bin",
+		"obj",
+		"Bin",
+		"gradle",
+		"build"
+	],
+	"IgnoreExt": [
+		".bak",
+		".dll",
+		".exe",
+		".log",
+		".scc",
+		".sln.cache",
+		".suo",
+		".tmp",
+		".vbw",
+		".vspscc",
+		".vssscc",
+		"build.force",
+		"proj.user",
+		"buildall.bat",
+		"publishall.bat"
+	],
+	"IncludeDir": [],
+	"IncludeExt": []
+}

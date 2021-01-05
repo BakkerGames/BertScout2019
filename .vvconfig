@@ -1,0 +1,35 @@
+{
+	"VVPath": "D:\\VV2\\Projects\\BertScout2019",
+	"IgnoreDir": [
+		"bin",
+		"obj",
+		"Bin"
+	],
+	"IgnoreExt": [
+		".bak",
+		".config",
+		".dll",
+		".exe",
+		".lnk",
+		".log",
+		".ocx",
+		".par2",
+		".sav",
+		".scc",
+		".sln.cache",
+		".suo",
+		".tmp",
+		".vbw",
+		".vspscc",
+		".vssscc",
+		".zip",
+		"proj.user",
+		"build.force",
+		"buildall.bat",
+		"publishall.bat"
+	],
+	"IncludeDir": [],
+	"IncludeExt": [
+		"\\app.config"
+	]
+}
